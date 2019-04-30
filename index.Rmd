@@ -1,31 +1,25 @@
 ---
-title: "A Comprehensive Guide to Git"
-author: "Russell McCreath"
-date: "30/04/2019"
+title: "A Comprehensive Guide to Git & GitHub"
 output: bookdown::gitbook
 site: bookdown::bookdown_site
+description: "A comprehensive guide for learning and using Git and GitHub"
+github-repo: NHS-NSS-transforming-publications/git-guide
+cover-image: images/cover.png
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+# Preface {-}
+
+```{r fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html')}
+knitr::include_graphics('images/cover.png', dpi = NA)
 ```
 
-## R Markdown
+This is a comprehensive training and reference guide for Git (including a look at Shell scripting) GitHub, and the integrations into RStudio. 
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+There are four chapters, each with their own training, excersises, and reference sections:
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+1. Shell
+2. Git
+3. GitHub
+4. RStudio
 
-```{r cars}
-summary(cars)
-```
-
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+The book is created using bookdown (an R package) and hosted using GitHub. This should allow convenience for development and use, hassle-free updates, and contribution from users (from typos to suggestions).

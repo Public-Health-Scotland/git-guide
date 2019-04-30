@@ -1,0 +1,259 @@
+# The Shell
+
+```{r fig.align='center', echo=FALSE, out.height = "250px", include=identical(knitr:::pandoc_to(), 'html')}
+knitr::include_graphics('images/bash.png', dpi = NA)
+```
+
+The Unix shell has been around longer than most of its users have been alive. It has survived so long because it’s a power tool that allows people to do complex things with just a few keystrokes. More importantly, it helps them combine existing programs in new ways and automate repetitive tasks so they aren’t typing the same things over and over again. Use of the shell is fundamental to using a wide range of other powerful tools and computing resources (including “high-performance computing” supercomputers). These lessons will start you on a path towards using these resources effectively.  
+
+
+## Background
+
+At a high level, computers do four things:
+
+* run programs
+* store data
+* communicate with each other, and
+* interact with us.  
+
+They can do the last of these in many different ways, including through a keyboard and mouse, touch screen interfaces, or using speech recognition systems. While touch and voice interfaces are becoming more commonplace, most interaction is still done using traditional screens, mice, touch-pads and keyboards.  
+
+We are all familiar with *graphical user interfaces* (GUI): windows, icons and pointers. They are easy to learn and fantastic for simple tasks where a vocabulary consisting of “click” translates easily into “do the thing I want”. But this magic relies on wanting a simple set of things, and having programs that can do exactly those things.  
+
+If you wish to do complex, purpose-specific things it helps to have a richer means of expressing your instructions to the computer. It doesn’t need to be complicated or difficult, just a vocabulary of commands and a simple grammar for using them.  
+
+This is what the shell provides - a simple language and a *command-line interface* (CLI) to use it through.  
+
+The heart of a command-line interface is a *read-evaluate-print loop* (REPL). It is called so because when you type a command and press Return (also known as Enter) the shell reads your command, evaluates (or “executes”) it, prints the output of your command, loops back and waits for you to enter another command.  
+
+
+## Setup
+
+The shell is a program that enables us to send commands to the computer and receive output. It is also referred to as the terminal or command line.  
+
+Some computers include a default Unix Shell program. The steps below describe some methods for identifying and opening a Unix Shell program if you already have one installed. There are also options for identifying and downloading a Unix Shell program, a Linux/UNIX emulator, or a program to access a Unix Shell on a server.  
+
+If none of the options below address your circumstances, try an online search for: Unix shell [your computer model] [your operating system].
+
+### Windows
+
+Computers with Windows operating systems do not automatically have a Unix Shell program installed. Here, we encourage you to use an emulator included in Git for Windows, which gives you access to both Bash shell commands and Git.  
+
+Once installed, you can open a terminal by running the program Git Bash from the Windows start menu.  
+
+Other solutions are available for running Bash commands on Windows. There is now a Bash shell command-line tool available for Windows 10. Additionally, you can run Bash commands on a remote computer or server that already has a Unix Shell, from your Windows machine. This can usually be done through a Secure Shell (SSH) client. One such client available for free for Windows computers is PuTTY. See the reference below for information on using the Windows 10 command-line tool, or installing and using a Unix/Linux emulator.
+
+* [Git for Windows](https://git-for-windows.github.io/)
+* [Using a Unix/Linux Emulator (Cygwin)](http://faculty.smu.edu/reynolds/unixtut/windows.html)  
+
+### Linux
+
+The default Unix Shell for Linux operating systems is usually Bash. On most versions of Linux, it is accessible by running the (Gnome) Terminal or (KDE) Konsole or xterm, which can be found via the applications menu or the search bar. If your machine is set up to use something other than bash, you can run it by opening a terminal and typing `bash`.  
+
+### Mac OS
+
+For a Mac computer, the default Unix Shell is Bash, and it is available via the Terminal Utilities program within your Applications folder.  
+
+To open Terminal, try one or both of the following:  
+
+* Go to your Applications. Within Applications, open the Utilities folder. Locate Terminal in the Utilities folder and open it.
+* Use the Mac Spotlight computer search function. Search for: "Terminal" and press Return.  
+
+See the reference below for more detail on how to use the Terminal on Mac:
+
+* [How to Use Terminal on Mac](http://www.macworld.co.uk/feature/mac-software/how-use-terminal-on-mac-3608274/)  
+
+
+## Introduction
+
+The Shell is a program which runs other programs rather than doing calculations itself. The most popular Unix shell is Bash, (the Bourne Again SHell — so-called because it’s derived from a shell written by Stephen Bourne). Bash is the default shell on most modern implementations of Unix and in most packages that provide Unix-like tools for Windows.  
+
+A typical shell window looks something like:  
+
+```
+user$
+user$ ls -F/
+  Applications/   System/
+  Library/        Users/
+  Network/        Volumes/
+user$
+```
+
+The first line shows only a prompt, indicating that the shell is waiting for input. Your shell may use different text for the prompt. Most importantly: when typing commands, either from these lessons or from other sources, do not type the prompt, only the commands that follow it.  
+
+The part that you type, `ls -F /` in the second line of the example, typically has the following structure: a **command**, some **flags** (also called options or switches) and an **argument**. Flags start with a single dash (`-`) or two dashes (`--`), and change the behaviour of a command. Arguments tell the command what to operate on (e.g. files and directories). Sometimes flags and arguments are referred to as parameters. A command can be called with more than one flag and more than one argument: but a command doesn’t always require an argument or a flag.  
+
+In the second line of the example above, our command is `ls`, with a flag `-F` and an argument `/`. Each part is separated by spaces: if you omit the space between `ls` and `-F` the shell will look for a command called `ls-F`, which doesn’t exist. Also, capitalisation matters: `LS` is different from `ls`.  
+
+Next we see the output that our command produced. In this case it is a listing of files and folders in a location called `/` - we’ll cover what all these mean later. *Those using a macOS might recognise the output in this example.*  
+
+Finally, the shell again prints the prompt and waits for you to type the next command.  
+
+In the examples for this lesson, we’ll show the prompt as `$`. You can make your prompt look the same by executing the command `PS1='$ '`. But you can also leave your prompt as it is - often the prompt includes useful information about who and where you are.  
+
+Open a shell window and try executing `ls -F /` for yourself (don’t forget that spaces and capitalisation are important!). You can change the prompt too, if you like.  
+
+### Commands & Flags
+
+Every command is a program stored somewhere on the computer, and the shell keeps a list of places to search for commands (the list is in a variable called PATH, but those are concepts we’ll meet later and are not too important at the moment). Recall that commands, flags and arguments are separated by spaces.  
+
+So let’s look at the REPL (read-evaluate-print loop) in more detail. Notice that the “evaluate” step is made of two parts:  
+
+1. Read what was typed (`ls -F /` in our example)
+The shell uses the spaces to split the line into the command, flags, and arguments
+2. Evaluate:
+    -Find a program called `ls`
+    -Execute it, passing it the flags and arguments (`-F` and `/`) to interpret as the program sees fit
+3. Print the output produced by the program.  
+
+and then print the prompt and wait for you to enter another command.  
+
+**Command not found?**  
+If the shell can’t find a program whose name is the command you typed, it will print an error message like:  
+```
+$ ls-F
+-bash: ls-F: command not found
+```
+Usually this means that the command is mis-typed - in this case we omitted the space between `ls` and `-F`.
+
+### Difficulty
+
+It is a different model of interacting than a GUI, and that will take some effort - and some time - to learn. A GUI presents you with choices and you select one. With a **command line interface** (CLI) the choices are combinations of commands and parameters, more like words in a language than buttons on a screen. They are not presented to you so you must learn a few, like learning some vocabulary in a new language. But a small number of commands gets you a long way, and we’ll cover those essential few today.  
+
+### Benefits
+
+The grammar of a shell allows you to combine existing tools into powerful pipelines and handle large volumes of data automatically. Sequences of commands can be written into a script, improving the reproducibility of workflows and allowing you to repeat them easily.  
+
+In addition, the command line is often the easiest way to interact with remote machines and supercomputers. Familiarity with the shell is near essential to run a variety of specialised tools and resources including high-performance computing systems. As clusters and cloud computing systems become more popular for scientific data crunching, being able to interact with the shell is becoming a necessary skill. We can build on the command-line skills covered here to tackle a wide range of scientific questions and computational challenges.
+
+
+## Navigating
+
+The part of the operating system responsible for managing files and directories is called the **file system**. It organizes our data into files, which hold information, and directories (also called “folders”), which hold files or other directories.  
+
+Several commands are frequently used to create, inspect, rename, and delete files and directories. To start exploring them, we’ll go to our open shell window.  
+
+First let’s find out where we are by running a command called `pwd` (which stands for “print working directory”). Directories are like *places* - at any time while we are using the shell we are in exactly one place, called our **current working directory**. Commands mostly read and write files in the current working directory, i.e. “here”, so knowing where you are before running a command is important. `pwd` shows you where you are:  
+
+```
+$ pwd
+/Users/username
+```
+Here, the computer’s response is: `/Users/username`, which is user's home directory:
+
+> The home directory path will look different on different operating systems. On Linux it may look like `/home/username`, and on Windows it will be similar to `C:\Documents and Settings\username` or `C:\Users\username`.
+(Note that it may look slightly different for different versions of Windows.)  
+
+### File System
+
+Here we'll illustrate the filesystem, this will be similar to your own filesystem but not identical:  
+
+*insert filesystem hierarchy diagram - level 1*
+
+At the top is the **root directory** that holds *everything* else. We refer to it using a slash, `/`, character on its own; this is the leading slash in `/Users/username`.  
+
+Inside that directory are several other directories: `bin` (which is where some built-in programs are stored), `data` (for miscellaneous files), `Users` (where users' personal directories are located), `temp` (for temporary file that don't need to be stored long term), etc.  
+
+We know that our current working directory `/Users/username` is stored inside `/Users` because `/Users` is the first part of its name. Similarly, we know that `/Users` is stored inside the root directory `/` because its name begins with `/`.
+
+Underneath `/Users`, we find one directory for each user with an account on the machine. Typically, when you open a new command prompt you will be in your home directory to start:
+
+*insert filesysyem hierarchy diagram - level 2*
+
+
+## Glossary
+
+| Keyword  | Description |
+|:---|:---|
+| **absolute path** | A path that refers to a particular location in a file system. Absolute paths are usually written with respect to the file system’s root directory, and begin with either “/” (on Unix) or “\” (on Microsoft Windows). See also: relative path. |
+| **argument** | A value given to a function or program when it runs. The term is often used interchangeably (and inconsistently) with parameter. |
+
+
+## Reference
+
+| Navigating Files & Directories  | Description |
+|:---|:---|
+| `cd [path]` | Changes the current working directory to the specified path |
+| `ls [path]` | Prints a listing of the specified file or directory. (If `ls` is used alone, the current working directory will be listed.) |
+| | |
+
+
+
+### Shortcuts
+| Command  | Description |
+|:---|:---|
+| `CTRL+A` |  Move to the beginning of the line. |
+| `CTRL+B` |  Moves backward one character. |
+| `CTRL+C` |  Halts the current command. |
+| `CTRL+D` |  Deletes one character backward or logs out of current session, similar to exit. |
+| `CTRL+E` |  Moves to end of line. |
+| `CTRL+F` |  Moves forward one character. |
+| `CTRL+G` |  Aborts the current editing command and ring the terminal bell. |
+| `CTRL+J` |  Same as RETURN. |
+| `CTRL+K` |  Deletes (kill) forward to end of line. |
+| `CTRL+L` |  Clears screen and redisplay the line. |
+| `CTRL+M` |  Same as RETURN. |
+| `CTRL+N` |  Next line in command history. |
+| `CTRL+O` |  Same as RETURN, then displays next line in history file. |
+| `CTRL+P` |  Previous line in command history. |
+| `CTRL+R` |  Searches backward. |
+| `CTRL+S` |  Searches forward. |
+| `CTRL+T` |  Transposes two characters. |
+| `CTRL+U` |  Kills backward from point to the beginning of line. |
+| `CTRL+V` |  Makes the next character typed verbatim. |
+| `CTRL+W` |  Kills the word behind the cursor. |
+| `CTRL+X` |  Lists the possible filename completetions of the current word. |
+| `CTRL+Y` |  Retrieves (yank) last item killed. |
+| `CTRL+Z` |  Stops the current command, resume with `fg` in the foreground or `bg` in the background. |
+| `DELETE` |  Deletes one character backward. |
+| `!!` | Repeats the last command. |
+| `exit` | Logs out of current session. |
+
+### Bash Basics
+| Command  | Description |
+|:---|:---|
+| `export` | Displays all environment variables. |
+| `echo $SHELL` | Displays the shell you’re using. |
+| `echo $BASH_VERSION` | Displays bash version. |
+| `bash` | If you want to use bash (type exit to go back to your normal shell). |
+| `whereis bash` | Finds out where bash is on your system. |
+| `clear` | Clears content on window (hide displayed lines). |
+
+### File Commands
+| Command  | Description |
+|:---|:---|
+| `ls` | Lists your files. |
+| `ls -l` | Lists your files in ‘long format’, which contains the exact size of the file, who owns the file and who has the right to look at it, and when it was last modified. |
+| `ls -a` | Lists all files, including hidden files. |
+| `ln -s [filename] [link]` | Creates symbolic link to file. |
+| `touch [filename]` | Creates or updates your file. |
+| `cat ] [filename]` | Places standard input into file. |
+| `more [filename]` | Shows the first part of a file (move with space and type q to quit). |
+| `head [filename]` | Outputs the first 10 lines of file. |
+| `tail [filename]` | Outputs the last 10 lines of file (useful with -f option). |
+| `emacs [filename]` | Lets you create and edit a file. |
+| `mv [filename1] [filename2]` | Moves a file. |
+| `cp [filename1] [filename2]` | Copies a file. |
+| `rm [filename]` | Removes a file. |
+| `diff [filename1] [filename2]` | Compares files, and shows where they differ. |
+| `wc [filename]` | Tells you how many lines, words and characters there are in a file. |
+| `chmod -options [filename]` | Lets you change the read, write, and execute permissions on your files. |
+| `gzip [filename]` | Compresses files. |
+| `gunzip [filename]` | Uncompresses files compressed by gzip. |
+| `gzcat [filename]` | Lets you look at gzipped file without actually having to gunzip it. |
+| `lpr [filename]` | Print the file. |
+| `lpq` | Check out the printer queue. |
+| `lprm [jobnumber]` | Remove something from the printer queue. |
+| `genscript` | Converts plain text files into postscript for printing and gives you some options for formatting. |
+| `dvips [filename]` | Print .dvi files (i.e. files produced by LaTeX). |
+| `grep [pattern] [filenames]` | Looks for the string in the files. |
+| `grep -r [pattern] [dir]` | Search recursively for pattern in directory. |
+
+### Directory Commands
+| Command  | Description |
+|:---|:---|
+| `mkdir [dirname]` | Makes a new directory. |
+| `cd` | Changes current working directory to home. |
+| `cd [path]` | Changes directory to specified `[path]`. |
+| `pwd` | Tells you where you currently are. |
+
