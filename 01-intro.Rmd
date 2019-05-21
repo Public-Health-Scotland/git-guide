@@ -1,2 +1,35 @@
-# Introduction / Quick Start {-}
+# Get Started {-}
 
+## Start Git
+
+Git is a version control system (VCS), head to [Version Control with Git] for the full background, training, and reference materials. 
+
+We recommend that git is used along with a hosting repository, such as GitHub (or Gitea, GitLab, etc.) and that the [GitHub workflow]() is followed. However, git can be used locally while working on a project. The steps outlined here are for this purpose and should only be followed for a personal project that is **local or on your personal network folder**. For collaborative work, see the getting started section for [Start GitHub].
+
+Throughout the guide, `<...>` has been used to indicate text which is user specific and should be edited with your own details. 
+
+
+### Initial Setup
+
+These intructions should only need to be followed once or when setting up a new device.
+
+1. **Install git** - Git is a free, open-source, software available from https://git-scm.com/. If you work within Public Health & Intelligence, request the software from IT through the [Service Portal](https://nhsnss.service-now.com/sp). Once authorised, this will allow you to download it from the Software Center on your machine. 
+
+2. **Configure your details** - Git needs to know who you are, use the following commands to configure your username and email:
+
+* `git config --global user.email <NHS email address>`
+* `git config --global user.name <your name>`
+
+At any time you can check what the current user details are using:
+
+* `git config --global user.email`
+
+
+### Project Steps
+
+
+
+## Start GitHub
+👋
+
+## Start RStudio Integration 
