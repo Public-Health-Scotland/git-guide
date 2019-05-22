@@ -5,7 +5,7 @@
 
 Git is a version control system (VCS), head to [Version Control with Git] for the full background, training, and reference materials. 
 
-We recommend that Git is used along with a hosting repository, such as GitHub (or Gitea, GitLab, etc.) and that the [Git Flow] is followed. However, Git can be used locally while working on a project. The steps outlined here are for this purpose and should only be followed for a personal project that is **local or on your personal network folder**. For collaborative work, see the getting started section for [Start GitHub].
+We recommend that Git is used along with a hosting repository, such as GitHub (or Gitea, GitLab, etc.) and that the [GitHub Flow] is followed. However, Git can be used locally while working on a project. The steps outlined here are for this purpose and should only be followed for a personal project that is **local or on your personal network folder**. For collaborative work, see the getting started section for [Start GitHub].
 
 Throughout the guide, `<...>` has been used to indicate text which is user specific and should be edited with your own details. 
 
@@ -187,7 +187,7 @@ $
 10. **Delete working branch** - when you're finished with your working branch delete it using `git branch -d <branch name>`, this will help to avoid merge conflicts. There is no need to have long-living branches; when you want to make further changes to your project, simply create a new working branch. 
 
 
-### Top Tips
+### Top Tips {-}
 
 These are some tips/references to keep in mind when working with Git:
 
@@ -205,9 +205,30 @@ These are some tips/references to keep in mind when working with Git:
 GitHub is a Git hosting repository that provides users with tools to ship better code through command line features, issues (threaded discussions), pull requests, and code review. GitHub builds collaboration directly into the development process. Work is organised into repositories, where users can outline requirements or direction and set expectations for team members. Then, using the [GitHub Flow], developers simply create a branch to work on updates, commit changes to save them, open a pull request to propose and dicsuss changes, and merge pull requests once everyone is on the same page. See [GitHub Workflow] for more details.
 
 
-### GitHub Flow
+### GitHub Flow {-}
+
+```{r fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html')}
+knitr::include_graphics('images/githubflow.png', dpi = NA)
+```
+
+This is our recommended workflow within the organisation. It is a branch-based workflow and involves keeping the master branch clean and 'production ready'/fully-functional at all times. 
+
+1. **Create a branch** - topic/per-person branches created from the master allow teams to contribute to many parallel efforts. Short-lived topic branches, in particular, keep teams focussed and results in quick ships. 
+2. **Add commits** - these are snapshots of development efforts within a branch and create safe, revertible points in the project's history.
+3. **Open a pull request** - pull requests publicise the project's ongoing efforts and set the tone for a transparent development process.
+4. **Discuss and review code** - teams participate in code reviews by commenting, testing, and reviewing open pull requests. Code review is at the centre of an open and participatory culture. Pull requests should be approved by at least one collaborator - we recommend you assign a specific reviewer(s) to check the work. In order to ensure the master branch remains 'production ready' we also recommend that changes are tested by the reviewer before approving.
+5. **Merge** - upon clicking merge, GitHub automatically performs the equivalent of a local `git merge` operation. GitHub also keeps the entire branch development history on the merged pull request.
+6. **Deploy** - teams can choose the best release cycles or incorporate continuous integration tools and operate with the assurance that code on the deployment branch has gone through a robust workflow.
 
 
+### Setup GitHub Account {-}
 
+1. **Sign up** - In order to use GitHub, you'll need to have a personal GitHub account, you can set that up here [http://github.com]. If using your NHS email address ensure you **don't use the same password as your NHS email account**. 
+2. **Edit your details** - you may be able to set these items up as part of the sign up process. If not, follow the links and edit them now.
+
+* Go to your [Profile Settings](https://github.com/settings/profile) and add your details with a picture of yourself if you feel comfortable to do so.
+* Go to your [Account Settings](https://github.com/settings/admin) and make sure your username is set to be your full name. This helps to identify users as generated GitHub handles tend to pretty obscure.
+
+3. **Get added to Transforming Publishing** - this step is optional for users who are doing work within the Transforming Publishing team. Email one of the admins [here](https://github.com/orgs/NHS-NSS-transforming-publications/teams/transforming-publishing-team/members?utf8=%E2%9C%93&query=+role%3Amaintainer) to get added.
 
 ## Start RStudio Integration {-}
