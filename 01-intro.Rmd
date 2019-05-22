@@ -229,6 +229,7 @@ This is our recommended workflow within the organisation. It is a branch-based w
 * Go to your [Profile Settings](https://github.com/settings/profile) and add your details with a picture of yourself if you feel comfortable to do so.
 * Go to your [Account Settings](https://github.com/settings/admin) and make sure your username is set to be your full name. This helps to identify users as generated GitHub handles tend to pretty obscure.
 
-3. **Get added to Transforming Publishing** - this step is optional for users who are doing work within the Transforming Publishing team. Email one of the admins [here](https://github.com/orgs/NHS-NSS-transforming-publications/teams/transforming-publishing-team/members?utf8=%E2%9C%93&query=+role%3Amaintainer) to get added.
+3. **Get added to Transforming Publishing** - this step is optional and only for users who are doing work within the Transforming Publishing team. Email one of the admins [here](https://github.com/orgs/NHS-NSS-transforming-publications/teams/transforming-publishing-team/members?utf8=%E2%9C%93&query=+role%3Amaintainer) to get added.
+
 
 ## Start RStudio Integration {-}
