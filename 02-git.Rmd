@@ -31,7 +31,12 @@ A repository, or Git project, encompasses the entire collection of files and fol
 Working in repositories keeps development projects organized and protected. Developers are encouraged to fix bugs, or create fresh features, without fear of derailing mainline development efforts. Git facilitates this through the use of topic branches: lightweight pointers to commits in history that can be easily created and deprecated when no longer needed.
 
 
-## Reference
+### Merge Conflicts
+
+*Enter information about merge conflicts here*
+
+
+## Git Command Reference
 
 ### Git Basics
 | Command  | Description |
