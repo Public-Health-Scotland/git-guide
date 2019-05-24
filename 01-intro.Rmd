@@ -332,12 +332,12 @@ $
 3. **Open a pull request** - when you've made changes that are ready to be included into production, open a pull request to propose and collaborate. These changes are proposed in that branch, which ensures that the master branch only contains finished and approved work. 
 
     1. On GitHub, go to the main page of the repository.
-    2. In the "Branch" menu, choose the branch that contains *your* commits.
+    2. In the "Branch:" menu, choose the branch that contains *your* commits.
     3. To the right of the "Branch" menu, click "New pull request".
     4. Use the "base:" branch dropdown menu to select the branch you'd like to merge your changes into.
     5. Use the "compare:" branch dropdown menu to choose the topic branch your changes are in.
     6. Type a title a description for your pull request.
-    7. If your pull request is ready for review, click "Create Pull Request". To create a draft pull request, use the dropdown menu and select "Create Draft Pull Request", then click "Draft Pull Request".
+    7. If your pull request is ready for review, click "Create Pull Request". *To create a draft pull request, use the dropdown menu and select "Create Draft Pull Request", then click "Draft Pull Request"*.
 
 
 ## Start RStudio Integration {-}
