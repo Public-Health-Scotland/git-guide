@@ -342,4 +342,55 @@ $
 
 ## Start RStudio Integration {-}
 
-1. **Configuration** - 
+RStudio provides a GUI (Graphical User Interface) to use Git and GitHub. Basically, this means that you don't need to use the command line and type out the instructions. Instead, there are buttons, prompts, and windows making the process of using version control user friendly and relatively straightforward.
+
+
+### Setup and Configuration {-}
+
+First, Git and RStudio must be installed. Now, let's configure RStudio to use Git.
+
+1. **Open RStudio**
+2. **Go to Tools in the menu bar > Global Options > Git/SVN**
+3. **If "Git executable:" shows "*(none)*", click "Browse" and select the git executable installed on your system.** - On Windows, git.exe will likely be be in "Program Files", specifically try `C:/Program Files/Git/bin/git.exe`.
+
+```{r fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html')}
+knitr::include_graphics('images/rstudio-globalopt-gitsvn.png', dpi = NA)
+```
+
+That's it for attaching RStudio and Git. This will allow you to utilise the RStudio Git GUI tools inside R Projects. 
+
+
+### RStudio Project Steps {-}
+
+1. **New R Project** - anytime you do any work that requires code, you should create an R project. This keeps your work together, seperates settings for different projects, and allows the use of version control. To do that, go to File in the menu bar and select "New Project". In the window that appears, name your project, choose a folder/directory for where to store it, and ensure "Create a git repository" is selected.
+
+```{r fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html')}
+knitr::include_graphics('images/rstudio-newproj.png', dpi = NA)
+```
+
+2. **Change, stage...** - RStudio will keep track of all changes made to the files within your R project (not just R files). Any changes made will show up in the "Git" tab, usually the same pane that the "Environment" tab is on. When you're ready to commit, save the files you're working with and stage them by ticking the box to the left of the files in the Git pane, and then click on the "Commit" button.
+
+```{r fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html')}
+knitr::include_graphics('images/rstudio-stage.png', dpi = NA)
+```
+
+3. **Commit** - After clicking on "Commit", a window will appear with the changes made for review and a prompt for a "Commit message". Your commit message should describe the changes made and be consise, meaningful and written in imperative mode. Then, just click on "Commit"!
+
+```{r fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html')}
+knitr::include_graphics('images/rstudio-commit.png', dpi = NA)
+```
+
+4. **Branching** - As part of the recommended workflow, you should use branches to develop individual features, this means that you can edit files but keep an original to revert back to if required. Additionally, when team working, it allows for many parallel efforts, keeping teams focussed, and for shipping updates faster. 
+
+- **New Branch** - To create a new branch in RStudio, just click the "New Branch" button in the Git pane and give it a name. To switch between branches, click the dropdown to the right of the "New Branch" button and click the name of the branch you want to switch to. *(When you select a branch, the state of the files that you committed in that branch will appear in both the Files pane in RStudio, and in your file explorer.)*
+
+```{r fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html')}
+knitr::include_graphics('images/rstudio-branch.png', dpi = NA)
+```
+
+- **Merge Branches** - When work from the working branch should be merged back to the master branch, this currently has no GUI option and must be done on the command line. This can be accessed from the "More" menu in the Git pane and selected "Shell" or in the RStudio Terminal window. Once you're in either of these, enter the command git merge <branch>.
+
+```
+username@NSS000000  ~/Documents/demo-project  (master)
+$ git merge <branch>
+```
