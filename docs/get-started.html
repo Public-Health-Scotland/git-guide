@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Get Started | A Comprehensive Guide to Git &amp; GitHub</title>
+  <meta name="description" content="A comprehensive guide for learning and using Git and GitHub">
+  <meta name="generator" content="bookdown  and GitBook 2.6.7">
+
+  <meta property="og:title" content="Get Started | A Comprehensive Guide to Git &amp; GitHub" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:image" content="images/cover.png" />
+  <meta property="og:description" content="A comprehensive guide for learning and using Git and GitHub" />
+  <meta name="github-repo" content="NHS-NSS-transforming-publications/git-guide" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Get Started | A Comprehensive Guide to Git &amp; GitHub" />
+  
+  <meta name="twitter:description" content="A comprehensive guide for learning and using Git and GitHub" />
+  <meta name="twitter:image" content="images/cover.png" />
+
+<meta name="author" content="Russell McCreath">
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="index.html">
+<link rel="next" href="the-shell.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="" data-path="get-started.html"><a href="get-started.html"><i class="fa fa-check"></i>Get Started</a><ul>
+<li class="chapter" data-level="" data-path="get-started.html"><a href="get-started.html#start-git"><i class="fa fa-check"></i>Start Git</a><ul>
+<li class="chapter" data-level="" data-path="get-started.html"><a href="get-started.html#initial-setup"><i class="fa fa-check"></i>Initial Setup</a></li>
+<li class="chapter" data-level="" data-path="get-started.html"><a href="get-started.html#git-project-steps"><i class="fa fa-check"></i>Git Project Steps</a></li>
+<li class="chapter" data-level="" data-path="get-started.html"><a href="get-started.html#top-tips"><i class="fa fa-check"></i>Top Tips</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="get-started.html"><a href="get-started.html#start-github"><i class="fa fa-check"></i>Start GitHub</a><ul>
+<li class="chapter" data-level="" data-path="get-started.html"><a href="get-started.html#github-flow"><i class="fa fa-check"></i>GitHub Flow</a></li>
+<li class="chapter" data-level="" data-path="get-started.html"><a href="get-started.html#setup-github-account"><i class="fa fa-check"></i>Setup GitHub Account</a></li>
+<li class="chapter" data-level="" data-path="get-started.html"><a href="get-started.html#new-project-repository"><i class="fa fa-check"></i>New Project Repository</a></li>
+<li class="chapter" data-level="" data-path="get-started.html"><a href="get-started.html#existing-project-repository"><i class="fa fa-check"></i>Existing Project Repository</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="get-started.html"><a href="get-started.html#start-rstudio-integration"><i class="fa fa-check"></i>Start RStudio Integration</a><ul>
+<li class="chapter" data-level="" data-path="get-started.html"><a href="get-started.html#setup-and-configuration"><i class="fa fa-check"></i>Setup and Configuration</a></li>
+<li class="chapter" data-level="" data-path="get-started.html"><a href="get-started.html#rstudio-project-steps"><i class="fa fa-check"></i>RStudio Project Steps</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="the-shell.html"><a href="the-shell.html"><i class="fa fa-check"></i><b>1</b> The Shell</a><ul>
+<li class="chapter" data-level="1.1" data-path="the-shell.html"><a href="the-shell.html#background"><i class="fa fa-check"></i><b>1.1</b> Background</a></li>
+<li class="chapter" data-level="1.2" data-path="the-shell.html"><a href="the-shell.html#setup"><i class="fa fa-check"></i><b>1.2</b> Setup</a><ul>
+<li class="chapter" data-level="1.2.1" data-path="the-shell.html"><a href="the-shell.html#windows"><i class="fa fa-check"></i><b>1.2.1</b> Windows</a></li>
+<li class="chapter" data-level="1.2.2" data-path="the-shell.html"><a href="the-shell.html#linux"><i class="fa fa-check"></i><b>1.2.2</b> Linux</a></li>
+<li class="chapter" data-level="1.2.3" data-path="the-shell.html"><a href="the-shell.html#mac-os"><i class="fa fa-check"></i><b>1.2.3</b> Mac OS</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="the-shell.html"><a href="the-shell.html#introduction"><i class="fa fa-check"></i><b>1.3</b> Introduction</a><ul>
+<li class="chapter" data-level="1.3.1" data-path="the-shell.html"><a href="the-shell.html#commands-flags"><i class="fa fa-check"></i><b>1.3.1</b> Commands &amp; Flags</a></li>
+<li class="chapter" data-level="1.3.2" data-path="the-shell.html"><a href="the-shell.html#difficulty"><i class="fa fa-check"></i><b>1.3.2</b> Difficulty</a></li>
+<li class="chapter" data-level="1.3.3" data-path="the-shell.html"><a href="the-shell.html#benefits"><i class="fa fa-check"></i><b>1.3.3</b> Benefits</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="the-shell.html"><a href="the-shell.html#navigating"><i class="fa fa-check"></i><b>1.4</b> Navigating</a><ul>
+<li class="chapter" data-level="1.4.1" data-path="the-shell.html"><a href="the-shell.html#file-system"><i class="fa fa-check"></i><b>1.4.1</b> File System</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path="the-shell.html"><a href="the-shell.html#glossary"><i class="fa fa-check"></i><b>1.5</b> Glossary</a></li>
+<li class="chapter" data-level="1.6" data-path="the-shell.html"><a href="the-shell.html#reference"><i class="fa fa-check"></i><b>1.6</b> Reference</a><ul>
+<li class="chapter" data-level="1.6.1" data-path="the-shell.html"><a href="the-shell.html#shortcuts"><i class="fa fa-check"></i><b>1.6.1</b> Shortcuts</a></li>
+<li class="chapter" data-level="1.6.2" data-path="the-shell.html"><a href="the-shell.html#bash-basics"><i class="fa fa-check"></i><b>1.6.2</b> Bash Basics</a></li>
+<li class="chapter" data-level="1.6.3" data-path="the-shell.html"><a href="the-shell.html#file-commands"><i class="fa fa-check"></i><b>1.6.3</b> File Commands</a></li>
+<li class="chapter" data-level="1.6.4" data-path="the-shell.html"><a href="the-shell.html#directory-commands"><i class="fa fa-check"></i><b>1.6.4</b> Directory Commands</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="version-control-with-git.html"><a href="version-control-with-git.html"><i class="fa fa-check"></i><b>2</b> Version Control with Git</a><ul>
+<li class="chapter" data-level="2.1" data-path="version-control-with-git.html"><a href="version-control-with-git.html#what-is-version-control"><i class="fa fa-check"></i><b>2.1</b> What is Version Control?</a></li>
+<li class="chapter" data-level="2.2" data-path="version-control-with-git.html"><a href="version-control-with-git.html#git"><i class="fa fa-check"></i><b>2.2</b> Git</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="version-control-with-git.html"><a href="version-control-with-git.html#merge-conflicts"><i class="fa fa-check"></i><b>2.2.1</b> Merge Conflicts</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="version-control-with-git.html"><a href="version-control-with-git.html#git-command-reference"><i class="fa fa-check"></i><b>2.3</b> Git Command Reference</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="version-control-with-git.html"><a href="version-control-with-git.html#git-basics"><i class="fa fa-check"></i><b>2.3.1</b> Git Basics</a></li>
+<li class="chapter" data-level="2.3.2" data-path="version-control-with-git.html"><a href="version-control-with-git.html#undoing-changes"><i class="fa fa-check"></i><b>2.3.2</b> Undoing changes</a></li>
+<li class="chapter" data-level="2.3.3" data-path="version-control-with-git.html"><a href="version-control-with-git.html#rewriting-git-history"><i class="fa fa-check"></i><b>2.3.3</b> Rewriting Git History</a></li>
+<li class="chapter" data-level="2.3.4" data-path="version-control-with-git.html"><a href="version-control-with-git.html#git-branches"><i class="fa fa-check"></i><b>2.3.4</b> Git Branches</a></li>
+<li class="chapter" data-level="2.3.5" data-path="version-control-with-git.html"><a href="version-control-with-git.html#remote-repositories"><i class="fa fa-check"></i><b>2.3.5</b> Remote Repositories</a></li>
+<li class="chapter" data-level="2.3.6" data-path="version-control-with-git.html"><a href="version-control-with-git.html#git-config"><i class="fa fa-check"></i><b>2.3.6</b> Git Config</a></li>
+<li class="chapter" data-level="2.3.7" data-path="version-control-with-git.html"><a href="version-control-with-git.html#git-log"><i class="fa fa-check"></i><b>2.3.7</b> Git Log</a></li>
+<li class="chapter" data-level="2.3.8" data-path="version-control-with-git.html"><a href="version-control-with-git.html#git-diff"><i class="fa fa-check"></i><b>2.3.8</b> Git Diff</a></li>
+<li class="chapter" data-level="2.3.9" data-path="version-control-with-git.html"><a href="version-control-with-git.html#git-reset"><i class="fa fa-check"></i><b>2.3.9</b> Git Reset</a></li>
+<li class="chapter" data-level="2.3.10" data-path="version-control-with-git.html"><a href="version-control-with-git.html#git-rebase"><i class="fa fa-check"></i><b>2.3.10</b> Git Rebase</a></li>
+<li class="chapter" data-level="2.3.11" data-path="version-control-with-git.html"><a href="version-control-with-git.html#git-pull"><i class="fa fa-check"></i><b>2.3.11</b> Git Pull</a></li>
+<li class="chapter" data-level="2.3.12" data-path="version-control-with-git.html"><a href="version-control-with-git.html#git-push"><i class="fa fa-check"></i><b>2.3.12</b> Git Push</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="github.html"><a href="github.html"><i class="fa fa-check"></i><b>3</b> GitHub</a><ul>
+<li class="chapter" data-level="3.1" data-path="github.html"><a href="github.html#github-workflow"><i class="fa fa-check"></i><b>3.1</b> GitHub Workflow</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="rstudio-git-integrations.html"><a href="rstudio-git-integrations.html"><i class="fa fa-check"></i><b>4</b> RStudio Git Integrations</a></li>
+<li class="chapter" data-level="" data-path="acknowledgements.html"><a href="acknowledgements.html"><i class="fa fa-check"></i>Acknowledgements</a><ul>
+<li class="chapter" data-level="4.1" data-path="acknowledgements.html"><a href="acknowledgements.html#git-1"><i class="fa fa-check"></i><b>4.1</b> Git</a></li>
+<li class="chapter" data-level="4.2" data-path="acknowledgements.html"><a href="acknowledgements.html#github-1"><i class="fa fa-check"></i><b>4.2</b> GitHub</a></li>
+<li class="chapter" data-level="4.3" data-path="acknowledgements.html"><a href="acknowledgements.html#version-control-in-rstudio"><i class="fa fa-check"></i><b>4.3</b> Version Control in RStudio</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">A Comprehensive Guide to Git &amp; GitHub</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="get-started" class="section level1 unnumbered">
+<h1>Get Started</h1>
+<div id="start-git" class="section level2 unnumbered">
+<h2>Start Git</h2>
+<p>Git is a version control system (VCS), head to <a href="version-control-with-git.html#version-control-with-git">Version Control with Git</a> for the full background, training, and reference materials.</p>
+<p>We recommend that Git is used along with a hosting repository, such as GitHub (or Gitea, GitLab, etc.) and that the <a href="get-started.html#github-flow">GitHub Flow</a> is followed. However, Git can be used locally while working on a project. The steps outlined here are for this purpose and should only be followed for a personal project that is <strong>local or on your personal network folder</strong>. For collaborative work, see the getting started section for <a href="get-started.html#start-github">Start GitHub</a>.</p>
+<p>Throughout the guide, <code>&lt;...&gt;</code> has been used to indicate text which is user specific and should be edited with your own details.</p>
+<div id="initial-setup" class="section level3 unnumbered">
+<h3>Initial Setup</h3>
+<p>These intructions should only need to be followed once or when setting up a new device.</p>
+<ol style="list-style-type: decimal">
+<li><p><strong>Install Git</strong> - Git is a free, open-source, software available from <a href="https://git-scm.com/" class="uri">https://git-scm.com/</a>. If you work within Public Health &amp; Intelligence, request the software from IT through the <a href="https://nhsnss.service-now.com/sp">Service Portal</a>. Once authorised, this will allow you to download it from the Software Center on your machine.</p></li>
+<li><p><strong>Configure your details</strong> - Git needs to know who you are, use the following commands to configure your username and email:</p></li>
+</ol>
+<ul>
+<li><code>git config --global user.email &lt;NHS email address&gt;</code></li>
+<li><code>git config --global user.name &lt;your name&gt;</code></li>
+</ul>
+<p>At any time you can check what the current user details are using:</p>
+<ul>
+<li><code>git config --global user.email</code></li>
+</ul>
+</div>
+<div id="git-project-steps" class="section level3 unnumbered">
+<h3>Git Project Steps</h3>
+<ol style="list-style-type: decimal">
+<li><strong>Navigate to the directory</strong> - navigate to the project folder on the shell command line, see <a href="the-shell.html#the-shell">The Shell</a> for the background, training, and reference materials on the Shell command line. You can also navigate the project folder using Windows Explorer, right click, and select “Git Bash Here”, this will open a command-line interface for that folder. From here, you can use Git and shell commands. <em>The line prompt for the user to enter commands is <code>$</code>, other lines are generated by the Shell.</em></li>
+</ol>
+<pre><code>username@NSS000000 MINGW64 ~
+$ cd Documents/project
+
+username@NSS000000 MINGW64 ~Documents/project
+$</code></pre>
+<ol start="2" style="list-style-type: decimal">
+<li><strong>Initialise Git</strong> - in the command line enter <code>git init</code>. Git is now initialised inside that project folder/directory and can track any files or sub-folders.</li>
+</ol>
+<pre><code>username@NSS000000 MINGW64 ~/Documents/project
+$ git init
+Initialized empty Git repository in C:/Users/username/Documents/project/.git/
+
+username@NSS000000 MINGW64 ~/Documents/project (master)
+$ </code></pre>
+<p>You’ll notice that you’re on the “<em>master</em>” branch. For set-up purposes, we’ll continue to work on the <em>master</em> branch but note that it’s best practice to do any work in a separate branch which is later merged into the <em>master</em> when ready.</p>
+<ol start="3" style="list-style-type: decimal">
+<li><strong>Check for changes</strong> - Git will recongise any files that have been added or changed. Enter <code>git status</code> to see an overview.</li>
+</ol>
+<pre><code>username@NSS000000 MINGW64 ~/Documents/project (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)
+    
+      .gitignore
+      project.Rproj
+      
+nothing added to commit but untracked files present (use &quot;git add&quot; to track)
+
+username@NSS000000 MINGW64 ~/Documents/project (master)
+$</code></pre>
+<p>In this example, an R Project has been started with a .gitignore file. <em>A .gitignore file is used to tell Git which files and folders to ignore, this is particularly imporant when working with GitHub and ensures that no sensitive information or data files are uploaded to GitHub. An example .gitignore file can be found <a href="https://github.com/NHS-NSS-transforming-publications/GitHub-guidance/blob/master/.gitignore">here</a>. Be aware that other file formats may also need to be considered to be added in this file.</em></p>
+<ol start="4" style="list-style-type: decimal">
+<li><strong>Track files</strong> - in this example Git has recognised two untracked files. In order to track them we must first <em>stage</em> them using <code>git add &lt;file name&gt;</code> (if the file name contains spaces you will need to put single quotation marks around it, e.g. <code>'file name'</code>) You can stage each file individually or use <code>git add .</code> to stage all files which have been detected by Git. <strong>It is usually safer to stage each file separately.</strong></li>
+</ol>
+<pre><code>username@NSS000000 MINGW64 ~/Documents/project (master)
+$ git add .gitignore
+
+username@NSS000000 MINGW64 ~/Documents/project (master)
+$ git add project.Rproj
+
+username@NSS000000 MINGW64 ~/Documents/project (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use &quot;git rm --cached &lt;file&gt;...&quot; to unstage)
+      
+      new file:   .gitignore
+      new file:   project.Rproj
+ 
+   
+username@NSS000000 MINGW64 ~/Documents/project (master)
+$</code></pre>
+<ol start="5" style="list-style-type: decimal">
+<li><strong>Commit changes</strong> - now, a set of staged changes can be committed using <code>git commit -m &lt;commit message&gt;</code>. When entering you commit message, ensure that it’s consise, meaningful and written in imperative mode.</li>
+</ol>
+<pre><code>username@NSS000000 MINGW64 ~/Documents/project (master)
+$ git commit -m &quot;Create R project&quot;
+[master (root-commit) 1ab2cde] Create R project
+  2 files changed, 17 insertions(+)
+  create mode 100644 .gitignore
+  create mode 100644 project.Rproj
+  
+username@NSS000000 MINGW64 ~/Documents/project (master)
+$</code></pre>
+<p>Git has now stored a snapshot of the project folder and its content at that point in time. Going forward, it will now be possible to check back through the old version of the folder via the commits and, if necessary, revert to a previous version. To see a history of ocmmits on a branch use <code>git log</code>.</p>
+<ol start="6" style="list-style-type: decimal">
+<li><strong>Create a branch</strong> - when first created, a branch is an exact copy of the original folder and contents (the master branch). As you work on the project, the working branch will change but leave the master branch untouched. This means that you always retain a master copy of the project and you only merge changes when you’re satisfied that they’re ready. To create a branch use <code>git branch &lt;name of branch&gt;</code>. To switch to working on the new working branch, use <code>git checkout &lt;name of branch&gt;</code>. These two steps can be done via one command, <code>git checkout -b &lt;name of branch</code>.</li>
+</ol>
+<pre><code>username@NSS000000 MINGW64 ~/Documents/project (master)
+$ git checkout -b feature
+Switched to branch &#39;feature&#39;
+
+username@NSS000000 MINGW64 ~/Documents/project (feature)
+$</code></pre>
+<ol start="7" style="list-style-type: decimal">
+<li><strong>Check for changes to branch</strong> - like in step 3, you’ll do work in your project and have changes to commit, use <code>git status</code> as before to see an overview. Then, keep saving and committing your work using <code>git add &lt;file&gt;</code> and <code>git commit -m &lt;commit message&gt;</code>.</li>
+</ol>
+<pre><code>username@NSS000000 MINGW64 ~/Documents/project (feature)
+$ git status
+On branch feature
+Changes not staged for commit:
+  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)
+  (use &quot;git checkout -- &lt;file&gt;...&quot; to discard changes in working directory)
+  
+      modified:   script.R
+      
+no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)
+
+username@NSS000000 MINGW64 ~/Documents/project (feature)
+$ git add script.R
+
+username@NSS000000 MINGW64 ~/Documents/project (feature)
+$ git commit -m &quot;Set up new script&quot;
+[feature a1bc23d] Set up new script
+  1 file changed, 1 insertion(+)</code></pre>
+<ol start="8" style="list-style-type: decimal">
+<li><strong>Check for branch differences</strong> - when you want to merge the changes into the master branch, you’ll want to compare them first. You can see the changes made by using <code>git diff &lt;master branch&gt; &lt;working branch&gt;</code>. On the command line, insertions have plus (<code>+</code>) signs at the start of the line while any deletions will have a negative (<code>-</code>) sign.</li>
+</ol>
+<pre><code>username@NSS000000 MINGW64 ~/Documents/project (feature)
+$ git checkout master
+Switched to branch &#39;master&#39;
+
+username@NSS000000 MINGW64 ~/Documents/project (master)
+$ git diff master feature
+diff --git a/script.R b/script.R
+new file modile 100644
+index 0000000..fe32d10
+--- /dev/null
++++ b/script.R
+@@ -0,0 +1,1 @@
++ #This is a demo R script with no content
+\ No newline at end of file
+
+username@NSS000000 MINGW64 ~/Documents/project (master)
+$</code></pre>
+<ol start="9" style="list-style-type: decimal">
+<li><strong>Merge changes into master branch</strong> - when you’re ready to make the merge into the master branch, ensure you’re on the master branch and use <code>git merge &lt;working branch&gt;</code>.</li>
+</ol>
+<pre><code>username@NSS000000 MINGW64 ~/Documents/project (master)
+$ git merge feature
+Updating 111abc0..f999ed0
+Fast-forward
+  script.R | 1 +
+  1 file changed, 1 insertion (+)
+  create mode 100644 script.R
+  
+username@NSS000000 MINGW64 ~/Documents/project (master)
+$</code></pre>
+<ol start="10" style="list-style-type: decimal">
+<li><strong>Delete working branch</strong> - when you’re finished with your working branch delete it using <code>git branch -d &lt;branch name&gt;</code>, this will help to avoid merge conflicts. There is no need to have long-living branches; when you want to make further changes to your project, simply create a new working branch.</li>
+</ol>
+</div>
+<div id="top-tips" class="section level3 unnumbered">
+<h3>Top Tips</h3>
+<p>These are some tips/references to keep in mind when working with Git:</p>
+<ul>
+<li>See <a href="version-control-with-git.html#git-command-reference">Git Command Reference</a> for a full list of commands that can be used in Git.</li>
+<li>Although it’s good to use version control throughout a project, Git can be initialised on an exisitng project folder.</li>
+<li>Commit often. Commits are the project history so commit after a section of code is completed, before lunch, at the end of the day, etc.</li>
+<li><a href="https://github.com/erlang/otp/wiki/writing-good-commit-messages">Write good commit messages</a>. The messages should be succint, meaningful, and written in imperative form (i.e. “Add x, y, z” not “Added x, y, z”).</li>
+<li>Delete branches after merging. This reduces risks of merge conflicts and keeps your work set-up tidy.</li>
+<li>It’s possible to have multiple branches for working on or fixing multiple features of your project, but be aware that this increases the chance of a merge conflict.</li>
+<li>See <a href="version-control-with-git.html#merge-conflicts">Merge Conflicts</a> for more information about what they are, and how to avoid/resolve them.</li>
+</ul>
+</div>
+</div>
+<div id="start-github" class="section level2 unnumbered">
+<h2>Start GitHub</h2>
+<p>GitHub is a Git hosting repository that provides users with tools to ship better code through command line features, issues (threaded discussions), pull requests, and code review. GitHub builds collaboration directly into the development process. Work is organised into repositories, where users can outline requirements or direction and set expectations for team members. Then, using the <a href="get-started.html#github-flow">GitHub Flow</a>, developers simply create a branch to work on updates, commit changes to save them, open a pull request to propose and dicsuss changes, and merge pull requests once everyone is on the same page. See <a href="github.html#github-workflow">GitHub Workflow</a> for more details.</p>
+<div id="github-flow" class="section level3 unnumbered">
+<h3>GitHub Flow</h3>
+<p><img src="images/githubflow.png" style="display: block; margin: auto;" /></p>
+<p>This is our recommended workflow within the organisation. It is a branch-based workflow and involves keeping the master branch clean and ‘production ready’/fully-functional at all times.</p>
+<ol style="list-style-type: decimal">
+<li><strong>Create a branch</strong> - topic/per-person branches created from the master allow teams to contribute to many parallel efforts. Short-lived topic branches, in particular, keep teams focussed and results in quick ships.</li>
+<li><strong>Add commits</strong> - these are snapshots of development efforts within a branch and create safe, revertible points in the project’s history.</li>
+<li><strong>Open a pull request</strong> - pull requests publicise the project’s ongoing efforts and set the tone for a transparent development process.</li>
+<li><strong>Discuss and review code</strong> - teams participate in code reviews by commenting, testing, and reviewing open pull requests. Code review is at the centre of an open and participatory culture. Pull requests should be approved by at least one collaborator - we recommend you assign a specific reviewer(s) to check the work. In order to ensure the master branch remains ‘production ready’ we also recommend that changes are tested by the reviewer before approving.</li>
+<li><strong>Merge</strong> - upon clicking merge, GitHub automatically performs the equivalent of a local <code>git merge</code> operation. GitHub also keeps the entire branch development history on the merged pull request.</li>
+<li><strong>Deploy</strong> - teams can choose the best release cycles or incorporate continuous integration tools and operate with the assurance that code on the deployment branch has gone through a robust workflow.</li>
+</ol>
+</div>
+<div id="setup-github-account" class="section level3 unnumbered">
+<h3>Setup GitHub Account</h3>
+<p>These instructions are for first-time users of GitHub.</p>
+<ol style="list-style-type: decimal">
+<li><strong>Sign up</strong> - In order to use GitHub, you’ll need to have a personal GitHub account, you can set that up here [<a href="http://github.com" class="uri">http://github.com</a>]. If using your NHS email address ensure you <strong>don’t use the same password as your NHS email account</strong>.</li>
+<li><strong>Edit your details</strong> - you will be able to set these items up as part of the sign up process. Otherwise, follow the links and edit them now.</li>
+</ol>
+<ul>
+<li>Go to your <a href="https://github.com/settings/profile">Profile Settings</a> and add your details with a picture of yourself if you feel comfortable to do so.</li>
+<li>Go to your <a href="https://github.com/settings/admin">Account Settings</a> and make sure your username is set to be your full name. This helps to identify users as generated GitHub handles tend to pretty obscure.</li>
+</ul>
+<ol start="3" style="list-style-type: decimal">
+<li><strong>Get added to Transforming Publishing</strong> - this step is optional and only for users who are doing work within the Transforming Publishing team. Email one of the admins <a href="https://github.com/orgs/NHS-NSS-transforming-publications/teams/transforming-publishing-team/members?utf8=%E2%9C%93&amp;query=+role%3Amaintainer">here</a> to request being added to the organisation.</li>
+</ol>
+</div>
+<div id="new-project-repository" class="section level3 unnumbered">
+<h3>New Project Repository</h3>
+<p>Just like in Git, a repository is used to organise a project. Repositories contain files, folders, images, data-sets (with caution), and anything else the project may need.</p>
+<p>If you’re setting up a new project on GitHub, follow these instructions. It is recommended to include a README or some other file with information about the project, this can be done at the same time the new repository is created.</p>
+<ol style="list-style-type: decimal">
+<li><strong>Go to <a href="https://github.com" class="uri">https://github.com</a> and sign in</strong></li>
+<li><strong>Create the repo</strong> - in the upper right corner, next to your avatar, click the <code>+</code> button and select “<em>New repository</em>”.</li>
+</ol>
+<p><img src="images/github-newrepo.png" style="display: block; margin: auto;" /></p>
+<ol start="3" style="list-style-type: decimal">
+<li><strong>Fill in the details</strong> - select the owner, give it a name (short, specfic, memorable, and preferably lowercase-with-hyphens), write a short description, and consider if initialising with a README is appropriate.</li>
+<li><strong>Click “Create repository”</strong></li>
+</ol>
+<p><img src="images/github-createrepo.png" style="display: block; margin: auto;" /></p>
+<ol start="5" style="list-style-type: decimal">
+<li><strong>Create project locally and link to GitHub</strong> - if you’re not using a GUI (Graphical User Interface) such as RStudio which has Git and GitHub integrations (see <a href="get-started.html#start-rstudio-integration">Start RStudio Integration</a> for more detail), follow along using command line tools, introduced above in <a href="get-started.html#git-project-steps">Git Project Steps</a>. In order to commit to Git and then link to GitHub, some file needs to exist. In this example, a README.md file is created. Then, we add the link to the GitHub repo with <code>git remote add &lt;name&gt; &lt;url&gt;</code> and sending the first set of changes to GitHub using <code>git push -u &lt;name&gt; &lt;branch&gt;</code>. <em>Also, this example uses the HTTPS connection (a URL) to GitHub. Your URL will be unique to your project. Check the GitHub code page for the instructions.</em></li>
+</ol>
+<pre><code>username@NSS000000 MINGW64 ~/Documents/demo-project
+$ echo &quot;# demo-project&quot; &gt;&gt; README.md
+$ git init
+Initialized empty Git repository in C:/Users/username/Documents/demo-project/.git/
+
+username@NSS000000 MINGW64 ~/Documents/demo-project
+$ git add README.md
+$ git commit -m &quot;first commit&quot;
+[master (root-commit) 1ab2cde] first commit
+  1 file changed, 1 insertion(+)
+  create mode 100644 README.md
+  
+username@NSS000000 MINGW64 ~/Documents/demo-project
+$ git remote add origin &lt;url&gt;
+$ git push -u origin master
+Counting objects: 3, done.
+Writing objects: 100% (3/3), 220 bytes | 220.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To &lt;url&gt;
+* [new branch]    master -&gt; master
+Branch master set up to track remote branch master from origin.
+
+username@NSS000000 MINGW64 ~/Documents/demo-project
+$</code></pre>
+</div>
+<div id="existing-project-repository" class="section level3 unnumbered">
+<h3>Existing Project Repository</h3>
+<ol style="list-style-type: decimal">
+<li><strong>Download the repository from GitHub</strong> - get the URL for the project you are looking to contribute to and using <code>git clone &lt;url&gt;</code> make a local copy on your machine. Then, change into the folder created using <code>cd &lt;folder&gt;</code>.</li>
+</ol>
+<pre><code>username@NSS000000 MINGW64 ~/Documents
+$ git clone &lt;url&gt;
+Cloning into &#39;existing-project&#39;...
+remote: Enumerating objects: 7, done.
+remote: Total 7 (delta 0), reused 0 (delta 0), pack-reused 7
+Unpacking objects: 100% (7/7), done.
+
+username@NSS000000 MINGW64 ~/Documents
+$ cd exising-project
+
+username@NSS000000 MINGW64 ~/Documents/existing-project
+$</code></pre>
+<ol start="2" style="list-style-type: decimal">
+<li><strong>Set up a branch, make some changes, stage them, commit them, and push them back to GitHub</strong></li>
+</ol>
+<pre><code>username@NSS000000 MINGW64 ~/Documents/existing-project
+$ git checkout -b &#39;feature&#39;
+Switched to branch &#39;feature&#39;
+
+username@NSS000000 MINGW64 ~/Documents/existing-project
+$ git add new-file.md
+
+username@NSS000000 MINGW64 ~/Documents/existing-project
+$ git commit -m &quot;add new-file&quot;
+
+username@NSS000000 MINGW64 ~/Documents/existing-project
+$ git push -u origin feature
+Counting objects: 1, done.
+Writing objects: 100% (1/1), 10 bytes | 10.00 KiB/s, done.
+Total 1 (delta 0), reused 0 (delta 0)
+To &lt;url&gt;
+* [new branch]    feature -&gt; feature
+Branch feature set up to track remote branch feature from origin.
+
+username@NSS000000 MINGW64 ~/Documents/existing-project
+$ </code></pre>
+<ol start="3" style="list-style-type: decimal">
+<li><p><strong>Open a pull request</strong> - when you’ve made changes that are ready to be included into production, open a pull request to propose and collaborate. These changes are proposed in that branch, which ensures that the master branch only contains finished and approved work.</p>
+<ol style="list-style-type: decimal">
+<li>On GitHub, go to the main page of the repository.</li>
+<li>In the “Branch:” menu, choose the branch that contains <em>your</em> commits.</li>
+<li>To the right of the “Branch” menu, click “New pull request”.</li>
+<li>Use the “base:” branch dropdown menu to select the branch you’d like to merge your changes into.</li>
+<li>Use the “compare:” branch dropdown menu to choose the topic branch your changes are in.</li>
+<li>Type a title a description for your pull request.</li>
+<li>If your pull request is ready for review, click “Create Pull Request”. <em>To create a draft pull request, use the dropdown menu and select “Create Draft Pull Request”, then click “Draft Pull Request”</em>.</li>
+</ol></li>
+</ol>
+</div>
+</div>
+<div id="start-rstudio-integration" class="section level2 unnumbered">
+<h2>Start RStudio Integration</h2>
+<p>RStudio provides a GUI (Graphical User Interface) to use Git and GitHub. Basically, this means that you don’t need to use the command line and type out the instructions. Instead, there are buttons, prompts, and windows making the process of using version control user friendly and relatively straightforward.</p>
+<div id="setup-and-configuration" class="section level3 unnumbered">
+<h3>Setup and Configuration</h3>
+<p>First, Git and RStudio must be installed. Now, let’s configure RStudio to use Git.</p>
+<ol style="list-style-type: decimal">
+<li><strong>Open RStudio</strong></li>
+<li><strong>Go to Tools in the menu bar &gt; Global Options &gt; Git/SVN</strong></li>
+<li><strong>If “Git executable:” shows “<em>(none)</em>”, click “Browse” and select the git executable installed on your system.</strong> - On Windows, git.exe will likely be be in “Program Files”, specifically try <code>C:/Program Files/Git/bin/git.exe</code>.</li>
+</ol>
+<p><img src="images/rstudio-globalopt-gitsvn.png" style="display: block; margin: auto;" /></p>
+<p>That’s it for attaching RStudio and Git. This will allow you to utilise the RStudio Git GUI tools inside R Projects.</p>
+</div>
+<div id="rstudio-project-steps" class="section level3 unnumbered">
+<h3>RStudio Project Steps</h3>
+<ol style="list-style-type: decimal">
+<li><strong>New R Project</strong> - anytime you do any work that requires code, you should create an R project. This keeps your work together, seperates settings for different projects, and allows the use of version control. To do that, go to File in the menu bar and select “New Project”. In the window that appears, name your project, choose a folder/directory for where to store it, and ensure “Create a git repository” is selected.</li>
+</ol>
+<p><img src="images/rstudio-newproj.png" style="display: block; margin: auto;" /></p>
+<ol start="2" style="list-style-type: decimal">
+<li><strong>Change, stage…</strong> - RStudio will keep track of all changes made to the files within your R project (not just R files). Any changes made will show up in the “Git” tab, usually the same pane that the “Environment” tab is on. When you’re ready to commit, save the files you’re working with and stage them by ticking the box to the left of the files in the Git pane, and then click on the “Commit” button.</li>
+</ol>
+<p><img src="images/rstudio-stage.png" style="display: block; margin: auto;" /></p>
+<ol start="3" style="list-style-type: decimal">
+<li><strong>Commit</strong> - After clicking on “Commit”, a window will appear with the changes made for review and a prompt for a “Commit message”. Your commit message should describe the changes made and be consise, meaningful and written in imperative mode. Then, just click on “Commit”!</li>
+</ol>
+<p><img src="images/rstudio-commit.png" style="display: block; margin: auto;" /></p>
+<ol start="4" style="list-style-type: decimal">
+<li><strong>Branching</strong> - As part of the recommended workflow, you should use branches to develop individual features, this means that you can edit files but keep an original to revert back to if required. Additionally, when team working, it allows for many parallel efforts, keeping teams focussed, and for shipping updates faster.</li>
+</ol>
+<ul>
+<li><strong>New Branch</strong> - To create a new branch in RStudio, just click the “New Branch” button in the Git pane and give it a name. To switch between branches, click the dropdown to the right of the “New Branch” button and click the name of the branch you want to switch to. <em>(When you select a branch, the state of the files that you committed in that branch will appear in both the Files pane in RStudio, and in your file explorer.)</em></li>
+</ul>
+<p><img src="images/rstudio-branch.png" style="display: block; margin: auto;" /></p>
+<ul>
+<li><strong>Merge Branches</strong> - When work from the working branch should be merged back to the master branch, this currently has no GUI option and must be done on the command line. This can be accessed from the “More” menu in the Git pane and selected “Shell” or in the RStudio Terminal window. Once you’re in either of these, enter the command git merge <branch>.</li>
+</ul>
+<pre><code>username@NSS000000  ~/Documents/demo-project  (master)
+$ git merge &lt;branch&gt;</code></pre>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="the-shell.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
