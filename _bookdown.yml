@@ -1,0 +1,10 @@
+---
+title: "A Comprehensive Guide to Git & GitHub"
+author: "Russell McCreath"
+output: bookdown::gitbook
+site: bookdown::bookdown_site
+description: "A comprehensive guide for learning and using Git and GitHub"
+github-repo: NHS-NSS-transforming-publications/git-guide
+cover-image: images/cover.png
+output_dir: "docs"
+---
