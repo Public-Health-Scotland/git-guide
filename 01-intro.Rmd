@@ -377,10 +377,19 @@ That's it for attaching RStudio and Git. This will allow you to utilise the RStu
 
 ### RStudio Project Steps {-}
 
-1. **New R Project** - anytime you do any work that requires code, you should create an R project. This keeps your work together, seperates settings for different projects, and allows the use of version control. To do that, go to File in the menu bar and select "New Project". In the window that appears, name your project, choose a folder/directory for where to store it, and ensure "Create a git repository" is selected.
+1. **Set up R Project** 
+
+    - **New Project** - anytime you do any work that requires code, you should create an R project. This keeps your work together, seperates settings for different projects, and allows the use of version control. To do that, go to File in the menu bar and select "New Project". In the window that appears, name your project, choose a folder/directory for where to store it, and ensure "Create a git repository" is selected.
 
 ```{r fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html')}
 knitr::include_graphics('images/rstudio-newproj.png', dpi = NA)
+```
+&nbsp;
+
+    - **Exisiting Project** - if you're going to be working on a project that already exisits as a repository, you can link to this through RStudio too. Go to File > New Project > Version Control > Git and enter the details in the screen that follows (this will create a folder with a copy of any contents that were in the GitHub repository).
+
+```{r fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html')}
+knitr::include_graphics('images/rstudio-clonerepo.png', dpi = NA)
 ```
 &nbsp;
 
