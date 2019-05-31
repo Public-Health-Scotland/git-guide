@@ -378,7 +378,7 @@ $</code></pre>
 </ol>
 <p><img src="images/github-createrepo.png" style="display: block; margin: auto;" />  </p>
 <ol start="5" style="list-style-type: decimal">
-<li><strong>Create project locally and link to GitHub</strong> - if you’re not using a GUI (Graphical User Interface) such as RStudio which has Git and GitHub integrations (see <a href="get-started.html#start-rstudio-integration">Start RStudio Integration</a> for more detail), follow along using command line tools, introduced above in <a href="get-started.html#git-project-steps">Git Project Steps</a>. In order to commit to Git and then link to GitHub, some file needs to exist. In this example, a README.md file is created. Then, we add the link to the GitHub repo (you only need to do this once per project) with <code>git remote add &lt;name&gt; &lt;url&gt;</code> (<em><code>&lt;name&gt;</code> is any name to refer to the GitHub connection but <code>origin</code> is the most common name used</em>) and then sending the first set of changes to GitHub using <code>git push -u &lt;name&gt; &lt;branch&gt;</code>. <em>Also, this example uses the HTTPS connection (a URL) to GitHub. Your URL will be unique to your project. Check the GitHub code page for the instructions.</em></li>
+<li><strong>Create project locally and link to GitHub</strong> - if you’re not using a GUI (Graphical User Interface) such as RStudio which has Git and GitHub integrations (see <a href="get-started.html#start-rstudio-integration">Start RStudio Integration</a> for more detail), follow along using command line tools, introduced above in <a href="get-started.html#git-project-steps">Git Project Steps</a>. In order to commit to Git and then link to GitHub, some file needs to exist. In this example, a README.md file is created. Then, we add the link to the GitHub repo (you only need to do this once per project) with <code>git remote add &lt;name&gt; &lt;url&gt;</code> (<em><code>&lt;name&gt;</code> is any name to refer to the GitHub connection but <code>origin</code> is the most common/preferred name to use</em>) and then sending the first set of changes to GitHub using <code>git push &lt;name&gt; &lt;branch&gt;</code>. <em>Also, this example uses the HTTPS connection (a URL) to GitHub. Your URL will be unique to your project. Check the GitHub code page for the instructions.</em></li>
 </ol>
 <pre><code>username@NSS000000 MINGW64 ~/Documents/demo-project
 $ echo &quot;# demo-project&quot; &gt;&gt; README.md
@@ -394,7 +394,7 @@ $ git commit -m &quot;first commit&quot;
   
 username@NSS000000 MINGW64 ~/Documents/demo-project
 $ git remote add origin &lt;url&gt;
-$ git push -u origin master
+$ git push origin master
 Counting objects: 3, done.
 Writing objects: 100% (3/3), 220 bytes | 220.00 KiB/s, done.
 Total 3 (delta 0), reused 0 (delta 0)
@@ -478,9 +478,16 @@ $ </code></pre>
 <div id="rstudio-project-steps" class="section level3 unnumbered">
 <h3>RStudio Project Steps</h3>
 <ol style="list-style-type: decimal">
-<li><strong>New R Project</strong> - anytime you do any work that requires code, you should create an R project. This keeps your work together, seperates settings for different projects, and allows the use of version control. To do that, go to File in the menu bar and select “New Project”. In the window that appears, name your project, choose a folder/directory for where to store it, and ensure “Create a git repository” is selected.</li>
+<li><strong>Set up R Project</strong></li>
 </ol>
+<ul>
+<li><strong>New Project</strong> - anytime you do any work that requires code, you should create an R project. This keeps your work together, seperates settings for different projects, and allows the use of version control. To do that, go to File in the menu bar and select “New Project”. In the window that appears, name your project, choose a folder/directory for where to store it, and ensure “Create a git repository” is selected.</li>
+</ul>
 <p><img src="images/rstudio-newproj.png" style="display: block; margin: auto;" />  </p>
+<ul>
+<li><strong>Exisiting Project</strong> - if you’re going to be working on a project that already exisits as a repository, you can link to this through RStudio too. Go to File &gt; New Project &gt; Version Control &gt; Git and enter the details in the screen that follows (this will create a folder with a copy of any contents that were in the GitHub repository).</li>
+</ul>
+<p><img src="images/rstudio-clonerepo.png" style="display: block; margin: auto;" />  </p>
 <ol start="2" style="list-style-type: decimal">
 <li><strong>Change, stage…</strong> - RStudio will keep track of all changes made to the files within your R project (not just R files). Any changes made will show up in the “Git” tab, usually the same pane that the “Environment” tab is on. When you’re ready to commit, save the files you’re working with and stage them by ticking the box to the left of the files in the Git pane, and then click on the “Commit” button.</li>
 </ol>
@@ -497,10 +504,26 @@ $ </code></pre>
 </ul>
 <p><img src="images/rstudio-branch.png" style="display: block; margin: auto;" />  </p>
 <ul>
-<li><strong>Merge Branches</strong> - When work from the working branch should be merged back to the master branch, this currently has no GUI option and must be done on the command line. This can be accessed from the “More” menu in the Git pane and selected “Shell” or in the RStudio Terminal window. Once you’re in either of these, enter the command git merge <branch>.</li>
+<li><strong>Merge Branches</strong> - When work from the working branch should be merged back to the master branch, this currently has no GUI option and must be done on the command line. This can be accessed from the “More” menu in the Git pane and selecting “Shell” or in the RStudio Terminal window. Once you’re in either of these, enter the command git merge <branch>.</li>
 </ul>
 <pre><code>username@NSS000000  ~/Documents/demo-project  (master)
 $ git merge &lt;branch&gt;</code></pre>
+<ol start="5" style="list-style-type: decimal">
+<li><strong>Link to GitHub</strong> - if this is a new project, it won’t be linked to GitHub yet. RStudio currently doesn’t have a GUI option for this and must be done on the command line. As above, this can be accessed from the “More” menu in the Git pane and selecting “Shell” or in the RStudio Terminal window. Once you’re in either of these, enter the command <code>git remote add &lt;name&gt; &lt;url&gt;</code> (<em><code>&lt;name&gt;</code> is any name to refer to the GitHub connection but <code>origin</code> is the most common/preferred name to use</em>), pulling in any changes that have been made on GitHub in the meantime using <code>git pull &lt;name&gt; &lt;branch&gt;</code> and then finally sending the changes to GitHub using <code>git push &lt;name&gt; &lt;branch&gt;</code>.</li>
+</ol>
+<pre><code>username@NSS000000 MINGW64 ~/Documents/demo-project
+$ git remote add origin &lt;url&gt;
+$ git pull origin master
+$ git push -u origin master
+Counting objects: 3, done.
+Writing objects: 100% (3/3), 220 bytes | 220.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To &lt;url&gt;
+* [new branch]    master -&gt; master
+Branch master set up to track remote branch master from origin.
+
+username@NSS000000 MINGW64 ~/Documents/demo-project
+$</code></pre>
 
 </div>
 </div>
