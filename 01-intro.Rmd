@@ -43,6 +43,7 @@ You can also navigate the project folder using Windows Explorer, right click, an
 ```{r fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html')}
 knitr::include_graphics('images/git-gitbashhere.png', dpi = NA)
 ```
+&nbsp;
 
 2. **Initialise Git** - in the command line enter `git init`. Git is now initialised inside that project folder/directory and can track any files or sub-folders. 
 
@@ -216,13 +217,14 @@ GitHub is a Git hosting repository that provides users with tools to ship better
 ```{r fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html')}
 knitr::include_graphics('images/githubflow.png', dpi = NA)
 ```
+&nbsp;
 
 This is our recommended workflow within the organisation. It is a branch-based workflow and involves keeping the master branch clean and 'production ready'/fully-functional at all times. 
 
 1. **Create a branch** - topic/per-person branches created from the master allow teams to contribute to many parallel efforts. Short-lived topic branches, in particular, keep teams focussed and results in quick ships. 
 2. **Add commits** - these are snapshots of development efforts within a branch and create safe, revertible points in the project's history.
 3. **Open a pull request** - pull requests publicise the project's ongoing efforts and set the tone for a transparent development process.
-4. **Discuss and review code** - teams participate in code reviews by commenting, testing, and reviewing open pull requests. Code review is at the centre of an open and participatory culture. Pull requests should be approved by at least one collaborator - we recommend you assign a specific reviewer(s) to check the work. In order to ensure the master branch remains 'production ready' we also recommend that changes are tested by the reviewer before approving.
+4. **Discuss and review code** - teams participate in code reviews by commenting, testing, and reviewing open pull requests. Code review is at the centre of an open and participatory culture. Pull requests should be approved by at least one collaborator - we recommend you assign a specific reviewer(s) to check the work. In order to ensure the master branch remains 'production ready' we also recommend that the master branch is protected and any changes are tested by the reviewer before approving.
 5. **Merge** - upon clicking merge, GitHub automatically performs the equivalent of a local `git merge` operation. GitHub also keeps the entire branch development history on the merged pull request.
 6. **Deploy** - teams can choose the best release cycles or incorporate continuous integration tools and operate with the assurance that code on the deployment branch has gone through a robust workflow.
 
@@ -252,15 +254,17 @@ If you're setting up a new project on GitHub, follow these instructions. It is r
 ```{r fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html')}
 knitr::include_graphics('images/github-newrepo.png', dpi = NA)
 ```
+&nbsp;
 
-3. **Fill in the details** - select the owner, give it a name (short, specfic, memorable, and preferably lowercase-with-hyphens), write a short description, and consider if initialising with a README is appropriate.
+3. **Fill in the details** - select the owner, give it a name (short, specfic, memorable, and preferably lowercase-with-hyphens), write a short description, and consider if initialising with a README is appropriate. *A README file is used to provide up front information about what the project does, why it's useful, how users can interact, where to get help, and who maintains and contributes to the project. This is really useful for anyone landing on the GitHub page to find out more. Initialising a repository on GitHub with a README will simply add a markdown file to which you can add the details to later.*
 4. **Click "Create repository"**
 
 ```{r fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html')}
 knitr::include_graphics('images/github-createrepo.png', dpi = NA)
 ```
+&nbsp;
 
-5. **Create project locally and link to GitHub** - if you're not using a GUI (Graphical User Interface) such as RStudio which has Git and GitHub integrations (see [Start RStudio Integration] for more detail), follow along using command line tools, introduced above in [Git Project Steps]. In order to commit to Git and then link to GitHub, some file needs to exist. In this example, a README.md file is created. Then, we add the link to the GitHub repo with `git remote add <name> <url>` and sending the first set of changes to GitHub using `git push -u <name> <branch>`. *Also, this example uses the HTTPS connection (a URL) to GitHub. Your URL will be unique to your project. Check the GitHub code page for the instructions.*
+5. **Create project locally and link to GitHub** - if you're not using a GUI (Graphical User Interface) such as RStudio which has Git and GitHub integrations (see [Start RStudio Integration] for more detail), follow along using command line tools, introduced above in [Git Project Steps]. In order to commit to Git and then link to GitHub, some file needs to exist. In this example, a README.md file is created. Then, we add the link to the GitHub repo (you only need to do this once per project) with `git remote add <name> <url>` (*`<name>` is any name to refer to the GitHub connection but `origin` is the most common name used*) and then sending the first set of changes to GitHub using `git push -u <name> <branch>`. *Also, this example uses the HTTPS connection (a URL) to GitHub. Your URL will be unique to your project. Check the GitHub code page for the instructions.*
 
 ```
 username@NSS000000 MINGW64 ~/Documents/demo-project
@@ -292,7 +296,7 @@ $
 
 ### Existing Project Repository {-}
 
-1. **Download the repository from GitHub** - get the URL for the project you are looking to contribute to and using `git clone <url>` make a local copy on your machine. Then, change into the folder created using `cd <folder>`.
+1. **Download the repository from GitHub** - get the URL for the project you are looking to contribute to and using `git clone <url>` make a local copy on your machine. This will create a local folder with the same name as the repo and a copy of all the files inside. In order to continue version control on that folder/repo, move into the folder on the command line using `cd <folder-name>`.
 
 ```
 username@NSS000000 MINGW64 ~/Documents
@@ -342,9 +346,13 @@ $
     3. To the right of the "Branch" menu, click "New pull request".
     4. Use the "base:" branch dropdown menu to select the branch you'd like to merge your changes into.
     5. Use the "compare:" branch dropdown menu to choose the topic branch your changes are in.
-    6. Type a title a description for your pull request.
+    6. Type a title as a description for your pull request.
     7. If your pull request is ready for review, click "Create Pull Request". *To create a draft pull request, use the dropdown menu and select "Create Draft Pull Request", then click "Draft Pull Request"*.
 
+```{r fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html')}
+knitr::include_graphics('images/github-pullrequest.png', dpi = NA)
+```
+&nbsp;
 
 ## Start RStudio Integration {-}
 
@@ -362,6 +370,7 @@ First, Git and RStudio must be installed. Now, let's configure RStudio to use Gi
 ```{r fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html')}
 knitr::include_graphics('images/rstudio-globalopt-gitsvn.png', dpi = NA)
 ```
+&nbsp;
 
 That's it for attaching RStudio and Git. This will allow you to utilise the RStudio Git GUI tools inside R Projects. 
 
@@ -373,18 +382,21 @@ That's it for attaching RStudio and Git. This will allow you to utilise the RStu
 ```{r fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html')}
 knitr::include_graphics('images/rstudio-newproj.png', dpi = NA)
 ```
+&nbsp;
 
 2. **Change, stage...** - RStudio will keep track of all changes made to the files within your R project (not just R files). Any changes made will show up in the "Git" tab, usually the same pane that the "Environment" tab is on. When you're ready to commit, save the files you're working with and stage them by ticking the box to the left of the files in the Git pane, and then click on the "Commit" button.
 
 ```{r fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html')}
 knitr::include_graphics('images/rstudio-stage.png', dpi = NA)
 ```
+&nbsp;
 
 3. **Commit** - After clicking on "Commit", a window will appear with the changes made for review and a prompt for a "Commit message". Your commit message should describe the changes made and be consise, meaningful and written in imperative mode. Then, just click on "Commit"!
 
 ```{r fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html')}
 knitr::include_graphics('images/rstudio-commit.png', dpi = NA)
 ```
+&nbsp;
 
 4. **Branching** - As part of the recommended workflow, you should use branches to develop individual features, this means that you can edit files but keep an original to revert back to if required. Additionally, when team working, it allows for many parallel efforts, keeping teams focussed, and for shipping updates faster. 
 
@@ -393,6 +405,7 @@ knitr::include_graphics('images/rstudio-commit.png', dpi = NA)
 ```{r fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html')}
 knitr::include_graphics('images/rstudio-branch.png', dpi = NA)
 ```
+&nbsp;
 
 - **Merge Branches** - When work from the working branch should be merged back to the master branch, this currently has no GUI option and must be done on the command line. This can be accessed from the "More" menu in the Git pane and selected "Shell" or in the RStudio Terminal window. Once you're in either of these, enter the command git merge <branch>.
 

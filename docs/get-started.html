@@ -183,7 +183,7 @@ $ cd Documents/project
 username@NSS000000 MINGW64 ~Documents/project
 $</code></pre>
 <p>You can also navigate the project folder using Windows Explorer, right click, and select “Git Bash Here”, this will open a command-line interface for that folder.</p>
-<p><img src="images/git-gitbashhere.png" style="display: block; margin: auto;" /></p>
+<p><img src="images/git-gitbashhere.png" style="display: block; margin: auto;" />  </p>
 <ol start="2" style="list-style-type: decimal">
 <li><strong>Initialise Git</strong> - in the command line enter <code>git init</code>. Git is now initialised inside that project folder/directory and can track any files or sub-folders.</li>
 </ol>
@@ -252,7 +252,7 @@ username@NSS000000 MINGW64 ~/Documents/project (master)
 $</code></pre>
 <p>Git has now stored a snapshot of the project folder and its content at that point in time. Going forward, it will now be possible to check back through the old version of the folder via the commits and, if necessary, revert to a previous version. To see a history of ocmmits on a branch use <code>git log</code>.</p>
 <ol start="6" style="list-style-type: decimal">
-<li><strong>Create a branch</strong> - when first created, a branch is an exact copy of the original folder and contents (the master branch). As you work on the project, the working branch will change but leave the master branch untouched. This means that you always retain a master copy of the project and you only merge changes when you’re satisfied that they’re ready. To create a branch use <code>git branch &lt;name of branch&gt;</code>. To switch to working on the new working branch, use <code>git checkout &lt;name of branch&gt;</code>. These two steps can be done via one command, <code>git checkout -b &lt;name of branch</code>.</li>
+<li><strong>Create a branch</strong> - when first created, a branch is an exact copy of the original folder and contents (the master branch). As you work on the project, the working branch will change but leave the master branch untouched. This means that you always retain a master copy of the project and you only merge changes when you’re satisfied that they’re ready. To create a branch use <code>git branch &lt;name of branch&gt;</code>. To switch to working on the new working branch, use <code>git checkout &lt;name of branch&gt;</code>. These two steps can be done via one command, <code>git checkout -b &lt;name of branch&gt;</code>.</li>
 </ol>
 <pre><code>username@NSS000000 MINGW64 ~/Documents/project (master)
 $ git checkout -b feature
@@ -337,13 +337,13 @@ $</code></pre>
 <p>GitHub is a Git hosting repository that provides users with tools to ship better code through command line features, issues (threaded discussions), pull requests, and code review. GitHub builds collaboration directly into the development process. Work is organised into repositories, where users can outline requirements or direction and set expectations for team members. Then, using the <a href="get-started.html#github-flow">GitHub Flow</a>, developers simply create a branch to work on updates, commit changes to save them, open a pull request to propose and dicsuss changes, and merge pull requests once everyone is on the same page. See <a href="github.html#github-workflow">GitHub Workflow</a> for more details.</p>
 <div id="github-flow" class="section level3 unnumbered">
 <h3>GitHub Flow</h3>
-<p><img src="images/githubflow.png" style="display: block; margin: auto;" /></p>
+<p><img src="images/githubflow.png" style="display: block; margin: auto;" />  </p>
 <p>This is our recommended workflow within the organisation. It is a branch-based workflow and involves keeping the master branch clean and ‘production ready’/fully-functional at all times.</p>
 <ol style="list-style-type: decimal">
 <li><strong>Create a branch</strong> - topic/per-person branches created from the master allow teams to contribute to many parallel efforts. Short-lived topic branches, in particular, keep teams focussed and results in quick ships.</li>
 <li><strong>Add commits</strong> - these are snapshots of development efforts within a branch and create safe, revertible points in the project’s history.</li>
 <li><strong>Open a pull request</strong> - pull requests publicise the project’s ongoing efforts and set the tone for a transparent development process.</li>
-<li><strong>Discuss and review code</strong> - teams participate in code reviews by commenting, testing, and reviewing open pull requests. Code review is at the centre of an open and participatory culture. Pull requests should be approved by at least one collaborator - we recommend you assign a specific reviewer(s) to check the work. In order to ensure the master branch remains ‘production ready’ we also recommend that changes are tested by the reviewer before approving.</li>
+<li><strong>Discuss and review code</strong> - teams participate in code reviews by commenting, testing, and reviewing open pull requests. Code review is at the centre of an open and participatory culture. Pull requests should be approved by at least one collaborator - we recommend you assign a specific reviewer(s) to check the work. In order to ensure the master branch remains ‘production ready’ we also recommend that the master branch is protected and any changes are tested by the reviewer before approving.</li>
 <li><strong>Merge</strong> - upon clicking merge, GitHub automatically performs the equivalent of a local <code>git merge</code> operation. GitHub also keeps the entire branch development history on the merged pull request.</li>
 <li><strong>Deploy</strong> - teams can choose the best release cycles or incorporate continuous integration tools and operate with the assurance that code on the deployment branch has gone through a robust workflow.</li>
 </ol>
@@ -371,14 +371,14 @@ $</code></pre>
 <li><strong>Go to <a href="https://github.com" class="uri">https://github.com</a> and sign in</strong></li>
 <li><strong>Create the repo</strong> - in the upper right corner, next to your avatar, click the <code>+</code> button and select “<em>New repository</em>”.</li>
 </ol>
-<p><img src="images/github-newrepo.png" style="display: block; margin: auto;" /></p>
+<p><img src="images/github-newrepo.png" style="display: block; margin: auto;" />  </p>
 <ol start="3" style="list-style-type: decimal">
-<li><strong>Fill in the details</strong> - select the owner, give it a name (short, specfic, memorable, and preferably lowercase-with-hyphens), write a short description, and consider if initialising with a README is appropriate.</li>
+<li><strong>Fill in the details</strong> - select the owner, give it a name (short, specfic, memorable, and preferably lowercase-with-hyphens), write a short description, and consider if initialising with a README is appropriate. <em>A README file is used to provide up front information about what the project does, why it’s useful, how users can interact, where to get help, and who maintains and contributes to the project. This is really useful for anyone landing on the GitHub page to find out more. Initialising a repository on GitHub with a README will simply add a markdown file to which you can add the details to later.</em></li>
 <li><strong>Click “Create repository”</strong></li>
 </ol>
-<p><img src="images/github-createrepo.png" style="display: block; margin: auto;" /></p>
+<p><img src="images/github-createrepo.png" style="display: block; margin: auto;" />  </p>
 <ol start="5" style="list-style-type: decimal">
-<li><strong>Create project locally and link to GitHub</strong> - if you’re not using a GUI (Graphical User Interface) such as RStudio which has Git and GitHub integrations (see <a href="get-started.html#start-rstudio-integration">Start RStudio Integration</a> for more detail), follow along using command line tools, introduced above in <a href="get-started.html#git-project-steps">Git Project Steps</a>. In order to commit to Git and then link to GitHub, some file needs to exist. In this example, a README.md file is created. Then, we add the link to the GitHub repo with <code>git remote add &lt;name&gt; &lt;url&gt;</code> and sending the first set of changes to GitHub using <code>git push -u &lt;name&gt; &lt;branch&gt;</code>. <em>Also, this example uses the HTTPS connection (a URL) to GitHub. Your URL will be unique to your project. Check the GitHub code page for the instructions.</em></li>
+<li><strong>Create project locally and link to GitHub</strong> - if you’re not using a GUI (Graphical User Interface) such as RStudio which has Git and GitHub integrations (see <a href="get-started.html#start-rstudio-integration">Start RStudio Integration</a> for more detail), follow along using command line tools, introduced above in <a href="get-started.html#git-project-steps">Git Project Steps</a>. In order to commit to Git and then link to GitHub, some file needs to exist. In this example, a README.md file is created. Then, we add the link to the GitHub repo (you only need to do this once per project) with <code>git remote add &lt;name&gt; &lt;url&gt;</code> (<em><code>&lt;name&gt;</code> is any name to refer to the GitHub connection but <code>origin</code> is the most common name used</em>) and then sending the first set of changes to GitHub using <code>git push -u &lt;name&gt; &lt;branch&gt;</code>. <em>Also, this example uses the HTTPS connection (a URL) to GitHub. Your URL will be unique to your project. Check the GitHub code page for the instructions.</em></li>
 </ol>
 <pre><code>username@NSS000000 MINGW64 ~/Documents/demo-project
 $ echo &quot;# demo-project&quot; &gt;&gt; README.md
@@ -408,7 +408,7 @@ $</code></pre>
 <div id="existing-project-repository" class="section level3 unnumbered">
 <h3>Existing Project Repository</h3>
 <ol style="list-style-type: decimal">
-<li><strong>Download the repository from GitHub</strong> - get the URL for the project you are looking to contribute to and using <code>git clone &lt;url&gt;</code> make a local copy on your machine. Then, change into the folder created using <code>cd &lt;folder&gt;</code>.</li>
+<li><strong>Download the repository from GitHub</strong> - get the URL for the project you are looking to contribute to and using <code>git clone &lt;url&gt;</code> make a local copy on your machine. This will create a local folder with the same name as the repo and a copy of all the files inside. In order to continue version control on that folder/repo, move into the folder on the command line using <code>cd &lt;folder-name&gt;</code>.</li>
 </ol>
 <pre><code>username@NSS000000 MINGW64 ~/Documents
 $ git clone &lt;url&gt;
@@ -454,10 +454,11 @@ $ </code></pre>
 <li>To the right of the “Branch” menu, click “New pull request”.</li>
 <li>Use the “base:” branch dropdown menu to select the branch you’d like to merge your changes into.</li>
 <li>Use the “compare:” branch dropdown menu to choose the topic branch your changes are in.</li>
-<li>Type a title a description for your pull request.</li>
+<li>Type a title as a description for your pull request.</li>
 <li>If your pull request is ready for review, click “Create Pull Request”. <em>To create a draft pull request, use the dropdown menu and select “Create Draft Pull Request”, then click “Draft Pull Request”</em>.</li>
 </ol></li>
 </ol>
+<p><img src="images/github-pullrequest.png" style="display: block; margin: auto;" />  </p>
 </div>
 </div>
 <div id="start-rstudio-integration" class="section level2 unnumbered">
@@ -471,7 +472,7 @@ $ </code></pre>
 <li><strong>Go to Tools in the menu bar &gt; Global Options &gt; Git/SVN</strong></li>
 <li><strong>If “Git executable:” shows “<em>(none)</em>”, click “Browse” and select the git executable installed on your system.</strong> - On Windows, git.exe will likely be be in “Program Files”, specifically try <code>C:/Program Files/Git/bin/git.exe</code>.</li>
 </ol>
-<p><img src="images/rstudio-globalopt-gitsvn.png" style="display: block; margin: auto;" /></p>
+<p><img src="images/rstudio-globalopt-gitsvn.png" style="display: block; margin: auto;" />  </p>
 <p>That’s it for attaching RStudio and Git. This will allow you to utilise the RStudio Git GUI tools inside R Projects.</p>
 </div>
 <div id="rstudio-project-steps" class="section level3 unnumbered">
@@ -479,22 +480,22 @@ $ </code></pre>
 <ol style="list-style-type: decimal">
 <li><strong>New R Project</strong> - anytime you do any work that requires code, you should create an R project. This keeps your work together, seperates settings for different projects, and allows the use of version control. To do that, go to File in the menu bar and select “New Project”. In the window that appears, name your project, choose a folder/directory for where to store it, and ensure “Create a git repository” is selected.</li>
 </ol>
-<p><img src="images/rstudio-newproj.png" style="display: block; margin: auto;" /></p>
+<p><img src="images/rstudio-newproj.png" style="display: block; margin: auto;" />  </p>
 <ol start="2" style="list-style-type: decimal">
 <li><strong>Change, stage…</strong> - RStudio will keep track of all changes made to the files within your R project (not just R files). Any changes made will show up in the “Git” tab, usually the same pane that the “Environment” tab is on. When you’re ready to commit, save the files you’re working with and stage them by ticking the box to the left of the files in the Git pane, and then click on the “Commit” button.</li>
 </ol>
-<p><img src="images/rstudio-stage.png" style="display: block; margin: auto;" /></p>
+<p><img src="images/rstudio-stage.png" style="display: block; margin: auto;" />  </p>
 <ol start="3" style="list-style-type: decimal">
 <li><strong>Commit</strong> - After clicking on “Commit”, a window will appear with the changes made for review and a prompt for a “Commit message”. Your commit message should describe the changes made and be consise, meaningful and written in imperative mode. Then, just click on “Commit”!</li>
 </ol>
-<p><img src="images/rstudio-commit.png" style="display: block; margin: auto;" /></p>
+<p><img src="images/rstudio-commit.png" style="display: block; margin: auto;" />  </p>
 <ol start="4" style="list-style-type: decimal">
 <li><strong>Branching</strong> - As part of the recommended workflow, you should use branches to develop individual features, this means that you can edit files but keep an original to revert back to if required. Additionally, when team working, it allows for many parallel efforts, keeping teams focussed, and for shipping updates faster.</li>
 </ol>
 <ul>
 <li><strong>New Branch</strong> - To create a new branch in RStudio, just click the “New Branch” button in the Git pane and give it a name. To switch between branches, click the dropdown to the right of the “New Branch” button and click the name of the branch you want to switch to. <em>(When you select a branch, the state of the files that you committed in that branch will appear in both the Files pane in RStudio, and in your file explorer.)</em></li>
 </ul>
-<p><img src="images/rstudio-branch.png" style="display: block; margin: auto;" /></p>
+<p><img src="images/rstudio-branch.png" style="display: block; margin: auto;" />  </p>
 <ul>
 <li><strong>Merge Branches</strong> - When work from the working branch should be merged back to the master branch, this currently has no GUI option and must be done on the command line. This can be accessed from the “More” menu in the Git pane and selected “Shell” or in the RStudio Terminal window. Once you’re in either of these, enter the command git merge <branch>.</li>
 </ul>
