@@ -509,21 +509,10 @@ $ </code></pre>
 <pre><code>username@NSS000000  ~/Documents/demo-project  (master)
 $ git merge &lt;branch&gt;</code></pre>
 <ol start="5" style="list-style-type: decimal">
-<li><strong>Link to GitHub</strong> - if this is a new project, it won’t be linked to GitHub yet. RStudio currently doesn’t have a GUI option for this and must be done on the command line. As above, this can be accessed from the “More” menu in the Git pane and selecting “Shell” or in the RStudio Terminal window. Once you’re in either of these, enter the command <code>git remote add &lt;name&gt; &lt;url&gt;</code> (<em><code>&lt;name&gt;</code> is any name to refer to the GitHub connection but <code>origin</code> is the most common/preferred name to use</em>), pulling in any changes that have been made on GitHub in the meantime using <code>git pull &lt;name&gt; &lt;branch&gt;</code> and then finally sending the changes to GitHub using <code>git push &lt;name&gt; &lt;branch&gt;</code>.</li>
+<li><strong>Link to GitHub</strong> - If this is a new project, it won’t be linked to GitHub yet. RStudio currently doesn’t have a GUI option for this and must be done on the command line. As above, this can be accessed from the “More” menu in the Git pane and selecting “Shell” or in the RStudio Terminal window. Once you’re in either of these, enter the command <code>git remote add &lt;name&gt; &lt;url&gt;</code> (<em><code>&lt;name&gt;</code> is any name to refer to the GitHub connection but <code>origin</code> is the most common/preferred name to use</em>), pulling in any changes that have been made on GitHub in the meantime using <code>git pull &lt;name&gt; &lt;branch&gt;</code> and then finally sending the changes to GitHub using <code>git push &lt;name&gt; &lt;branch&gt;</code>.</li>
+<li><strong>Pull and push</strong> - After linking the project to a GitHub repository, RStudio has a GUI interface for pulling and pushing changes. It’s good practice to pull from GitHub to check for changes that have occured since the last time and to help avoid merge conflicts. After that you can click push to send all your changes to GitHub, now everything is in-sync again.</li>
 </ol>
-<pre><code>username@NSS000000 MINGW64 ~/Documents/demo-project
-$ git remote add origin &lt;url&gt;
-$ git pull origin master
-$ git push -u origin master
-Counting objects: 3, done.
-Writing objects: 100% (3/3), 220 bytes | 220.00 KiB/s, done.
-Total 3 (delta 0), reused 0 (delta 0)
-To &lt;url&gt;
-* [new branch]    master -&gt; master
-Branch master set up to track remote branch master from origin.
-
-username@NSS000000 MINGW64 ~/Documents/demo-project
-$</code></pre>
+<p><img src="images/rstudio-pullpush.png" style="display: block; margin: auto;" />  </p>
 
 </div>
 </div>
