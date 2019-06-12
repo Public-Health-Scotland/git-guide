@@ -161,99 +161,87 @@ Underneath `/Users`, we find one directory for each user with an account on the 
 *insert filesysyem hierarchy diagram - level 2*
 
 
-## Glossary
-
-| Keyword  | Description |
-|:---|:---|
-| **absolute path** | A path that refers to a particular location in a file system. Absolute paths are usually written with respect to the file system’s root directory, and begin with either “/” (on Unix) or “\” (on Microsoft Windows). See also: relative path. |
-| **argument** | A value given to a function or program when it runs. The term is often used interchangeably (and inconsistently) with parameter. |
-
-
 ## Reference
 
-| Navigating Files & Directories  | Description |
-|:---|:---|
-| `cd [path]` | Changes the current working directory to the specified path |
-| `ls [path]` | Prints a listing of the specified file or directory. (If `ls` is used alone, the current working directory will be listed.) |
-| | |
+### Glossary {-}
+
+```{r, echo=FALSE}
+knitr::kable(
+  data.frame(
+    "Keyword" = c("**absolute path**", "**argument**"),
+    "Description" = c('A path that refers to a particular location in a file system. Absolute paths are usually written with respect to the file system’s root directory, and begin with either “/” (on Unix) or “&#92;” (on Microsoft Windows). See also: relative path.', 'A value given to a function or program when it runs. The term is often used interchangeably (and inconsistently) with parameter.')
+  )
+)
+```
+
+&nbsp;
 
 
+### Navigation {-}
 
-### Shortcuts
-| Command  | Description |
-|:---|:---|
-| `CTRL+A` |  Move to the beginning of the line. |
-| `CTRL+B` |  Moves backward one character. |
-| `CTRL+C` |  Halts the current command. |
-| `CTRL+D` |  Deletes one character backward or logs out of current session, similar to exit. |
-| `CTRL+E` |  Moves to end of line. |
-| `CTRL+F` |  Moves forward one character. |
-| `CTRL+G` |  Aborts the current editing command and ring the terminal bell. |
-| `CTRL+J` |  Same as RETURN. |
-| `CTRL+K` |  Deletes (kill) forward to end of line. |
-| `CTRL+L` |  Clears screen and redisplay the line. |
-| `CTRL+M` |  Same as RETURN. |
-| `CTRL+N` |  Next line in command history. |
-| `CTRL+O` |  Same as RETURN, then displays next line in history file. |
-| `CTRL+P` |  Previous line in command history. |
-| `CTRL+R` |  Searches backward. |
-| `CTRL+S` |  Searches forward. |
-| `CTRL+T` |  Transposes two characters. |
-| `CTRL+U` |  Kills backward from point to the beginning of line. |
-| `CTRL+V` |  Makes the next character typed verbatim. |
-| `CTRL+W` |  Kills the word behind the cursor. |
-| `CTRL+X` |  Lists the possible filename completetions of the current word. |
-| `CTRL+Y` |  Retrieves (yank) last item killed. |
-| `CTRL+Z` |  Stops the current command, resume with `fg` in the foreground or `bg` in the background. |
-| `DELETE` |  Deletes one character backward. |
-| `!!` | Repeats the last command. |
-| `exit` | Logs out of current session. |
+```{r, echo=FALSE}
+knitr::kable(
+  data.frame(
+    "Command" = c("`cd [path]`", "`ls [path]`"),
+    "Description" = c("Changes the current working directory to the specified path", "Prints a listing of the specified file or directory. (If `ls` is used alone, the current working directory will be listed.)")
+  )
+)
+```
 
-### Bash Basics
-| Command  | Description |
-|:---|:---|
-| `export` | Displays all environment variables. |
-| `echo $SHELL` | Displays the shell you’re using. |
-| `echo $BASH_VERSION` | Displays bash version. |
-| `bash` | If you want to use bash (type exit to go back to your normal shell). |
-| `whereis bash` | Finds out where bash is on your system. |
-| `clear` | Clears content on window (hide displayed lines). |
+&nbsp;
 
-### File Commands
-| Command  | Description |
-|:---|:---|
-| `ls` | Lists your files. |
-| `ls -l` | Lists your files in ‘long format’, which contains the exact size of the file, who owns the file and who has the right to look at it, and when it was last modified. |
-| `ls -a` | Lists all files, including hidden files. |
-| `ln -s [filename] [link]` | Creates symbolic link to file. |
-| `touch [filename]` | Creates or updates your file. |
-| `cat ] [filename]` | Places standard input into file. |
-| `more [filename]` | Shows the first part of a file (move with space and type q to quit). |
-| `head [filename]` | Outputs the first 10 lines of file. |
-| `tail [filename]` | Outputs the last 10 lines of file (useful with -f option). |
-| `emacs [filename]` | Lets you create and edit a file. |
-| `mv [filename1] [filename2]` | Moves a file. |
-| `cp [filename1] [filename2]` | Copies a file. |
-| `rm [filename]` | Removes a file. |
-| `diff [filename1] [filename2]` | Compares files, and shows where they differ. |
-| `wc [filename]` | Tells you how many lines, words and characters there are in a file. |
-| `chmod -options [filename]` | Lets you change the read, write, and execute permissions on your files. |
-| `gzip [filename]` | Compresses files. |
-| `gunzip [filename]` | Uncompresses files compressed by gzip. |
-| `gzcat [filename]` | Lets you look at gzipped file without actually having to gunzip it. |
-| `lpr [filename]` | Print the file. |
-| `lpq` | Check out the printer queue. |
-| `lprm [jobnumber]` | Remove something from the printer queue. |
-| `genscript` | Converts plain text files into postscript for printing and gives you some options for formatting. |
-| `dvips [filename]` | Print .dvi files (i.e. files produced by LaTeX). |
-| `grep [pattern] [filenames]` | Looks for the string in the files. |
-| `grep -r [pattern] [dir]` | Search recursively for pattern in directory. |
 
-### Directory Commands
-| Command  | Description |
-|:---|:---|
-| `mkdir [dirname]` | Makes a new directory. |
-| `cd` | Changes current working directory to home. |
-| `cd [path]` | Changes directory to specified `[path]`. |
-| `pwd` | Tells you where you currently are. |
+### Shortcuts {-}
 
+```{r, echo=FALSE}
+knitr::kable(
+  data.frame(
+    "Command" = c("`CTRL+A` ", "`CTRL+B` ", "`CTRL+C` ", "`CTRL+D` ", "`CTRL+E` ", "`CTRL+F` ", "`CTRL+G` ", "`CTRL+J` ", "`CTRL+K` ", "`CTRL+L` ", "`CTRL+M` ", "`CTRL+N` ", "`CTRL+O` ", "`CTRL+P` ", "`CTRL+R` ", "`CTRL+S` ", "`CTRL+T` ", "`CTRL+U` ", "`CTRL+V` ", "`CTRL+W` ", "`CTRL+X` ", "`CTRL+Y` ", "`CTRL+Z` ", "`DELETE` ", "`!!` ", "`exit` "),
+    "Description" = c("Move to the beginning of the line. ", "Moves backward one character. ", "Halts the current command. ", "Deletes one character backward or logs out of current session, similar to exit. ", "Moves to end of line. ", "Moves forward one character. ", "Aborts the current editing command and ring the terminal bell. ", "Same as RETURN. ", "Deletes (kill) forward to end of line. ", "Clears screen and redisplay the line. ", "Same as RETURN. ", "Next line in command history. ", "Same as RETURN, then displays next line in history file. ", "Previous line in command history. ", "Searches backward. ", "Searches forward. ", "Transposes two characters. ", "Kills backward from point to the beginning of line. ", "Makes the next character typed verbatim. ", "Kills the word behind the cursor. ", "Lists the possible filename completions of the current word. ", "Retrieves (yank) last item killed. ", "Stops the current command, resume with `fg` in the foreground or `bg` in the background. ", "Deletes one character backward. ", "Repeats the last command. ", "Logs out of current session. ")
+  )
+)
+```
+
+&nbsp;
+
+
+### Bash Basics {-}
+
+```{r, echo=FALSE}
+knitr::kable(
+  data.frame(
+    "Command" = c("`export` ", "`echo $SHELL` ", "`echo $BASH_VERSION` ", "`bash` ", "`whereis bash` ", "`clear` "),
+    "Description" = c("Displays all environment variables. ", "Displays the shell you’re using. ", "Displays bash version. ", "If you want to use bash (type exit to go back to your normal shell). ", "Finds out where bash is on your system. ", "Clears content on window (hide displayed lines). ")
+  )
+)
+```
+
+&nbsp;
+
+
+### File Commands {-}
+
+```{r, echo=FALSE}
+knitr::kable(
+  data.frame(
+    "Command" = c("`ls` ", "`ls -l` ", "`ls -a` ", "`ln -s [filename] [link]` ", "`touch [filename]` ", "`cat ] [filename]` ", "`more [filename]` ", "`head [filename]` ", "`tail [filename]` ", "`emacs [filename]` ", "`mv [filename1] [filename2]` ", "`cp [filename1] [filename2]` ", "`rm [filename]` ", "`diff [filename1] [filename2]` ", "`wc [filename]` ", "`chmod -options [filename]` ", "`gzip [filename]` ", "`gunzip [filename]` ", "`gzcat [filename]` ", "`lpr [filename]` ", "`lpq` ", "`lprm [jobnumber]` ", "`genscript` ", "`dvips [filename]` ", "`grep [pattern] [filenames]` ", "`grep -r [pattern] [dir]` "),
+    "Description" = c("Lists your files. ", "Lists your files in ‘long format’, which contains the exact size of the file, who owns the file and who has the right to look at it, and when it was last modified. ", "Lists all files, including hidden files. ", "Creates symbolic link to file. ", "Creates or updates your file. ", "Places standard input into file. ", "Shows the first part of a file (move with space and type q to quit). ", "Outputs the first 10 lines of file. ", "Outputs the last 10 lines of file (useful with -f option). ", "Lets you create and edit a file. ", "Moves a file. ", "Copies a file. ", "Removes a file. ", "Compares files, and shows where they differ. ", "Tells you how many lines, words and characters there are in a file. ", "Lets you change the read, write, and execute permissions on your files. ", "Compresses files. ", "Uncompresses files compressed by gzip. ", "Lets you look at gzipped file without actually having to gunzip it. ", "Print the file. ", "Check out the printer queue. ", "Remove something from the printer queue. ", "Converts plain text files into postscript for printing and gives you some options for formatting. ", "Print .dvi files (i.e. files produced by LaTeX). ", "Looks for the string in the files. ", "Search recursively for pattern in directory. ")
+  )
+)
+```
+
+&nbsp;
+
+
+### Directory Commands {-}
+
+```{r, echo=FALSE}
+knitr::kable(
+  data.frame(
+    "Command" = c("`mkdir [dirname]` ", "`cd` ", "`cd [path]` ", "`pwd` "),
+    "Description" = c("Makes a new directory. ", "Changes current working directory to home. ", "Changes directory to specified `[path]`. ", "Tells you where you currently are. ")
+  )
+)
+```
+
+&nbsp;

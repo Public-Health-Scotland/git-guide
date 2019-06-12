@@ -22,7 +22,6 @@
   <meta name="twitter:description" content="A quick start guide for using Git, GitHub, and integrations with RStudio" />
   <meta name="twitter:image" content="images/cover.png" />
 
-<meta name="author" content="Russell McCreath">
 
 
 
@@ -78,12 +77,13 @@
 <li class="chapter" data-level="1.4" data-path="the-shell.html"><a href="the-shell.html#navigating"><i class="fa fa-check"></i><b>1.4</b> Navigating</a><ul>
 <li class="chapter" data-level="1.4.1" data-path="the-shell.html"><a href="the-shell.html#file-system"><i class="fa fa-check"></i><b>1.4.1</b> File System</a></li>
 </ul></li>
-<li class="chapter" data-level="1.5" data-path="the-shell.html"><a href="the-shell.html#glossary"><i class="fa fa-check"></i><b>1.5</b> Glossary</a></li>
-<li class="chapter" data-level="1.6" data-path="the-shell.html"><a href="the-shell.html#reference"><i class="fa fa-check"></i><b>1.6</b> Reference</a><ul>
-<li class="chapter" data-level="1.6.1" data-path="the-shell.html"><a href="the-shell.html#shortcuts"><i class="fa fa-check"></i><b>1.6.1</b> Shortcuts</a></li>
-<li class="chapter" data-level="1.6.2" data-path="the-shell.html"><a href="the-shell.html#bash-basics"><i class="fa fa-check"></i><b>1.6.2</b> Bash Basics</a></li>
-<li class="chapter" data-level="1.6.3" data-path="the-shell.html"><a href="the-shell.html#file-commands"><i class="fa fa-check"></i><b>1.6.3</b> File Commands</a></li>
-<li class="chapter" data-level="1.6.4" data-path="the-shell.html"><a href="the-shell.html#directory-commands"><i class="fa fa-check"></i><b>1.6.4</b> Directory Commands</a></li>
+<li class="chapter" data-level="1.5" data-path="the-shell.html"><a href="the-shell.html#reference"><i class="fa fa-check"></i><b>1.5</b> Reference</a><ul>
+<li class="chapter" data-level="" data-path="the-shell.html"><a href="the-shell.html#glossary"><i class="fa fa-check"></i>Glossary</a></li>
+<li class="chapter" data-level="" data-path="the-shell.html"><a href="the-shell.html#navigation"><i class="fa fa-check"></i>Navigation</a></li>
+<li class="chapter" data-level="" data-path="the-shell.html"><a href="the-shell.html#shortcuts"><i class="fa fa-check"></i>Shortcuts</a></li>
+<li class="chapter" data-level="" data-path="the-shell.html"><a href="the-shell.html#bash-basics"><i class="fa fa-check"></i>Bash Basics</a></li>
+<li class="chapter" data-level="" data-path="the-shell.html"><a href="the-shell.html#file-commands"><i class="fa fa-check"></i>File Commands</a></li>
+<li class="chapter" data-level="" data-path="the-shell.html"><a href="the-shell.html#directory-commands"><i class="fa fa-check"></i>Directory Commands</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="version-control-with-git.html"><a href="version-control-with-git.html"><i class="fa fa-check"></i><b>2</b> Version Control with Git</a><ul>
@@ -259,13 +259,11 @@ If the shell can’t find a program whose name is the command you typed, it will
 <p><em>insert filesysyem hierarchy diagram - level 2</em></p>
 </div>
 </div>
-<div id="glossary" class="section level2">
-<h2><span class="header-section-number">1.5</span> Glossary</h2>
-<table style="width:14%;">
-<colgroup>
-<col width="6%" />
-<col width="6%" />
-</colgroup>
+<div id="reference" class="section level2">
+<h2><span class="header-section-number">1.5</span> Reference</h2>
+<div id="glossary" class="section level3 unnumbered">
+<h3>Glossary</h3>
+<table>
 <thead>
 <tr class="header">
 <th align="left">Keyword</th>
@@ -275,7 +273,7 @@ If the shell can’t find a program whose name is the command you typed, it will
 <tbody>
 <tr class="odd">
 <td align="left"><strong>absolute path</strong></td>
-<td align="left">A path that refers to a particular location in a file system. Absolute paths are usually written with respect to the file system’s root directory, and begin with either “/” (on Unix) or “” (on Microsoft Windows). See also: relative path.</td>
+<td align="left">A path that refers to a particular location in a file system. Absolute paths are usually written with respect to the file system’s root directory, and begin with either “/” (on Unix) or “\” (on Microsoft Windows). See also: relative path.</td>
 </tr>
 <tr class="even">
 <td align="left"><strong>argument</strong></td>
@@ -283,39 +281,14 @@ If the shell can’t find a program whose name is the command you typed, it will
 </tr>
 </tbody>
 </table>
+<p> </p>
 </div>
-<div id="reference" class="section level2">
-<h2><span class="header-section-number">1.6</span> Reference</h2>
-<table style="width:14%;">
-<colgroup>
-<col width="6%" />
-<col width="6%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">Navigating Files &amp; Directories</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><code>cd [path]</code></td>
-<td align="left">Changes the current working directory to the specified path</td>
-</tr>
-<tr class="even">
-<td align="left"><code>ls [path]</code></td>
-<td align="left">Prints a listing of the specified file or directory. (If <code>ls</code> is used alone, the current working directory will be listed.)</td>
-</tr>
-<tr class="odd">
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
+<div id="navigation" class="section level3 unnumbered">
+<h3>Navigation</h3>
 <table>
 <thead>
 <tr class="header">
-<th align="left">Navigating.Files…Directories</th>
+<th align="left">Command</th>
 <th align="left">Description</th>
 </tr>
 </thead>
@@ -330,13 +303,11 @@ If the shell can’t find a program whose name is the command you typed, it will
 </tr>
 </tbody>
 </table>
-<div id="shortcuts" class="section level3">
-<h3><span class="header-section-number">1.6.1</span> Shortcuts</h3>
-<table style="width:14%;">
-<colgroup>
-<col width="6%" />
-<col width="6%" />
-</colgroup>
+<p> </p>
+</div>
+<div id="shortcuts" class="section level3 unnumbered">
+<h3>Shortcuts</h3>
+<table>
 <thead>
 <tr class="header">
 <th align="left">Command</th>
@@ -426,7 +397,7 @@ If the shell can’t find a program whose name is the command you typed, it will
 </tr>
 <tr class="odd">
 <td align="left"><code>CTRL+X</code></td>
-<td align="left">Lists the possible filename completetions of the current word.</td>
+<td align="left">Lists the possible filename completions of the current word.</td>
 </tr>
 <tr class="even">
 <td align="left"><code>CTRL+Y</code></td>
@@ -450,9 +421,10 @@ If the shell can’t find a program whose name is the command you typed, it will
 </tr>
 </tbody>
 </table>
+<p> </p>
 </div>
-<div id="bash-basics" class="section level3">
-<h3><span class="header-section-number">1.6.2</span> Bash Basics</h3>
+<div id="bash-basics" class="section level3 unnumbered">
+<h3>Bash Basics</h3>
 <table>
 <thead>
 <tr class="header">
@@ -487,14 +459,11 @@ If the shell can’t find a program whose name is the command you typed, it will
 </tr>
 </tbody>
 </table>
+<p> </p>
 </div>
-<div id="file-commands" class="section level3">
-<h3><span class="header-section-number">1.6.3</span> File Commands</h3>
-<table style="width:14%;">
-<colgroup>
-<col width="6%" />
-<col width="6%" />
-</colgroup>
+<div id="file-commands" class="section level3 unnumbered">
+<h3>File Commands</h3>
+<table>
 <thead>
 <tr class="header">
 <th align="left">Command</th>
@@ -608,9 +577,10 @@ If the shell can’t find a program whose name is the command you typed, it will
 </tr>
 </tbody>
 </table>
+<p> </p>
 </div>
-<div id="directory-commands" class="section level3">
-<h3><span class="header-section-number">1.6.4</span> Directory Commands</h3>
+<div id="directory-commands" class="section level3 unnumbered">
+<h3>Directory Commands</h3>
 <table>
 <thead>
 <tr class="header">
@@ -637,6 +607,7 @@ If the shell can’t find a program whose name is the command you typed, it will
 </tr>
 </tbody>
 </table>
+<p> </p>
 
 </div>
 </div>
