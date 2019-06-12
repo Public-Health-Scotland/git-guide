@@ -19,9 +19,9 @@ output_dir: /docs
 knitr::include_graphics('images/cover.png', dpi = NA)
 ```
 
-This is a quick guide for Git, including a look at Shell scripting, GitHub, and the integrations into RStudio. There are references for further detailed and training on each of these topics.
+This is a quick guide for Git, including a look at Shell scripting, GitHub, and the integrations into RStudio. There are references for further details and training on each of these topics.
 
-There are four chapters, identifying setup, steps to follow, "cheat-sheets", and further reference materials:
+In this guide, there are four chapters which identify setup, steps to follow, "cheat-sheets", and further reference materials:
 
 1. Shell
 2. Git
