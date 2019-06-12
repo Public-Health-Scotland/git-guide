@@ -249,3 +249,5 @@ knitr::kable(
 
 ## Shell Reference
 
+[Software Carpentry - Shell Lesson](http://swcarpentry.github.io/shell-novice/) - *"This lesson guides you through the basics of file systems and the shell. If you have stored files on a computer at all and recognize the word “file” and either “directory” or “folder” (two common words for the same thing), you’re ready for this lesson."*
+
