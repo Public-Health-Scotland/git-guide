@@ -399,3 +399,10 @@ These are some tips/references to keep in mind when working with Git:
 * [Write good commit messages](https://github.com/erlang/otp/wiki/writing-good-commit-messages). The messages should be succint, meaningful, and written in imperative form (i.e. "Add x, y, z" not "Added x, y, z").
 * Delete branches after merging. This reduces risks of merge conflicts and keeps your work set-up tidy.
 * It's possible to have multiple branches for working on or fixing multiple features of your project, but be aware that this increases the chance of a merge conflict.
+
+
+### Links {-}
+
+[Pro Git Book](https://git-scm.com/book/en/v2) - A complete reference text for Git.
+
+[Software Carpentry - Git Lesson](http://swcarpentry.github.io/git-novice/) - *"Version control is the lab notebook of the digital world: it’s what professionals use to keep track of what they’ve done and to collaborate with other people. Every large software development project relies on it, and most programmers use it for their small jobs as well. And it isn’t just for software: books, papers, small data sets, and anything that changes over time or needs to be shared can and should be stored in a version control system."*
