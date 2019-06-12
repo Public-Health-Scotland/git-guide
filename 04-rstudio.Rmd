@@ -82,3 +82,7 @@ $ git merge <branch>
 knitr::include_graphics('images/rstudio-pullpush.png', dpi = NA)
 ```
 &nbsp;
+
+
+## RStudio Reference
+

@@ -161,7 +161,7 @@ Underneath `/Users`, we find one directory for each user with an account on the 
 *insert filesysyem hierarchy diagram - level 2*
 
 
-## Shell Reference
+## Shell Cheat Sheet
 
 ### Glossary {-}
 
@@ -245,3 +245,7 @@ knitr::kable(
 ```
 
 &nbsp;
+
+
+## Shell Reference
+

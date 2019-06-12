@@ -155,4 +155,5 @@ knitr::include_graphics('images/github-pullrequest.png', dpi = NA)
 &nbsp;
 
 
-## Reference
+## GitHub Reference
+
