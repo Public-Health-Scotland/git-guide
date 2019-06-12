@@ -1,6 +1,5 @@
 ---
 title: "A Quick Guide to Git & GitHub"
-author: "Russell McCreath"
 site: bookdown::bookdown_site
 output: 
   bookdown::gitbook:
