@@ -1,0 +1,14 @@
+---
+title: "A Guide to Git & GitHub"
+author: "Russell McCreath"
+site: bookdown::bookdown_site
+output: 
+  bookdown::gitbook:
+    config:
+      toc:
+        collapse: section
+description: "A quick start guide for using Git and GitHub"
+github-repo: NHS-NSS-transforming-publications/git-guide
+cover-image: images/cover.png
+output_dir: "docs"
+---
