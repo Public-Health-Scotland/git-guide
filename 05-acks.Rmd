@@ -1,9 +1,0 @@
-# Acknowledgements {-}
-
-[Software Carpentry](https://software-carpentry.org)
-
-## Git
-
-## GitHub
-
-## Version Control in RStudio
