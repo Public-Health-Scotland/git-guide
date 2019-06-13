@@ -18,6 +18,7 @@ output_dir: /docs
 ```{r fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html')}
 knitr::include_graphics('images/cover.png', dpi = NA)
 ```
+&nbsp;
 
 This is a quick guide for Git, including a look at Shell scripting, GitHub, and the integrations into RStudio. There are references for further details and training on each of these topics.
 

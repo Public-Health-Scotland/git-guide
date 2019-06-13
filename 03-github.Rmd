@@ -3,6 +3,7 @@
 ```{r fig.align='center', echo=FALSE, out.height = "250px", include=identical(knitr:::pandoc_to(), 'html')}
 knitr::include_graphics('images/github.png', dpi = NA)
 ```
+&nbsp;
 
 Version control really comes into its own when we begin to collaborate with other people. We already have most of the machinery we need to do this; the only thing missing is to copy changes from one repository to another.  
 

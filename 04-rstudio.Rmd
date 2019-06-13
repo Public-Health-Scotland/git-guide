@@ -3,6 +3,7 @@
 ```{r fig.align='center', echo=FALSE, out.height = "250px", include=identical(knitr:::pandoc_to(), 'html')}
 knitr::include_graphics('images/rstudio.png', dpi = NA)
 ```
+&nbsp;
 
 Version control can be very useful when developing data analysis scripts. For that reason, the popular development environment [RStudio](https://www.rstudio.com/) for the R programming language has built-in integration with Git. While some advanced Git features still require the command-line, RStudio has a nice interface for many common Git operations.  
 
