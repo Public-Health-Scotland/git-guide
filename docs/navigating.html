@@ -5,11 +5,11 @@
 
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Acknowledgements | A Quick Guide to Git &amp; GitHub</title>
+  <title>1.4 Navigating | A Quick Guide to Git &amp; GitHub</title>
   <meta name="description" content="A quick start guide for using Git, GitHub, and integrations with RStudio">
   <meta name="generator" content="bookdown  and GitBook 2.6.7">
 
-  <meta property="og:title" content="Acknowledgements | A Quick Guide to Git &amp; GitHub" />
+  <meta property="og:title" content="1.4 Navigating | A Quick Guide to Git &amp; GitHub" />
   <meta property="og:type" content="book" />
   
   <meta property="og:image" content="images/cover.png" />
@@ -17,7 +17,7 @@
   <meta name="github-repo" content="NHS-NSS-transforming-publications/git-guide" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Acknowledgements | A Quick Guide to Git &amp; GitHub" />
+  <meta name="twitter:title" content="1.4 Navigating | A Quick Guide to Git &amp; GitHub" />
   
   <meta name="twitter:description" content="A quick start guide for using Git, GitHub, and integrations with RStudio" />
   <meta name="twitter:image" content="images/cover.png" />
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="rstudio-reference.html">
-<link rel="next" href="git-1.html">
+<link rel="prev" href="introduction.html">
+<link rel="next" href="shell-cheat-sheet.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -145,17 +145,35 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="acknowledgements" class="section level1 unnumbered">
-<h1>Acknowledgements</h1>
-<p><a href="https://software-carpentry.org">Software Carpentry</a></p> 
+<div id="navigating" class="section level2">
+<h2><span class="header-section-number">1.4</span> Navigating</h2>
+<p>The part of the operating system responsible for managing files and directories is called the <strong>file system</strong>. It organizes our data into files, which hold information, and directories (also called “folders”), which hold files or other directories.</p>
+<p>Several commands are frequently used to create, inspect, rename, and delete files and directories. To start exploring them, we’ll go to our open shell window.</p>
+<p>First let’s find out where we are by running a command called <code>pwd</code> (which stands for “print working directory”). Directories are like <em>places</em> - at any time while we are using the shell we are in exactly one place, called our <strong>current working directory</strong>. Commands mostly read and write files in the current working directory, i.e. “here”, so knowing where you are before running a command is important. <code>pwd</code> shows you where you are:</p>
+<pre><code>$ pwd
+/Users/username</code></pre>
+<p>Here, the computer’s response is: <code>/Users/username</code>, which is user’s home directory:</p>
+<blockquote>
+<p>The home directory path will look different on different operating systems. On Linux it may look like <code>/home/username</code>, and on Windows it will be similar to <code>C:\Documents and Settings\username</code> or <code>C:\Users\username</code>. (Note that it may look slightly different for different versions of Windows.)</p>
+</blockquote>
+<div id="file-system" class="section level3">
+<h3><span class="header-section-number">1.4.1</span> File System</h3>
+<p>Here we’ll illustrate the filesystem, this will be similar to your own filesystem but not identical:</p>
+<p><em>insert filesystem hierarchy diagram - level 1</em></p>
+<p>At the top is the <strong>root directory</strong> that holds <em>everything</em> else. We refer to it using a slash, <code>/</code>, character on its own; this is the leading slash in <code>/Users/username</code>.</p>
+<p>Inside that directory are several other directories: <code>bin</code> (which is where some built-in programs are stored), <code>data</code> (for miscellaneous files), <code>Users</code> (where users’ personal directories are located), <code>temp</code> (for temporary file that don’t need to be stored long term), etc.</p>
+<p>We know that our current working directory <code>/Users/username</code> is stored inside <code>/Users</code> because <code>/Users</code> is the first part of its name. Similarly, we know that <code>/Users</code> is stored inside the root directory <code>/</code> because its name begins with <code>/</code>.</p>
+<p>Underneath <code>/Users</code>, we find one directory for each user with an account on the machine. Typically, when you open a new command prompt you will be in your home directory to start:</p>
+<p><em>insert filesysyem hierarchy diagram - level 2</em></p>
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="rstudio-reference.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="git-1.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="introduction.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="shell-cheat-sheet.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -185,7 +203,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/NHS-NSS-transforming-publications/git-guide/edit/master/05-acks.Rmd",
+"link": "https://github.com/NHS-NSS-transforming-publications/git-guide/edit/master/01-shell.Rmd",
 "text": "Edit"
 },
 "history": {

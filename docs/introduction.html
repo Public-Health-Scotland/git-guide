@@ -5,11 +5,11 @@
 
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Acknowledgements | A Quick Guide to Git &amp; GitHub</title>
+  <title>1.3 Introduction | A Quick Guide to Git &amp; GitHub</title>
   <meta name="description" content="A quick start guide for using Git, GitHub, and integrations with RStudio">
   <meta name="generator" content="bookdown  and GitBook 2.6.7">
 
-  <meta property="og:title" content="Acknowledgements | A Quick Guide to Git &amp; GitHub" />
+  <meta property="og:title" content="1.3 Introduction | A Quick Guide to Git &amp; GitHub" />
   <meta property="og:type" content="book" />
   
   <meta property="og:image" content="images/cover.png" />
@@ -17,7 +17,7 @@
   <meta name="github-repo" content="NHS-NSS-transforming-publications/git-guide" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Acknowledgements | A Quick Guide to Git &amp; GitHub" />
+  <meta name="twitter:title" content="1.3 Introduction | A Quick Guide to Git &amp; GitHub" />
   
   <meta name="twitter:description" content="A quick start guide for using Git, GitHub, and integrations with RStudio" />
   <meta name="twitter:image" content="images/cover.png" />
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="rstudio-reference.html">
-<link rel="next" href="git-1.html">
+<link rel="prev" href="setup.html">
+<link rel="next" href="navigating.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -145,17 +145,56 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="acknowledgements" class="section level1 unnumbered">
-<h1>Acknowledgements</h1>
-<p><a href="https://software-carpentry.org">Software Carpentry</a></p> 
+<div id="introduction" class="section level2">
+<h2><span class="header-section-number">1.3</span> Introduction</h2>
+<p>The Shell is a program which runs other programs rather than doing calculations itself. The most popular Unix shell is Bash, (the Bourne Again SHell — so-called because it’s derived from a shell written by Stephen Bourne). Bash is the default shell on most modern implementations of Unix and in most packages that provide Unix-like tools for Windows.</p>
+<p>A typical shell window looks something like:</p>
+<pre><code>user$
+user$ ls -F/
+  Applications/   System/
+  Library/        Users/
+  Network/        Volumes/
+user$</code></pre>
+<p>The first line shows only a prompt, indicating that the shell is waiting for input. Your shell may use different text for the prompt. Most importantly: when typing commands, either from these lessons or from other sources, do not type the prompt, only the commands that follow it.</p>
+<p>The part that you type, <code>ls -F /</code> in the second line of the example, typically has the following structure: a <strong>command</strong>, some <strong>flags</strong> (also called options or switches) and an <strong>argument</strong>. Flags start with a single dash (<code>-</code>) or two dashes (<code>--</code>), and change the behaviour of a command. Arguments tell the command what to operate on (e.g. files and directories). Sometimes flags and arguments are referred to as parameters. A command can be called with more than one flag and more than one argument: but a command doesn’t always require an argument or a flag.</p>
+<p>In the second line of the example above, our command is <code>ls</code>, with a flag <code>-F</code> and an argument <code>/</code>. Each part is separated by spaces: if you omit the space between <code>ls</code> and <code>-F</code> the shell will look for a command called <code>ls-F</code>, which doesn’t exist. Also, capitalisation matters: <code>LS</code> is different from <code>ls</code>.</p>
+<p>Next we see the output that our command produced. In this case it is a listing of files and folders in a location called <code>/</code> - we’ll cover what all these mean later. <em>Those using a macOS might recognise the output in this example.</em></p>
+<p>Finally, the shell again prints the prompt and waits for you to type the next command.</p>
+<p>In the examples for this lesson, we’ll show the prompt as <code>$</code>. You can make your prompt look the same by executing the command <code>PS1='$ '</code>. But you can also leave your prompt as it is - often the prompt includes useful information about who and where you are.</p>
+<p>Open a shell window and try executing <code>ls -F /</code> for yourself (don’t forget that spaces and capitalisation are important!). You can change the prompt too, if you like.</p>
+<div id="commands-flags" class="section level3">
+<h3><span class="header-section-number">1.3.1</span> Commands &amp; Flags</h3>
+<p>Every command is a program stored somewhere on the computer, and the shell keeps a list of places to search for commands (the list is in a variable called PATH, but those are concepts we’ll meet later and are not too important at the moment). Recall that commands, flags and arguments are separated by spaces.</p>
+<p>So let’s look at the REPL (read-evaluate-print loop) in more detail. Notice that the “evaluate” step is made of two parts:</p>
+<ol style="list-style-type: decimal">
+<li>Read what was typed (<code>ls -F /</code> in our example) The shell uses the spaces to split the line into the command, flags, and arguments</li>
+<li>Evaluate: -Find a program called <code>ls</code> -Execute it, passing it the flags and arguments (<code>-F</code> and <code>/</code>) to interpret as the program sees fit</li>
+<li>Print the output produced by the program.</li>
+</ol>
+<p>and then print the prompt and wait for you to enter another command.</p>
+<p><strong>Command not found?</strong><br />
+If the shell can’t find a program whose name is the command you typed, it will print an error message like:</p>
+<pre><code>$ ls-F
+-bash: ls-F: command not found</code></pre>
+<p>Usually this means that the command is mis-typed - in this case we omitted the space between <code>ls</code> and <code>-F</code>.</p>
+</div>
+<div id="difficulty" class="section level3">
+<h3><span class="header-section-number">1.3.2</span> Difficulty</h3>
+<p>It is a different model of interacting than a GUI, and that will take some effort - and some time - to learn. A GUI presents you with choices and you select one. With a <strong>command line interface</strong> (CLI) the choices are combinations of commands and parameters, more like words in a language than buttons on a screen. They are not presented to you so you must learn a few, like learning some vocabulary in a new language. But a small number of commands gets you a long way, and we’ll cover those essential few today.</p>
+</div>
+<div id="benefits" class="section level3">
+<h3><span class="header-section-number">1.3.3</span> Benefits</h3>
+<p>The grammar of a shell allows you to combine existing tools into powerful pipelines and handle large volumes of data automatically. Sequences of commands can be written into a script, improving the reproducibility of workflows and allowing you to repeat them easily.</p>
+<p>In addition, the command line is often the easiest way to interact with remote machines and supercomputers. Familiarity with the shell is near essential to run a variety of specialised tools and resources including high-performance computing systems. As clusters and cloud computing systems become more popular for scientific data crunching, being able to interact with the shell is becoming a necessary skill. We can build on the command-line skills covered here to tackle a wide range of scientific questions and computational challenges.</p>
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="rstudio-reference.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="git-1.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="setup.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="navigating.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -185,7 +224,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/NHS-NSS-transforming-publications/git-guide/edit/master/05-acks.Rmd",
+"link": "https://github.com/NHS-NSS-transforming-publications/git-guide/edit/master/01-shell.Rmd",
 "text": "Edit"
 },
 "history": {

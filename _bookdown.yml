@@ -1,4 +1,3 @@
----
 title: "A Guide to Git & GitHub"
 author: "Russell McCreath"
 site: bookdown::bookdown_site
@@ -12,4 +11,3 @@ github-repo: NHS-NSS-transforming-publications/git-guide
 edit: https://github.com/NHS-NSS-transforming-publications/git-guide/edit/master/%s
 cover-image: images/cover.png
 output_dir: "docs"
----
