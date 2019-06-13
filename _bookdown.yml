@@ -9,6 +9,7 @@ output:
         collapse: section
 description: "A quick start guide for using Git and GitHub"
 github-repo: NHS-NSS-transforming-publications/git-guide
+edit: https://github.com/NHS-NSS-transforming-publications/git-guide/edit/master/%s
 cover-image: images/cover.png
 output_dir: "docs"
 ---
