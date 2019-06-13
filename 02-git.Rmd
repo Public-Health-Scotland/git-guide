@@ -38,7 +38,7 @@ Working in repositories keeps development projects organized and protected. Deve
 
 These intructions should only need to be followed once or when setting up a new device.
 
-1. **Install Git** - Git is a free, open-source, software available from https://git-scm.com/. If you work within Public Health & Intelligence, request the software from IT through the [Service Portal](https://nhsnss.service-now.com/sp). Once authorised, this will allow you to download it from the Software Center on your machine. 
+1. **Install Git** - Git is a free, open-source, software available from https://git-scm.com/. If you work within NHS National Services Scotland, request the software from IT through the [Service Portal](https://nhsnss.service-now.com/sp). Once authorised, this will allow you to download it from the Software Center on your machine. 
 
 2. **Configure your details** - Git needs to know who you are, use the following commands to configure your username and email (*if you're a GitHub user, use the same email and username you're registered with on GitHub.*):
 
