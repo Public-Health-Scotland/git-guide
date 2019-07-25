@@ -27,4 +27,4 @@ In this guide, there are four chapters which identify setup, steps to follow, "c
 3. GitHub
 4. RStudio
 
-*The book is created using bookdown (an R package) and hosted using GitHub. This should allow convenience for development and use, hassle-free updates, and contribution from users (from typos to suggestions).*
+*The book is created using bookdown (an R package) and hosted using GitHub. This should allow convenience for development and use, hassle-free updates, and contribution from users (from typos to suggestions).* 
