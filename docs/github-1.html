@@ -5,11 +5,11 @@
 
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>A Quick Guide to Git &amp; GitHub</title>
+  <title>3 GitHub | A Quick Guide to Git &amp; GitHub</title>
   <meta name="description" content="A quick start guide for using Git, GitHub, and integrations with RStudio">
   <meta name="generator" content="bookdown  and GitBook 2.6.7">
 
-  <meta property="og:title" content="A Quick Guide to Git &amp; GitHub" />
+  <meta property="og:title" content="3 GitHub | A Quick Guide to Git &amp; GitHub" />
   <meta property="og:type" content="book" />
   
   <meta property="og:image" content="images/cover.png" />
@@ -17,7 +17,7 @@
   <meta name="github-repo" content="NHS-NSS-transforming-publications/git-guide" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="A Quick Guide to Git &amp; GitHub" />
+  <meta name="twitter:title" content="3 GitHub | A Quick Guide to Git &amp; GitHub" />
   
   <meta name="twitter:description" content="A quick start guide for using Git, GitHub, and integrations with RStudio" />
   <meta name="twitter:image" content="images/cover.png" />
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-
-<link rel="next" href="introduction-setup.html">
+<link rel="prev" href="version-control-with-git.html">
+<link rel="next" href="rstudio-git-integrations.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -156,30 +156,155 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">A Quick Guide to Git &amp; GitHub</h1>
-</div>
-<div id="preface" class="section level1 unnumbered">
-<h1>Preface</h1>
-<p><img src="images/cover.png" style="display: block; margin: auto;" /></p>
-<p>This is a quick guide for Git, including a look at Shell scripting, GitHub, and the integrations into RStudio. There are references for further details and training on each of these topics.</p>
-<p>In this guide, there are four chapters which identify setup, steps to follow, “cheat-sheets”, and further reference materials:</p>
+<div id="github-1" class="section level1">
+<h1><span class="header-section-number">3</span> GitHub</h1>
+<p><img src="images/github.png" height="250px" style="display: block; margin: auto;" /></p>
+<p>Version control really comes into its own when we begin to collaborate with other people. We already have most of the machinery we need to do this; the only thing missing is to copy changes from one repository to another.</p>
+<p>Systems like Git allow us to move work between any two repositories. In practice, though, it’s easiest to use one copy as a central hub, and to keep it on the web rather than on someone’s laptop. Most programmers use hosting services like <a href="https://github.com/">GitHub</a>, <a href="https://bitbucket.org/">BitBucket</a> or <a href="https://gitlab.com/">GitLab</a> to hold those master copies. Here, we’ll explore GitHub.</p>
+<p>GitHub is a Git hosting repository that provides users with tools to ship better code through command line features, issues (threaded discussions), pull requests, and code review. GitHub builds collaboration directly into the development process. Work is organised into repositories, where users can outline requirements or direction and set expectations for team members. Then, using the [GitHub Flow], developers simply create a branch to work on updates, commit changes to save them, open a pull request to propose and dicsuss changes, and merge pull requests once everyone is on the same page. See <a href="github-1.html#github-workflow-1">GitHub Workflow</a> for more details.</p>
+<div id="github-workflow-1" class="section level2">
+<h2><span class="header-section-number">3.1</span> GitHub Workflow</h2>
+<p><img src="images/githubflow.png" style="display: block; margin: auto;" />  </p>
+<p>This is our recommended workflow. The workflow is branch-based and involves keeping the master branch clean and ‘production ready’/fully-functional at all times.</p>
 <ol style="list-style-type: decimal">
-<li>Shell</li>
-<li>Git</li>
-<li>GitHub</li>
-<li>RStudio</li>
+<li><strong>Create a branch</strong> - topic/per-person branches created from the master allow teams to contribute to many parallel efforts. Short-lived topic branches, in particular, keep teams focussed and results in quick ships.</li>
+<li><strong>Add commits</strong> - these are snapshots of development efforts within a branch and create safe, revertible points in the project’s history.</li>
+<li><strong>Open a pull request</strong> - pull requests publicise the project’s ongoing efforts and set the tone for a transparent development process.</li>
+<li><strong>Discuss and review code</strong> - teams participate in code reviews by commenting, testing, and reviewing open pull requests. Code review is at the centre of an open and participatory culture. Pull requests should be approved by at least one collaborator - we recommend you assign a specific reviewer(s) to check the work. In order to ensure the master branch remains ‘production ready’ we also recommend that the master branch is protected and any changes are tested by the reviewer before approving.</li>
+<li><strong>Merge</strong> - upon clicking merge, GitHub automatically performs the equivalent of a local <code>git merge</code> operation. GitHub also keeps the entire branch development history on the merged pull request.</li>
+<li><strong>Deploy</strong> - teams can choose the best release cycles or incorporate continuous integration tools and operate with the assurance that code on the deployment branch has gone through a robust workflow.</li>
 </ol>
-<p><em>The book is created using bookdown (an R package) and hosted using GitHub. This should allow convenience for development and use, hassle-free updates, and contribution from users (from typos to suggestions).</em></p>
+</div>
+<div id="setup-3" class="section level2">
+<h2><span class="header-section-number">3.2</span> Setup</h2>
+<p>These instructions are for first-time users of GitHub and highlight the steps in setting up a GitHub account.</p>
+<ol style="list-style-type: decimal">
+<li><strong>Sign up</strong> - In order to use GitHub, you’ll need to have a personal GitHub account, you can set that up here [<a href="http://github.com" class="uri">http://github.com</a>]. If using your NHS email address ensure you <strong>don’t use the same password as your NHS email account</strong>.</li>
+<li><strong>Edit your details</strong> - you will be able to set these items up as part of the sign up process. Otherwise, follow the links and edit them now.</li>
+</ol>
+<ul>
+<li>Go to your <a href="https://github.com/settings/profile">Profile Settings</a> and add your details with a picture of yourself if you feel comfortable to do so.</li>
+<li>Go to your <a href="https://github.com/settings/admin">Account Settings</a> and make sure your username is set to be your full name. This helps to identify users as generated GitHub handles tend to pretty obscure.</li>
+</ul>
+<ol start="3" style="list-style-type: decimal">
+<li><strong>Get added to Transforming Publishing</strong> - this step is optional and only for users who are doing work within the Transforming Publishing team. Email one of the admins <a href="https://github.com/orgs/NHS-NSS-transforming-publications/teams/transforming-publishing-team/members?utf8=%E2%9C%93&amp;query=+role%3Amaintainer">here</a> to request being added to the organisation.</li>
+</ol>
+</div>
+<div id="quick-start-github" class="section level2">
+<h2><span class="header-section-number">3.3</span> Quick Start GitHub</h2>
+<div id="new-project-repository" class="section level3">
+<h3><span class="header-section-number">3.3.1</span> New Project Repository</h3>
+<p>Just like in Git, a repository is used to organise a project. Repositories contain files, folders, images, data-sets (with caution), and anything else the project may need.</p>
+<p>If you’re setting up a new project on GitHub, follow these instructions. It is recommended to include a README or some other file with information about the project, this can be done at the same time the new repository is created.</p>
+<ol style="list-style-type: decimal">
+<li><strong>Go to <a href="https://github.com" class="uri">https://github.com</a> and sign in</strong></li>
+<li><strong>Create the repo</strong> - in the upper right corner, next to your avatar, click the <code>+</code> button and select “<em>New repository</em>”.</li>
+</ol>
+<p><img src="images/github-newrepo.png" style="display: block; margin: auto;" />  </p>
+<ol start="3" style="list-style-type: decimal">
+<li><strong>Fill in the details</strong> - select the owner, give it a name (short, specfic, memorable, and preferably lowercase-with-hyphens), write a short description, and consider if initialising with a README is appropriate. <em>A README file is used to provide up front information about what the project does, why it’s useful, how users can interact, where to get help, and who maintains and contributes to the project. This is really useful for anyone landing on the GitHub page to find out more. Initialising a repository on GitHub with a README will simply add a markdown file to which you can add the details to later.</em></li>
+<li><strong>Click “Create repository”</strong></li>
+</ol>
+<p><img src="images/github-createrepo.png" style="display: block; margin: auto;" />  </p>
+<ol start="5" style="list-style-type: decimal">
+<li><strong>Create project locally and link to GitHub</strong> - if you’re not using a GUI (Graphical User Interface) such as RStudio which has Git and GitHub integrations (see [Start RStudio Integration] for more detail), follow along using command line tools, introduced above in [Git Project Steps]. In order to commit to Git and then link to GitHub, some file needs to exist. In this example, a README.md file is created. Then, we add the link to the GitHub repo (you only need to do this once per project) with <code>git remote add &lt;name&gt; &lt;url&gt;</code> (<em><code>&lt;name&gt;</code> is any name to refer to the GitHub connection but <code>origin</code> is the most common/preferred name to use</em>) and then sending the first set of changes to GitHub using <code>git push &lt;name&gt; &lt;branch&gt;</code>. <em>Also, this example uses the HTTPS connection (a URL) to GitHub. Your URL will be unique to your project. Check the GitHub code page for the instructions.</em></li>
+</ol>
+<pre><code>username@NSS000000 MINGW64 ~/Documents/demo-project
+$ echo &quot;# demo-project&quot; &gt;&gt; README.md
+$ git init
+Initialized empty Git repository in C:/Users/username/Documents/demo-project/.git/
 
+username@NSS000000 MINGW64 ~/Documents/demo-project
+$ git add README.md
+$ git commit -m &quot;first commit&quot;
+[master (root-commit) 1ab2cde] first commit
+  1 file changed, 1 insertion(+)
+  create mode 100644 README.md
+  
+username@NSS000000 MINGW64 ~/Documents/demo-project
+$ git remote add origin &lt;url&gt;
+$ git push origin master
+Counting objects: 3, done.
+Writing objects: 100% (3/3), 220 bytes | 220.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To &lt;url&gt;
+* [new branch]    master -&gt; master
+Branch master set up to track remote branch master from origin.
+
+username@NSS000000 MINGW64 ~/Documents/demo-project
+$</code></pre>
+</div>
+<div id="existing-project-repository" class="section level3">
+<h3><span class="header-section-number">3.3.2</span> Existing Project Repository</h3>
+<ol style="list-style-type: decimal">
+<li><strong>Download the repository from GitHub</strong> - get the URL for the project you are looking to contribute to and using <code>git clone &lt;url&gt;</code> make a local copy on your machine. This will create a local folder with the same name as the repo and a copy of all the files inside. In order to continue version control on that folder/repo, move into the folder on the command line using <code>cd &lt;folder-name&gt;</code>.</li>
+</ol>
+<pre><code>username@NSS000000 MINGW64 ~/Documents
+$ git clone &lt;url&gt;
+Cloning into &#39;existing-project&#39;...
+remote: Enumerating objects: 7, done.
+remote: Total 7 (delta 0), reused 0 (delta 0), pack-reused 7
+Unpacking objects: 100% (7/7), done.
+
+username@NSS000000 MINGW64 ~/Documents
+$ cd exising-project
+
+username@NSS000000 MINGW64 ~/Documents/existing-project
+$</code></pre>
+<ol start="2" style="list-style-type: decimal">
+<li><strong>Set up a branch, make some changes, stage them, commit them, and push them back to GitHub</strong></li>
+</ol>
+<pre><code>username@NSS000000 MINGW64 ~/Documents/existing-project
+$ git checkout -b &#39;feature&#39;
+Switched to branch &#39;feature&#39;
+
+username@NSS000000 MINGW64 ~/Documents/existing-project
+$ git add new-file.md
+
+username@NSS000000 MINGW64 ~/Documents/existing-project
+$ git commit -m &quot;add new-file&quot;
+
+username@NSS000000 MINGW64 ~/Documents/existing-project
+$ git push -u origin feature
+Counting objects: 1, done.
+Writing objects: 100% (1/1), 10 bytes | 10.00 KiB/s, done.
+Total 1 (delta 0), reused 0 (delta 0)
+To &lt;url&gt;
+* [new branch]    feature -&gt; feature
+Branch feature set up to track remote branch feature from origin.
+
+username@NSS000000 MINGW64 ~/Documents/existing-project
+$ </code></pre>
+<ol start="3" style="list-style-type: decimal">
+<li><p><strong>Open a pull request</strong> - when you’ve made changes that are ready to be included into production, open a pull request to propose and collaborate. These changes are proposed in that branch, which ensures that the master branch only contains finished and approved work.</p>
+<ol style="list-style-type: decimal">
+<li>On GitHub, go to the main page of the repository.</li>
+<li>In the “Branch:” menu, choose the branch that contains <em>your</em> commits.</li>
+<li>To the right of the “Branch” menu, click “New pull request”.</li>
+<li>Use the “base:” branch dropdown menu to select the branch you’d like to merge your changes into.</li>
+<li>Use the “compare:” branch dropdown menu to choose the topic branch your changes are in.</li>
+<li>Type a title as a description for your pull request.</li>
+<li>If your pull request is ready for review, click “Create Pull Request”. <em>To create a draft pull request, use the dropdown menu and select “Create Draft Pull Request”, then click “Draft Pull Request”</em>.</li>
+</ol></li>
+</ol>
+<p><img src="images/github-pullrequest.png" style="display: block; margin: auto;" />  </p>
+</div>
+</div>
+<div id="github-reference" class="section level2">
+<h2><span class="header-section-number">3.4</span> GitHub Reference</h2>
+<p><a href="https://guides.github.com/">GitHub Guides</a> - A variety of guides available directly from GitHub.</p>
+<p><a href="https://eu.udacity.com/course/how-to-use-git-and-github--ud775">Udacity - How to Use Git and GitHub</a> - <em>“Effective use of version control is an important and useful skill for any developer working on long-lived (or even medium-lived) projects, especially if more than one developer is involved. This course, built with input from GitHub, will introduce the basics of using version control by focusing on a particular version control system called Git and a collaboration platform called GitHub.”</em></p>
+<p><a href="https://happygitwithr.com/">Happy Git and GitHub for the useR</a> - <em>“Integrate Git and GitHub into your daily work with R and R Markdown.”</em></p>
+
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
-<a href="introduction-setup.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="version-control-with-git.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="rstudio-git-integrations.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

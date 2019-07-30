@@ -1,0 +1,118 @@
+# Introduction & Setup {-}
+
+## Version Control, Git, and Remotes {-}
+
+#### Version Control {-}
+
+A version control system, or VCS, tracks the history of changes as people and teams collaborate on projects together. As the project evolves, teams can run tests, fix bugs, and contribute new code with the confidence that any version can be recovered at any time. Developers can review project history to find out:
+
+* Which changes were made?
+* Who made the changes?
+* When were the changes made?
+* Why were changes needed?
+
+Software teams that do not use any form of version control often run into problems; changes not available to users or creation of incompatible changes. If you're a developer who has never used version control you may have added versions to your files, perhaps with suffixes like "final" or "latest" and then had to later deal with a new final version. Perhaps you've commented out code blocks because you want to disable certain functionality without deleting the code, fearing that there may be a use for it later. Version control is a way out of these problems.
+
+
+#### Git {-}
+
+Git is a version control system (VCS). We recommend that git is used along with a hosting repository (a remote), such as GitHub (or Gitea, GitLab, etc.) and that the [GitHub Flow] is followed. However, git can be used locally while working on a project. The steps outlined in [Quick Start Git] are for this purpose and should only be followed for a personal project that is **local or on your personal network folder**. For collaborative work, see the getting started section for [Start GitHub].
+
+According to the latest [Stack Overflow developer survey](https://insights.stackoverflow.com/survey/2017#technology), more than 70 percent of developers use git, making it the most-used VCS in the world. Git is commonly used for both open source and commercial software development, with significant benefits for individuals, teams and businesses:
+
+* Entire timeline of changes, decisions, and progression of any project in one place.
+* With a DVCS like git, collaboration can happen any time while maintaining source code integrity. Using branches, developers can safely propose changes to production code.
+* Businesses using git can break down communication barriers between teams and keep them focused on doing their best work. Plus, git makes it possible to align experts across a business to collaborate on major projects.
+
+A **repository** is git's encompassing of the entire collection of files and folders associated with a project, along with each file’s revision history. The file history appears as snapshots in time called commits, and the commits exist as a linked-list relationship, and can be organized into multiple lines of development called branches. Using the command line or other ease-of-use interfaces, a git repository also allows for: interaction with the history, cloning, creating branches, committing, merging, comparing changes across versions of code, and more.
+
+Working in repositories keeps development projects organized and protected. Developers are encouraged to fix bugs, or create fresh features, without fear of derailing mainline development efforts. Git facilitates this through the use of topic branches: lightweight pointers to commits in history that can be easily created and deprecated when no longer needed.
+
+
+#### Remotes {-}
+
+Version control really comes into its own when we begin to collaborate with other people. We already have most of the machinery we need to do this; the only thing missing is to copy changes from one repository to another.
+
+Systems like Git allow us to move work between any two repositories. In practice, though, it’s easiest to use one copy as a central hub, and to keep it on the web rather than on someone’s laptop. This is where remotes come in. Most programmers use hosting services like [GitHub](https://github.com/), [BitBucket](https://bitbucket.org/) or [GitLab](https://gitlab.com/) to hold those master copies. We currently use **GitHub.**
+
+GitHub is a git hosting repository that provides users with tools to ship better code through command line features, issues (threaded discussions), pull requests, and code review. GitHub builds collaboration directly into the development process. Work is organised into repositories, where users can outline requirements or direction and set expectations for team members. Then, using the [GitHub Flow], developers simply create a branch to work on updates, commit changes to save them, open a pull request to propose and dicsuss changes, and merge pull requests once everyone is on the same page. See [GitHub Workflow] for more details.
+
+
+## Workflows {-}
+
+### GitHub Workflow
+
+```{r fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html')}
+knitr::include_graphics('images/githubflow.png', dpi = NA)
+```
+&nbsp;
+
+This is our recommended workflow. The workflow is branch-based and involves keeping the master branch clean and 'production ready'/fully-functional at all times. 
+
+1. **Create a branch** - topic/per-person branches created from the master allow teams to contribute to many parallel efforts. Short-lived topic branches, in particular, keep teams focussed and results in quick ships.
+2. **Add commits** - these are snapshots of development efforts within a branch and create safe, revertible points in the project's history.
+3. **Open a pull request** - pull requests publicise the project's ongoing efforts and set the tone for a transparent development process.
+4. **Discuss and review code** - teams participate in code reviews by commenting, testing, and reviewing open pull requests. Code review is at the centre of an open and participatory culture. Pull requests should be approved by at least one collaborator - we recommend you assign a specific reviewer(s) to check the work. In order to ensure the master branch remains 'production ready' we also recommend that the master branch is protected and any changes are tested by the reviewer before approving.
+5. **Merge** - upon clicking merge, GitHub automatically performs the equivalent of a local `git merge` operation. GitHub also keeps the entire branch development history on the merged pull request.
+6. **Deploy** - teams can choose the best release cycles or incorporate continuous integration tools and operate with the assurance that code on the deployment branch has gone through a robust workflow.
+
+
+## Setup {-}
+
+### Git {-}
+
+*These intructions should only need to be followed once or when setting up a new device.*
+
+1. **Install Git** - Git is a free, open-source, software available from https://git-scm.com/. If you work within NHS National Services Scotland, request the software from IT through the [Service Portal](https://nhsnss.service-now.com/sp). Once authorised, this will allow you to download it from the Software Center on your machine. 
+
+This will install three applications on your computer, go to Start > Git (folder):
+
+* **Git Bash** - this is the command line (Shell) interface for git. This will allow you to enter git commands, i.e. `git init`, and can be launched by right clicking in a directory/folder and selecting "Git Bash Here".
+* **Git CMD** - this is a deprecated version, similar to the Bash interface, and shouldn't be used here.
+* **Git GUI** - this is git's version of a Graphical User Interface. This will perform the same functions as "Git Bash" by the user selecting options rather than having to type in the commands. This guide will outline using integrations on software like RStudio to utilise GUIs rather than this option.
+
+2. **Configure your details** - Git needs to know who you are, use the following commands to configure your username and email (*if you're a GitHub user, use the same email and username you're registered with on GitHub.*):
+
+* `git config --global user.email <NHS email address>`
+* `git config --global user.name <your name>`
+
+At any time you can check what the current user details are using:
+
+* `git config --global user.email`
+
+
+### GitHub {-}
+
+These instructions are for first-time users of GitHub and highlight the steps in setting up a GitHub account.
+
+1. **Sign up** - In order to use GitHub, you'll need to have a personal GitHub account, you can set that up on the [GitHub website](http://github.com). If using your NHS email address ensure you **don't use the same password as your NHS email account**. 
+2. **Edit your details** - you will be able to set these items up as part of the sign up process. Otherwise, follow the links and edit them now.
+
+* Go to your [Profile Settings](https://github.com/settings/profile) and add your details with a picture of yourself if you feel comfortable to do so.
+* Go to your [Account Settings](https://github.com/settings/admin) and make sure your username is set to be your full name. This helps to identify users as generated GitHub handles tend to pretty obscure.
+
+3. **Get added to Organisations** - this step is optional.
+
+* If you're doing work within the Transforming Publishing team. Email one of the admins [here](https://github.com/orgs/NHS-NSS-transforming-publications/teams/transforming-publishing-team/members?utf8=%E2%9C%93&query=+role%3Amaintainer) to request being added to the organisation.
+* If you work within Public Health & Intelligence (PHI), the [Health & Social Care Scotland](https://github.com/Health-SocialCare-Scotland) GitHub may be of interest. Repositories can be requested and set up for team working.
+
+
+### RStudio {-}
+
+First [R](https://www.r-project.org/) and [RStudio](https://www.rstudio.com/) must be installed on your machine. Just as with git, if you work within NHS National Services Scotland these can be requested through the [Service Portal](https://nhsnss.service-now.com/sp). Once authorised, this will allow you to download it from the Software Center on your machine. You may also be able to use the server versions of RStudio and the project workflow will be the same.
+
+1. **Once in RStudio, go to Tools in the menu bar > Global Options > Git/SVN**:
+
+```{r fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html')}
+knitr::include_graphics('images/rstudio-globalopt-gitsvn.png', dpi = NA)
+```
+&nbsp;
+
+2. **If "Git executable:" shows "*(none)*", click "Browse" and select the git executable installed on your system.** - On Windows, git.exe will likely be be in "Program Files", specifically try `C:/Program Files/Git/bin/git.exe`. That's it for attaching RStudio and Git. This will allow you to utilise the RStudio Git GUI tools inside R Projects. 
+
+3. **Create an SSH Key** - this step is recommended for users who will be using a remote such as GitHub with their project. SSH is a faster, more secure, and more convienent method of connecting to GitHub.
+
+    1. If you see anything within the 'SSH RSA Key:' box, you can skip this step, else click on 'Create RSA Key...', click 'Create' and close the dialog box that appears confirming the key creation. If this doesn't work, there may be access/priviledge issues which will need to be resolved through IT and logging a ticket through the [Service Portal](https://nhsnss.service-now.com/sp).
+    2. Now, click on 'View public key' and copy the text string that appears in a dialog box. 
+    3. Go to your [GitHub SSH Settings](https://github.com/settings/keys) and click 'New SSH key'.
+    4. Give the key a meaningful title that you will recongnise and paste the key from RStudio. Complete the process by clicking 'Add SSH key'.
