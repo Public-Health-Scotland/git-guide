@@ -40,7 +40,7 @@ GitHub is a git hosting repository that provides users with tools to ship better
 
 ## Workflows {-}
 
-### GitHub Workflow
+### GitHub Workflow {-}
 
 ```{r fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html')}
 knitr::include_graphics('images/githubflow.png', dpi = NA)
