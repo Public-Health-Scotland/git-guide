@@ -5,11 +5,11 @@
 
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Acknowledgements | A Quick Guide to Git &amp; GitHub</title>
+  <title>Setup | A Quick Guide to Git &amp; GitHub</title>
   <meta name="description" content="A quick start guide for using Git, GitHub, and integrations with RStudio">
   <meta name="generator" content="bookdown  and GitBook 2.6.7">
 
-  <meta property="og:title" content="Acknowledgements | A Quick Guide to Git &amp; GitHub" />
+  <meta property="og:title" content="Setup | A Quick Guide to Git &amp; GitHub" />
   <meta property="og:type" content="book" />
   
   <meta property="og:image" content="images/cover.png" />
@@ -17,7 +17,7 @@
   <meta name="github-repo" content="NHS-NSS-transforming-publications/git-guide" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Acknowledgements | A Quick Guide to Git &amp; GitHub" />
+  <meta name="twitter:title" content="Setup | A Quick Guide to Git &amp; GitHub" />
   
   <meta name="twitter:description" content="A quick start guide for using Git, GitHub, and integrations with RStudio" />
   <meta name="twitter:image" content="images/cover.png" />
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="rstudio-reference.html">
-<link rel="next" href="git-3.html">
+<link rel="prev" href="workflows.html">
+<link rel="next" href="the-shell.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -156,17 +156,79 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="acknowledgements" class="section level1 unnumbered">
-<h1>Acknowledgements</h1>
-<p><a href="https://software-carpentry.org">Software Carpentry</a></p> 
+<div id="setup" class="section level2 unnumbered">
+<h2>Setup</h2>
+<div id="git-1" class="section level3 unnumbered">
+<h3>Git</h3>
+<p><em>These intructions should only need to be followed once or when setting up a new device.</em></p>
+<ol style="list-style-type: decimal">
+<li><strong>Install Git</strong> - Git is a free, open-source, software available from <a href="https://git-scm.com/" class="uri">https://git-scm.com/</a>. If you work within NHS National Services Scotland, request the software from IT through the <a href="https://nhsnss.service-now.com/sp">Service Portal</a>. Once authorised, this will allow you to download it from the Software Center on your machine.</li>
+</ol>
+<p>This will install three applications on your computer, go to Start &gt; Git (folder):</p>
+<ul>
+<li><strong>Git Bash</strong> - this is the command line (Shell) interface for git. This will allow you to enter git commands, i.e. <code>git init</code>, and can be launched by right clicking in a directory/folder and selecting “Git Bash Here”.</li>
+<li><strong>Git CMD</strong> - this is a deprecated version, similar to the Bash interface, and shouldn’t be used here.</li>
+<li><strong>Git GUI</strong> - this is git’s version of a Graphical User Interface. This will perform the same functions as “Git Bash” by the user selecting options rather than having to type in the commands. This guide will outline using integrations on software like RStudio to utilise GUIs rather than this option.</li>
+</ul>
+<ol start="2" style="list-style-type: decimal">
+<li><strong>Configure your details</strong> - Git needs to know who you are, use the following commands to configure your username and email (<em>if you’re a GitHub user, use the same email and username you’re registered with on GitHub.</em>):</li>
+</ol>
+<ul>
+<li><code>git config --global user.email &lt;NHS email address&gt;</code></li>
+<li><code>git config --global user.name &lt;your name&gt;</code></li>
+</ul>
+<p>At any time you can check what the current user details are using:</p>
+<ul>
+<li><code>git config --global user.email</code></li>
+</ul>
 </div>
+<div id="github" class="section level3 unnumbered">
+<h3>GitHub</h3>
+<p>These instructions are for first-time users of GitHub and highlight the steps in setting up a GitHub account.</p>
+<ol style="list-style-type: decimal">
+<li><strong>Sign up</strong> - In order to use GitHub, you’ll need to have a personal GitHub account, you can set that up on the <a href="http://github.com">GitHub website</a>. If using your NHS email address ensure you <strong>don’t use the same password as your NHS email account</strong>.</li>
+<li><strong>Edit your details</strong> - you will be able to set these items up as part of the sign up process. Otherwise, follow the links and edit them now.</li>
+</ol>
+<ul>
+<li>Go to your <a href="https://github.com/settings/profile">Profile Settings</a> and add your details with a picture of yourself if you feel comfortable to do so.</li>
+<li>Go to your <a href="https://github.com/settings/admin">Account Settings</a> and make sure your username is set to be your full name. This helps to identify users as generated GitHub handles tend to pretty obscure.</li>
+</ul>
+<ol start="3" style="list-style-type: decimal">
+<li><strong>Get added to Organisations</strong> - this step is optional.</li>
+</ol>
+<ul>
+<li>If you’re doing work within the Transforming Publishing team. Email one of the admins <a href="https://github.com/orgs/NHS-NSS-transforming-publications/teams/transforming-publishing-team/members?utf8=%E2%9C%93&amp;query=+role%3Amaintainer">here</a> to request being added to the organisation.</li>
+<li>If you work within Public Health &amp; Intelligence (PHI), the <a href="https://github.com/Health-SocialCare-Scotland">Health &amp; Social Care Scotland</a> GitHub may be of interest. Repositories can be requested and set up for team working.</li>
+</ul>
+</div>
+<div id="rstudio" class="section level3 unnumbered">
+<h3>RStudio</h3>
+<p>First <a href="https://www.r-project.org/">R</a> and <a href="https://www.rstudio.com/">RStudio</a> must be installed on your machine. Just as with git, if you work within NHS National Services Scotland these can be requested through the <a href="https://nhsnss.service-now.com/sp">Service Portal</a>. Once authorised, this will allow you to download it from the Software Center on your machine. You may also be able to use the server versions of RStudio and the project workflow will be the same.</p>
+<ol style="list-style-type: decimal">
+<li><strong>Once in RStudio, go to Tools in the menu bar &gt; Global Options &gt; Git/SVN</strong>:</li>
+</ol>
+<p><img src="images/rstudio-globalopt-gitsvn.png" style="display: block; margin: auto;" />  </p>
+<ol start="2" style="list-style-type: decimal">
+<li><p><strong>If “Git executable:” shows “<em>(none)</em>”, click “Browse” and select the git executable installed on your system.</strong> - On Windows, git.exe will likely be be in “Program Files”, specifically try <code>C:/Program Files/Git/bin/git.exe</code>. That’s it for attaching RStudio and Git. This will allow you to utilise the RStudio Git GUI tools inside R Projects.</p></li>
+<li><p><strong>Create an SSH Key</strong> - this step is recommended for users who will be using a remote such as GitHub with their project. The other option is HTTPS (which doesn’t require setup), however SSH is a faster, more secure, and more convienent method of connecting to GitHub.</p>
+<ol style="list-style-type: decimal">
+<li>If you see anything within the ‘SSH RSA Key:’ box, you can skip this step, else click on ‘Create RSA Key…’, click ‘Create’ and close the dialog box that appears confirming the key creation. If this doesn’t work, there may be access/priviledge issues which will need to be resolved through IT and logging a ticket through the <a href="https://nhsnss.service-now.com/sp">Service Portal</a>.</li>
+<li>Now, click on ‘View public key’ and copy the text string that appears in a dialog box.</li>
+<li>Go to your <a href="https://github.com/settings/keys">GitHub SSH Settings</a> and click ‘New SSH key’.</li>
+<li>Give the key a meaningful title that you will recongnise and paste the key from RStudio. Complete the process by clicking ‘Add SSH key’.</li>
+</ol></li>
+</ol>
+
+</div>
+</div>
+<!-- </div> -->
             </section>
 
           </div>
         </div>
       </div>
-<a href="rstudio-reference.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="git-3.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="workflows.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="the-shell.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

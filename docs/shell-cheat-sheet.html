@@ -5,11 +5,11 @@
 
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Acknowledgements | A Quick Guide to Git &amp; GitHub</title>
+  <title>1.5 Shell Cheat Sheet | A Quick Guide to Git &amp; GitHub</title>
   <meta name="description" content="A quick start guide for using Git, GitHub, and integrations with RStudio">
   <meta name="generator" content="bookdown  and GitBook 2.6.7">
 
-  <meta property="og:title" content="Acknowledgements | A Quick Guide to Git &amp; GitHub" />
+  <meta property="og:title" content="1.5 Shell Cheat Sheet | A Quick Guide to Git &amp; GitHub" />
   <meta property="og:type" content="book" />
   
   <meta property="og:image" content="images/cover.png" />
@@ -17,7 +17,7 @@
   <meta name="github-repo" content="NHS-NSS-transforming-publications/git-guide" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Acknowledgements | A Quick Guide to Git &amp; GitHub" />
+  <meta name="twitter:title" content="1.5 Shell Cheat Sheet | A Quick Guide to Git &amp; GitHub" />
   
   <meta name="twitter:description" content="A quick start guide for using Git, GitHub, and integrations with RStudio" />
   <meta name="twitter:image" content="images/cover.png" />
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="rstudio-reference.html">
-<link rel="next" href="git-3.html">
+<link rel="prev" href="navigating.html">
+<link rel="next" href="shell-reference.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -156,17 +156,364 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="acknowledgements" class="section level1 unnumbered">
-<h1>Acknowledgements</h1>
-<p><a href="https://software-carpentry.org">Software Carpentry</a></p> 
+<div id="shell-cheat-sheet" class="section level2">
+<h2><span class="header-section-number">1.5</span> Shell Cheat Sheet</h2>
+<div id="glossary" class="section level3 unnumbered">
+<h3>Glossary</h3>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Keyword</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><strong>absolute path</strong></td>
+<td align="left">A path that refers to a particular location in a file system. Absolute paths are usually written with respect to the file system’s root directory, and begin with either “/” (on Unix) or “\” (on Microsoft Windows). See also: relative path.</td>
+</tr>
+<tr class="even">
+<td align="left"><strong>argument</strong></td>
+<td align="left">A value given to a function or program when it runs. The term is often used interchangeably (and inconsistently) with parameter.</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+</div>
+<div id="navigation" class="section level3 unnumbered">
+<h3>Navigation</h3>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Command</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><code>cd [path]</code></td>
+<td align="left">Changes the current working directory to the specified path</td>
+</tr>
+<tr class="even">
+<td align="left"><code>ls [path]</code></td>
+<td align="left">Prints a listing of the specified file or directory. (If <code>ls</code> is used alone, the current working directory will be listed.)</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+</div>
+<div id="shortcuts" class="section level3 unnumbered">
+<h3>Shortcuts</h3>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Command</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><code>CTRL+A</code></td>
+<td align="left">Move to the beginning of the line.</td>
+</tr>
+<tr class="even">
+<td align="left"><code>CTRL+B</code></td>
+<td align="left">Moves backward one character.</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>CTRL+C</code></td>
+<td align="left">Halts the current command.</td>
+</tr>
+<tr class="even">
+<td align="left"><code>CTRL+D</code></td>
+<td align="left">Deletes one character backward or logs out of current session, similar to exit.</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>CTRL+E</code></td>
+<td align="left">Moves to end of line.</td>
+</tr>
+<tr class="even">
+<td align="left"><code>CTRL+F</code></td>
+<td align="left">Moves forward one character.</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>CTRL+G</code></td>
+<td align="left">Aborts the current editing command and ring the terminal bell.</td>
+</tr>
+<tr class="even">
+<td align="left"><code>CTRL+J</code></td>
+<td align="left">Same as RETURN.</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>CTRL+K</code></td>
+<td align="left">Deletes (kill) forward to end of line.</td>
+</tr>
+<tr class="even">
+<td align="left"><code>CTRL+L</code></td>
+<td align="left">Clears screen and redisplay the line.</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>CTRL+M</code></td>
+<td align="left">Same as RETURN.</td>
+</tr>
+<tr class="even">
+<td align="left"><code>CTRL+N</code></td>
+<td align="left">Next line in command history.</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>CTRL+O</code></td>
+<td align="left">Same as RETURN, then displays next line in history file.</td>
+</tr>
+<tr class="even">
+<td align="left"><code>CTRL+P</code></td>
+<td align="left">Previous line in command history.</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>CTRL+R</code></td>
+<td align="left">Searches backward.</td>
+</tr>
+<tr class="even">
+<td align="left"><code>CTRL+S</code></td>
+<td align="left">Searches forward.</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>CTRL+T</code></td>
+<td align="left">Transposes two characters.</td>
+</tr>
+<tr class="even">
+<td align="left"><code>CTRL+U</code></td>
+<td align="left">Kills backward from point to the beginning of line.</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>CTRL+V</code></td>
+<td align="left">Makes the next character typed verbatim.</td>
+</tr>
+<tr class="even">
+<td align="left"><code>CTRL+W</code></td>
+<td align="left">Kills the word behind the cursor.</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>CTRL+X</code></td>
+<td align="left">Lists the possible filename completions of the current word.</td>
+</tr>
+<tr class="even">
+<td align="left"><code>CTRL+Y</code></td>
+<td align="left">Retrieves (yank) last item killed.</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>CTRL+Z</code></td>
+<td align="left">Stops the current command, resume with <code>fg</code> in the foreground or <code>bg</code> in the background.</td>
+</tr>
+<tr class="even">
+<td align="left"><code>DELETE</code></td>
+<td align="left">Deletes one character backward.</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>!!</code></td>
+<td align="left">Repeats the last command.</td>
+</tr>
+<tr class="even">
+<td align="left"><code>exit</code></td>
+<td align="left">Logs out of current session.</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+</div>
+<div id="bash-basics" class="section level3 unnumbered">
+<h3>Bash Basics</h3>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Command</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><code>export</code></td>
+<td align="left">Displays all environment variables.</td>
+</tr>
+<tr class="even">
+<td align="left"><code>echo $SHELL</code></td>
+<td align="left">Displays the shell you’re using.</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>echo $BASH_VERSION</code></td>
+<td align="left">Displays bash version.</td>
+</tr>
+<tr class="even">
+<td align="left"><code>bash</code></td>
+<td align="left">If you want to use bash (type exit to go back to your normal shell).</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>whereis bash</code></td>
+<td align="left">Finds out where bash is on your system.</td>
+</tr>
+<tr class="even">
+<td align="left"><code>clear</code></td>
+<td align="left">Clears content on window (hide displayed lines).</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+</div>
+<div id="file-commands" class="section level3 unnumbered">
+<h3>File Commands</h3>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Command</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><code>ls</code></td>
+<td align="left">Lists your files.</td>
+</tr>
+<tr class="even">
+<td align="left"><code>ls -l</code></td>
+<td align="left">Lists your files in ‘long format’, which contains the exact size of the file, who owns the file and who has the right to look at it, and when it was last modified.</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>ls -a</code></td>
+<td align="left">Lists all files, including hidden files.</td>
+</tr>
+<tr class="even">
+<td align="left"><code>ln -s [filename] [link]</code></td>
+<td align="left">Creates symbolic link to file.</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>touch [filename]</code></td>
+<td align="left">Creates or updates your file.</td>
+</tr>
+<tr class="even">
+<td align="left"><code>cat ] [filename]</code></td>
+<td align="left">Places standard input into file.</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>more [filename]</code></td>
+<td align="left">Shows the first part of a file (move with space and type q to quit).</td>
+</tr>
+<tr class="even">
+<td align="left"><code>head [filename]</code></td>
+<td align="left">Outputs the first 10 lines of file.</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>tail [filename]</code></td>
+<td align="left">Outputs the last 10 lines of file (useful with -f option).</td>
+</tr>
+<tr class="even">
+<td align="left"><code>emacs [filename]</code></td>
+<td align="left">Lets you create and edit a file.</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>mv [filename1] [filename2]</code></td>
+<td align="left">Moves a file.</td>
+</tr>
+<tr class="even">
+<td align="left"><code>cp [filename1] [filename2]</code></td>
+<td align="left">Copies a file.</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>rm [filename]</code></td>
+<td align="left">Removes a file.</td>
+</tr>
+<tr class="even">
+<td align="left"><code>diff [filename1] [filename2]</code></td>
+<td align="left">Compares files, and shows where they differ.</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>wc [filename]</code></td>
+<td align="left">Tells you how many lines, words and characters there are in a file.</td>
+</tr>
+<tr class="even">
+<td align="left"><code>chmod -options [filename]</code></td>
+<td align="left">Lets you change the read, write, and execute permissions on your files.</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>gzip [filename]</code></td>
+<td align="left">Compresses files.</td>
+</tr>
+<tr class="even">
+<td align="left"><code>gunzip [filename]</code></td>
+<td align="left">Uncompresses files compressed by gzip.</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>gzcat [filename]</code></td>
+<td align="left">Lets you look at gzipped file without actually having to gunzip it.</td>
+</tr>
+<tr class="even">
+<td align="left"><code>lpr [filename]</code></td>
+<td align="left">Print the file.</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>lpq</code></td>
+<td align="left">Check out the printer queue.</td>
+</tr>
+<tr class="even">
+<td align="left"><code>lprm [jobnumber]</code></td>
+<td align="left">Remove something from the printer queue.</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>genscript</code></td>
+<td align="left">Converts plain text files into postscript for printing and gives you some options for formatting.</td>
+</tr>
+<tr class="even">
+<td align="left"><code>dvips [filename]</code></td>
+<td align="left">Print .dvi files (i.e. files produced by LaTeX).</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>grep [pattern] [filenames]</code></td>
+<td align="left">Looks for the string in the files.</td>
+</tr>
+<tr class="even">
+<td align="left"><code>grep -r [pattern] [dir]</code></td>
+<td align="left">Search recursively for pattern in directory.</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+</div>
+<div id="directory-commands" class="section level3 unnumbered">
+<h3>Directory Commands</h3>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Command</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><code>mkdir [dirname]</code></td>
+<td align="left">Makes a new directory.</td>
+</tr>
+<tr class="even">
+<td align="left"><code>cd</code></td>
+<td align="left">Changes current working directory to home.</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>cd [path]</code></td>
+<td align="left">Changes directory to specified <code>[path]</code>.</td>
+</tr>
+<tr class="even">
+<td align="left"><code>pwd</code></td>
+<td align="left">Tells you where you currently are.</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="rstudio-reference.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="git-3.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="navigating.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="shell-reference.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

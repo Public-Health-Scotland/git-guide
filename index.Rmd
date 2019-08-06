@@ -3,6 +3,7 @@ title: "A Quick Guide to Git & GitHub"
 site: bookdown::bookdown_site
 output: 
   bookdown::gitbook:
+    split_by: section
     config:
       toc:
         collapse: section
