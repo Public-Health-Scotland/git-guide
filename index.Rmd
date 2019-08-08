@@ -19,13 +19,17 @@ output_dir: /docs
 knitr::include_graphics('images/cover.png', dpi = NA)
 ```
 
-This is a quick guide for Git, including a look at Shell scripting, GitHub, and the integrations into RStudio. There are references for further details and training on each of these topics.
+This is a quick guide for git, including GitHub, and the integrations into RStudio. There are references for further details and training on each of these topics.
 
-In this guide, there are four chapters which identify setup, steps to follow, "cheat-sheets", and further reference materials:
+In this guide, there are six sections which identify setup, steps to follow, "cheat-sheets", and further reference materials:
 
-1. Shell
-2. Git
+1. Introduction
+2. Project Workflow - using RStudio
 3. GitHub
-4. RStudio
+4. Git
+5. Cheat sheet
+6. References
+
+&nbsp;
 
 *The book is created using bookdown (an R package) and hosted using GitHub. This should allow convenience for development and use, hassle-free updates, and contribution from users (from typos to suggestions).* 
