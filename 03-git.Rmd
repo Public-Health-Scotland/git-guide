@@ -1,4 +1,4 @@
-# Version Control with Git
+# Git
 
 ```{r fig.align='center', echo=FALSE, out.height = "250px", include=identical(knitr:::pandoc_to(), 'html')}
 knitr::include_graphics('images/git.png', dpi = NA)
