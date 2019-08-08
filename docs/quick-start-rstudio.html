@@ -161,11 +161,17 @@
 <li><strong>Set up R Project</strong></li>
 </ol>
 <ul>
-<li><strong>New Project</strong> - anytime you do any work that requires code, you should create an R project. This keeps your work together, seperates settings for different projects, and allows the use of version control. To do that, go to File in the menu bar and select “New Project”. In the window that appears, name your project, choose a folder/directory for where to store it, and ensure “Create a git repository” is selected.</li>
+<li><strong>New Project</strong> - any time you do any work that requires code, you should create an R project. This keeps your work together, seperates settings for different projects, and allows the use of version control. To do that, go to File in the menu bar and select “New Project”. In the window that appears, name your project, choose a folder/directory for where to store it, and ensure “Create a git repository” is selected.</li>
 </ul>
 <p><img src="images/rstudio-newproj.png" style="display: block; margin: auto;" />  </p>
 <ul>
-<li><strong>Exisiting Project</strong> - if you’re going to be working on a project that already exisits as a repository, you can link to this through RStudio too. Go to File &gt; New Project &gt; Version Control &gt; Git and enter the details in the screen that follows (this will create a folder with a copy of any contents that were in the GitHub repository).</li>
+<li><p><strong>Existing Project</strong> - if you have already started working on an R Project without initialising git, you can start using it at any point (the earlier the better). On an existing R Project go to Tools &gt; Terminal &gt; New Terminal, in that panel type <code>git init</code>.</p></li>
+<li><p><strong>Exisiting Remote Repo</strong> - if you’re going to be working on a project that already exisits on a remote repository (e.g. a GitHub project), you can link to this/clone it through RStudio too. Go to File &gt; New Project &gt; Version Control &gt; Git and enter the details in the screen that follows (this will create a folder with a copy of any contents that were in the GitHub repository).</p>
+<ul>
+<li><strong>Repository URL</strong>: this is the webpage URL that you go to and can see the full repo. This guide’s repo URL is: “<a href="https://github.com/NHS-NSS-transforming-publications/git-guide" class="uri">https://github.com/NHS-NSS-transforming-publications/git-guide</a>”.</li>
+<li><strong>Project directory name</strong>: this is up to you and will be used to name the folder/directory that contains a copy of the repo. Give it any meaningful name, for example this guide is named “git-guide”, the same name as on the remote repo.</li>
+<li><strong>Create project as subdirectory of</strong>: this is the location of where the folder/directory that contains the copy of the repo will be stored.</li>
+</ul></li>
 </ul>
 <p><img src="images/rstudio-clonerepo.png" style="display: block; margin: auto;" />  </p>
 <ol start="2" style="list-style-type: decimal">
@@ -173,7 +179,7 @@
 </ol>
 <p><img src="images/rstudio-stage.png" style="display: block; margin: auto;" />  </p>
 <ol start="3" style="list-style-type: decimal">
-<li><strong>Commit</strong> - After clicking on “Commit”, a window will appear with the changes made for review and a prompt for a “Commit message”. Your commit message should describe the changes made and be consise, meaningful and written in imperative mode. Then, just click on “Commit”!</li>
+<li><strong>Commit</strong> - After clicking on “Commit”, a window will appear with the changes made for review and a prompt for a “Commit message”. Your commit message should describe the changes made and be consise, meaningful and written in imperative mode. Then, just click on “Commit”! <em>This has saved all the changes to the project. Going forward, it will be possible to look back and see the full history of changes to the project, who made those changes, and revert to previous versions where necessary.</em></li>
 </ol>
 <p><img src="images/rstudio-commit.png" style="display: block; margin: auto;" />  </p>
 <ol start="4" style="list-style-type: decimal">
@@ -184,13 +190,13 @@
 </ul>
 <p><img src="images/rstudio-branch.png" style="display: block; margin: auto;" />  </p>
 <ul>
-<li><strong>Merge Branches</strong> - When work from the working branch should be merged back to the master branch, this currently has no GUI option and must be done on the command line. This can be accessed from the “More” menu in the Git pane and selecting “Shell” or in the RStudio Terminal window. Once you’re in either of these, enter the command git merge <branch>.</li>
+<li><strong>Merge Branches</strong> - When work from the working branch should be merged back to the master branch, this currently has no GUI option and must be done on the command line. This can be accessed from the “More” menu in the Git pane and selecting “Shell” or in the RStudio Terminal window. Once you’re in either of these, enter the command <code>git merge &lt;branch&gt;</code>.</li>
 </ul>
 <pre><code>username@NSS000000  ~/Documents/demo-project  (master)
 $ git merge &lt;branch&gt;</code></pre>
 <ol start="5" style="list-style-type: decimal">
-<li><strong>Link to GitHub</strong> - If this is a new project, it won’t be linked to GitHub yet. RStudio currently doesn’t have a GUI option for this and must be done on the command line. As above, this can be accessed from the “More” menu in the Git pane and selecting “Shell” or in the RStudio Terminal window. Once you’re in either of these, enter the command <code>git remote add &lt;name&gt; &lt;url&gt;</code> (<em><code>&lt;name&gt;</code> is any name to refer to the GitHub connection but <code>origin</code> is the most common/preferred name to use</em>), pulling in any changes that have been made on GitHub in the meantime using <code>git pull &lt;name&gt; &lt;branch&gt;</code> and then finally sending the changes to GitHub using <code>git push &lt;name&gt; &lt;branch&gt;</code>.</li>
-<li><strong>Pull and push</strong> - After linking the project to a GitHub repository, RStudio has a GUI interface for pulling and pushing changes. It’s good practice to pull from GitHub to check for changes that have occured since the last time and to help avoid merge conflicts. After that you can click push to send all your changes to GitHub, now everything is in-sync again.</li>
+<li><p><strong>Link to GitHub</strong> - If this is a new project, it won’t be linked to GitHub yet. RStudio currently doesn’t have a GUI option for this and must be done on the command line. As above, this can be accessed from the “More” menu in the Git pane and selecting “Shell” or in the RStudio Terminal window. Once you’re in either of these, enter the command <code>git remote add &lt;name&gt; &lt;url&gt;</code> (<em><code>&lt;name&gt;</code> is any name to refer to the GitHub connection but <code>origin</code> is the most common/preferred name to use</em>), pulling in any changes that have been made on GitHub in the meantime using <code>git pull &lt;name&gt; &lt;branch&gt;</code> and then finally sending the changes to GitHub using <code>git push &lt;name&gt; &lt;branch&gt;</code>.</p></li>
+<li><p><strong>Pull and push</strong> - After linking the project to a GitHub repository, RStudio has a GUI interface for pulling and pushing changes. It’s good practice to pull from GitHub to check for changes that have occured since the last time and to help avoid merge conflicts. After that you can click push to send all your commits to GitHub, now everything is in-sync again.</p></li>
 </ol>
 <p><img src="images/rstudio-pullpush.png" style="display: block; margin: auto;" />  </p>
 </div>

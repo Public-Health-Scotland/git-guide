@@ -5,25 +5,31 @@ knitr::include_graphics('images/rstudio.png', dpi = NA)
 ```
 &nbsp;
 
-Version control can be very useful when developing data analysis scripts. For that reason, the popular development environment [RStudio](https://www.rstudio.com/) for the R programming language has built-in integration with Git. While some advanced Git features still require the command-line, RStudio has a nice interface for many common Git operations.  
+Version control can be very useful when developing data analysis scripts. For that reason, the development environment RStudio for the R programming language has a built-in integration with git. While some advanced git features still require the command line, RStudio has a nice interface for many comman git operations. As such, this guide and the supporting workshops focus on utilising this interface for learning and utilising git. 
 
-RStudio allows us to create a project associated with a given directory to keep track of various related files, to be able to track the development of the project over time, to be able to revert to previous versions, and to collaborate with others, all using version control with RStudio projects and Git.
+RStudio allows us to create a project associated with a given folder/directory to keep track of various related files, to be able to track the development of the project over time, to be able to revert to previous versions, and to collaborate with others, all using version control with RStudio projects and git.
 
-RStudio provides a GUI (Graphical User Interface) to use Git and GitHub. Basically, this means that you don’t need to use the command line and type out the instructions. Instead, there are buttons, prompts, and windows making the process of using version control user friendly and relatively straightforward.
+RStudio provides a GUI (Graphical User Interface) to use git and remotes such as GitHub. Basically, this means that you don’t need to use the command line and type out the instructions. Instead, there are buttons, prompts, and windows making the process of using version control user friendly and straightforward.
 
 
 ## Quick Start RStudio
 
 1. **Set up R Project** 
 
-- **New Project** - anytime you do any work that requires code, you should create an R project. This keeps your work together, seperates settings for different projects, and allows the use of version control. To do that, go to File in the menu bar and select "New Project". In the window that appears, name your project, choose a folder/directory for where to store it, and ensure "Create a git repository" is selected.
+- **New Project** - any time you do any work that requires code, you should create an R project. This keeps your work together, seperates settings for different projects, and allows the use of version control. To do that, go to File in the menu bar and select "New Project". In the window that appears, name your project, choose a folder/directory for where to store it, and ensure "Create a git repository" is selected.
 
 ```{r fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html')}
 knitr::include_graphics('images/rstudio-newproj.png', dpi = NA)
 ```
 &nbsp;
 
-- **Exisiting Project** - if you're going to be working on a project that already exisits as a repository, you can link to this through RStudio too. Go to File > New Project > Version Control > Git and enter the details in the screen that follows (this will create a folder with a copy of any contents that were in the GitHub repository).
+- **Existing Project** - if you have already started working on an R Project without initialising git, you can start using it at any point (the earlier the better). On an existing R Project go to Tools > Terminal > New Terminal, in that panel type `git init`.
+
+- **Exisiting Remote Repo** - if you're going to be working on a project that already exisits on a remote repository (e.g. a GitHub project), you can link to this/clone it through RStudio too. Go to File > New Project > Version Control > Git and enter the details in the screen that follows (this will create a folder with a copy of any contents that were in the GitHub repository).
+
+    * **Repository URL**: this is the webpage URL that you go to and can see the full repo. This guide's repo URL is: "https://github.com/NHS-NSS-transforming-publications/git-guide".
+    * **Project directory name**: this is up to you and will be used to name the folder/directory that contains a copy of the repo. Give it any meaningful name, for example this guide is named "git-guide", the same name as on the remote repo.
+    * **Create project as subdirectory of**: this is the location of where the folder/directory that contains the copy of the repo will be stored. 
 
 ```{r fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html')}
 knitr::include_graphics('images/rstudio-clonerepo.png', dpi = NA)
@@ -37,7 +43,7 @@ knitr::include_graphics('images/rstudio-stage.png', dpi = NA)
 ```
 &nbsp;
 
-3. **Commit** - After clicking on "Commit", a window will appear with the changes made for review and a prompt for a "Commit message". Your commit message should describe the changes made and be consise, meaningful and written in imperative mode. Then, just click on "Commit"!
+3. **Commit** - After clicking on "Commit", a window will appear with the changes made for review and a prompt for a "Commit message". Your commit message should describe the changes made and be consise, meaningful and written in imperative mode. Then, just click on "Commit"! *This has saved all the changes to the project. Going forward, it will be possible to look back and see the full history of changes to the project, who made those changes, and revert to previous versions where necessary.*
 
 ```{r fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html')}
 knitr::include_graphics('images/rstudio-commit.png', dpi = NA)
@@ -53,7 +59,7 @@ knitr::include_graphics('images/rstudio-branch.png', dpi = NA)
 ```
 &nbsp;
 
-- **Merge Branches** - When work from the working branch should be merged back to the master branch, this currently has no GUI option and must be done on the command line. This can be accessed from the "More" menu in the Git pane and selecting "Shell" or in the RStudio Terminal window. Once you're in either of these, enter the command git merge <branch>.
+- **Merge Branches** - When work from the working branch should be merged back to the master branch, this currently has no GUI option and must be done on the command line. This can be accessed from the "More" menu in the Git pane and selecting "Shell" or in the RStudio Terminal window. Once you're in either of these, enter the command `git merge <branch>`.
 
 ```
 username@NSS000000  ~/Documents/demo-project  (master)
@@ -61,7 +67,8 @@ $ git merge <branch>
 ```
 
 5. **Link to GitHub** - If this is a new project, it won't be linked to GitHub yet. RStudio currently doesn't have a GUI option for this and must be done on the command line. As above, this can be accessed from the "More" menu in the Git pane and selecting "Shell" or in the RStudio Terminal window. Once you're in either of these, enter the command `git remote add <name> <url>` (*`<name>` is any name to refer to the GitHub connection but `origin` is the most common/preferred name to use*), pulling in any changes that have been made on GitHub in the meantime using `git pull <name> <branch>` and then finally sending the changes to GitHub using `git push <name> <branch>`.
-6. **Pull and push** - After linking the project to a GitHub repository, RStudio has a GUI interface for pulling and pushing changes. It's good practice to pull from GitHub to check for changes that have occured since the last time and to help avoid merge conflicts. After that you can click push to send all your changes to GitHub, now everything is in-sync again.
+
+6. **Pull and push** - After linking the project to a GitHub repository, RStudio has a GUI interface for pulling and pushing changes. It's good practice to pull from GitHub to check for changes that have occured since the last time and to help avoid merge conflicts. After that you can click push to send all your commits to GitHub, now everything is in-sync again.
 
 ```{r fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html')}
 knitr::include_graphics('images/rstudio-pullpush.png', dpi = NA)
