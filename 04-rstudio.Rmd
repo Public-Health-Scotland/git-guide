@@ -1,30 +1,15 @@
-# RStudio Git Integrations
+# Project Workflow with RStudio
 
 ```{r fig.align='center', echo=FALSE, out.height = "250px", include=identical(knitr:::pandoc_to(), 'html')}
 knitr::include_graphics('images/rstudio.png', dpi = NA)
 ```
+&nbsp;
 
 Version control can be very useful when developing data analysis scripts. For that reason, the popular development environment [RStudio](https://www.rstudio.com/) for the R programming language has built-in integration with Git. While some advanced Git features still require the command-line, RStudio has a nice interface for many common Git operations.  
 
 RStudio allows us to create a project associated with a given directory to keep track of various related files, to be able to track the development of the project over time, to be able to revert to previous versions, and to collaborate with others, all using version control with RStudio projects and Git.
 
 RStudio provides a GUI (Graphical User Interface) to use Git and GitHub. Basically, this means that you don’t need to use the command line and type out the instructions. Instead, there are buttons, prompts, and windows making the process of using version control user friendly and relatively straightforward.
-
-
-## Setup
-
-First, Git and RStudio must be installed. Now, let's configure RStudio to use Git.
-
-1. **Open RStudio**
-2. **Go to Tools in the menu bar > Global Options > Git/SVN**
-3. **If "Git executable:" shows "*(none)*", click "Browse" and select the git executable installed on your system.** - On Windows, git.exe will likely be be in "Program Files", specifically try `C:/Program Files/Git/bin/git.exe`.
-
-```{r fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html')}
-knitr::include_graphics('images/rstudio-globalopt-gitsvn.png', dpi = NA)
-```
-&nbsp;
-
-That's it for attaching RStudio and Git. This will allow you to utilise the RStudio Git GUI tools inside R Projects. 
 
 
 ## Quick Start RStudio

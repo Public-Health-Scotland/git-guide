@@ -1,5 +1,14 @@
 # Introduction & Setup {-}
 
+Who for?
+What
+Where
+When
+Why
+
+As you may already know, or will find out, git is a command line (Shell/Bash) tool. Throughout this guide, the aim has been to provide a clear workflow and guidance that will allow you to work with these tools with minimal command line interaction. However, if you'd like to know more about this topic, Software Carpentry offer a fantastic [Introduction to Shell](http://swcarpentry.github.io/shell-novice/) lesson. 
+
+
 ## Version Control, Git, and Remotes {-}
 
 #### Version Control {-}
@@ -35,7 +44,7 @@ Version control really comes into its own when we begin to collaborate with othe
 
 Systems like Git allow us to move work between any two repositories. In practice, though, it’s easiest to use one copy as a central hub, and to keep it on the web rather than on someone’s laptop. This is where remotes come in. Most programmers use hosting services like [GitHub](https://github.com/), [BitBucket](https://bitbucket.org/) or [GitLab](https://gitlab.com/) to hold those master copies. We currently use **GitHub.**
 
-GitHub is a git hosting repository that provides users with tools to ship better code through command line features, issues (threaded discussions), pull requests, and code review. GitHub builds collaboration directly into the development process. Work is organised into repositories, where users can outline requirements or direction and set expectations for team members. Then, using the [GitHub Flow], developers simply create a branch to work on updates, commit changes to save them, open a pull request to propose and dicsuss changes, and merge pull requests once everyone is on the same page. See [GitHub Workflow] for more details.
+GitHub is a git hosting repository that provides users with tools to ship better code through command line features, issues (threaded discussions), pull requests, and code review. GitHub builds collaboration directly into the development process. Work is organised into repositories, where users can outline requirements or direction and set expectations for team members. Then, using the [GitHub Flow], developers simply create a branch to work on updates, commit changes to save them, open a pull request to propose and discuss changes, and merge pull requests once everyone is on the same page. See [GitHub Workflow] for more details.
 
 
 ## Workflows {-}
@@ -110,7 +119,7 @@ knitr::include_graphics('images/rstudio-globalopt-gitsvn.png', dpi = NA)
 
 2. **If "Git executable:" shows "*(none)*", click "Browse" and select the git executable installed on your system.** - On Windows, git.exe will likely be be in "Program Files", specifically try `C:/Program Files/Git/bin/git.exe`. That's it for attaching RStudio and Git. This will allow you to utilise the RStudio Git GUI tools inside R Projects. 
 
-3. **Create an SSH Key** - this step is recommended for users who will be using a remote such as GitHub with their project. The other option is HTTPS (which doesn't require setup), however SSH is a faster, more secure, and more convienent method of connecting to GitHub.
+3. **Create an SSH Key** - this step is recommended for users who will be using a remote such as GitHub with their project. The other option is HTTPS (which doesn't require setup), however SSH is a faster and more convienent method of connecting to GitHub.
 
     1. If you see anything within the 'SSH RSA Key:' box, you can skip this step, else click on 'Create RSA Key...', click 'Create' and close the dialog box that appears confirming the key creation. If this doesn't work, there may be access/priviledge issues which will need to be resolved through IT and logging a ticket through the [Service Portal](https://nhsnss.service-now.com/sp).
     2. Now, click on 'View public key' and copy the text string that appears in a dialog box. 
