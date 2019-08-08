@@ -5,6 +5,7 @@ knitr::include_graphics('images/rstudio.png', dpi = NA)
 ```
 &nbsp;
 
+
 Version control can be very useful when developing data analysis scripts. For that reason, the development environment RStudio for the R programming language has a built-in integration with git. While some advanced git features still require the command line, RStudio has a nice interface for many comman git operations. As such, this guide and the supporting workshops focus on utilising this interface for learning and utilising git. 
 
 RStudio allows us to create a project associated with a given folder/directory to keep track of various related files, to be able to track the development of the project over time, to be able to revert to previous versions, and to collaborate with others, all using version control with RStudio projects and git.
@@ -66,7 +67,7 @@ username@NSS000000  ~/Documents/demo-project  (master)
 $ git merge <branch>
 ```
 
-5. **Link to GitHub** - If this is a new project, it won't be linked to GitHub yet. RStudio currently doesn't have a GUI option for this and must be done on the command line. As above, this can be accessed from the "More" menu in the Git pane and selecting "Shell" or in the RStudio Terminal window. Once you're in either of these, enter the command `git remote add <name> <url>` (*`<name>` is any name to refer to the GitHub connection but `origin` is the most common/preferred name to use*), pulling in any changes that have been made on GitHub in the meantime using `git pull <name> <branch>` and then finally sending the changes to GitHub using `git push <name> <branch>`.
+5. **Link to GitHub** - If this is a new project, it won't be linked to GitHub yet. *See [Quick Start GitHub] for instructions on how to set up a repo on GitHub.* RStudio currently doesn't have a GUI option for this and must be done on the command line. As above, this can be accessed from the "More" menu in the Git pane and selecting "Shell" or in the RStudio Terminal window. Once you're in either of these, enter the command `git remote add <name> <url>` (*`<name>` is any name to refer to the GitHub connection but `origin` is the most common/preferred name to use*), pulling in any changes that have been made on GitHub in the meantime using `git pull <name> <branch>` and then finally sending the changes to GitHub using `git push <name> <branch>`.
 
 6. **Pull and push** - After linking the project to a GitHub repository, RStudio has a GUI interface for pulling and pushing changes. It's good practice to pull from GitHub to check for changes that have occured since the last time and to help avoid merge conflicts. After that you can click push to send all your commits to GitHub, now everything is in-sync again.
 
