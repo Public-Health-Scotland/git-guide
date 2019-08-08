@@ -92,13 +92,9 @@
 <li class="chapter" data-level="" data-path="git-cheat-sheet.html"><a href="git-cheat-sheet.html#rewriting-git-history"><i class="fa fa-check"></i>Rewriting Git History</a></li>
 <li class="chapter" data-level="" data-path="git-cheat-sheet.html"><a href="git-cheat-sheet.html#git-branches"><i class="fa fa-check"></i>Git Branches</a></li>
 <li class="chapter" data-level="" data-path="git-cheat-sheet.html"><a href="git-cheat-sheet.html#remote-repositories"><i class="fa fa-check"></i>Remote Repositories</a></li>
-<li class="chapter" data-level="" data-path="git-cheat-sheet.html"><a href="git-cheat-sheet.html#git-config"><i class="fa fa-check"></i>Git Config</a></li>
 <li class="chapter" data-level="" data-path="git-cheat-sheet.html"><a href="git-cheat-sheet.html#git-log"><i class="fa fa-check"></i>Git Log</a></li>
 <li class="chapter" data-level="" data-path="git-cheat-sheet.html"><a href="git-cheat-sheet.html#git-diff"><i class="fa fa-check"></i>Git Diff</a></li>
 <li class="chapter" data-level="" data-path="git-cheat-sheet.html"><a href="git-cheat-sheet.html#git-reset"><i class="fa fa-check"></i>Git Reset</a></li>
-<li class="chapter" data-level="" data-path="git-cheat-sheet.html"><a href="git-cheat-sheet.html#git-rebase"><i class="fa fa-check"></i>Git Rebase</a></li>
-<li class="chapter" data-level="" data-path="git-cheat-sheet.html"><a href="git-cheat-sheet.html#git-pull"><i class="fa fa-check"></i>Git Pull</a></li>
-<li class="chapter" data-level="" data-path="git-cheat-sheet.html"><a href="git-cheat-sheet.html#git-push"><i class="fa fa-check"></i>Git Push</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="reference.html"><a href="reference.html"><i class="fa fa-check"></i>Reference</a><ul>
 <li class="chapter" data-level="" data-path="reference.html"><a href="reference.html#top-tips"><i class="fa fa-check"></i>Top Tips</a></li>
@@ -136,36 +132,48 @@
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><code>git init [directory]</code></td>
-<td align="left">Create empty Git repo in specified directory. Run with no arguments to initialise the current directory as a git repository.</td>
+<td align="left"><code>git config --global user.name &quot;[name]&quot;</code></td>
+<td align="left">Sets author name to be used for all your commits.</td>
+</tr>
+<tr class="even">
+<td align="left"><code>git config --global user.email &quot;[email]&quot;</code></td>
+<td align="left">Sets author email to be used for all your commits.</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>git init [project-name]</code></td>
+<td align="left">Create empty git repo in specified directory.</td>
 </tr>
 <tr class="even">
 <td align="left"><code>git clone [repo]</code></td>
-<td align="left">Clone repo located at <code>[repo]</code> onto local machine. Original repo can be located on the local file system or on a remote machine via HTTP or SSH.</td>
+<td align="left">Clone repo with version history located at <code>[repo]</code>.</td>
 </tr>
 <tr class="odd">
-<td align="left"><code>git config user.name [name]</code></td>
-<td align="left">Define author name to be used for all commits in current repo. Devs commonly use <code>--global</code> flag to set config options for current user.</td>
-</tr>
-<tr class="even">
-<td align="left"><code>git add [directory]</code></td>
-<td align="left">Stage all changes in <code>[directory]</code> for the next commit. Replace <code>[directory]</code> with a <code>[file]</code> to change a specific file.</td>
-</tr>
-<tr class="odd">
-<td align="left"><code>git commit -m “[message]”</code></td>
-<td align="left">Commit the staged snapshot, but instead of launching a text editor, use [message] as the commit message.</td>
-</tr>
-<tr class="even">
 <td align="left"><code>git status</code></td>
-<td align="left">List which files are staged, unstated, and untracked.</td>
-</tr>
-<tr class="odd">
-<td align="left"><code>git log</code></td>
-<td align="left">Display the entire commit history using the default format. For customisation see additional options.</td>
+<td align="left">List all new or modified files to be committed.</td>
 </tr>
 <tr class="even">
 <td align="left"><code>git diff</code></td>
-<td align="left">Show unstated changes between your index and working directory.</td>
+<td align="left">Show file changes not yet staged.</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>git add [file]</code></td>
+<td align="left">Stage all changes in <code>[file]</code> for the next commit.</td>
+</tr>
+<tr class="even">
+<td align="left"><code>git diff --staged</code></td>
+<td align="left">Shows files differences between staging and the last file version.</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>git reset [file]</code></td>
+<td align="left">Unstages the file, but preserves its contents.</td>
+</tr>
+<tr class="even">
+<td align="left"><code>git commit -m “[message]”</code></td>
+<td align="left">Commit the staged snapshot to permanent version history.</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>git log</code></td>
+<td align="left">Display the entire commit history for the current branch.</td>
 </tr>
 </tbody>
 </table>
@@ -261,53 +269,23 @@
 <tbody>
 <tr class="odd">
 <td align="left"><code>git remote add [name] [url]</code></td>
-<td align="left">Create a new connection to a remote repo. After adding a remote, you can use <code>[name]</code> as a shortcut for <code>[url]</code> in other commands.</td>
+<td align="left">Create a new connection to a remote repo.</td>
 </tr>
 <tr class="even">
-<td align="left"><code>git fetch [remote] [branch]</code></td>
-<td align="left">Fetches a specific <code>[branch]</code>, from the repo. Leave off <code>[branch]</code> to fetch all remote refs.</td>
+<td align="left"><code>git fetch [remote]</code></td>
+<td align="left">Downloads all history from the remote repo.</td>
 </tr>
 <tr class="odd">
+<td align="left"><code>git merge [remote]/[branch]</code></td>
+<td align="left">Combines the remote branch into the current local branch</td>
+</tr>
+<tr class="even">
 <td align="left"><code>git pull [remote]</code></td>
-<td align="left">Fetch the specified remote’s copy of current branch and immediately merge it into the local copy.</td>
-</tr>
-<tr class="even">
-<td align="left"><code>. git push [remote] [branch]</code></td>
-<td align="left">Push the branch to <code>[remote]</code>, along with necessary commits and objects. Creates named branch in the remote repo if it doesn’t exist.</td>
-</tr>
-</tbody>
-</table>
-<p> </p>
-</div>
-<div id="git-config" class="section level3 unnumbered">
-<h3>Git Config</h3>
-<table>
-<thead>
-<tr class="header">
-<th align="left">Command</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><code>git config --global user.name [name]</code></td>
-<td align="left">Define the author name to be used for all commits by the current user.</td>
-</tr>
-<tr class="even">
-<td align="left"><code>git config --global user.email [email]</code></td>
-<td align="left">Define the author email to be used for all commits by the current user.</td>
+<td align="left">Downloads and merges remote’s copy of current branch.</td>
 </tr>
 <tr class="odd">
-<td align="left"><code>git config --global alias. [alias-name] [git-commands]</code></td>
-<td align="left">Create shortcut for a Git command. E.g. <code>alias.glog log --graph --oneline</code> will set <code>git glog</code> equivalent to <code>git log --graph --oneline</code>.</td>
-</tr>
-<tr class="even">
-<td align="left"><code>git config --system core.editor [editor]</code></td>
-<td align="left">Set text editor used by commands for all users on the machine. <code>[editor]</code> arg should be the command that launches the desired editor (e.g., vi).</td>
-</tr>
-<tr class="odd">
-<td align="left"><code>git config --global --edit</code></td>
-<td align="left">Open the global configuration file in a text editor for manual editing.</td>
+<td align="left"><code>git push [remote] [branch]</code></td>
+<td align="left">Uploads the branch and history to <code>[remote]</code>.</td>
 </tr>
 </tbody>
 </table>
@@ -410,68 +388,6 @@
 <tr class="even">
 <td align="left"><code>git reset --hard [commit]</code></td>
 <td align="left">Same as previous, but resets both the staging area &amp; working directory to match. Deletes uncommitted changes, and all commits after <code>[commit]</code>.</td>
-</tr>
-</tbody>
-</table>
-<p> </p>
-</div>
-<div id="git-rebase" class="section level3 unnumbered">
-<h3>Git Rebase</h3>
-<table>
-<thead>
-<tr class="header">
-<th align="left">Command</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><code>git rebase -i [base]</code></td>
-<td align="left">Interactively rebase current branch onto <code>[base]</code>. Launches editor to enter commands for how each commit will be transferred to the new base.</td>
-</tr>
-</tbody>
-</table>
-<p> </p>
-</div>
-<div id="git-pull" class="section level3 unnumbered">
-<h3>Git Pull</h3>
-<table>
-<thead>
-<tr class="header">
-<th align="left">Command</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><code>git pull --rebase [remote]</code></td>
-<td align="left">Fetch the remote’s copy of current branch and rebases it into the local copy. Uses git rebase instead of merge to integrate the branches.</td>
-</tr>
-</tbody>
-</table>
-<p> </p>
-</div>
-<div id="git-push" class="section level3 unnumbered">
-<h3>Git Push</h3>
-<table>
-<thead>
-<tr class="header">
-<th align="left">Command</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><code>git push [remote] --force</code></td>
-<td align="left">Forces the <code>git push</code> even if it results in a non-fast-forward merge. Do not use the <code>--force</code> flag unless you’re absolutely sure you know what you’re doing.</td>
-</tr>
-<tr class="even">
-<td align="left"><code>git push [remote] --all</code></td>
-<td align="left">Push all of your local branches to the specified remote.</td>
-</tr>
-<tr class="odd">
-<td align="left"><code>git push [remote] --tags</code></td>
-<td align="left">Tags aren’t automatically pushed when you push a branch or use the —all flag. The —tags flag sends all of your local tags to the remote repo.</td>
 </tr>
 </tbody>
 </table>
