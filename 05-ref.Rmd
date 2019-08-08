@@ -1,6 +1,6 @@
 # Reference {-}
 
-### Top Tips {-}
+#### Top Tips {-}
 
 These are some tips/references to keep in mind when working with git:
 
@@ -11,7 +11,7 @@ These are some tips/references to keep in mind when working with git:
 * It's possible to have multiple branches for working on or fixing multiple features of your project, but be aware that this increases the chance of a merge conflict.
 
 
-## Git
+#### Git {-}
 
 [Pro Git Book](https://git-scm.com/book/en/v2) - A complete reference text for Git.
 
@@ -24,7 +24,7 @@ These are some tips/references to keep in mind when working with git:
 [Department for Education - VSTS for Analysis](https://dfe-analytical-services.github.io/vsts-for-analysis/) - *"This book aims act as a resource for analysts on how and why they should use version control."*
 
 
-## GitHub
+#### GitHub {-}
 
 [GitHub Guides](https://guides.github.com/) - A variety of guides available directly from GitHub.
 
@@ -33,7 +33,7 @@ These are some tips/references to keep in mind when working with git:
 [Happy Git and GitHub for the useR](https://happygitwithr.com/) - *"Integrate Git and GitHub into your daily work with R and R Markdown."*
 
 
-## Version Control in RStudio
+#### Version Control in RStudio {-}
 
 [RStudio - Using Projects](https://support.rstudio.com/hc/en-us/articles/200526207) - A support article for using RStudio projects. There is a need to use projects for version control so this article provides an introduction to this topic.
 
