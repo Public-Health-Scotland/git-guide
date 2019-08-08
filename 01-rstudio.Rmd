@@ -76,10 +76,3 @@ knitr::include_graphics('images/rstudio-pullpush.png', dpi = NA)
 ```
 &nbsp;
 
-
-## RStudio Reference
-
-[RStudio - Using Projects](https://support.rstudio.com/hc/en-us/articles/200526207) - A support article for using RStudio projects. There is a need to use projects for version control so this article provides an introduction to this topic.
-
-[RStudio - Version Control with Git and SVN](https://support.rstudio.com/hc/en-us/articles/200532077-Version-Control-with-Git-and-SVN) - A support article for using version control in RStudio.
-
