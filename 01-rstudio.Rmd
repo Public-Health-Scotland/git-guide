@@ -6,11 +6,9 @@ knitr::include_graphics('images/rstudio.png', dpi = NA)
 &nbsp;
 
 
-Version control can be very useful when developing data analysis scripts. For that reason, the development environment RStudio for the R programming language has a built-in integration with git. While some advanced git features still require the command line, RStudio has a nice interface for many comman git operations. As such, this guide and the supporting workshops focus on utilising this interface for learning and utilising git. 
+RStudio (the most commonly used R IDE) comes with some useful git integreation in the form of buttons. While some advanced git features still require the command line, RStudio has a nice interface for many common git operations. As such, this guide and the supporting workshops focus on utilising this interface for learning and utilising git. 
 
-RStudio allows us to create a project associated with a given folder/directory to keep track of various related files, to be able to track the development of the project over time, to be able to revert to previous versions, and to collaborate with others, all using version control with RStudio projects and git.
-
-RStudio provides a GUI (Graphical User Interface) to use git and remotes such as GitHub. Basically, this means that you don’t need to use the command line and type out the instructions. Instead, there are buttons, prompts, and windows making the process of using version control user friendly and straightforward.
+RStudio allows us to create a project associated with a given folder/directory to bundle everything together. It is through a project that RStudio gets its git integration, so projects can be used to version control any file within the associated directory. RStudio is able to connect to remote repositories on platforms such as GitHub, so the command line is not necessary to "push" or "pull" code from there.
 
 
 ## Quick Start RStudio
@@ -24,11 +22,11 @@ knitr::include_graphics('images/rstudio-newproj.png', dpi = NA)
 ```
 &nbsp;
 
-- **Existing Project** - if you have already started working on an R Project without initialising git, you can start using it at any point (the earlier the better). On an existing R Project go to Tools > Terminal > New Terminal, in that panel type `git init`.
+- **Existing Project** - if you have already started working on an R Project without initialising git, you can start using it at any point (the earlier the better). On an existing R Project go to Tools > Project Options > git/SVN > and select "git" in the version control drop down. This will ask if you want to initialise a repo, click "yes". To use the terminal/command line, go to: Tools > Terminal > New Terminal, in that panel type `git init`.
 
 - **Exisiting Remote Repo** - if you're going to be working on a project that already exisits on a remote repository (e.g. a GitHub project), you can link to this/clone it through RStudio too. Go to File > New Project > Version Control > Git and enter the details in the screen that follows (this will create a folder with a copy of any contents that were in the GitHub repository).
 
-    * **Repository URL**: this is the webpage URL that you go to and can see the full repo. This guide's repo URL is: "https://github.com/NHS-NSS-transforming-publications/git-guide".
+    * **Repository URL**: Using SSH, this guide's link is: "git@github.com:NHS-NSS-transforming-publications/git-guide.git".
     * **Project directory name**: this is up to you and will be used to name the folder/directory that contains a copy of the repo. Give it any meaningful name, for example this guide is named "git-guide", the same name as on the remote repo.
     * **Create project as subdirectory of**: this is the location of where the folder/directory that contains the copy of the repo will be stored. 
 
@@ -37,30 +35,30 @@ knitr::include_graphics('images/rstudio-clonerepo.png', dpi = NA)
 ```
 &nbsp;
 
-2. **Change, stage...** - RStudio will keep track of all changes made to the files within your R project (not just R files). Any changes made will show up in the "Git" tab, usually the same pane that the "Environment" tab is on. When you're ready to commit, save the files you're working with and stage them by ticking the box to the left of the files in the Git pane, and then click on the "Commit" button.
+2. **Change, stage...** - RStudio will keep track of all changes made to the files within your R project (not just R files). Any changes made will show up in the "Git" tab, which can be found in the same pane as the R environment. This is typically the top-right pane, but their positions can be changed so it may not be in all cases. When you're ready to commit, save the files you're working with and stage them by ticking the box to the left of the files in the Git pane, and then click on the "Commit" button.
 
 ```{r fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html')}
 knitr::include_graphics('images/rstudio-stage.png', dpi = NA)
 ```
 &nbsp;
 
-3. **Commit** - After clicking on "Commit", a window will appear with the changes made for review and a prompt for a "Commit message". Your commit message should describe the changes made and be consise, meaningful and written in imperative mode. Then, just click on "Commit"! *This has saved all the changes to the project. Going forward, it will be possible to look back and see the full history of changes to the project, who made those changes, and revert to previous versions where necessary.*
+3. **Commit** - After clicking on "Commit", a window will appear with the changes made for review and a prompt for a "Commit message". Your commit message should describe the changes made and be consise, meaningful and written in imperative mood. Then, just click on "Commit"! *This has saved all the changes to the project. Going forward, it will be possible to look back and see the full history of changes to the project, who made those changes, and revert to previous versions where necessary.*
 
 ```{r fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html')}
 knitr::include_graphics('images/rstudio-commit.png', dpi = NA)
 ```
 &nbsp;
 
-4. **Branching** - As part of the recommended workflow, you should use branches to develop individual features, this means that you can edit files but keep an original to revert back to if required. Additionally, when team working, it allows for many parallel efforts, keeping teams focussed, and for shipping updates faster. 
+4. **Branching** - As part of the recommended workflow, you should use branches to develop individual features, this means that you can edit files but keep an original to revert back to if required. Additionally, when team working, it allows for people to work on different things in parallel. This can help improve efficiency as people don't have to wait for others to finish what they're doing before starting something else.  
 
-- **New Branch** - To create a new branch in RStudio, just click the "New Branch" button in the Git pane and give it a name. To switch between branches, click the dropdown to the right of the "New Branch" button and click the name of the branch you want to switch to. *(When you select a branch, the state of the files that you committed in that branch will appear in both the Files pane in RStudio, and in your file explorer.)*
+- **New Branch** - To create a new branch in RStudio, just click the "New Branch" button in the Git pane and give it a name. To switch between branches, click the dropdown to the right of the "New Branch" button and click the name of the branch you want to switch to. *(When you select a branch, the state of the files in that branch will appear in both the Files pane in RStudio, and in your computer's file explorer.)*
 
 ```{r fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html')}
 knitr::include_graphics('images/rstudio-branch.png', dpi = NA)
 ```
 &nbsp;
 
-- **Merge Branches** - When work from the working branch should be merged back to the master branch, this currently has no GUI option and must be done on the command line. This can be accessed from the "More" menu in the Git pane and selecting "Shell" or in the RStudio Terminal window. Once you're in either of these, enter the command `git merge <branch>`.
+- **Merge Branches** - When the working branch should be merged back to the master branch, this must be done on the command line as there is no way to do this using the GUI. This can be accessed from the "More" menu in the Git pane and selecting "Shell" or in the RStudio Terminal window. Once you're in either of these, enter the command `git merge <branch>`.
 
 ```
 username@NSS000000  ~/Documents/demo-project  (master)
