@@ -123,15 +123,20 @@
 <h2>Workflows</h2>
 <div id="github-workflow" class="section level3 unnumbered">
 <h3>GitHub Workflow</h3>
-<p><img src="images/githubflow.png" style="display: block; margin: auto;" />  </p>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-2"></span>
+<img src="images/githubflow.png" alt="https://guides.github.com/pdfs/githubflow-online.pdf"  />
+<p class="caption">
+Figure .: <a href="https://guides.github.com/pdfs/githubflow-online.pdf" class="uri">https://guides.github.com/pdfs/githubflow-online.pdf</a>
+</p>
+</div>
 <p>This is our recommended workflow. The workflow is branch-based and involves keeping the master branch clean and ‘production ready’/fully-functional at all times.</p>
 <ol style="list-style-type: decimal">
-<li><strong>Create a branch</strong> - topic/per-person branches created from the master allow teams to contribute to many parallel efforts. Short-lived topic branches, in particular, keep teams focussed and results in quick ships.</li>
-<li><strong>Add commits</strong> - these are snapshots of development efforts within a branch and create safe, revertible points in the project’s history.</li>
-<li><strong>Open a pull request</strong> - pull requests publicise the project’s ongoing efforts and set the tone for a transparent development process.</li>
-<li><strong>Discuss and review code</strong> - teams participate in code reviews by commenting, testing, and reviewing open pull requests. Code review is at the centre of an open and participatory culture. Pull requests should be approved by at least one collaborator - we recommend you assign a specific reviewer(s) to check the work. In order to ensure the master branch remains ‘production ready’ we also recommend that the master branch is protected and any changes are tested by the reviewer before approving.</li>
-<li><strong>Merge</strong> - upon clicking merge, GitHub automatically performs the equivalent of a local <code>Git merge</code> operation. GitHub also keeps the entire branch development history on the merged pull request.</li>
-<li><strong>Deploy</strong> - teams can choose the best release cycles or incorporate continuous integration tools and operate with the assurance that code on the deployment branch has gone through a robust workflow.</li>
+<li><strong>Create a branch</strong> - topic/per-person branches created from the master allow teams to contribute to seperate issues at the same time.</li>
+<li><strong>Add commits</strong> - these are snapshots of development within a branch and create safe, revertible points in the project’s history.</li>
+<li><strong>Open a pull request</strong> - pull requests are the mechanism for which modifed code within a branch is merged back into the master branch, i.e. bringing the master branch up to date with changes made within a branch.</li>
+<li><strong>Discuss and review code</strong> - teams participate in code reviews by commenting, testing, and reviewing open pull requests. Pull requests should be approved by at least one collaborator - we recommend you assign a specific reviewer(s) to check the work. In order to ensure the master branch remains ‘production ready’ we also recommend that the master branch is protected and any changes are tested by the reviewer before approving.</li>
+<li><strong>Merge</strong> - upon clicking merge, GitHub automatically performs the equivalent of a local <code>Git merge</code> operation. Although you’ll likely never have to manually enter this command, it’s good to understand that the buttons available for interaction with git are just performing these commands for us. GitHub also keeps the entire branch development history on the merged pull request.</li>
+<li><strong>Deploy</strong> (<em>optional</em>) - teams can choose the best release cycles or incorporate continuous integration tools and operate with the assurance that code on the deployment branch has gone through a robust workflow.</li>
 </ol>
 </div>
 </div>

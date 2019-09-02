@@ -4,6 +4,8 @@ As you may already know, or will find out, Git is a command line (Shell/Bash) to
 
 The target audience for this guide is analysts within NHS National Services Scotland, particularly those who use R for data analysis. It may be that others find use in this guide, if so, fantastic! If you feel that something is missing or could be better, please raise a [GitHub issue](https://Github.com/NHS-NSS-transforming-publications/Git-guide/issues). 
 
+Throughout this guide where there are code examples, `<>` are used to show areas that define the users input. The arrow symbols shouldn't be entered along with the rest of the command. 
+
 
 ## Version Control, Git, and Remotes {-}
 
@@ -33,6 +35,11 @@ According to the latest [Stack Overflow developer survey](https://insights.stack
 A **repository** is Git's encompassing of the entire collection of files and folders associated with a project, along with each file’s revision history. The file history appears as snapshots in time called commits (versions), these commits can be organized into multiple lines of development called branches (seperate areas of development on the same project). Using the command line or other ease-of-use interfaces, a Git repository also allows for: interaction with the history, cloning (copying), creating branches, committing (saving a version), merging (bringing two versions together), comparing changes across versions of code, and more. This is a lot of information but as you start using Git it'll all embed and the terminology will be second nature.
 
 
+#### Branches {-}
+
+Creating branches allows development and work to continue without affecting the main stream, it also allows many people to do work in parallel without overwriting each other's work. Branching works by taking a copy of the main code and then later merging back when the code is ready. Before the marge takes place, reviews can take place to gain feedback and ensure the implemented changes will have the desired effect.
+
+
 #### Remotes {-}
 
 Version control has great potential to facilitate collaborative working with colleagues and third parties. This can be utilised with the use of "remote" repositories - copies of a project hosted away from the workspace e.g. on GitHub or Gitea. There's more about this later when we talk about GitHub, but for just now, this is a little introduction so you're familiar with the term.
@@ -46,19 +53,18 @@ GitHub is a Git hosting repository that provides users with tools to ship better
 
 ### GitHub Workflow {-}
 
-```{r fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html')}
+```{r fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html'),fig.cap="https://guides.github.com/pdfs/githubflow-online.pdf"}
 knitr::include_graphics('images/Githubflow.png', dpi = NA)
 ```
-&nbsp;
 
 This is our recommended workflow. The workflow is branch-based and involves keeping the master branch clean and 'production ready'/fully-functional at all times. 
 
-1. **Create a branch** - topic/per-person branches created from the master allow teams to contribute to many parallel efforts. Short-lived topic branches, in particular, keep teams focussed and results in quick ships.
-2. **Add commits** - these are snapshots of development efforts within a branch and create safe, revertible points in the project's history.
-3. **Open a pull request** - pull requests publicise the project's ongoing efforts and set the tone for a transparent development process.
-4. **Discuss and review code** - teams participate in code reviews by commenting, testing, and reviewing open pull requests. Code review is at the centre of an open and participatory culture. Pull requests should be approved by at least one collaborator - we recommend you assign a specific reviewer(s) to check the work. In order to ensure the master branch remains 'production ready' we also recommend that the master branch is protected and any changes are tested by the reviewer before approving.
-5. **Merge** - upon clicking merge, GitHub automatically performs the equivalent of a local `Git merge` operation. GitHub also keeps the entire branch development history on the merged pull request.
-6. **Deploy** - teams can choose the best release cycles or incorporate continuous integration tools and operate with the assurance that code on the deployment branch has gone through a robust workflow.
+1. **Create a branch** - topic/per-person branches created from the master allow teams to contribute to seperate issues at the same time.
+2. **Add commits** - these are snapshots of development within a branch and create safe, revertible points in the project's history.
+3. **Open a pull request** - pull requests are the mechanism for which modifed code within a branch is merged back into the master branch, i.e. bringing the master branch up to date with changes made within a branch.
+4. **Discuss and review code** - teams participate in code reviews by commenting, testing, and reviewing open pull requests. Pull requests should be approved by at least one collaborator - we recommend you assign a specific reviewer(s) to check the work. In order to ensure the master branch remains 'production ready' we also recommend that the master branch is protected and any changes are tested by the reviewer before approving.
+5. **Merge** - upon clicking merge, GitHub automatically performs the equivalent of a local `Git merge` operation. Although you'll likely never have to manually enter this command, it's good to understand that the buttons available for interaction with git are just performing these commands for us. GitHub also keeps the entire branch development history on the merged pull request.
+6. **Deploy** (*optional*) - teams can choose the best release cycles or incorporate continuous integration tools and operate with the assurance that code on the deployment branch has gone through a robust workflow.
 
 
 ## Setup {-}
@@ -73,9 +79,9 @@ This will install three applications on your computer, go to Start > Git (folder
 
 * **Git Bash** - this is the command line (Shell) interface for Git. This will allow you to enter Git commands, i.e. `Git init`, and can be launched by right clicking in a directory/folder and selecting "Git Bash Here".
 * **Git CMD** - this is a deprecated version, similar to the Bash interface, and shouldn't be used here.
-* **Git GUI** - this is Git's version of a Graphical User Interface. This will perform the same functions as "Git Bash" by the user selecting options rather than having to type in the commands. This guide will outline using integrations on software like RStudio to utilise GUIs rather than this option.
+* **Git GUI** - this is Git's version of a Graphical User Interface. This will perform the same functions as "Git Bash", but employs a point-and-click interface instead. This guide does not cover Git GUI and instead focuses on the integrated Git GUI in RStudio.
 
-2. **Configure your details** - Git needs to know who you are, use the following commands to configure your username and email (*if you're a GitHub user, use the same email and username you're registered with on GitHub.*):
+2. **Configure your details** - Git needs to know who you are, use the following commands to configure your username and email using Git Bash (*if you're a GitHub user, use the same email and username you're registered with on GitHub.* This is a necessary step for GitHub to recognise the account where the commits come from, even with proper authentication GitHub will use these details to assign the commits.) Remember not to type the arrow symbols `<>` when entering the command:
 
 * `Git config --global user.email <NHS email address>`
 * `Git config --global user.name <your name>`
@@ -89,7 +95,7 @@ At any time you can check what the current user details are using:
 
 These instructions are for first-time users of GitHub and highlight the steps in setting up a GitHub account.
 
-1. **Sign up** - In order to use GitHub, you'll need to have a personal GitHub account, you can set that up on the [GitHub website](http://Github.com). If using your NHS email address ensure you **don't use the same password as your NHS email account**. 
+1. **Sign up** - In order to use GitHub, you'll need to have a personal GitHub account, you can set that up on the [GitHub website](http://Github.com). If using your NHS email address or LDAP username ensure you **don't use the same password as your NHS email account or LDAP login**. 
 2. **Edit your details** - you will be able to set these items up as part of the sign up process. Otherwise, follow the links and edit them now.
 
 * Go to your [Profile Settings](https://Github.com/settings/profile) and add your details with a picture of yourself if you feel comfortable to do so.
@@ -112,7 +118,7 @@ knitr::include_graphics('images/rstudio-globalopt-Gitsvn.png', dpi = NA)
 ```
 &nbsp;
 
-2. **If "Git executable:" shows "*(none)*", click "Browse" and select the Git executable installed on your system.** - On Windows, Git.exe will likely be be in "Program Files", specifically try `C:/Program Files/Git/bin/Git.exe`. That's it for attaching RStudio and Git. This will allow you to utilise the RStudio Git GUI tools inside R Projects. 
+2. **If "Git executable:" shows "*(none)*", click "Browse" and select the Git executable installed on your system.** - On Windows, the filepath should point to folder git was installed to and finish `.../bin/git.exe`. If you're on the server, it should be `/usr/bin/git`. That's it for attaching RStudio and Git. This will allow you to utilise the RStudio Git GUI tools inside R Projects. 
 
 3. **Create an SSH Key** - this step is recommended for users who will be using a remote such as GitHub with their project. The other option is HTTPS (which doesn't require setup), however SSH is a faster and more convienent method of connecting to GitHub.
 
