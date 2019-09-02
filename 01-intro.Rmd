@@ -1,12 +1,8 @@
 # Introduction & Setup {-}
 
-Who for?
-What
-Where
-When
-Why
-
 As you may already know, or will find out, git is a command line (Shell/Bash) tool. Throughout this guide, the aim has been to provide a clear workflow and guidance that will allow you to work with these tools with minimal command line interaction. However, if you'd like to know more about this topic, Software Carpentry offer a fantastic [Introduction to Shell](http://swcarpentry.github.io/shell-novice/) lesson. 
+
+The target audience for this guide is analysts within NHS National Services Scotland, particularly those who use R for data analysis. It may be that others find use in this guide, if so, fantastic! If you feel that something is missing or could be better, please raise a [GitHub issue](https://github.com/NHS-NSS-transforming-publications/git-guide/issues). 
 
 
 ## Version Control, Git, and Remotes {-}
