@@ -6,7 +6,7 @@ These are some tips/references to keep in mind when working with git:
 
 * Although it's good to use version control throughout a project, git can be initialised on an exisitng project folder.
 * Commit often. Commits are the project history so commit after a section of code is completed, before lunch, at the end of the day, etc.
-* [Write good commit messages](https://github.com/erlang/otp/wiki/writing-good-commit-messages). The messages should be succint, meaningful, and written in imperative form (i.e. "Add x, y, z" not "Added x, y, z").
+* [Write good commit messages](https://github.com/erlang/otp/wiki/writing-good-commit-messages). The messages should be succinct, meaningful, and written in imperative form (i.e. "Add x, y, z" not "Added x, y, z").
 * Delete branches after merging. This reduces risks of merge conflicts and keeps your work set-up tidy.
 * It's possible to have multiple branches for working on or fixing multiple features of your project, but be aware that this increases the chance of a merge conflict.
 
