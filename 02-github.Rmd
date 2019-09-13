@@ -123,5 +123,3 @@ knitr::include_graphics('images/github-pullrequest.png', dpi = NA)
 ```
 &nbsp;
 
-
-## Pull Requests
