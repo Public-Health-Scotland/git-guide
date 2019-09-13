@@ -77,7 +77,7 @@ This is our recommended workflow. The workflow is branch-based and involves keep
 
 This will install three applications on your computer, go to Start > Git (folder):
 
-* **Git Bash** - this is the command line (Shell) interface for Git. This will allow you to enter Git commands, i.e. `Git init`, and can be launched by right clicking in a directory/folder and selecting "Git Bash Here".
+* **Git Bash** - this is the command line (Shell) interface for Git. This will allow you to enter Git commands, i.e. `git init`, and can be launched by right clicking in a directory/folder and selecting "Git Bash Here".
 * **Git CMD** - this is a deprecated version, similar to the Bash interface, and shouldn't be used here.
 * **Git GUI** - this is Git's version of a Graphical User Interface. This will perform the same functions as "Git Bash", but employs a point-and-click interface instead. This guide does not cover Git GUI and instead focuses on the integrated Git GUI in RStudio.
 
