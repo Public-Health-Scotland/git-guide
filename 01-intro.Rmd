@@ -1,6 +1,6 @@
 # Introduction & Setup {-}
 
-As you may already know, or will find out, Git is a command line (Shell/Bash) tool. Throughout this guide, the aim has been to provide a clear workflow and guidance that will allow you to work with these tools with minimal command line interaction. However, if you'd like to know more about this topic, Software Carpentry offer a fantastic [Introduction to Shell](http://swcarpentry.Github.io/shell-novice/) lesson. 
+As you may already know, or will find out, Git is a command line (Shell/Bash) tool used for version control. Throughout this guide, the aim has been to provide a clear workflow and guidance that will allow you to work with these tools with minimal command line interaction. However, if you'd like to know more about this topic, Software Carpentry offer a fantastic [Introduction to Shell](http://swcarpentry.Github.io/shell-novice/) lesson. 
 
 The target audience for this guide is analysts within NHS National Services Scotland, particularly those who use R for data analysis. It may be that others find use in this guide, if so, fantastic! If you feel that something is missing or could be better, please raise a [GitHub issue](https://Github.com/NHS-NSS-transforming-publications/Git-guide/issues). 
 
@@ -54,7 +54,7 @@ GitHub is a Git hosting repository that provides users with tools to ship better
 ### GitHub Workflow {-}
 
 ```{r fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html'),fig.cap="https://guides.github.com/pdfs/githubflow-online.pdf"}
-knitr::include_graphics('images/Githubflow.png', dpi = NA)
+knitr::include_graphics('images/githubflow.png', dpi = NA)
 ```
 
 This is our recommended workflow. The workflow is branch-based and involves keeping the master branch clean and 'production ready'/fully-functional at all times. 
@@ -63,7 +63,7 @@ This is our recommended workflow. The workflow is branch-based and involves keep
 2. **Add commits** - these are snapshots of development within a branch and create safe, revertible points in the project's history.
 3. **Open a pull request** - pull requests are the mechanism for which modifed code within a branch is merged back into the master branch, i.e. bringing the master branch up to date with changes made within a branch.
 4. **Discuss and review code** - teams participate in code reviews by commenting, testing, and reviewing open pull requests. Pull requests should be approved by at least one collaborator - we recommend you assign a specific reviewer(s) to check the work. In order to ensure the master branch remains 'production ready' we also recommend that the master branch is protected and any changes are tested by the reviewer before approving.
-5. **Merge** - upon clicking merge, GitHub automatically performs the equivalent of a local `Git merge` operation. Although you'll likely never have to manually enter this command, it's good to understand that the buttons available for interaction with git are just performing these commands for us. GitHub also keeps the entire branch development history on the merged pull request.
+5. **Merge** - upon clicking merge, GitHub automatically performs the equivalent of a local `git merge` operation. Although you'll likely never have to manually enter this command, it's good to understand that the buttons available for interaction with git are just performing these commands for us. GitHub also keeps the entire branch development history on the merged pull request.
 6. **Deploy** (*optional*) - teams can choose the best release cycles or incorporate continuous integration tools and operate with the assurance that code on the deployment branch has gone through a robust workflow.
 
 
@@ -114,7 +114,7 @@ First [R](https://www.r-project.org/) and [RStudio](https://www.rstudio.com/) mu
 1. **Once in RStudio, go to Tools in the menu bar > Global Options > Git/SVN**:
 
 ```{r fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html')}
-knitr::include_graphics('images/rstudio-globalopt-Gitsvn.png', dpi = NA)
+knitr::include_graphics('images/rstudio-globalopt-gitsvn.png', dpi = NA)
 ```
 &nbsp;
 
