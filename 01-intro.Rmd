@@ -24,7 +24,7 @@ Software teams that do not use any form of version control often run into proble
 
 #### Git {-}
 
-Git is a version control system (VCS). We recommend that Git is used along with a hosting repository (a remote), such as GitHub (or Gitea, GitLab, etc.) and that the [GitHub Flow] is followed. However, Git can be used locally while working on a project. The steps outlined in [Quick Start Git] are for this purpose and should only be followed for a personal project that is **local or on your personal network folder**. For collaborative work, see the getting started section for [Start GitHub].
+Git is a version control system (VCS). We recommend that Git is used along with a hosting repository (a remote), such as GitHub (or Gitea, GitLab, etc.) and that the [GitHub Workflow] is followed. However, Git can be used locally while working on a project. The steps outlined in [Quick Start Git] are for this purpose and should only be followed for a personal project that is **local or on your personal network folder**. For collaborative work, see [Quick Start GitHub].
 
 According to the latest [Stack Overflow developer survey](https://insights.stackoverflow.com/survey/2017#technology), more than 70 percent of developers use Git, making it the most-used VCS in the world. Git is commonly used for both open source and commercial software development, with significant benefits for individuals, teams and businesses:
 
@@ -46,7 +46,7 @@ Version control has great potential to facilitate collaborative working with col
 
 Systems like Git allow us to move work between any two repositories. In practice, though, it’s easiest to use one copy as a central hub, and to keep it on the web/private network rather than on someone’s laptop. This is where remotes come in. Most programmers use hosting services like [GitHub](https://Github.com/), [BitBucket](https://bitbucket.org/) or [GitLab](https://Gitlab.com/) to hold those master copies. We currently use **GitHub.** 
 
-GitHub is a Git hosting repository that provides users with tools to ship better code through command line features, issues (threaded discussions), pull requests, and code review. GitHub builds collaboration directly into the development process. Work is organised into repositories, where users can outline requirements or direction and set expectations for team members. Then, using the [GitHub Flow], developers simply create a branch to work on updates, commit changes to save them, open a pull request to propose and discuss changes, and merge pull requests once everyone is on the same page. See [GitHub Workflow] for more details.
+GitHub is a Git hosting repository that provides users with tools to ship better code through command line features, issues (threaded discussions), pull requests, and code review. GitHub builds collaboration directly into the development process. Work is organised into repositories, where users can outline requirements or direction and set expectations for team members. Then, using the [GitHub Workflow], developers simply create a branch to work on updates, commit changes to save them, open a pull request to propose and discuss changes, and merge pull requests once everyone is on the same page. See [GitHub Workflow] for more details.
 
 
 ## Workflows {-}
