@@ -1,3 +1,5 @@
+\newpage
+
 # Project Workflow with RStudio
 
 ```{r fig.align='center', echo=FALSE, out.height = "250px", include=identical(knitr:::pandoc_to(), 'html')}

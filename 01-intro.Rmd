@@ -1,3 +1,5 @@
+\newpage
+
 # Introduction & Setup {-}
 
 As you may already know, or will find out, Git is a command line (Shell/Bash) tool used for version control. Throughout this guide, the aim has been to provide a clear workflow and guidance that will allow you to work with these tools with minimal command line interaction. However, if you'd like to know more about this topic, Software Carpentry offer a fantastic [Introduction to Shell](http://swcarpentry.Github.io/shell-novice/) lesson. 
@@ -48,7 +50,7 @@ Systems like Git allow us to move work between any two repositories. In practice
 
 GitHub is a Git hosting repository that provides users with tools to ship better code through command line features, issues (threaded discussions), pull requests, and code review. GitHub builds collaboration directly into the development process. Work is organised into repositories, where users can outline requirements or direction and set expectations for team members. Then, using the [GitHub Workflow], developers simply create a branch to work on updates, commit changes to save them, open a pull request to propose and discuss changes, and merge pull requests once everyone is on the same page. See [GitHub Workflow] for more details.
 
-
+\newpage
 ## Workflows {-}
 
 ### GitHub Workflow {-}
@@ -66,7 +68,7 @@ This is our recommended workflow. The workflow is branch-based and involves keep
 5. **Merge** - upon clicking merge, GitHub automatically performs the equivalent of a local `git merge` operation. Although you'll likely never have to manually enter this command, it's good to understand that the buttons available for interaction with git are just performing these commands for us. GitHub also keeps the entire branch development history on the merged pull request.
 6. **Deploy** (*optional*) - teams can choose the best release cycles or incorporate continuous integration tools and operate with the assurance that code on the deployment branch has gone through a robust workflow.
 
-
+\newpage
 ## Setup {-}
 
 ### Git {-}
@@ -90,7 +92,7 @@ At any time you can check what the current user details are using:
 
 * `Git config --global user.email`
 
-
+\newpage
 ### GitHub {-}
 
 These instructions are for first-time users of GitHub and highlight the steps in setting up a GitHub account.
@@ -106,7 +108,7 @@ These instructions are for first-time users of GitHub and highlight the steps in
 * If you're doing work within the Transforming Publishing team. Email one of the admins [here](https://Github.com/orgs/NHS-NSS-transforming-publications/teams/transforming-publishing-team/members?utf8=%E2%9C%93&query=+role%3Amaintainer) to request being added to the organisation.
 * If you work within Public Health & Intelligence (PHI), the [Health & Social Care Scotland](https://Github.com/Health-SocialCare-Scotland) GitHub may be of interest. Repositories can be requested and set up for team working.
 
-
+\newpage
 ### RStudio {-}
 
 First [R](https://www.r-project.org/) and [RStudio](https://www.rstudio.com/) must be installed on your machine. Just as with Git, if you work within NHS National Services Scotland these can be requested through the [Service Portal](https://nhsnss.service-now.com/sp). Once authorised, this will allow you to download it from the Software Center on your machine. You may also be able to use the server versions of RStudio and the project workflow will be the same.

@@ -1,3 +1,5 @@
+\newpage
+
 # Git Cheat Sheet {-}
 
 ### Git Basics {-}
