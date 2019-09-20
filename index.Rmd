@@ -19,7 +19,7 @@ output_dir: /docs
 knitr::include_graphics('images/cover.png', dpi = NA)
 ```
 
-This is a quick guide for git, including GitHub, and the integrations into RStudio. There are references for further details and training on each of these topics.
+This is a quick guide for git, including GitHub, and the integrations into RStudio. There are references for further details and training on each of these topics. A PDF copy of this guide can be downloaded using the PDF button in the toolbar - please note that you'll need to download this again after any changes or updates to ensure you have the latest copy for guidance and recommended workflows. It will always be possible to bookmark this page and return to whenever required.
 
 In this guide, there are six sections which identify setup, steps to follow, "cheat-sheets", and further reference materials:
 
