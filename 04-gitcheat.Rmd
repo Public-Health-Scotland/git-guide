@@ -3,12 +3,15 @@
 ### Git Basics {-}
 
 ```{r, echo=FALSE}
-knitr::kable(
-  data.frame(
+git_basics_table <- data.frame(
     "Command" = c("`git config --global user.name \"[name]\"`", "`git config --global user.email \"[email]\"`", "`git init [project-name]` ", "`git clone [repo]` ", "`git status` ", "`git diff` ", "`git add [file]` ", "`git diff --staged`", "`git reset [file]`", "`git commit -m “[message]”` ", "`git log` "),
     "Description" = c("Sets author name to be used for all your commits.", "Sets author email to be used for all your commits.", "Create empty git repo in specified directory.", "Clone repo with version history located at `[repo]`.", "List all new or modified files to be committed.", "Show file changes not yet staged.", "Stage all changes in `[file]` for the next commit.", "Shows files differences between staging and the last file version.", "Unstages the file, but preserves its contents.", "Commit the staged snapshot to permanent version history.", "Display the entire commit history for the current branch.")
   )
-)
+
+kable(git_basics_table) %>%
+  kable_styling(full_width = F) %>%
+  column_spec(1, width = "18em") %>%
+  column_spec(2, width = "27em")
 ```
 
 &nbsp;
@@ -17,12 +20,15 @@ knitr::kable(
 ### Undoing changes {-}
 
 ```{r, echo=FALSE}
-knitr::kable(
-  data.frame(
+undoing_changes_table <- data.frame(
     "Command" = c("`git revert [commit]` ", "`git reset [file]` ", "`git clean -n` "),
     "Description" = c("Create new commit that undoes all of the changes made in `[commit]`, then apply it to the current branch. ", "Remove `[file]` from the staging area, but leave the working directory unchanged. This un-stages a file without overwriting any changes. ", "Shows which files would be removed from working directory. Use the `-f` flag in place of the `-n` flag to execute the clean. ")
   )
-)
+
+kable(undoing_changes_table) %>%
+  kable_styling(full_width = F) %>%
+  column_spec(1, width = "10em") %>%
+  column_spec(2, width = "35em")
 ```
 
 &nbsp;
@@ -31,12 +37,15 @@ knitr::kable(
 ### Rewriting Git History {-}
 
 ```{r, echo=FALSE}
-knitr::kable(
-  data.frame(
+rewriting_git_history_table <- data.frame(
     "Command" = c("`git commit —amend` ", "`git rebase [base]` ", "`git reflog` "),
     "Description" = c("Replace the last commit with the staged changes and last commit combined. Use with nothing staged to edit the last commit’s message. ", "Rebase the current branch onto `[base]`. `[base]` can be a commit ID, a branch name, a tag, or a relative reference to `HEAD`. ", "Show a log of changes to the local repository’s `HEAD`. Add `--relative-date` flag to show date info or `--all` to show all refs. ")
   )
-)
+
+kable(rewriting_git_history_table) %>%
+  kable_styling(full_width = F) %>%
+  column_spec(1, width = "10em") %>%
+  column_spec(2, width = "35em")
 ```
 
 &nbsp;
@@ -45,12 +54,16 @@ knitr::kable(
 ### Git Branches {-}
 
 ```{r, echo=FALSE}
-knitr::kable(
-  data.frame(
+git_branches_table <- data.frame(
     "Command" = c("`git branch` ", "`git checkout -b [branch]` ", "`git merge [branch]` "),
     "Description" = c("List all of the branches in your repo. Add a `branch` argument to create a new branch with the name `branch`. ", "Create and check out a new branch named `[branch]`. Drop the `-b` flag to checkout an existing branch. ", "Merge `[branch]` into the current branch. ")
   )
-)
+
+
+kable(git_branches_table) %>%
+  kable_styling(full_width = F) %>%
+  column_spec(1, width = "12em") %>%
+  column_spec(2, width = "33em")
 ```
 
 &nbsp;
@@ -59,12 +72,16 @@ knitr::kable(
 ### Remote Repositories {-}
 
 ```{r, echo=FALSE}
-knitr::kable(
-  data.frame(
+remote_repositories_table <- data.frame(
     "Command" = c("`git remote add [name] [url]` ", "`git fetch [remote]` ", "`git merge [remote]/[branch]`", "`git pull [remote]` ", "`git push [remote] [branch]` "),
     "Description" = c("Create a new connection to a remote repo.", "Downloads all history from the remote repo.", "Combines the remote branch into the current local branch", "Downloads and merges remote's copy of current branch.", "Uploads the branch and history to `[remote]`.")
   )
-)
+
+
+kable(remote_repositories_table) %>%
+  kable_styling(full_width = F) %>%
+  column_spec(1, width = "15em") %>%
+  column_spec(2, width = "30em")
 ```
 
 &nbsp;
@@ -73,12 +90,16 @@ knitr::kable(
 ### Git Log {-}
 
 ```{r, echo=FALSE}
-knitr::kable(
-  data.frame(
+git_log_table <- data.frame(
     "Command" = c("`git log -[limit]` ", "`git log --oneline` ", "`git log -p` ", "`git log —-stat` ", "`git log —-author= ”[pattern]”` ", "`git log —grep=”[pattern]”` ", "`git log [since]..[until]` ", "`git log -- [file]` ", "`git log --graph --decorate` "),
     "Description" = c("Limit number of commits by `[limit]`. E.g. `git log -5` will limit to 5 commits. ", "Condense each commit to a single line. ", "Display the full diff of each commit. ", "Include which files were altered and the relative number of lines that were added or deleted from each of them. ", "Search for commits by a particular author. ", "Search for commits with a commit message that matches [pattern]. ", "Shows commits that occur between `[since]` and `[until]`. Args can be a commit ID, branch name, `HEAD`, or any other kind of revision reference. ", "Only display commits that have the specified file. ", "`--graph` flag draws a text based graph of commits on left side of commit msgs. `--decorate` adds names of branches or tags of commits shown. ")
   )
-)
+
+
+kable(git_log_table) %>%
+  kable_styling(full_width = F) %>%
+  column_spec(1, width = "15em") %>%
+  column_spec(2, width = "30em")
 ```
 
 &nbsp;
@@ -87,12 +108,16 @@ knitr::kable(
 ### Git Diff {-}
 
 ```{r, echo=FALSE}
-knitr::kable(
-  data.frame(
+git_diff_table <- data.frame(
     "Command" = c("`git diff HEAD` ", "`git diff --cached` "),
     "Description" = c("Show difference between working directory and last commit. ", "Show difference between staged changes and last commit. ")
   )
-)
+
+
+kable(git_diff_table) %>%
+  kable_styling(full_width = F) %>%
+  column_spec(1, width = "10em") %>%
+  column_spec(2, width = "35em")
 ```
 
 &nbsp;
@@ -101,12 +126,15 @@ knitr::kable(
 ### Git Reset {-}
 
 ```{r, echo=FALSE}
-knitr::kable(
-  data.frame(
+git_reset_table <- data.frame(
     "Command" = c("`git reset` ", "`git reset --hard` ", "`git reset [commit]` ", "`git reset --hard [commit]` "),
     "Description" = c("Reset staging area to match most recent commit, but leave the working directory unchanged. ", "Reset staging area and working directory to match most recent commit and *overwrites all changes* in the working directory. ", "Move the current branch tip backward to `[commit]`, reset the staging area to match, but leave the working directory alone. ", "Same as previous, but resets both the staging area & working directory to match. Deletes uncommitted changes, and all commits after `[commit]`. ")
   )
-)
+
+kable(git_reset_table) %>%
+  kable_styling(full_width = F) %>%
+  column_spec(1, width = "12em") %>%
+  column_spec(2, width = "33em")
 ```
 
 &nbsp;

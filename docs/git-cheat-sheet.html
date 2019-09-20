@@ -46,6 +46,7 @@
 
 
 
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
 
 
 
@@ -122,57 +123,105 @@
 <h1>Git Cheat Sheet</h1>
 <div id="git-basics" class="section level3 unnumbered">
 <h3>Git Basics</h3>
-<table>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>
-<tr class="header">
-<th align="left">Command</th>
-<th align="left">Description</th>
+<tr>
+<th style="text-align:left;">
+Command
+</th>
+<th style="text-align:left;">
+Description
+</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td align="left"><code>git config --global user.name &quot;[name]&quot;</code></td>
-<td align="left">Sets author name to be used for all your commits.</td>
+<tr>
+<td style="text-align:left;width: 18em; ">
+<code>git config --global user.name &quot;[name]&quot;</code>
+</td>
+<td style="text-align:left;width: 27em; ">
+Sets author name to be used for all your commits.
+</td>
 </tr>
-<tr class="even">
-<td align="left"><code>git config --global user.email &quot;[email]&quot;</code></td>
-<td align="left">Sets author email to be used for all your commits.</td>
+<tr>
+<td style="text-align:left;width: 18em; ">
+<code>git config --global user.email &quot;[email]&quot;</code>
+</td>
+<td style="text-align:left;width: 27em; ">
+Sets author email to be used for all your commits.
+</td>
 </tr>
-<tr class="odd">
-<td align="left"><code>git init [project-name]</code></td>
-<td align="left">Create empty git repo in specified directory.</td>
+<tr>
+<td style="text-align:left;width: 18em; ">
+<code>git init [project-name]</code>
+</td>
+<td style="text-align:left;width: 27em; ">
+Create empty git repo in specified directory.
+</td>
 </tr>
-<tr class="even">
-<td align="left"><code>git clone [repo]</code></td>
-<td align="left">Clone repo with version history located at <code>[repo]</code>.</td>
+<tr>
+<td style="text-align:left;width: 18em; ">
+<code>git clone [repo]</code>
+</td>
+<td style="text-align:left;width: 27em; ">
+Clone repo with version history located at <code>[repo]</code>.
+</td>
 </tr>
-<tr class="odd">
-<td align="left"><code>git status</code></td>
-<td align="left">List all new or modified files to be committed.</td>
+<tr>
+<td style="text-align:left;width: 18em; ">
+<code>git status</code>
+</td>
+<td style="text-align:left;width: 27em; ">
+List all new or modified files to be committed.
+</td>
 </tr>
-<tr class="even">
-<td align="left"><code>git diff</code></td>
-<td align="left">Show file changes not yet staged.</td>
+<tr>
+<td style="text-align:left;width: 18em; ">
+<code>git diff</code>
+</td>
+<td style="text-align:left;width: 27em; ">
+Show file changes not yet staged.
+</td>
 </tr>
-<tr class="odd">
-<td align="left"><code>git add [file]</code></td>
-<td align="left">Stage all changes in <code>[file]</code> for the next commit.</td>
+<tr>
+<td style="text-align:left;width: 18em; ">
+<code>git add [file]</code>
+</td>
+<td style="text-align:left;width: 27em; ">
+Stage all changes in <code>[file]</code> for the next commit.
+</td>
 </tr>
-<tr class="even">
-<td align="left"><code>git diff --staged</code></td>
-<td align="left">Shows files differences between staging and the last file version.</td>
+<tr>
+<td style="text-align:left;width: 18em; ">
+<code>git diff --staged</code>
+</td>
+<td style="text-align:left;width: 27em; ">
+Shows files differences between staging and the last file version.
+</td>
 </tr>
-<tr class="odd">
-<td align="left"><code>git reset [file]</code></td>
-<td align="left">Unstages the file, but preserves its contents.</td>
+<tr>
+<td style="text-align:left;width: 18em; ">
+<code>git reset [file]</code>
+</td>
+<td style="text-align:left;width: 27em; ">
+Unstages the file, but preserves its contents.
+</td>
 </tr>
-<tr class="even">
-<td align="left"><code>git commit -m “[message]”</code></td>
-<td align="left">Commit the staged snapshot to permanent version history.</td>
+<tr>
+<td style="text-align:left;width: 18em; ">
+<code>git commit -m “[message]”</code>
+</td>
+<td style="text-align:left;width: 27em; ">
+Commit the staged snapshot to permanent version history.
+</td>
 </tr>
-<tr class="odd">
-<td align="left"><code>git log</code></td>
-<td align="left">Display the entire commit history for the current branch.</td>
+<tr>
+<td style="text-align:left;width: 18em; ">
+<code>git log</code>
+</td>
+<td style="text-align:left;width: 27em; ">
+Display the entire commit history for the current branch.
+</td>
 </tr>
 </tbody>
 </table>
@@ -180,25 +229,41 @@
 </div>
 <div id="undoing-changes" class="section level3 unnumbered">
 <h3>Undoing changes</h3>
-<table>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>
-<tr class="header">
-<th align="left">Command</th>
-<th align="left">Description</th>
+<tr>
+<th style="text-align:left;">
+Command
+</th>
+<th style="text-align:left;">
+Description
+</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td align="left"><code>git revert [commit]</code></td>
-<td align="left">Create new commit that undoes all of the changes made in <code>[commit]</code>, then apply it to the current branch.</td>
+<tr>
+<td style="text-align:left;width: 10em; ">
+<code>git revert [commit]</code>
+</td>
+<td style="text-align:left;width: 35em; ">
+Create new commit that undoes all of the changes made in <code>[commit]</code>, then apply it to the current branch.
+</td>
 </tr>
-<tr class="even">
-<td align="left"><code>git reset [file]</code></td>
-<td align="left">Remove <code>[file]</code> from the staging area, but leave the working directory unchanged. This un-stages a file without overwriting any changes.</td>
+<tr>
+<td style="text-align:left;width: 10em; ">
+<code>git reset [file]</code>
+</td>
+<td style="text-align:left;width: 35em; ">
+Remove <code>[file]</code> from the staging area, but leave the working directory unchanged. This un-stages a file without overwriting any changes.
+</td>
 </tr>
-<tr class="odd">
-<td align="left"><code>git clean -n</code></td>
-<td align="left">Shows which files would be removed from working directory. Use the <code>-f</code> flag in place of the <code>-n</code> flag to execute the clean.</td>
+<tr>
+<td style="text-align:left;width: 10em; ">
+<code>git clean -n</code>
+</td>
+<td style="text-align:left;width: 35em; ">
+Shows which files would be removed from working directory. Use the <code>-f</code> flag in place of the <code>-n</code> flag to execute the clean.
+</td>
 </tr>
 </tbody>
 </table>
@@ -206,25 +271,41 @@
 </div>
 <div id="rewriting-git-history" class="section level3 unnumbered">
 <h3>Rewriting Git History</h3>
-<table>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>
-<tr class="header">
-<th align="left">Command</th>
-<th align="left">Description</th>
+<tr>
+<th style="text-align:left;">
+Command
+</th>
+<th style="text-align:left;">
+Description
+</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td align="left"><code>git commit —amend</code></td>
-<td align="left">Replace the last commit with the staged changes and last commit combined. Use with nothing staged to edit the last commit’s message.</td>
+<tr>
+<td style="text-align:left;width: 10em; ">
+<code>git commit —amend</code>
+</td>
+<td style="text-align:left;width: 35em; ">
+Replace the last commit with the staged changes and last commit combined. Use with nothing staged to edit the last commit’s message.
+</td>
 </tr>
-<tr class="even">
-<td align="left"><code>git rebase [base]</code></td>
-<td align="left">Rebase the current branch onto <code>[base]</code>. <code>[base]</code> can be a commit ID, a branch name, a tag, or a relative reference to <code>HEAD</code>.</td>
+<tr>
+<td style="text-align:left;width: 10em; ">
+<code>git rebase [base]</code>
+</td>
+<td style="text-align:left;width: 35em; ">
+Rebase the current branch onto <code>[base]</code>. <code>[base]</code> can be a commit ID, a branch name, a tag, or a relative reference to <code>HEAD</code>.
+</td>
 </tr>
-<tr class="odd">
-<td align="left"><code>git reflog</code></td>
-<td align="left">Show a log of changes to the local repository’s <code>HEAD</code>. Add <code>--relative-date</code> flag to show date info or <code>--all</code> to show all refs.</td>
+<tr>
+<td style="text-align:left;width: 10em; ">
+<code>git reflog</code>
+</td>
+<td style="text-align:left;width: 35em; ">
+Show a log of changes to the local repository’s <code>HEAD</code>. Add <code>--relative-date</code> flag to show date info or <code>--all</code> to show all refs.
+</td>
 </tr>
 </tbody>
 </table>
@@ -232,25 +313,41 @@
 </div>
 <div id="git-branches" class="section level3 unnumbered">
 <h3>Git Branches</h3>
-<table>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>
-<tr class="header">
-<th align="left">Command</th>
-<th align="left">Description</th>
+<tr>
+<th style="text-align:left;">
+Command
+</th>
+<th style="text-align:left;">
+Description
+</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td align="left"><code>git branch</code></td>
-<td align="left">List all of the branches in your repo. Add a <code>branch</code> argument to create a new branch with the name <code>branch</code>.</td>
+<tr>
+<td style="text-align:left;width: 12em; ">
+<code>git branch</code>
+</td>
+<td style="text-align:left;width: 33em; ">
+List all of the branches in your repo. Add a <code>branch</code> argument to create a new branch with the name <code>branch</code>.
+</td>
 </tr>
-<tr class="even">
-<td align="left"><code>git checkout -b [branch]</code></td>
-<td align="left">Create and check out a new branch named <code>[branch]</code>. Drop the <code>-b</code> flag to checkout an existing branch.</td>
+<tr>
+<td style="text-align:left;width: 12em; ">
+<code>git checkout -b [branch]</code>
+</td>
+<td style="text-align:left;width: 33em; ">
+Create and check out a new branch named <code>[branch]</code>. Drop the <code>-b</code> flag to checkout an existing branch.
+</td>
 </tr>
-<tr class="odd">
-<td align="left"><code>git merge [branch]</code></td>
-<td align="left">Merge <code>[branch]</code> into the current branch.</td>
+<tr>
+<td style="text-align:left;width: 12em; ">
+<code>git merge [branch]</code>
+</td>
+<td style="text-align:left;width: 33em; ">
+Merge <code>[branch]</code> into the current branch.
+</td>
 </tr>
 </tbody>
 </table>
@@ -258,33 +355,57 @@
 </div>
 <div id="remote-repositories" class="section level3 unnumbered">
 <h3>Remote Repositories</h3>
-<table>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>
-<tr class="header">
-<th align="left">Command</th>
-<th align="left">Description</th>
+<tr>
+<th style="text-align:left;">
+Command
+</th>
+<th style="text-align:left;">
+Description
+</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td align="left"><code>git remote add [name] [url]</code></td>
-<td align="left">Create a new connection to a remote repo.</td>
+<tr>
+<td style="text-align:left;width: 15em; ">
+<code>git remote add [name] [url]</code>
+</td>
+<td style="text-align:left;width: 30em; ">
+Create a new connection to a remote repo.
+</td>
 </tr>
-<tr class="even">
-<td align="left"><code>git fetch [remote]</code></td>
-<td align="left">Downloads all history from the remote repo.</td>
+<tr>
+<td style="text-align:left;width: 15em; ">
+<code>git fetch [remote]</code>
+</td>
+<td style="text-align:left;width: 30em; ">
+Downloads all history from the remote repo.
+</td>
 </tr>
-<tr class="odd">
-<td align="left"><code>git merge [remote]/[branch]</code></td>
-<td align="left">Combines the remote branch into the current local branch</td>
+<tr>
+<td style="text-align:left;width: 15em; ">
+<code>git merge [remote]/[branch]</code>
+</td>
+<td style="text-align:left;width: 30em; ">
+Combines the remote branch into the current local branch
+</td>
 </tr>
-<tr class="even">
-<td align="left"><code>git pull [remote]</code></td>
-<td align="left">Downloads and merges remote’s copy of current branch.</td>
+<tr>
+<td style="text-align:left;width: 15em; ">
+<code>git pull [remote]</code>
+</td>
+<td style="text-align:left;width: 30em; ">
+Downloads and merges remote’s copy of current branch.
+</td>
 </tr>
-<tr class="odd">
-<td align="left"><code>git push [remote] [branch]</code></td>
-<td align="left">Uploads the branch and history to <code>[remote]</code>.</td>
+<tr>
+<td style="text-align:left;width: 15em; ">
+<code>git push [remote] [branch]</code>
+</td>
+<td style="text-align:left;width: 30em; ">
+Uploads the branch and history to <code>[remote]</code>.
+</td>
 </tr>
 </tbody>
 </table>
@@ -292,49 +413,89 @@
 </div>
 <div id="git-log" class="section level3 unnumbered">
 <h3>Git Log</h3>
-<table>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>
-<tr class="header">
-<th align="left">Command</th>
-<th align="left">Description</th>
+<tr>
+<th style="text-align:left;">
+Command
+</th>
+<th style="text-align:left;">
+Description
+</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td align="left"><code>git log -[limit]</code></td>
-<td align="left">Limit number of commits by <code>[limit]</code>. E.g. <code>git log -5</code> will limit to 5 commits.</td>
+<tr>
+<td style="text-align:left;width: 15em; ">
+<code>git log -[limit]</code>
+</td>
+<td style="text-align:left;width: 30em; ">
+Limit number of commits by <code>[limit]</code>. E.g. <code>git log -5</code> will limit to 5 commits.
+</td>
 </tr>
-<tr class="even">
-<td align="left"><code>git log --oneline</code></td>
-<td align="left">Condense each commit to a single line.</td>
+<tr>
+<td style="text-align:left;width: 15em; ">
+<code>git log --oneline</code>
+</td>
+<td style="text-align:left;width: 30em; ">
+Condense each commit to a single line.
+</td>
 </tr>
-<tr class="odd">
-<td align="left"><code>git log -p</code></td>
-<td align="left">Display the full diff of each commit.</td>
+<tr>
+<td style="text-align:left;width: 15em; ">
+<code>git log -p</code>
+</td>
+<td style="text-align:left;width: 30em; ">
+Display the full diff of each commit.
+</td>
 </tr>
-<tr class="even">
-<td align="left"><code>git log —-stat</code></td>
-<td align="left">Include which files were altered and the relative number of lines that were added or deleted from each of them.</td>
+<tr>
+<td style="text-align:left;width: 15em; ">
+<code>git log —-stat</code>
+</td>
+<td style="text-align:left;width: 30em; ">
+Include which files were altered and the relative number of lines that were added or deleted from each of them.
+</td>
 </tr>
-<tr class="odd">
-<td align="left"><code>git log —-author= ”[pattern]”</code></td>
-<td align="left">Search for commits by a particular author.</td>
+<tr>
+<td style="text-align:left;width: 15em; ">
+<code>git log —-author= ”[pattern]”</code>
+</td>
+<td style="text-align:left;width: 30em; ">
+Search for commits by a particular author.
+</td>
 </tr>
-<tr class="even">
-<td align="left"><code>git log —grep=”[pattern]”</code></td>
-<td align="left">Search for commits with a commit message that matches [pattern].</td>
+<tr>
+<td style="text-align:left;width: 15em; ">
+<code>git log —grep=”[pattern]”</code>
+</td>
+<td style="text-align:left;width: 30em; ">
+Search for commits with a commit message that matches [pattern].
+</td>
 </tr>
-<tr class="odd">
-<td align="left"><code>git log [since]..[until]</code></td>
-<td align="left">Shows commits that occur between <code>[since]</code> and <code>[until]</code>. Args can be a commit ID, branch name, <code>HEAD</code>, or any other kind of revision reference.</td>
+<tr>
+<td style="text-align:left;width: 15em; ">
+<code>git log [since]..[until]</code>
+</td>
+<td style="text-align:left;width: 30em; ">
+Shows commits that occur between <code>[since]</code> and <code>[until]</code>. Args can be a commit ID, branch name, <code>HEAD</code>, or any other kind of revision reference.
+</td>
 </tr>
-<tr class="even">
-<td align="left"><code>git log -- [file]</code></td>
-<td align="left">Only display commits that have the specified file.</td>
+<tr>
+<td style="text-align:left;width: 15em; ">
+<code>git log -- [file]</code>
+</td>
+<td style="text-align:left;width: 30em; ">
+Only display commits that have the specified file.
+</td>
 </tr>
-<tr class="odd">
-<td align="left"><code>git log --graph --decorate</code></td>
-<td align="left"><code>--graph</code> flag draws a text based graph of commits on left side of commit msgs. <code>--decorate</code> adds names of branches or tags of commits shown.</td>
+<tr>
+<td style="text-align:left;width: 15em; ">
+<code>git log --graph --decorate</code>
+</td>
+<td style="text-align:left;width: 30em; ">
+<code>--graph</code> flag draws a text based graph of commits on left side of commit msgs. <code>--decorate</code> adds names of branches or tags of commits shown.
+</td>
 </tr>
 </tbody>
 </table>
@@ -342,21 +503,33 @@
 </div>
 <div id="git-diff" class="section level3 unnumbered">
 <h3>Git Diff</h3>
-<table>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>
-<tr class="header">
-<th align="left">Command</th>
-<th align="left">Description</th>
+<tr>
+<th style="text-align:left;">
+Command
+</th>
+<th style="text-align:left;">
+Description
+</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td align="left"><code>git diff HEAD</code></td>
-<td align="left">Show difference between working directory and last commit.</td>
+<tr>
+<td style="text-align:left;width: 10em; ">
+<code>git diff HEAD</code>
+</td>
+<td style="text-align:left;width: 35em; ">
+Show difference between working directory and last commit.
+</td>
 </tr>
-<tr class="even">
-<td align="left"><code>git diff --cached</code></td>
-<td align="left">Show difference between staged changes and last commit.</td>
+<tr>
+<td style="text-align:left;width: 10em; ">
+<code>git diff --cached</code>
+</td>
+<td style="text-align:left;width: 35em; ">
+Show difference between staged changes and last commit.
+</td>
 </tr>
 </tbody>
 </table>
@@ -364,29 +537,49 @@
 </div>
 <div id="git-reset" class="section level3 unnumbered">
 <h3>Git Reset</h3>
-<table>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>
-<tr class="header">
-<th align="left">Command</th>
-<th align="left">Description</th>
+<tr>
+<th style="text-align:left;">
+Command
+</th>
+<th style="text-align:left;">
+Description
+</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td align="left"><code>git reset</code></td>
-<td align="left">Reset staging area to match most recent commit, but leave the working directory unchanged.</td>
+<tr>
+<td style="text-align:left;width: 12em; ">
+<code>git reset</code>
+</td>
+<td style="text-align:left;width: 33em; ">
+Reset staging area to match most recent commit, but leave the working directory unchanged.
+</td>
 </tr>
-<tr class="even">
-<td align="left"><code>git reset --hard</code></td>
-<td align="left">Reset staging area and working directory to match most recent commit and <em>overwrites all changes</em> in the working directory.</td>
+<tr>
+<td style="text-align:left;width: 12em; ">
+<code>git reset --hard</code>
+</td>
+<td style="text-align:left;width: 33em; ">
+Reset staging area and working directory to match most recent commit and <em>overwrites all changes</em> in the working directory.
+</td>
 </tr>
-<tr class="odd">
-<td align="left"><code>git reset [commit]</code></td>
-<td align="left">Move the current branch tip backward to <code>[commit]</code>, reset the staging area to match, but leave the working directory alone.</td>
+<tr>
+<td style="text-align:left;width: 12em; ">
+<code>git reset [commit]</code>
+</td>
+<td style="text-align:left;width: 33em; ">
+Move the current branch tip backward to <code>[commit]</code>, reset the staging area to match, but leave the working directory alone.
+</td>
 </tr>
-<tr class="even">
-<td align="left"><code>git reset --hard [commit]</code></td>
-<td align="left">Same as previous, but resets both the staging area &amp; working directory to match. Deletes uncommitted changes, and all commits after <code>[commit]</code>.</td>
+<tr>
+<td style="text-align:left;width: 12em; ">
+<code>git reset --hard [commit]</code>
+</td>
+<td style="text-align:left;width: 33em; ">
+Same as previous, but resets both the staging area &amp; working directory to match. Deletes uncommitted changes, and all commits after <code>[commit]</code>.
+</td>
 </tr>
 </tbody>
 </table>
