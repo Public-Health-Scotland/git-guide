@@ -11,5 +11,4 @@ bookdown::pdf_book:
   highlight: tango
   toc_depth: 3
   number_sections: false
-  df_print: kable
 ---

@@ -129,7 +129,7 @@
 </ol>
 <p>This will install three applications on your computer, go to Start &gt; Git (folder):</p>
 <ul>
-<li><strong>Git Bash</strong> - this is the command line (Shell) interface for Git. This will allow you to enter Git commands, i.e. <code>git init</code>, and can be launched by right clicking in a directory/folder and selecting “Git Bash Here”.</li>
+<li><strong>Git Bash</strong> - this is the command line (Shell) interface for Git. This will allow you to enter Git commands, i.e. <code>git init</code>, and can be launched by right clicking in a directory/folder and selecting “Git Bash Here”.</li>
 <li><strong>Git CMD</strong> - this is a deprecated version, similar to the Bash interface, and shouldn’t be used here.</li>
 <li><strong>Git GUI</strong> - this is Git’s version of a Graphical User Interface. This will perform the same functions as “Git Bash”, but employs a point-and-click interface instead. This guide does not cover Git GUI and instead focuses on the integrated Git GUI in RStudio.</li>
 </ul>
@@ -172,7 +172,8 @@
 <ol style="list-style-type: decimal">
 <li><strong>Once in RStudio, go to Tools in the menu bar &gt; Global Options &gt; Git/SVN</strong>:</li>
 </ol>
-<p><img src="images/rstudio-globalopt-gitsvn.png" style="display: block; margin: auto;" />  </p>
+<p><img src="images/rstudio-globalopt-gitsvn.png" style="display: block; margin: auto;" />
+ </p>
 <ol start="2" style="list-style-type: decimal">
 <li><p><strong>If “Git executable:” shows “<em>(none)</em>”, click “Browse” and select the Git executable installed on your system.</strong> - On Windows, the filepath should point to folder git was installed to and finish <code>.../bin/git.exe</code>. If you’re on the server, it should be <code>/usr/bin/git</code>. That’s it for attaching RStudio and Git. This will allow you to utilise the RStudio Git GUI tools inside R Projects.</p></li>
 <li><p><strong>Create an SSH Key</strong> - this step is recommended for users who will be using a remote such as GitHub with their project. The other option is HTTPS (which doesn’t require setup), however SSH is a faster and more convienent method of connecting to GitHub.</p>
