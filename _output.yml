@@ -8,7 +8,6 @@ bookdown::gitbook:
       collapse: section
 bookdown::pdf_book:
   latex_engine: xelatex
-  highlight: tango
   toc_depth: 3
   number_sections: false
 ---
