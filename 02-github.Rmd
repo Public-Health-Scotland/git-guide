@@ -2,7 +2,7 @@
 
 # GitHub
 
-```{r fig.align='center', echo=FALSE, out.height = "250px", include=identical(knitr:::pandoc_to(), 'html')}
+```{r echo = FALSE, fig.align='center', out.width = '30%'}
 knitr::include_graphics('images/github.png', dpi = NA)
 ```
 &nbsp;
@@ -23,7 +23,7 @@ If you're setting up a new project on GitHub, follow these instructions. It is r
 1. **Go to https://github.com and sign in**
 2. **Create the repo** - in the upper right corner, next to your avatar, click the `+` button and select "*New repository*".
 
-```{r fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html')}
+```{r echo = FALSE, fig.align='center', out.width = '95%'}
 knitr::include_graphics('images/github-newrepo.png', dpi = NA)
 ```
 &nbsp;
@@ -31,7 +31,7 @@ knitr::include_graphics('images/github-newrepo.png', dpi = NA)
 3. **Fill in the details** - select the owner, give it a name (short, specfic, memorable, and preferably lowercase-with-hyphens), write a short description, and consider if initialising with a README is appropriate. *A README file is used to provide up front information about what the project does, why it's useful, how users can interact, where to get help, and who maintains and contributes to the project. This is really useful for anyone landing on the GitHub page to find out more. Initialising a repository on GitHub with a README will simply add a markdown file to which you can add the details to later.*
 4. **Click "Create repository"**
 
-```{r fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html')}
+```{r echo = FALSE, fig.align='center', out.width = '95%'}
 knitr::include_graphics('images/github-createrepo.png', dpi = NA)
 ```
 &nbsp;
@@ -120,7 +120,7 @@ $
     6. Type a title as a description for your pull request.
     7. If your pull request is ready for review, click "Create Pull Request". *To create a draft pull request, use the dropdown menu and select "Create Draft Pull Request", then click "Draft Pull Request"*.
 
-```{r fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html')}
+```{r echo = FALSE, fig.align='center', out.width = '95%'}
 knitr::include_graphics('images/github-pullrequest.png', dpi = NA)
 ```
 &nbsp;

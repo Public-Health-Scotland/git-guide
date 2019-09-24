@@ -2,8 +2,8 @@
 
 # Project Workflow with RStudio
 
-```{r fig.align='center', echo=FALSE, out.height = "250px", include=identical(knitr:::pandoc_to(), 'html')}
-knitr::include_graphics('images/rstudio.png', dpi = NA)
+```{r echo=FALSE, fig.align='center', out.width = '30%'}
+knitr::include_graphics('images/rstudio.png')
 ```
 &nbsp;
 
@@ -19,7 +19,7 @@ RStudio allows us to create a project associated with a given folder/directory t
 
 - **New Project** - any time you do any work that requires code, you should create an R project. This keeps your work together, seperates settings for different projects, and allows the use of version control. To do that, go to File in the menu bar and select "New Project". In the window that appears, name your project, choose a folder/directory for where to store it, and ensure "Create a git repository" is selected.
 
-```{r fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html')}
+```{r echo = FALSE, fig.align='center', out.width = '95%'}
 knitr::include_graphics('images/rstudio-newproj.png', dpi = NA)
 ```
 &nbsp;
@@ -32,21 +32,21 @@ knitr::include_graphics('images/rstudio-newproj.png', dpi = NA)
     * **Project directory name**: this is up to you and will be used to name the folder/directory that contains a copy of the repo. Give it any meaningful name, for example this guide is named "git-guide", the same name as on the remote repo.
     * **Create project as subdirectory of**: this is the location of where the folder/directory that contains the copy of the repo will be stored. 
 
-```{r fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html')}
+```{r echo = FALSE, fig.align='center', out.width = '95%'}
 knitr::include_graphics('images/rstudio-clonerepo.png', dpi = NA)
 ```
 &nbsp;
 
 2. **Change, stage...** - RStudio will keep track of all changes made to the files within your R project (not just R files). Any changes made will show up in the "Git" tab, which can be found in the same pane as the R environment. This is typically the top-right pane, but their positions can be changed so it may not be in all cases. When you're ready to commit, save the files you're working with and stage them by ticking the box to the left of the files in the Git pane, and then click on the "Commit" button.
 
-```{r fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html')}
+```{r echo = FALSE, fig.align='center', out.width = '95%'}
 knitr::include_graphics('images/rstudio-stage.png', dpi = NA)
 ```
 &nbsp;
 
 3. **Commit** - After clicking on "Commit", a window will appear with the changes made for review and a prompt for a "Commit message". Your commit message should describe the changes made and be consise, meaningful and written in imperative mood. Then, just click on "Commit"! *This has saved all the changes to the project. Going forward, it will be possible to look back and see the full history of changes to the project, who made those changes, and revert to previous versions where necessary.*
 
-```{r fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html')}
+```{r echo = FALSE, fig.align='center', out.width = '95%'}
 knitr::include_graphics('images/rstudio-commit.png', dpi = NA)
 ```
 &nbsp;
@@ -55,7 +55,7 @@ knitr::include_graphics('images/rstudio-commit.png', dpi = NA)
 
 - **New Branch** - To create a new branch in RStudio, just click the "New Branch" button in the Git pane and give it a name. To switch between branches, click the dropdown to the right of the "New Branch" button and click the name of the branch you want to switch to. *(When you select a branch, the state of the files in that branch will appear in both the Files pane in RStudio, and in your computer's file explorer.)*
 
-```{r fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html')}
+```{r echo = FALSE, fig.align='center', out.width = '95%'}
 knitr::include_graphics('images/rstudio-branch.png', dpi = NA)
 ```
 &nbsp;
@@ -71,7 +71,7 @@ $ git merge <branch>
 
 6. **Pull and push** - After linking the project to a GitHub repository, RStudio has a GUI interface for pulling and pushing changes. It's good practice to pull from GitHub to check for changes that have occured since the last time and to help avoid merge conflicts. After that you can click push to send all your commits to GitHub, now everything is in-sync again.
 
-```{r fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html')}
+```{r echo = FALSE, fig.align='center', out.width = '95%'}
 knitr::include_graphics('images/rstudio-pullpush.png', dpi = NA)
 ```
 &nbsp;

@@ -2,7 +2,7 @@
 
 # Git
 
-```{r fig.align='center', echo=FALSE, out.height = "250px", include=identical(knitr:::pandoc_to(), 'html')}
+```{r echo = FALSE, fig.align='center', out.width = '30%'}
 knitr::include_graphics('images/git.png', dpi = NA)
 ```
 &nbsp;
@@ -27,7 +27,7 @@ $
 
 You can also navigate the project folder using Windows Explorer, right click, and select "Git Bash Here", this will open a command-line interface for that folder.
 
-```{r fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html')}
+```{r echo = FALSE, fig.align='center', out.width = '95%'}
 knitr::include_graphics('images/git-gitbashhere.png', dpi = NA)
 ```
 &nbsp;

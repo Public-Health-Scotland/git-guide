@@ -127,7 +127,7 @@
 <ul>
 <li><strong>New Project</strong> - any time you do any work that requires code, you should create an R project. This keeps your work together, seperates settings for different projects, and allows the use of version control. To do that, go to File in the menu bar and select “New Project”. In the window that appears, name your project, choose a folder/directory for where to store it, and ensure “Create a git repository” is selected.</li>
 </ul>
-<p><img src="images/rstudio-newproj.png" style="display: block; margin: auto;" />
+<p><img src="images/rstudio-newproj.png" width="95%" style="display: block; margin: auto;" />
  </p>
 <ul>
 <li><p><strong>Existing Project</strong> - if you have already started working on an R Project without initialising git, you can start using it at any point (the earlier the better). On an existing R Project go to Tools &gt; Project Options &gt; git/SVN &gt; and select “git” in the version control drop down. This will ask if you want to initialise a repo, click “yes”. To use the terminal/command line, go to: Tools &gt; Terminal &gt; New Terminal, in that panel type <code>git init</code>.</p></li>
@@ -138,17 +138,17 @@
 <li><strong>Create project as subdirectory of</strong>: this is the location of where the folder/directory that contains the copy of the repo will be stored.</li>
 </ul></li>
 </ul>
-<p><img src="images/rstudio-clonerepo.png" style="display: block; margin: auto;" />
+<p><img src="images/rstudio-clonerepo.png" width="95%" style="display: block; margin: auto;" />
  </p>
 <ol start="2" style="list-style-type: decimal">
 <li><strong>Change, stage…</strong> - RStudio will keep track of all changes made to the files within your R project (not just R files). Any changes made will show up in the “Git” tab, which can be found in the same pane as the R environment. This is typically the top-right pane, but their positions can be changed so it may not be in all cases. When you’re ready to commit, save the files you’re working with and stage them by ticking the box to the left of the files in the Git pane, and then click on the “Commit” button.</li>
 </ol>
-<p><img src="images/rstudio-stage.png" style="display: block; margin: auto;" />
+<p><img src="images/rstudio-stage.png" width="95%" style="display: block; margin: auto;" />
  </p>
 <ol start="3" style="list-style-type: decimal">
 <li><strong>Commit</strong> - After clicking on “Commit”, a window will appear with the changes made for review and a prompt for a “Commit message”. Your commit message should describe the changes made and be consise, meaningful and written in imperative mood. Then, just click on “Commit”! <em>This has saved all the changes to the project. Going forward, it will be possible to look back and see the full history of changes to the project, who made those changes, and revert to previous versions where necessary.</em></li>
 </ol>
-<p><img src="images/rstudio-commit.png" style="display: block; margin: auto;" />
+<p><img src="images/rstudio-commit.png" width="95%" style="display: block; margin: auto;" />
  </p>
 <ol start="4" style="list-style-type: decimal">
 <li><strong>Branching</strong> - As part of the recommended workflow, you should use branches to develop individual features, this means that you can edit files but keep an original to revert back to if required. Additionally, when team working, it allows for people to work on different things in parallel. This can help improve efficiency as people don’t have to wait for others to finish what they’re doing before starting something else.</li>
@@ -156,7 +156,7 @@
 <ul>
 <li><strong>New Branch</strong> - To create a new branch in RStudio, just click the “New Branch” button in the Git pane and give it a name. To switch between branches, click the dropdown to the right of the “New Branch” button and click the name of the branch you want to switch to. <em>(When you select a branch, the state of the files in that branch will appear in both the Files pane in RStudio, and in your computer’s file explorer.)</em></li>
 </ul>
-<p><img src="images/rstudio-branch.png" style="display: block; margin: auto;" />
+<p><img src="images/rstudio-branch.png" width="95%" style="display: block; margin: auto;" />
  </p>
 <ul>
 <li><strong>Merge Branches</strong> - When the working branch should be merged back to the master branch, this must be done on the command line as there is no way to do this using the GUI. This can be accessed from the “More” menu in the Git pane and selecting “Shell” or in the RStudio Terminal window. Once you’re in either of these, enter the command <code>git merge &lt;branch&gt;</code>.</li>
@@ -167,7 +167,7 @@ $ git merge &lt;branch&gt;</code></pre>
 <li><p><strong>Link to GitHub</strong> - If this is a new project, it won’t be linked to GitHub yet. <em>See <a href="quick-start-github.html#quick-start-github">Quick Start GitHub</a> for instructions on how to set up a repo on GitHub.</em> RStudio currently doesn’t have a GUI option for this and must be done on the command line. As above, this can be accessed from the “More” menu in the Git pane and selecting “Shell” or in the RStudio Terminal window. Once you’re in either of these, enter the command <code>git remote add &lt;name&gt; &lt;url&gt;</code> (<em><code>&lt;name&gt;</code> is any name to refer to the GitHub connection but <code>origin</code> is the most common/preferred name to use</em>), pulling in any changes that have been made on GitHub in the meantime using <code>git pull &lt;name&gt; &lt;branch&gt;</code> and then finally sending the changes to GitHub using <code>git push &lt;name&gt; &lt;branch&gt;</code>.</p></li>
 <li><p><strong>Pull and push</strong> - After linking the project to a GitHub repository, RStudio has a GUI interface for pulling and pushing changes. It’s good practice to pull from GitHub to check for changes that have occured since the last time and to help avoid merge conflicts. After that you can click push to send all your commits to GitHub, now everything is in-sync again.</p></li>
 </ol>
-<p><img src="images/rstudio-pullpush.png" style="display: block; margin: auto;" />
+<p><img src="images/rstudio-pullpush.png" width="95%" style="display: block; margin: auto;" />
  </p>
 
 

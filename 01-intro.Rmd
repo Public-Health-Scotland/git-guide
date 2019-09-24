@@ -55,11 +55,11 @@ GitHub is a Git hosting repository that provides users with tools to ship better
 
 ### GitHub Workflow {-}
 
-```{r fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html'),fig.cap="https://guides.github.com/pdfs/githubflow-online.pdf"}
-knitr::include_graphics('images/githubflow.png', dpi = NA)
-```
+This is our recommended workflow. The workflow is branch-based and involves keeping the master branch clean and 'production ready'/fully-functional at all times. The workflow is from GitHub and can be seen here: https://guides.github.com/pdfs/githubflow-online.pdf 
 
-This is our recommended workflow. The workflow is branch-based and involves keeping the master branch clean and 'production ready'/fully-functional at all times. 
+```{r echo = FALSE, fig.align = 'center', out.width = '95%'}
+knitr::include_graphics('images/githubflow.png')
+```
 
 1. **Create a branch** - topic/per-person branches created from the master allow teams to contribute to seperate issues at the same time.
 2. **Add commits** - these are snapshots of development within a branch and create safe, revertible points in the project's history.
@@ -115,7 +115,7 @@ First [R](https://www.r-project.org/) and [RStudio](https://www.rstudio.com/) mu
 
 1. **Once in RStudio, go to Tools in the menu bar > Global Options > Git/SVN**:
 
-```{r fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html')}
+```{r echo = FALSE, fig.align = 'center', out.width = '95%'}
 knitr::include_graphics('images/rstudio-globalopt-gitsvn.png', dpi = NA)
 ```
 &nbsp;
@@ -128,3 +128,4 @@ knitr::include_graphics('images/rstudio-globalopt-gitsvn.png', dpi = NA)
     2. Now, click on 'View public key' and copy the text string that appears in a dialog box. 
     3. Go to your [GitHub SSH Settings](https://Github.com/settings/keys) and click 'New SSH key'.
     4. Give the key a meaningful title that you will recongnise and paste the key from RStudio. Complete the process by clicking 'Add SSH key'.
+
