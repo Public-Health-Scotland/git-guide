@@ -1,6 +1,6 @@
 \newpage
 
-# GitHub
+# GitHub hello
 
 ```{r echo = FALSE, fig.align='center', out.width = '30%'}
 knitr::include_graphics('images/github.png', dpi = NA)
