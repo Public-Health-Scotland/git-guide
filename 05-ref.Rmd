@@ -12,6 +12,8 @@ These are some tips/references to keep in mind when working with git:
 * Delete branches after merging. This reduces risks of merge conflicts and keeps your work set-up tidy.
 * It's possible to have multiple branches for working on or fixing multiple features of your project, but be aware that this increases the chance of a merge conflict.
 
+> <span style="color:red">GitHub should be thought of as a public forum. No confidential information (including server connection details, passwords, and person identifiable information) should be pushed, even to a private repository! Keep this in mind throughout any project, it's easier to maintain security throughout than have to go back through and delete code or commits later.</span>
+
 
 ### Git {-}
 
