@@ -64,7 +64,7 @@ nothing added to commit but untracked files present (use "git add" to track)
 username@NSS000000 MINGW64 ~/Documents/project (master)
 $
 ```
-In this example, an R Project has been started with a .gitignore file. *A .gitignore file is used to tell Git which files and folders to ignore, this is particularly imporant when working with GitHub and ensures that no sensitive information or data files are uploaded to GitHub. An example .gitignore file can be found [here](https://github.com/NHS-NSS-transforming-publications/GitHub-guidance/blob/master/.gitignore). Be aware that other file formats may also need to be considered to be added in this file.*
+In this example, an R Project has been started with a .gitignore file. *A .gitignore file is used to tell Git which files and folders to ignore, this is particularly imporant when working with GitHub and ensures that no sensitive information or data files are uploaded to GitHub. An example .gitignore file can be found [here](https://github.com/Public-Health-Scotland/GitHub-guidance/blob/master/.gitignore). Be aware that other file formats may also need to be considered to be added in this file.*
 
 4. **Track files** - in this example Git has recognised two untracked files. In order to track them we must first *stage* them using `git add <file name>` (if the file name contains spaces you will need to put single quotation marks around it, e.g. `'file name'`) You can stage each file individually or use `git add .` to stage all files which have been detected by Git. **It is usually safer to stage each file separately.**
 

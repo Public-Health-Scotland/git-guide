@@ -4,7 +4,7 @@
 
 As you may already know, or will find out, Git is a command line (Shell/Bash) tool used for version control. Throughout this guide, the aim has been to provide a clear workflow and guidance that will allow you to work with these tools with minimal command line interaction. However, if you'd like to know more about this topic, Software Carpentry offer a fantastic [Introduction to Shell](http://swcarpentry.Github.io/shell-novice/) lesson. 
 
-The target audience for this guide is analysts within NHS National Services Scotland, particularly those who use R for data analysis. It may be that others find use in this guide, if so, fantastic! If you feel that something is missing or could be better, please raise a [GitHub issue](https://Github.com/NHS-NSS-transforming-publications/Git-guide/issues). 
+The target audience for this guide is analysts within NHS National Services Scotland, particularly those who use R for data analysis. It may be that others find use in this guide, if so, fantastic! If you feel that something is missing or could be better, please raise a [GitHub issue](https://Github.com/Public-Health-Scotland/Git-guide/issues). 
 
 Throughout this guide where there are code examples, `<>` are used to show areas that define the users input. The arrow symbols shouldn't be entered along with the rest of the command. 
 
@@ -105,8 +105,7 @@ These instructions are for first-time users of GitHub and highlight the steps in
 
 3. **Get added to Organisations** - this step is optional.
 
-* If you're doing work within the Transforming Publishing team. Email one of the admins [here](https://Github.com/orgs/NHS-NSS-transforming-publications/teams/transforming-publishing-team/members?utf8=%E2%9C%93&query=+role%3Amaintainer) to request being added to the organisation.
-* If you work within Public Health & Intelligence (PHI), the [Health & Social Care Scotland](https://Github.com/Health-SocialCare-Scotland) GitHub may be of interest. Repositories can be requested and set up for team working.
+* If you work within Public Health Scotland, the [Public Health Scotland](https://Github.com/Public-Health-Scotland) GitHub may be of interest. Email phs.transformingpublishing@nhs.net to be added to the organisation. You'll then be able to create shared repos.
 
 \newpage
 ### RStudio {-}

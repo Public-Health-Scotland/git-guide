@@ -28,7 +28,7 @@ knitr::include_graphics('images/rstudio-newproj.png', dpi = NA)
 
 - **Exisiting Remote Repo** - if you're going to be working on a project that already exisits on a remote repository (e.g. a GitHub project), you can link to this/clone it through RStudio too. Go to File > New Project > Version Control > Git and enter the details in the screen that follows (this will create a folder with a copy of any contents that were in the GitHub repository).
 
-    * **Repository URL**: Using SSH, this guide's link is: "git@github.com:NHS-NSS-transforming-publications/git-guide.git".
+    * **Repository URL**: Using SSH, this guide's link is: "git@github.com:Public-Health-Scotland/git-guide.git".
     * **Project directory name**: this is up to you and will be used to name the folder/directory that contains a copy of the repo. Give it any meaningful name, for example this guide is named "git-guide", the same name as on the remote repo.
     * **Create project as subdirectory of**: this is the location of where the folder/directory that contains the copy of the repo will be stored. 
 
