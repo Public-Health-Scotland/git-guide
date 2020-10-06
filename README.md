@@ -16,4 +16,4 @@
 
 ## Get in touch
 
-* Email: phs.transformingpublishing@nhs.net
+* Email: phs.transformingpublishing@phs.scot
