@@ -105,7 +105,7 @@ These instructions are for first-time users of GitHub and highlight the steps in
 
 3. **Get added to Organisations** - this step is optional.
 
-* If you work within Public Health Scotland, the [Public Health Scotland](https://Github.com/Public-Health-Scotland) GitHub may be of interest. Email phs.transformingpublishing@nhs.net to be added to the organisation. You'll then be able to create shared repos.
+* If you work within Public Health Scotland, the [Public Health Scotland](https://Github.com/Public-Health-Scotland) GitHub may be of interest. Email phs.transformingpublishing@phs.scot to be added to the organisation. You'll then be able to create shared repos.
 
 \newpage
 ### RStudio {-}

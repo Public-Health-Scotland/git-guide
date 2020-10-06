@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>2 GitHub | A Quick Guide to Git &amp; GitHub</title>
+  <meta name="description" content="A quick start guide for using Git, GitHub, and integrations with RStudio" />
+  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="2 GitHub | A Quick Guide to Git &amp; GitHub" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:image" content="images/cover.png" />
+  <meta property="og:description" content="A quick start guide for using Git, GitHub, and integrations with RStudio" />
+  <meta name="github-repo" content="Public-Health-Scotland/git-guide" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="2 GitHub | A Quick Guide to Git &amp; GitHub" />
+  
+  <meta name="twitter:description" content="A quick start guide for using Git, GitHub, and integrations with RStudio" />
+  <meta name="twitter:image" content="images/cover.png" />
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="quick-start-rstudio.html"/>
+<link rel="next" href="quick-start-github.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+
+
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="" data-path="introduction-setup.html"><a href="introduction-setup.html"><i class="fa fa-check"></i>Introduction &amp; Setup</a><ul>
+<li class="chapter" data-level="" data-path="version-control-git-and-remotes.html"><a href="version-control-git-and-remotes.html"><i class="fa fa-check"></i>Version Control, Git, and Remotes</a></li>
+<li class="chapter" data-level="" data-path="workflows.html"><a href="workflows.html"><i class="fa fa-check"></i>Workflows</a><ul>
+<li class="chapter" data-level="" data-path="workflows.html"><a href="workflows.html#github-workflow"><i class="fa fa-check"></i>GitHub Workflow</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="setup.html"><a href="setup.html"><i class="fa fa-check"></i>Setup</a><ul>
+<li class="chapter" data-level="" data-path="setup.html"><a href="setup.html#git-1"><i class="fa fa-check"></i>Git</a></li>
+<li class="chapter" data-level="" data-path="setup.html"><a href="setup.html#github"><i class="fa fa-check"></i>GitHub</a></li>
+<li class="chapter" data-level="" data-path="setup.html"><a href="setup.html#rstudio"><i class="fa fa-check"></i>RStudio</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="project-workflow-with-rstudio.html"><a href="project-workflow-with-rstudio.html"><i class="fa fa-check"></i><b>1</b> Project Workflow with RStudio</a><ul>
+<li class="chapter" data-level="1.1" data-path="quick-start-rstudio.html"><a href="quick-start-rstudio.html"><i class="fa fa-check"></i><b>1.1</b> Quick Start RStudio</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="setup.html"><a href="setup.html#github"><i class="fa fa-check"></i><b>2</b> GitHub</a><ul>
+<li class="chapter" data-level="2.1" data-path="quick-start-github.html"><a href="quick-start-github.html"><i class="fa fa-check"></i><b>2.1</b> Quick Start GitHub</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="quick-start-github.html"><a href="quick-start-github.html#new-project-repository"><i class="fa fa-check"></i><b>2.1.1</b> New Project Repository</a></li>
+<li class="chapter" data-level="2.1.2" data-path="quick-start-github.html"><a href="quick-start-github.html#existing-project-repository"><i class="fa fa-check"></i><b>2.1.2</b> Existing Project Repository</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="version-control-git-and-remotes.html"><a href="version-control-git-and-remotes.html#git"><i class="fa fa-check"></i><b>3</b> Git</a><ul>
+<li class="chapter" data-level="3.1" data-path="quick-start-git.html"><a href="quick-start-git.html"><i class="fa fa-check"></i><b>3.1</b> Quick Start Git</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="git-cheat-sheet.html"><a href="git-cheat-sheet.html"><i class="fa fa-check"></i>Git Cheat Sheet</a><ul>
+<li class="chapter" data-level="" data-path="git-cheat-sheet.html"><a href="git-cheat-sheet.html#git-basics"><i class="fa fa-check"></i>Git Basics</a></li>
+<li class="chapter" data-level="" data-path="git-cheat-sheet.html"><a href="git-cheat-sheet.html#undoing-changes"><i class="fa fa-check"></i>Undoing changes</a></li>
+<li class="chapter" data-level="" data-path="git-cheat-sheet.html"><a href="git-cheat-sheet.html#rewriting-git-history"><i class="fa fa-check"></i>Rewriting Git History</a></li>
+<li class="chapter" data-level="" data-path="git-cheat-sheet.html"><a href="git-cheat-sheet.html#git-branches"><i class="fa fa-check"></i>Git Branches</a></li>
+<li class="chapter" data-level="" data-path="git-cheat-sheet.html"><a href="git-cheat-sheet.html#remote-repositories"><i class="fa fa-check"></i>Remote Repositories</a></li>
+<li class="chapter" data-level="" data-path="git-cheat-sheet.html"><a href="git-cheat-sheet.html#git-log"><i class="fa fa-check"></i>Git Log</a></li>
+<li class="chapter" data-level="" data-path="git-cheat-sheet.html"><a href="git-cheat-sheet.html#git-diff"><i class="fa fa-check"></i>Git Diff</a></li>
+<li class="chapter" data-level="" data-path="git-cheat-sheet.html"><a href="git-cheat-sheet.html#git-reset"><i class="fa fa-check"></i>Git Reset</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="reference.html"><a href="reference.html"><i class="fa fa-check"></i>Reference</a><ul>
+<li class="chapter" data-level="" data-path="reference.html"><a href="reference.html#top-tips"><i class="fa fa-check"></i>Top Tips</a></li>
+<li class="chapter" data-level="" data-path="version-control-git-and-remotes.html"><a href="version-control-git-and-remotes.html#git"><i class="fa fa-check"></i>Git</a></li>
+<li class="chapter" data-level="" data-path="setup.html"><a href="setup.html#github"><i class="fa fa-check"></i>GitHub</a></li>
+<li class="chapter" data-level="" data-path="setup.html"><a href="setup.html#rstudio"><i class="fa fa-check"></i>RStudio</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">A Quick Guide to Git &amp; GitHub</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="github" class="section level1">
+<h1><span class="header-section-number">2</span> GitHub</h1>
+<p><img src="images/github.png" width="30%" style="display: block; margin: auto;" />
+ </p>
+<p>Systems like git allow us to move work between any two repositories. In practice, though, it’s easiest to use one copy as a central hub, and to keep it on the web rather than on someone’s laptop. Most programmers use hosting services like <a href="https://github.com/">GitHub</a>, <a href="https://bitbucket.org/">BitBucket</a> or <a href="https://gitlab.com/">GitLab</a> to hold those master copies. Here, we’ll explore GitHub.</p>
+<p>GitHub is a git hosting repository that provides users with tools to ship better code through command line features, issues (threaded discussions), pull requests, and code review. GitHub builds collaboration directly into the development process. Work is organised into repositories, where users can outline requirements or direction and set expectations for team members. Then, using the [GitHub Workflow], developers simply create a branch to work on updates, commit changes to save them, open a pull request to propose and dicsuss changes, and merge pull requests once everyone is on the same page.</p>
+<blockquote>
+<p><span style="color:red">GitHub should be thought of as a public forum. No confidential information (including server connection details, passwords, and person identifiable information) should be pushed, even to a private repository! Keep this in mind throughout any project, it’s easier to maintain security throughout than have to go back through and delete code or commits later.</span></p>
+</blockquote>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="quick-start-rstudio.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="quick-start-github.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/NHS-NSS-transforming-publications/git-guide/edit/master/02-github.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf"],
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
