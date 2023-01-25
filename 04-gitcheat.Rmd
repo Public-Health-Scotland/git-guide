@@ -7,7 +7,7 @@
 ```{r, echo=FALSE}
 git_basics_table <- data.frame(
     "Command" = c("`git config --global user.name \"[name]\"`", "`git config --global user.email \"[email]\"`", "`git init [project-name]` ", "`git clone [repo]` ", "`git status` ", "`git diff` ", "`git add [file]` ", "`git diff --staged`", "`git reset [file]`", "`git commit -m “[message]”` ", "`git log` "),
-    "Description" = c("Sets author name to be used for all your commits.", "Sets author email to be used for all your commits.", "Create empty git repo in specified directory.", "Clone repo with version history located at `[repo]`.", "List all new or modified files to be committed.", "Show file changes not yet staged.", "Stage all changes in `[file]` for the next commit.", "Shows files differences between staging and the last file version.", "Unstages the file, but preserves its contents.", "Commit the staged snapshot to permanent version history.", "Display the entire commit history for the current branch.")
+    "Description" = c("Sets author name to be used for all your commits.", "Sets author email to be used for all your commits.", "Create empty Git repo in specified directory.", "Clone repo with version history located at `[repo]`.", "List all new or modified files to be committed.", "Show file changes not yet staged.", "Stage all changes in `[file]` for the next commit.", "Shows files differences between staging and the last file version.", "Unstages the file, but preserves its contents.", "Commit the staged snapshot to permanent version history.", "Display the entire commit history for the current branch.")
   )
 
 kable(git_basics_table) %>%

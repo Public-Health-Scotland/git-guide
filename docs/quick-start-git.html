@@ -176,7 +176,7 @@ nothing added to commit but untracked files present (use &quot;git add&quot; to 
 
 username@NSS000000 MINGW64 ~/Documents/project (master)
 $</code></pre>
-<p>In this example, an R Project has been started with a .gitignore file. <em>A .gitignore file is used to tell Git which files and folders to ignore, this is particularly imporant when working with GitHub and ensures that no sensitive information or data files are uploaded to GitHub. An example .gitignore file can be found <a href="https://github.com/Public-Health-Scotland/GitHub-guidance/blob/master/.gitignore">here</a>. Be aware that other file formats may also need to be considered to be added in this file.</em></p>
+<p>In this example, an R Project has been started with a .gitignore file. <em>A .gitignore file is used to tell Git which files and folders to ignore, this is particularly important when working with GitHub and ensures that no sensitive information or data files are uploaded to GitHub. An example .gitignore file can be found <a href="https://github.com/Public-Health-Scotland/GitHub-guidance/blob/master/.gitignore">here</a>. Be aware that other file formats may also need to be considered to be added in this file.</em></p>
 <ol start="4" style="list-style-type: decimal">
 <li><strong>Track files</strong> - in this example Git has recognised two untracked files. In order to track them we must first <em>stage</em> them using <code>git add &lt;file name&gt;</code> (if the file name contains spaces you will need to put single quotation marks around it, e.g. <code>'file name'</code>) You can stage each file individually or use <code>git add .</code> to stage all files which have been detected by Git. <strong>It is usually safer to stage each file separately.</strong></li>
 </ol>
@@ -213,7 +213,7 @@ $ git commit -m &quot;Create R project&quot;
   
 username@NSS000000 MINGW64 ~/Documents/project (master)
 $</code></pre>
-<p>Git has now stored a snapshot of the project folder and its content at that point in time. Going forward, it will now be possible to check back through the old version of the folder via the commits and, if necessary, revert to a previous version. To see a history of ocmmits on a branch use <code>git log</code>.</p>
+<p>Git has now stored a snapshot of the project folder and its content at that point in time. Going forward, it will now be possible to check back through the old version of the folder via the commits and, if necessary, revert to a previous version. To see a history of commits on a branch use <code>git log</code>.</p>
 <ol start="6" style="list-style-type: decimal">
 <li><strong>Create a branch</strong> - when first created, a branch is an exact copy of the original folder and contents (the master branch). As you work on the project, the working branch will change but leave the master branch untouched. This means that you always retain a master copy of the project and you only merge changes when you’re satisfied that they’re ready. To create a branch use <code>git branch &lt;name of branch&gt;</code>. To switch to working on the new working branch, use <code>git checkout &lt;name of branch&gt;</code>. These two steps can be done via one command, <code>git checkout -b &lt;name of branch&gt;</code>.</li>
 </ol>
