@@ -6,12 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Setup | A Quick Guide to Git &amp; GitHub</title>
   <meta name="description" content="A quick start guide for using Git, GitHub, and integrations with RStudio" />
-  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Setup | A Quick Guide to Git &amp; GitHub" />
   <meta property="og:type" content="book" />
-  
-  <meta property="og:image" content="images/cover.png" />
+  <meta property="og:image" content="/images/cover.png" />
   <meta property="og:description" content="A quick start guide for using Git, GitHub, and integrations with RStudio" />
   <meta name="github-repo" content="Public-Health-Scotland/git-guide" />
 
@@ -19,7 +18,7 @@
   <meta name="twitter:title" content="Setup | A Quick Guide to Git &amp; GitHub" />
   
   <meta name="twitter:description" content="A quick start guide for using Git, GitHub, and integrations with RStudio" />
-  <meta name="twitter:image" content="images/cover.png" />
+  <meta name="twitter:image" content="/images/cover.png" />
 
 
 
@@ -31,7 +30,8 @@
   
 <link rel="prev" href="workflows.html"/>
 <link rel="next" href="project-workflow-with-rstudio.html"/>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -47,9 +47,12 @@
 
 
 
-
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+
 
 
 
@@ -66,30 +69,38 @@
 
 <ul class="summary">
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
-<li class="chapter" data-level="" data-path="introduction-setup.html"><a href="introduction-setup.html"><i class="fa fa-check"></i>Introduction &amp; Setup</a><ul>
+<li class="chapter" data-level="" data-path="introduction-setup.html"><a href="introduction-setup.html"><i class="fa fa-check"></i>Introduction &amp; Setup</a>
+<ul>
 <li class="chapter" data-level="" data-path="version-control-git-and-remotes.html"><a href="version-control-git-and-remotes.html"><i class="fa fa-check"></i>Version Control, Git, and Remotes</a></li>
-<li class="chapter" data-level="" data-path="workflows.html"><a href="workflows.html"><i class="fa fa-check"></i>Workflows</a><ul>
+<li class="chapter" data-level="" data-path="workflows.html"><a href="workflows.html"><i class="fa fa-check"></i>Workflows</a>
+<ul>
 <li class="chapter" data-level="" data-path="workflows.html"><a href="workflows.html#github-workflow"><i class="fa fa-check"></i>GitHub Workflow</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="setup.html"><a href="setup.html"><i class="fa fa-check"></i>Setup</a><ul>
+<li class="chapter" data-level="" data-path="setup.html"><a href="setup.html"><i class="fa fa-check"></i>Setup</a>
+<ul>
 <li class="chapter" data-level="" data-path="setup.html"><a href="setup.html#git-1"><i class="fa fa-check"></i>Git</a></li>
 <li class="chapter" data-level="" data-path="setup.html"><a href="setup.html#github"><i class="fa fa-check"></i>GitHub</a></li>
 <li class="chapter" data-level="" data-path="setup.html"><a href="setup.html#rstudio"><i class="fa fa-check"></i>RStudio</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="1" data-path="project-workflow-with-rstudio.html"><a href="project-workflow-with-rstudio.html"><i class="fa fa-check"></i><b>1</b> Project Workflow with RStudio</a><ul>
+<li class="chapter" data-level="1" data-path="project-workflow-with-rstudio.html"><a href="project-workflow-with-rstudio.html"><i class="fa fa-check"></i><b>1</b> Project Workflow with RStudio</a>
+<ul>
 <li class="chapter" data-level="1.1" data-path="quick-start-rstudio.html"><a href="quick-start-rstudio.html"><i class="fa fa-check"></i><b>1.1</b> Quick Start RStudio</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="setup.html"><a href="setup.html#github"><i class="fa fa-check"></i><b>2</b> GitHub</a><ul>
-<li class="chapter" data-level="2.1" data-path="quick-start-github.html"><a href="quick-start-github.html"><i class="fa fa-check"></i><b>2.1</b> Quick Start GitHub</a><ul>
+<li class="chapter" data-level="2" data-path="github-1.html"><a href="github-1.html"><i class="fa fa-check"></i><b>2</b> GitHub</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="quick-start-github.html"><a href="quick-start-github.html"><i class="fa fa-check"></i><b>2.1</b> Quick Start GitHub</a>
+<ul>
 <li class="chapter" data-level="2.1.1" data-path="quick-start-github.html"><a href="quick-start-github.html#new-project-repository"><i class="fa fa-check"></i><b>2.1.1</b> New Project Repository</a></li>
 <li class="chapter" data-level="2.1.2" data-path="quick-start-github.html"><a href="quick-start-github.html#existing-project-repository"><i class="fa fa-check"></i><b>2.1.2</b> Existing Project Repository</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="version-control-git-and-remotes.html"><a href="version-control-git-and-remotes.html#git"><i class="fa fa-check"></i><b>3</b> Git</a><ul>
+<li class="chapter" data-level="3" data-path="git-2.html"><a href="git-2.html"><i class="fa fa-check"></i><b>3</b> Git</a>
+<ul>
 <li class="chapter" data-level="3.1" data-path="quick-start-git.html"><a href="quick-start-git.html"><i class="fa fa-check"></i><b>3.1</b> Quick Start Git</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="git-cheat-sheet.html"><a href="git-cheat-sheet.html"><i class="fa fa-check"></i>Git Cheat Sheet</a><ul>
+<li class="chapter" data-level="" data-path="git-cheat-sheet.html"><a href="git-cheat-sheet.html"><i class="fa fa-check"></i>Git Cheat Sheet</a>
+<ul>
 <li class="chapter" data-level="" data-path="git-cheat-sheet.html"><a href="git-cheat-sheet.html#git-basics"><i class="fa fa-check"></i>Git Basics</a></li>
 <li class="chapter" data-level="" data-path="git-cheat-sheet.html"><a href="git-cheat-sheet.html#undoing-changes"><i class="fa fa-check"></i>Undoing changes</a></li>
 <li class="chapter" data-level="" data-path="git-cheat-sheet.html"><a href="git-cheat-sheet.html#rewriting-git-history"><i class="fa fa-check"></i>Rewriting Git History</a></li>
@@ -99,11 +110,12 @@
 <li class="chapter" data-level="" data-path="git-cheat-sheet.html"><a href="git-cheat-sheet.html#git-diff"><i class="fa fa-check"></i>Git Diff</a></li>
 <li class="chapter" data-level="" data-path="git-cheat-sheet.html"><a href="git-cheat-sheet.html#git-reset"><i class="fa fa-check"></i>Git Reset</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="reference.html"><a href="reference.html"><i class="fa fa-check"></i>Reference</a><ul>
+<li class="chapter" data-level="" data-path="reference.html"><a href="reference.html"><i class="fa fa-check"></i>Reference</a>
+<ul>
 <li class="chapter" data-level="" data-path="reference.html"><a href="reference.html#top-tips"><i class="fa fa-check"></i>Top Tips</a></li>
-<li class="chapter" data-level="" data-path="version-control-git-and-remotes.html"><a href="version-control-git-and-remotes.html#git"><i class="fa fa-check"></i>Git</a></li>
-<li class="chapter" data-level="" data-path="setup.html"><a href="setup.html#github"><i class="fa fa-check"></i>GitHub</a></li>
-<li class="chapter" data-level="" data-path="setup.html"><a href="setup.html#rstudio"><i class="fa fa-check"></i>RStudio</a></li>
+<li class="chapter" data-level="" data-path="reference.html"><a href="reference.html#git-4"><i class="fa fa-check"></i>Git</a></li>
+<li class="chapter" data-level="" data-path="reference.html"><a href="reference.html#github-2"><i class="fa fa-check"></i>GitHub</a></li>
+<li class="chapter" data-level="" data-path="reference.html"><a href="reference.html#rstudio-1"><i class="fa fa-check"></i>RStudio</a></li>
 </ul></li>
 </ul>
 
@@ -122,10 +134,10 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="setup" class="section level2 unnumbered">
-<h2>Setup</h2>
-<div id="git-1" class="section level3 unnumbered">
-<h3>Git</h3>
+<div id="setup" class="section level2 unnumbered hasAnchor">
+<h2>Setup<a href="setup.html#setup" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="git-1" class="section level3 unnumbered hasAnchor">
+<h3>Git<a href="setup.html#git-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><em>These intructions should only need to be followed once or when setting up a new device.</em></p>
 <ol style="list-style-type: decimal">
 <li><strong>Install Git</strong> - Git is a free, open-source, software available from <a href="https://Git-scm.com/" class="uri">https://Git-scm.com/</a>. If you work within NHS National Services Scotland, request the software from IT through the <a href="https://nhsnss.service-now.com/sp">Service Portal</a>. Once authorised, this will allow you to download it from the Software Center on your machine.</li>
@@ -149,8 +161,8 @@
 </ul>
 <div style="page-break-after: always;"></div>
 </div>
-<div id="github" class="section level3 unnumbered">
-<h3>GitHub</h3>
+<div id="github" class="section level3 unnumbered hasAnchor">
+<h3>GitHub<a href="setup.html#github" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>These instructions are for first-time users of GitHub and highlight the steps in setting up a GitHub account.</p>
 <ol style="list-style-type: decimal">
 <li><strong>Sign up</strong> - In order to use GitHub, you’ll need to have a personal GitHub account, you can set that up on the <a href="http://Github.com">GitHub website</a>. If using your NHS email address or LDAP username ensure you <strong>don’t use the same password as your NHS email account or LDAP login</strong>.</li>
@@ -168,8 +180,8 @@
 </ul>
 <div style="page-break-after: always;"></div>
 </div>
-<div id="rstudio" class="section level3 unnumbered">
-<h3>RStudio</h3>
+<div id="rstudio" class="section level3 unnumbered hasAnchor">
+<h3>RStudio<a href="setup.html#rstudio" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>First <a href="https://www.r-project.org/">R</a> and <a href="https://www.rstudio.com/">RStudio</a> must be installed on your machine. Just as with Git, if you work within NHS National Services Scotland these can be requested through the <a href="https://nhsnss.service-now.com/sp">Service Portal</a>. Once authorised, this will allow you to download it from the Software Center on your machine. You may also be able to use the server versions of RStudio and the project workflow will be the same.</p>
 <ol style="list-style-type: decimal">
 <li><strong>Once in RStudio, go to Tools in the menu bar &gt; Global Options &gt; Git/SVN</strong>:</li>
@@ -201,7 +213,6 @@
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -220,6 +231,7 @@ gitbook.start({
 "weibo": false,
 "instapaper": false,
 "vk": false,
+"whatsapp": false,
 "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
@@ -240,6 +252,10 @@ gitbook.start({
 "text": null
 },
 "download": ["_main.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "section"
 }
