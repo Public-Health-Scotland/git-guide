@@ -1,8 +1,8 @@
 \newpage
 
-## Workflows {-}
+# Workflows {-}
 
-### GitHub Workflow {-}
+## GitHub Workflow {-}
 
 This is our recommended workflow. The workflow is branch-based and involves keeping the master branch clean and 'production ready'/fully-functional at all times. The workflow is from GitHub and can be seen here: https://guides.github.com/pdfs/githubflow-online.pdf 
 

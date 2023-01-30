@@ -1,8 +1,8 @@
 \newpage
 
-## Setup {-}
+# Setup {-}
 
-### Git {-}
+## Git {-}
 
 *These intructions should only need to be followed once or when setting up a new device.*
 
@@ -24,7 +24,7 @@ At any time you can check what the current user details are using:
 * `git config --global user.email`
 
 \newpage
-### GitHub {-}
+## GitHub {-}
 
 These instructions are for first-time users of GitHub and highlight the steps in setting up a GitHub account.
 
@@ -39,7 +39,7 @@ These instructions are for first-time users of GitHub and highlight the steps in
 * If you work within Public Health Scotland, the [Public Health Scotland](https://github.com/Public-Health-Scotland) GitHub may be of interest. Email phs.transformingpublishing@phs.scot to be added to the organisation. You'll then be able to create shared repos.
 
 \newpage
-### RStudio {-}
+## RStudio {-}
 
 First [R](https://www.r-project.org/) and [RStudio](https://www.rstudio.com/) must be installed on your machine. Just as with Git, if you work within NHS National Services Scotland these can be requested through the [Service Portal](https://nhsnss.service-now.com/sp). Once authorised, this will allow you to download it from the Software Center on your machine. You may also be able to use the server versions of RStudio and the project workflow will be the same.
 

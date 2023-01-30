@@ -28,7 +28,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="quick-start-rstudio.html"/>
+<link rel="prev" href="quick-start-git.html"/>
 <link rel="next" href="quick-start-github.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -72,20 +72,16 @@
 <li class="chapter" data-level="" data-path="introduction-setup.html"><a href="introduction-setup.html"><i class="fa fa-check"></i>Introduction &amp; Setup</a>
 <ul>
 <li class="chapter" data-level="" data-path="version-control-git-and-remotes.html"><a href="version-control-git-and-remotes.html"><i class="fa fa-check"></i>Version Control, Git, and Remotes</a></li>
-<li class="chapter" data-level="" data-path="workflows.html"><a href="workflows.html"><i class="fa fa-check"></i>Workflows</a>
-<ul>
-<li class="chapter" data-level="" data-path="workflows.html"><a href="workflows.html#github-workflow"><i class="fa fa-check"></i>GitHub Workflow</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="setup.html"><a href="setup.html"><i class="fa fa-check"></i>Setup</a>
 <ul>
-<li class="chapter" data-level="" data-path="setup.html"><a href="setup.html#git-1"><i class="fa fa-check"></i>Git</a></li>
-<li class="chapter" data-level="" data-path="setup.html"><a href="setup.html#github"><i class="fa fa-check"></i>GitHub</a></li>
-<li class="chapter" data-level="" data-path="setup.html"><a href="setup.html#rstudio"><i class="fa fa-check"></i>RStudio</a></li>
+<li class="chapter" data-level="" data-path="git-1.html"><a href="git-1.html"><i class="fa fa-check"></i>Git</a></li>
+<li class="chapter" data-level="" data-path="github.html"><a href="github.html"><i class="fa fa-check"></i>GitHub</a></li>
+<li class="chapter" data-level="" data-path="rstudio.html"><a href="rstudio.html"><i class="fa fa-check"></i>RStudio</a></li>
 </ul></li>
-</ul></li>
-<li class="chapter" data-level="1" data-path="project-workflow-with-rstudio.html"><a href="project-workflow-with-rstudio.html"><i class="fa fa-check"></i><b>1</b> Project Workflow with RStudio</a>
+<li class="chapter" data-level="1" data-path="git-2.html"><a href="git-2.html"><i class="fa fa-check"></i><b>1</b> Git</a>
 <ul>
-<li class="chapter" data-level="1.1" data-path="quick-start-rstudio.html"><a href="quick-start-rstudio.html"><i class="fa fa-check"></i><b>1.1</b> Quick Start RStudio</a></li>
+<li class="chapter" data-level="1.1" data-path="quick-start-git.html"><a href="quick-start-git.html"><i class="fa fa-check"></i><b>1.1</b> Quick Start Git</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="github-1.html"><a href="github-1.html"><i class="fa fa-check"></i><b>2</b> GitHub</a>
 <ul>
@@ -95,9 +91,13 @@
 <li class="chapter" data-level="2.1.2" data-path="quick-start-github.html"><a href="quick-start-github.html#existing-project-repository"><i class="fa fa-check"></i><b>2.1.2</b> Existing Project Repository</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="git-2.html"><a href="git-2.html"><i class="fa fa-check"></i><b>3</b> Git</a>
+<li class="chapter" data-level="3" data-path="project-workflow-with-rstudio.html"><a href="project-workflow-with-rstudio.html"><i class="fa fa-check"></i><b>3</b> Project Workflow with RStudio</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="quick-start-git.html"><a href="quick-start-git.html"><i class="fa fa-check"></i><b>3.1</b> Quick Start Git</a></li>
+<li class="chapter" data-level="3.1" data-path="quick-start-rstudio.html"><a href="quick-start-rstudio.html"><i class="fa fa-check"></i><b>3.1</b> Quick Start RStudio</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="workflows.html"><a href="workflows.html"><i class="fa fa-check"></i>Workflows</a>
+<ul>
+<li class="chapter" data-level="" data-path="github-workflow.html"><a href="github-workflow.html"><i class="fa fa-check"></i>GitHub Workflow</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="git-cheat-sheet.html"><a href="git-cheat-sheet.html"><i class="fa fa-check"></i>Git Cheat Sheet</a>
 <ul>
@@ -139,7 +139,7 @@
 <p><img src="images/github.png" width="30%" style="display: block; margin: auto;" />
  </p>
 <p>Systems like Git allow us to move work between any two repositories. In practice, though, it’s easiest to use one copy as a central hub, and to keep it on the web rather than on someone’s laptop. Most programmers use hosting services like <a href="https://github.com/">GitHub</a>, <a href="https://bitbucket.org/">BitBucket</a> or <a href="https://gitlab.com/">GitLab</a> to hold those master copies. Here, we’ll explore GitHub.</p>
-<p>GitHub is a Git hosting repository that provides users with tools to ship better code through command line features, issues (threaded discussions), pull requests, and code review. GitHub builds collaboration directly into the development process. Work is organised into repositories, where users can outline requirements or direction and set expectations for team members. Then, using the <a href="workflows.html#github-workflow">GitHub Workflow</a>, developers simply create a branch to work on updates, commit changes to save them, open a pull request to propose and dicsuss changes, and merge pull requests once everyone is on the same page.</p>
+<p>GitHub is a Git hosting repository that provides users with tools to ship better code through command line features, issues (threaded discussions), pull requests, and code review. GitHub builds collaboration directly into the development process. Work is organised into repositories, where users can outline requirements or direction and set expectations for team members. Then, using the <a href="github-workflow.html#github-workflow">GitHub Workflow</a>, developers simply create a branch to work on updates, commit changes to save them, open a pull request to propose and dicsuss changes, and merge pull requests once everyone is on the same page.</p>
 <blockquote>
 <p><span style="color:red">GitHub should be thought of as a public forum. No confidential information (including server connection details, passwords, and person identifiable information) should be pushed, even to a private repository! Keep this in mind throughout any project, it’s easier to maintain security throughout than have to go back through and delete code or commits later.</span></p>
 </blockquote>
@@ -149,7 +149,7 @@
           </div>
         </div>
       </div>
-<a href="quick-start-rstudio.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="quick-start-git.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="quick-start-github.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
@@ -181,7 +181,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/NHS-NSS-transforming-publications/git-guide/edit/master/02-github.Rmd",
+"link": "https://github.com/NHS-NSS-transforming-publications/git-guide/edit/master/04-remotes.Rmd",
 "text": "Edit"
 },
 "history": {

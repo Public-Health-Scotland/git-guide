@@ -28,8 +28,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="version-control-git-and-remotes.html"/>
-<link rel="next" href="setup.html"/>
+<link rel="prev" href="quick-start-rstudio.html"/>
+<link rel="next" href="github-workflow.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -72,20 +72,16 @@
 <li class="chapter" data-level="" data-path="introduction-setup.html"><a href="introduction-setup.html"><i class="fa fa-check"></i>Introduction &amp; Setup</a>
 <ul>
 <li class="chapter" data-level="" data-path="version-control-git-and-remotes.html"><a href="version-control-git-and-remotes.html"><i class="fa fa-check"></i>Version Control, Git, and Remotes</a></li>
-<li class="chapter" data-level="" data-path="workflows.html"><a href="workflows.html"><i class="fa fa-check"></i>Workflows</a>
-<ul>
-<li class="chapter" data-level="" data-path="workflows.html"><a href="workflows.html#github-workflow"><i class="fa fa-check"></i>GitHub Workflow</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="setup.html"><a href="setup.html"><i class="fa fa-check"></i>Setup</a>
 <ul>
-<li class="chapter" data-level="" data-path="setup.html"><a href="setup.html#git-1"><i class="fa fa-check"></i>Git</a></li>
-<li class="chapter" data-level="" data-path="setup.html"><a href="setup.html#github"><i class="fa fa-check"></i>GitHub</a></li>
-<li class="chapter" data-level="" data-path="setup.html"><a href="setup.html#rstudio"><i class="fa fa-check"></i>RStudio</a></li>
+<li class="chapter" data-level="" data-path="git-1.html"><a href="git-1.html"><i class="fa fa-check"></i>Git</a></li>
+<li class="chapter" data-level="" data-path="github.html"><a href="github.html"><i class="fa fa-check"></i>GitHub</a></li>
+<li class="chapter" data-level="" data-path="rstudio.html"><a href="rstudio.html"><i class="fa fa-check"></i>RStudio</a></li>
 </ul></li>
-</ul></li>
-<li class="chapter" data-level="1" data-path="project-workflow-with-rstudio.html"><a href="project-workflow-with-rstudio.html"><i class="fa fa-check"></i><b>1</b> Project Workflow with RStudio</a>
+<li class="chapter" data-level="1" data-path="git-2.html"><a href="git-2.html"><i class="fa fa-check"></i><b>1</b> Git</a>
 <ul>
-<li class="chapter" data-level="1.1" data-path="quick-start-rstudio.html"><a href="quick-start-rstudio.html"><i class="fa fa-check"></i><b>1.1</b> Quick Start RStudio</a></li>
+<li class="chapter" data-level="1.1" data-path="quick-start-git.html"><a href="quick-start-git.html"><i class="fa fa-check"></i><b>1.1</b> Quick Start Git</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="github-1.html"><a href="github-1.html"><i class="fa fa-check"></i><b>2</b> GitHub</a>
 <ul>
@@ -95,9 +91,13 @@
 <li class="chapter" data-level="2.1.2" data-path="quick-start-github.html"><a href="quick-start-github.html#existing-project-repository"><i class="fa fa-check"></i><b>2.1.2</b> Existing Project Repository</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="git-2.html"><a href="git-2.html"><i class="fa fa-check"></i><b>3</b> Git</a>
+<li class="chapter" data-level="3" data-path="project-workflow-with-rstudio.html"><a href="project-workflow-with-rstudio.html"><i class="fa fa-check"></i><b>3</b> Project Workflow with RStudio</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="quick-start-git.html"><a href="quick-start-git.html"><i class="fa fa-check"></i><b>3.1</b> Quick Start Git</a></li>
+<li class="chapter" data-level="3.1" data-path="quick-start-rstudio.html"><a href="quick-start-rstudio.html"><i class="fa fa-check"></i><b>3.1</b> Quick Start RStudio</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="workflows.html"><a href="workflows.html"><i class="fa fa-check"></i>Workflows</a>
+<ul>
+<li class="chapter" data-level="" data-path="github-workflow.html"><a href="github-workflow.html"><i class="fa fa-check"></i>GitHub Workflow</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="git-cheat-sheet.html"><a href="git-cheat-sheet.html"><i class="fa fa-check"></i>Git Cheat Sheet</a>
 <ul>
@@ -134,30 +134,16 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="workflows" class="section level2 unnumbered hasAnchor">
-<h2>Workflows<a href="workflows.html#workflows" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="github-workflow" class="section level3 unnumbered hasAnchor">
-<h3>GitHub Workflow<a href="workflows.html#github-workflow" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>This is our recommended workflow. The workflow is branch-based and involves keeping the master branch clean and ‘production ready’/fully-functional at all times. The workflow is from GitHub and can be seen here: <a href="https://guides.github.com/pdfs/githubflow-online.pdf" class="uri">https://guides.github.com/pdfs/githubflow-online.pdf</a></p>
-<p><img src="images/githubflow.png" width="95%" style="display: block; margin: auto;" /></p>
-<ol style="list-style-type: decimal">
-<li><strong>Create a branch</strong> - topic/per-person branches created from the master allow teams to contribute to seperate issues at the same time.</li>
-<li><strong>Add commits</strong> - these are snapshots of development within a branch and create safe, revertible points in the project’s history.</li>
-<li><strong>Open a pull request</strong> - pull requests are the mechanism for which modifed code within a branch is merged back into the master branch, i.e. bringing the master branch up to date with changes made within a branch.</li>
-<li><strong>Discuss and review code</strong> - teams participate in code reviews by commenting, testing, and reviewing open pull requests. Pull requests should be approved by at least one collaborator - we recommend you assign a specific reviewer(s) to check the work. In order to ensure the master branch remains ‘production ready’ we also recommend that the master branch is protected and any changes are tested by the reviewer before approving.</li>
-<li><strong>Merge</strong> - upon clicking merge, GitHub automatically performs the equivalent of a local <code>git merge</code> operation. Although you’ll likely never have to manually enter this command, it’s good to understand that the buttons available for interaction with Git are just performing these commands for us. GitHub also keeps the entire branch development history on the merged pull request.</li>
-<li><strong>Deploy</strong> (<em>optional</em>) - teams can choose the best release cycles or incorporate continuous integration tools and operate with the assurance that code on the deployment branch has gone through a robust workflow.</li>
-</ol>
-<div style="page-break-after: always;"></div>
-</div>
+<div id="workflows" class="section level1 unnumbered hasAnchor">
+<h1>Workflows<a href="workflows.html#workflows" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="version-control-git-and-remotes.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="setup.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="quick-start-rstudio.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="github-workflow.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -188,7 +174,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/NHS-NSS-transforming-publications/git-guide/edit/master/01-intro.Rmd",
+"link": "https://github.com/NHS-NSS-transforming-publications/git-guide/edit/master/06-workflows.Rmd",
 "text": "Edit"
 },
 "history": {
