@@ -10,7 +10,6 @@ In this section, each component has it's own section for setup, check them out:
 * [GitHub](#github-setup)
 * [Gitea](#gitea-setup)
 * [RStudio](#rstudio-setup)
-* [VS Code](#vs-code-setup)
 
 ## Git Setup {-}
 
@@ -47,7 +46,7 @@ These instructions are for first-time users of GitHub and highlight the steps in
 
 3. **Get added to Organisations** - this step is optional.
 
-* If you work within Public Health Scotland, the [Public Health Scotland GitHub organisation](https://github.com/Public-Health-Scotland)may be of interest. Email [phs.datascience@phs.scot](mailto:phs.datascience@phs.scot) to be added to the organisation. You'll then be able to create shared repos or teams.
+* If you work within Public Health Scotland, the [Public Health Scotland GitHub organisation](https://github.com/Public-Health-Scotland) may be of interest. Email [phs.datascience@phs.scot](mailto:phs.datascience@phs.scot) to be added to the organisation. You'll then be able to create shared repos or teams.
 
 \newpage
 ## Gitea Setup {-}
