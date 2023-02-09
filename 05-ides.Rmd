@@ -1,6 +1,6 @@
 \newpage
 
-# Project Workflow with RStudio
+# IDEs
 
 ```{r echo=FALSE, fig.align='center', out.width = '30%'}
 knitr::include_graphics('images/rstudio.png')

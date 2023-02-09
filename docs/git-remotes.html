@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>RStudio Setup | A Quick Guide to Git &amp; GitHub</title>
+  <title>2 Git Remotes | A Quick Guide to Git &amp; GitHub</title>
   <meta name="description" content="A quick start guide for using Git, GitHub, and integrations with RStudio" />
   <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="RStudio Setup | A Quick Guide to Git &amp; GitHub" />
+  <meta property="og:title" content="2 Git Remotes | A Quick Guide to Git &amp; GitHub" />
   <meta property="og:type" content="book" />
   <meta property="og:image" content="/images/cover.png" />
   <meta property="og:description" content="A quick start guide for using Git, GitHub, and integrations with RStudio" />
   <meta name="github-repo" content="Public-Health-Scotland/git-guide" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="RStudio Setup | A Quick Guide to Git &amp; GitHub" />
+  <meta name="twitter:title" content="2 Git Remotes | A Quick Guide to Git &amp; GitHub" />
   
   <meta name="twitter:description" content="A quick start guide for using Git, GitHub, and integrations with RStudio" />
   <meta name="twitter:image" content="/images/cover.png" />
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="gitea-setup.html"/>
-<link rel="next" href="git-1.html"/>
+<link rel="prev" href="quick-start-git.html"/>
+<link rel="next" href="quick-start-github.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -139,59 +139,23 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="rstudio-setup" class="section level2 unnumbered hasAnchor">
-<h2>RStudio Setup<a href="rstudio-setup.html#rstudio-setup" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>There are 2 primary versions of RStudio available for staff in PHS, a local version on your machine and as an IDE on the <a href="https://pwb.publichealthscotland.org/">Posit Workbench server</a>. If your working on your local machine, first <a href="https://www.r-project.org/">R</a> and <a href="https://www.rstudio.com/">RStudio</a> must be installed. Just as with Git, if you work within PHS, these can be requested through <a href="https://nhsnss.service-now.com/phs/">Service Now</a>. Once authorised, this will allow you to download it from the Software Center on your machine. Most use cases will be for the server but getting Git setup on RStudio is the same regardless of where you’re using it.</p>
-<ol style="list-style-type: decimal">
-<li><strong>Once in RStudio, go to Tools in the menu bar &gt; Global Options &gt; Git/SVN</strong>:</li>
-</ol>
-<p><img src="images/rstudio-globalopt-gitsvn.png" width="95%" style="display: block; margin: auto;" />
+<div id="git-remotes" class="section level1 hasAnchor" number="2">
+<h1><span class="header-section-number">2</span> Git Remotes<a href="git-remotes.html#git-remotes" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p><img src="images/github.png" width="30%" style="display: block; margin: auto;" />
  </p>
-<ol start="2" style="list-style-type: decimal">
-<li><p><strong>If “Git executable:” shows “<em>(none)</em>”, click “Browse” and select the Git executable installed on your system.</strong> - That’s it for attaching RStudio and Git. This will allow you to utilise the RStudio Git GUI tools inside R Projects.</p>
-<ul>
-<li>On Windows - the file path should point to folder Git was installed to and finish <code>.../bin/git.exe</code>.</li>
-<li>On the server - the path should be <code>/usr/bin/git</code>.</li>
-</ul></li>
-</ol>
-<div id="authentication-for-remotes" class="section level3 unnumbered hasAnchor">
-<h3>Authentication for remotes<a href="rstudio-setup.html#authentication-for-remotes" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Authentication is required to work with Git remotes, e.g., GitHub. Gitea uses HTTPS authentication, with SSH not available, and accepts your standard LDAP username and password. As such, there is no setup required for Gitea.</p>
-<ul>
-<li><p><strong>Create an SSH Key</strong> - this is the recommended authentication method on the new server, as a faster and more convenient method.</p>
-<ol style="list-style-type: decimal">
-<li>If you see anything within the ‘SSH RSA Key:’ box, you can skip this step, else click on ‘Create RSA Key…’, click ‘Create’ and close the dialog box that appears confirming the key creation.</li>
-<li>Now, click on ‘View public key’ and copy the text string that appears in a dialog box.</li>
-<li>Go to your <a href="https://github.com/settings/keys">GitHub SSH Settings</a> and click ‘New SSH key’.</li>
-<li>Give the key a meaningful title that you will recongnise (e.g. “Posit Workbench”) and paste the key from RStudio. Complete the process by clicking ‘Add SSH key’.</li>
-</ol></li>
-</ul>
-<p> </p>
-<ul>
-<li><p><strong>Use HTTPS on GitHub</strong> - GitHub blocked plain HTTPS authentication due to security concerns, and as such now requires a PAT. While SSH is now available (and the preferred option), details are below for how to use:</p>
-<ol style="list-style-type: decimal">
-<li>Create a PAT - Go to your <a href="https://github.com/settings/tokens">GitHub Personal Access Tokens’ settings page</a>, create a token (with a meaningful name), and grant the necessary permissions (likely to be all of ‘repo’). Then, copy the given token to your clipboard. <em>Note: for security, after you leave the page, you will no longer be able to retrieve the token.</em></li>
-<li>Use the PAT - the PAT will be used in place of your password when performing secure operations over HTTPS. It is possible to store the PAT rather than having to enter for every operation:
-<ol style="list-style-type: decimal">
-<li><p>If you already have cached these details or have made an error, clear the cache by entering this command in the terminal:</p>
-<p><code>git config --global -–unset credential.helper</code></p></li>
-<li><p>Then enter this command in the terminal. After performing a Git operation, you will be asked to enter your credentials. Make sure to use your usual GitHub username and the PAT. Following this, your credentials should be stored for future Git operations.</p>
-<p><code>git config --global credential.helper store</code></p></li>
-</ol></li>
-</ol></li>
-</ul>
-
-<div style="page-break-after: always;"></div>
+<p>Systems like Git allow us to move work between any two repositories. In practice, though, it’s easiest to use one copy as a central hub, and to keep it on the web rather than on someone’s laptop. Most programmers use hosting services like <a href="https://github.com/">GitHub</a>, <a href="https://bitbucket.org/">BitBucket</a> or <a href="https://gitlab.com/">GitLab</a> to hold those master copies. Here, we’ll explore GitHub.</p>
+<p>GitHub is a Git hosting repository that provides users with tools to ship better code through command line features, issues (threaded discussions), pull requests, and code review. GitHub builds collaboration directly into the development process. Work is organised into repositories, where users can outline requirements or direction and set expectations for team members. Then, using the <a href="github-workflow.html#github-workflow">GitHub Workflow</a>, developers simply create a branch to work on updates, commit changes to save them, open a pull request to propose and dicsuss changes, and merge pull requests once everyone is on the same page.</p>
+<blockquote>
+<p><span style="color:red">GitHub should be thought of as a public forum. No confidential information (including server connection details, passwords, and person identifiable information) should be pushed, even to a private repository! Keep this in mind throughout any project, it’s easier to maintain security throughout than have to go back through and delete code or commits later.</span></p>
+</blockquote>
 </div>
-</div>
-<!-- </div> -->
             </section>
 
           </div>
         </div>
       </div>
-<a href="gitea-setup.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="git-1.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="quick-start-git.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="quick-start-github.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -222,7 +186,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/NHS-NSS-transforming-publications/git-guide/edit/master/02-setup.Rmd",
+"link": "https://github.com/NHS-NSS-transforming-publications/git-guide/edit/master/04-remotes.Rmd",
 "text": "Edit"
 },
 "history": {
