@@ -20,6 +20,7 @@
   <meta name="twitter:description" content="A quick start guide for using Git, GitHub, and integrations with RStudio" />
   <meta name="twitter:image" content="/images/cover.png" />
 
+<meta name="author" content="Russell McCreath" />
 
 
 
@@ -28,7 +29,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="introduction-setup.html"/>
+<link rel="prev" href="introduction.html"/>
 <link rel="next" href="setup.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -68,8 +69,22 @@
       <nav role="navigation">
 
 <ul class="summary">
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
-<li class="chapter" data-level="1" data-path="git.html"><a href="git.html"><i class="fa fa-check"></i><b>1</b> Git</a>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><strong>Gitting Started with Git</strong></a></li>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i>Introduction</a>
+<ul>
+<li class="chapter" data-level="" data-path="version-control-git-and-remotes.html"><a href="version-control-git-and-remotes.html"><i class="fa fa-check"></i>Version Control, Git, and Remotes</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="setup.html"><a href="setup.html"><i class="fa fa-check"></i>Setup</a>
+<ul>
+<li class="chapter" data-level="" data-path="git-setup.html"><a href="git-setup.html"><i class="fa fa-check"></i>Git Setup</a></li>
+<li class="chapter" data-level="" data-path="github-setup.html"><a href="github-setup.html"><i class="fa fa-check"></i>GitHub Setup</a></li>
+<li class="chapter" data-level="" data-path="gitea-setup.html"><a href="gitea-setup.html"><i class="fa fa-check"></i>Gitea Setup</a></li>
+<li class="chapter" data-level="" data-path="rstudio-setup.html"><a href="rstudio-setup.html"><i class="fa fa-check"></i>RStudio Setup</a>
+<ul>
+<li class="chapter" data-level="" data-path="rstudio-setup.html"><a href="rstudio-setup.html#authentication-for-remotes"><i class="fa fa-check"></i>Authentication for remotes</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="git-1.html"><a href="git-1.html"><i class="fa fa-check"></i><b>1</b> Git</a>
 <ul>
 <li class="chapter" data-level="1.1" data-path="quick-start-git.html"><a href="quick-start-git.html"><i class="fa fa-check"></i><b>1.1</b> Quick Start Git</a></li>
 </ul></li>
@@ -103,19 +118,9 @@
 <li class="chapter" data-level="" data-path="reference.html"><a href="reference.html"><i class="fa fa-check"></i>Reference</a>
 <ul>
 <li class="chapter" data-level="" data-path="reference.html"><a href="reference.html#top-tips"><i class="fa fa-check"></i>Top Tips</a></li>
-<li class="chapter" data-level="" data-path="reference.html"><a href="reference.html#git-2"><i class="fa fa-check"></i>Git</a></li>
+<li class="chapter" data-level="" data-path="reference.html"><a href="reference.html#git-3"><i class="fa fa-check"></i>Git</a></li>
 <li class="chapter" data-level="" data-path="reference.html"><a href="reference.html#github-1"><i class="fa fa-check"></i>GitHub</a></li>
 <li class="chapter" data-level="" data-path="reference.html"><a href="reference.html#rstudio"><i class="fa fa-check"></i>RStudio</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="introduction-setup.html"><a href="introduction-setup.html"><i class="fa fa-check"></i>Introduction &amp; Setup</a>
-<ul>
-<li class="chapter" data-level="" data-path="version-control-git-and-remotes.html"><a href="version-control-git-and-remotes.html"><i class="fa fa-check"></i>Version Control, Git, and Remotes</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="setup.html"><a href="setup.html"><i class="fa fa-check"></i>Setup</a>
-<ul>
-<li class="chapter" data-level="" data-path="git-4.html"><a href="git-4.html"><i class="fa fa-check"></i>Git</a></li>
-<li class="chapter" data-level="" data-path="github-2.html"><a href="github-2.html"><i class="fa fa-check"></i>GitHub</a></li>
-<li class="chapter" data-level="" data-path="rstudio-1.html"><a href="rstudio-1.html"><i class="fa fa-check"></i>RStudio</a></li>
 </ul></li>
 </ul>
 
@@ -148,26 +153,26 @@
 </ul>
 <p>Software teams that do not use any form of version control often run into problems. Developers who have never used version control may have added versions to your files, perhaps with suffixes like “final” or “latest” and then had to later deal with a new “final” version. Perhaps you’ve dealt with commented out code blocks because you want to disable certain functionality without deleting the code, fearing that there may be a use for it later. Version control is a way out of these problems.</p>
 </div>
-<div id="git-3" class="section level4 unnumbered hasAnchor">
-<h4>Git<a href="version-control-git-and-remotes.html#git-3" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="git" class="section level4 unnumbered hasAnchor">
+<h4>Git<a href="version-control-git-and-remotes.html#git" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Git is a version control system (VCS). We recommend that Git is used along with a hosting repository (a remote), such as GitHub (or Gitea, GitLab, etc.) and that the <a href="github-workflow.html#github-workflow">GitHub Workflow</a> is followed. However, Git can be used locally while working on a project. The steps outlined in <a href="quick-start-git.html#quick-start-git">Quick Start Git</a> are for this purpose and should only be followed for a personal project that is <strong>local or on your personal network folder</strong>. For collaborative work, see <a href="quick-start-github.html#quick-start-github">Quick Start GitHub</a>.</p>
-<p>According to the latest <a href="https://insights.stackoverflow.com/survey/2017#technology">Stack Overflow developer survey</a>, more than 70 percent of developers use Git, making it the most-used VCS in the world. Git is commonly used for both open source and commercial software development, with significant benefits for individuals, teams and businesses:</p>
+<p>According to the latest <a href="https://insights.stackoverflow.com/survey/2021#section-most-popular-technologies-other-tools">Stack Overflow developer survey</a>, more than 90 percent of developers use Git, making it the most-used VCS in the world (and most used tool in general). This has remained high but grown from 2017 which was at around 75% of developers. Git is commonly used for both open source and commercial software development, with significant benefits for individuals, teams and businesses:</p>
 <ul>
 <li>Entire timeline of changes, decisions, and progression of any project in one place.</li>
 <li>With a VCS like Git, collaboration can happen any time while maintaining source code integrity. Using branches, developers can safely propose changes to production code.</li>
 <li>Businesses using Git can break down communication barriers between teams and keep them focused on doing their best work. Plus, Git makes it possible to align experts across a business to collaborate on major projects.</li>
 </ul>
-<p>A <strong>repository</strong> is Git’s encompassing of the entire collection of files and folders associated with a project, along with each file’s revision history. The file history appears as snapshots in time called commits (versions), these commits can be organized into multiple lines of development called branches (seperate areas of development on the same project). Using the command line or other ease-of-use interfaces, a Git repository also allows for: interaction with the history, cloning (copying), creating branches, committing (saving a version), merging (bringing two versions together), comparing changes across versions of code, and more. This is a lot of information but as you start using Git it’ll all embed and the terminology will be second nature.</p>
+<p>A <strong>repository</strong> is Git’s encompassing of the entire collection of files and folders associated with a project, along with each file’s revision history. The file history appears as snapshots in time called commits (versions), these commits can be organized into multiple lines of development called branches (separate areas of development on the same project). Using the command line or other ease-of-use interfaces, a Git repository also allows for: interaction with the history, cloning (copying), creating branches, committing (saving a version), merging (bringing two versions together), comparing changes across versions of code, and more. This is a lot of information but as you start using Git it’ll all embed and the terminology will be second nature.</p>
 </div>
 <div id="branches" class="section level4 unnumbered hasAnchor">
 <h4>Branches<a href="version-control-git-and-remotes.html#branches" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>Creating branches allows development and work to continue without affecting the main stream, it also allows many people to do work in parallel without overwriting each other’s work. Branching works by taking a copy of the main code and then later merging back when the code is ready. Before the marge takes place, reviews can take place to gain feedback and ensure the implemented changes will have the desired effect.</p>
+<p>Creating branches allows development and work to continue without affecting the main stream, it also allows many people to do work in parallel without overwriting each others work. Branching works by taking a copy of the main code and then later merging back when the code is ready. Before the marge takes place, reviews can take place to gain feedback and ensure the implemented changes will have the desired effect.</p>
 </div>
 <div id="remotes" class="section level4 unnumbered hasAnchor">
 <h4>Remotes<a href="version-control-git-and-remotes.html#remotes" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Version control has great potential to facilitate collaborative working with colleagues and third parties. This can be utilised with the use of “remote” repositories - copies of a project hosted away from the workspace e.g. on GitHub or Gitea. There’s more about this later when we talk about GitHub, but for just now, this is a little introduction so you’re familiar with the term.</p>
-<p>Systems like Git allow us to move work between any two repositories. In practice, though, it’s easiest to use one copy as a central hub, and to keep it on the web/private network rather than on someone’s laptop. This is where remotes come in. Most programmers use hosting services like <a href="https://github.com/">GitHub</a>, <a href="https://bitbucket.org/">BitBucket</a> or <a href="https://gitlab.com/">GitLab</a> to hold those master copies. We currently use <strong>GitHub.</strong></p>
-<p>GitHub is a Git hosting repository that provides users with tools to ship better code through command line features, issues (threaded discussions), pull requests, and code review. GitHub builds collaboration directly into the development process. Work is organised into repositories, where users can outline requirements or direction and set expectations for team members. Then, using the <a href="github-workflow.html#github-workflow">GitHub Workflow</a>, developers simply create a branch to work on updates, commit changes to save them, open a pull request to propose and discuss changes, and merge pull requests once everyone is on the same page. See <a href="github-workflow.html#github-workflow">GitHub Workflow</a> for more details.</p>
+<p>Systems like Git allow us to move work between any two repositories. In practice, though, it’s easiest to use one copy as a central hub, and to keep it on the web/private network rather than on someone’s laptop. This is where remotes come in. Most use hosting services like <a href="https://github.com/">GitHub</a>, <a href="https://bitbucket.org/">BitBucket</a> or <a href="https://gitlab.com/">GitLab</a> to hold those master copies. In addition to using GitHub internally, we also have <a href="https://phs-git.nhsnss.scot.nhs.uk/">Gitea</a> available as in internally hosted remote.</p>
+<p>GitHub is a Git hosting repository that provides users with tools to ship better code through command line features, issues, pull requests, and code review. GitHub builds collaboration directly into the development process. Work is organised into repositories, where users can outline requirements or direction and set expectations for team members. Then, using a specific workflow, developers can simply create a branch to work on updates, commit changes to save them, open a pull request to propose and discuss changes, and merge pull requests once everyone is on the same page. See <a href="workflows.html#workflows">Workflows</a> for more details.</p>
 
 <div style="page-break-after: always;"></div>
 </div>
@@ -178,7 +183,7 @@
           </div>
         </div>
       </div>
-<a href="introduction-setup.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="introduction.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="setup.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
@@ -210,7 +215,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/NHS-NSS-transforming-publications/git-guide/edit/master/i-intro.Rmd",
+"link": "https://github.com/NHS-NSS-transforming-publications/git-guide/edit/master/01-intro.Rmd",
 "text": "Edit"
 },
 "history": {
@@ -225,9 +230,6 @@ gitbook.start({
 "search": {
 "engine": "fuse",
 "options": null
-},
-"toc": {
-"collapse": "section"
 }
 });
 });

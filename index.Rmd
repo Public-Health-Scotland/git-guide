@@ -1,19 +1,19 @@
 ---
 title: "A Quick Guide to Git & GitHub"
+author: "Russell McCreath"
 site: bookdown::bookdown_site
 output: 
   bookdown::gitbook:
     split_by: section
     config:
       toc:
-        collapse: section
 description: "A quick start guide for using Git, GitHub, and integrations with RStudio"
 github-repo: Public-Health-Scotland/git-guide
 cover-image: images/cover.png
 output_dir: /docs
 ---
 
-# Preface {-}
+# **Gitting Started with Git** {-}
 
 ```{r, echo=FALSE}
 library(magrittr)

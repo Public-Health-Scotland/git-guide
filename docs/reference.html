@@ -20,6 +20,7 @@
   <meta name="twitter:description" content="A quick start guide for using Git, GitHub, and integrations with RStudio" />
   <meta name="twitter:image" content="/images/cover.png" />
 
+<meta name="author" content="Russell McCreath" />
 
 
 
@@ -29,7 +30,7 @@
   
   
 <link rel="prev" href="git-cheat-sheet.html"/>
-<link rel="next" href="introduction-setup.html"/>
+
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -68,8 +69,22 @@
       <nav role="navigation">
 
 <ul class="summary">
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
-<li class="chapter" data-level="1" data-path="git.html"><a href="git.html"><i class="fa fa-check"></i><b>1</b> Git</a>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><strong>Gitting Started with Git</strong></a></li>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i>Introduction</a>
+<ul>
+<li class="chapter" data-level="" data-path="version-control-git-and-remotes.html"><a href="version-control-git-and-remotes.html"><i class="fa fa-check"></i>Version Control, Git, and Remotes</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="setup.html"><a href="setup.html"><i class="fa fa-check"></i>Setup</a>
+<ul>
+<li class="chapter" data-level="" data-path="git-setup.html"><a href="git-setup.html"><i class="fa fa-check"></i>Git Setup</a></li>
+<li class="chapter" data-level="" data-path="github-setup.html"><a href="github-setup.html"><i class="fa fa-check"></i>GitHub Setup</a></li>
+<li class="chapter" data-level="" data-path="gitea-setup.html"><a href="gitea-setup.html"><i class="fa fa-check"></i>Gitea Setup</a></li>
+<li class="chapter" data-level="" data-path="rstudio-setup.html"><a href="rstudio-setup.html"><i class="fa fa-check"></i>RStudio Setup</a>
+<ul>
+<li class="chapter" data-level="" data-path="rstudio-setup.html"><a href="rstudio-setup.html#authentication-for-remotes"><i class="fa fa-check"></i>Authentication for remotes</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="git-1.html"><a href="git-1.html"><i class="fa fa-check"></i><b>1</b> Git</a>
 <ul>
 <li class="chapter" data-level="1.1" data-path="quick-start-git.html"><a href="quick-start-git.html"><i class="fa fa-check"></i><b>1.1</b> Quick Start Git</a></li>
 </ul></li>
@@ -103,19 +118,9 @@
 <li class="chapter" data-level="" data-path="reference.html"><a href="reference.html"><i class="fa fa-check"></i>Reference</a>
 <ul>
 <li class="chapter" data-level="" data-path="reference.html"><a href="reference.html#top-tips"><i class="fa fa-check"></i>Top Tips</a></li>
-<li class="chapter" data-level="" data-path="reference.html"><a href="reference.html#git-2"><i class="fa fa-check"></i>Git</a></li>
+<li class="chapter" data-level="" data-path="reference.html"><a href="reference.html#git-3"><i class="fa fa-check"></i>Git</a></li>
 <li class="chapter" data-level="" data-path="reference.html"><a href="reference.html#github-1"><i class="fa fa-check"></i>GitHub</a></li>
 <li class="chapter" data-level="" data-path="reference.html"><a href="reference.html#rstudio"><i class="fa fa-check"></i>RStudio</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="introduction-setup.html"><a href="introduction-setup.html"><i class="fa fa-check"></i>Introduction &amp; Setup</a>
-<ul>
-<li class="chapter" data-level="" data-path="version-control-git-and-remotes.html"><a href="version-control-git-and-remotes.html"><i class="fa fa-check"></i>Version Control, Git, and Remotes</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="setup.html"><a href="setup.html"><i class="fa fa-check"></i>Setup</a>
-<ul>
-<li class="chapter" data-level="" data-path="git-4.html"><a href="git-4.html"><i class="fa fa-check"></i>Git</a></li>
-<li class="chapter" data-level="" data-path="github-2.html"><a href="github-2.html"><i class="fa fa-check"></i>GitHub</a></li>
-<li class="chapter" data-level="" data-path="rstudio-1.html"><a href="rstudio-1.html"><i class="fa fa-check"></i>RStudio</a></li>
 </ul></li>
 </ul>
 
@@ -150,8 +155,8 @@
 <p><span style="color:red">GitHub should be thought of as a public forum. No confidential information (including server connection details, passwords, and person identifiable information) should be pushed, even to a private repository! Keep this in mind throughout any project, it’s easier to maintain security throughout than have to go back through and delete code or commits later.</span></p>
 </blockquote>
 </div>
-<div id="git-2" class="section level3 unnumbered hasAnchor">
-<h3>Git<a href="reference.html#git-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="git-3" class="section level3 unnumbered hasAnchor">
+<h3>Git<a href="reference.html#git-3" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><a href="https://git-scm.com/book/en/v2">Pro Git Book</a> - A complete reference text for Git.</p>
 <p><a href="https://www.atlassian.com/git">Atlassian - Git</a> - Tutorials, tips, and the latest news about Git.</p>
 <p><a href="https://try.github.io/">Try Git</a> - Learn by doing. This will allow you to work with Git commands on a secure tutorial system.</p>
@@ -170,7 +175,6 @@
 <p><a href="https://support.rstudio.com/hc/en-us/articles/200532077-Version-Control-with-Git-and-SVN">RStudio - Version Control with Git and SVN</a> - A support article for using version control in RStudio.</p>
 <p><a href="https://tonyelhabr.rbind.io/post/making-first-pull-request/">R Package Pull Requests: A Newbie’s Guide</a> - A blog post that discusses the experience of submitting pull requests for existing R packages.</p>
 
-<div style="page-break-after: always;"></div>
 </div>
 </div>
             </section>
@@ -178,8 +182,8 @@
           </div>
         </div>
       </div>
-<a href="git-cheat-sheet.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="introduction-setup.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="git-cheat-sheet.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -225,9 +229,6 @@ gitbook.start({
 "search": {
 "engine": "fuse",
 "options": null
-},
-"toc": {
-"collapse": "section"
 }
 });
 });

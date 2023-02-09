@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>1 Git | A Quick Guide to Git &amp; GitHub</title>
+  <title>Git Setup | A Quick Guide to Git &amp; GitHub</title>
   <meta name="description" content="A quick start guide for using Git, GitHub, and integrations with RStudio" />
   <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="1 Git | A Quick Guide to Git &amp; GitHub" />
+  <meta property="og:title" content="Git Setup | A Quick Guide to Git &amp; GitHub" />
   <meta property="og:type" content="book" />
   <meta property="og:image" content="/images/cover.png" />
   <meta property="og:description" content="A quick start guide for using Git, GitHub, and integrations with RStudio" />
   <meta name="github-repo" content="Public-Health-Scotland/git-guide" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="1 Git | A Quick Guide to Git &amp; GitHub" />
+  <meta name="twitter:title" content="Git Setup | A Quick Guide to Git &amp; GitHub" />
   
   <meta name="twitter:description" content="A quick start guide for using Git, GitHub, and integrations with RStudio" />
   <meta name="twitter:image" content="/images/cover.png" />
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="rstudio-setup.html"/>
-<link rel="next" href="quick-start-git.html"/>
+<link rel="prev" href="setup.html"/>
+<link rel="next" href="github-setup.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -139,22 +139,34 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="git-1" class="section level1 hasAnchor" number="1">
-<h1><span class="header-section-number">1</span> Git<a href="git-1.html#git-1" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p><img src="images/git.png" width="30%" style="display: block; margin: auto;" />
- </p>
-<div id="git-2" class="section level4 unnumbered hasAnchor">
-<h4>Git<a href="git-1.html#git-2" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>Git is a version control system (VCS). We recommend that Git is used along with a hosting repository, such as GitHub (or Gitea, GitLab, etc.) and that the <a href="github-workflow.html#github-workflow">GitHub Workflow</a> is followed. However, Git can be used locally while working on a project. The steps outlined in <a href="quick-start-git.html#quick-start-git">Quick Start Git</a> are for this purpose and should only be followed for a personal project that is <strong>local or on your personal network folder</strong>. For collaborative work, see <a href="quick-start-github.html#quick-start-github">Quick Start GitHub</a>.</p>
-</div>
+<div id="git-setup" class="section level2 unnumbered hasAnchor">
+<h2>Git Setup<a href="git-setup.html#git-setup" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><em>These instructions should only need to be followed once or when setting up a new device.</em></p>
+<ol style="list-style-type: decimal">
+<li><p><strong>Install Git</strong> - <em>This step is only necessary if you will be working with Git local to your machine, e.g. not on the Posit Workbench server.</em> Git is a free, open-source, software available from <a href="https://git-scm.com/" class="uri">https://git-scm.com/</a>. If you work within PHS, request the software from IT through <a href="https://nhsnss.service-now.com/phs/">Service Now</a>. Once authorised, this will allow you to download it from the Software Center on your machine.</p>
+<p>This will install three applications on your computer, go to Start &gt; Git (folder):</p>
+<ul>
+<li><strong>Git Bash</strong> - this is the command line (Shell) interface for Git. This will allow you to enter Git commands, i.e. <code>git init</code>, and can be launched by right clicking in a directory/folder and selecting “Git Bash Here”.</li>
+<li><strong>Git CMD</strong> - this is a deprecated version, similar to the Bash interface, and shouldn’t be used here.</li>
+<li><strong>Git GUI</strong> - this is Git’s version of a Graphical User Interface. This will perform the same functions as “Git Bash”, but employs a point-and-click interface instead. This guide does not cover Git GUI and instead focuses on the integrated Git GUI in RStudio.</li>
+</ul></li>
+<li><p><strong>Configure your details</strong> - Git needs to know who you are, use the following commands to configure your username and email using Git Bash or the Terminal (<em>if you’re a GitHub user, use the same email and username you’re registered with on GitHub.</em> This is a necessary step for GitHub to recognise the account where the commits come from, even with proper authentication GitHub will use these details to assign the commits.) Remember not to type the arrow symbols <code>&lt;&gt;</code> when entering the command:</p></li>
+</ol>
+<ul>
+<li><p><code>git config --global user.email &lt;email address&gt;</code> - use your PHS email address here.</p></li>
+<li><p><code>git config --global user.name &lt;your name&gt;</code> - use your GitHub username here, see <a href="github-setup.html#github-setup">GitHub Setup</a> for more details.</p>
+<p>At any time you can check what the current user details are using:</p></li>
+<li><p><code>git config --global user.email</code></p></li>
+</ul>
+<div style="page-break-after: always;"></div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="rstudio-setup.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="quick-start-git.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="setup.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="github-setup.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -185,7 +197,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/NHS-NSS-transforming-publications/git-guide/edit/master/03-git.Rmd",
+"link": "https://github.com/NHS-NSS-transforming-publications/git-guide/edit/master/02-setup.Rmd",
 "text": "Edit"
 },
 "history": {
