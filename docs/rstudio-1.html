@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>3.1 Quick Start RStudio | A Quick Guide to Git &amp; GitHub</title>
+  <title>RStudio | A Quick Guide to Git &amp; GitHub</title>
   <meta name="description" content="A quick start guide for using Git, GitHub, and integrations with RStudio" />
   <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="3.1 Quick Start RStudio | A Quick Guide to Git &amp; GitHub" />
+  <meta property="og:title" content="RStudio | A Quick Guide to Git &amp; GitHub" />
   <meta property="og:type" content="book" />
   <meta property="og:image" content="/images/cover.png" />
   <meta property="og:description" content="A quick start guide for using Git, GitHub, and integrations with RStudio" />
   <meta name="github-repo" content="Public-Health-Scotland/git-guide" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="3.1 Quick Start RStudio | A Quick Guide to Git &amp; GitHub" />
+  <meta name="twitter:title" content="RStudio | A Quick Guide to Git &amp; GitHub" />
   
   <meta name="twitter:description" content="A quick start guide for using Git, GitHub, and integrations with RStudio" />
   <meta name="twitter:image" content="/images/cover.png" />
@@ -28,8 +28,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="project-workflow-with-rstudio.html"/>
-<link rel="next" href="workflows.html"/>
+<link rel="prev" href="github-2.html"/>
+
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -134,58 +134,25 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="quick-start-rstudio" class="section level2 hasAnchor" number="3.1">
-<h2><span class="header-section-number">3.1</span> Quick Start RStudio<a href="quick-start-rstudio.html#quick-start-rstudio" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="rstudio-1" class="section level2 unnumbered hasAnchor">
+<h2>RStudio<a href="rstudio-1.html#rstudio-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>First <a href="https://www.r-project.org/">R</a> and <a href="https://www.rstudio.com/">RStudio</a> must be installed on your machine. Just as with Git, if you work within NHS National Services Scotland these can be requested through the <a href="https://nhsnss.service-now.com/sp">Service Portal</a>. Once authorised, this will allow you to download it from the Software Center on your machine. You may also be able to use the server versions of RStudio and the project workflow will be the same.</p>
 <ol style="list-style-type: decimal">
-<li><strong>Set up R Project</strong></li>
+<li><strong>Once in RStudio, go to Tools in the menu bar &gt; Global Options &gt; Git/SVN</strong>:</li>
 </ol>
-<ul>
-<li><strong>New Project</strong> - any time you do any work that requires code, you should create an R project. This keeps your work together, separates settings for different projects, and allows the use of version control. To do that, go to File in the menu bar and select “New Project”. In the window that appears, name your project, choose a folder/directory for where to store it, and ensure “Create a Git repository” is selected.</li>
-</ul>
-<p><img src="images/rstudio-newproj.png" width="95%" style="display: block; margin: auto;" />
- </p>
-<ul>
-<li><p><strong>Existing Project</strong> - if you have already started working on an R Project without initialising Git, you can start using it at any point (the earlier the better). On an existing R Project go to Tools &gt; Project Options &gt; Git/SVN &gt; and select “Git” in the version control drop down. This will ask if you want to initialise a repo, click “yes”. To use the terminal/command line, go to: Tools &gt; Terminal &gt; New Terminal, in that panel type <code>git init</code>.</p></li>
-<li><p><strong>Existing Remote Repo</strong> - if you’re going to be working on a project that already exists on a remote repository (e.g. a GitHub project), you can link to this/clone it through RStudio too. Go to File &gt; New Project &gt; Version Control &gt; Git and enter the details in the screen that follows (this will create a folder with a copy of any contents that were in the GitHub repository).</p>
-<ul>
-<li><strong>Repository URL</strong>: Using SSH, this guide’s link is: “<a href="mailto:git@github.com" class="email">git@github.com</a>:Public-Health-Scotland/git-guide.git”.</li>
-<li><strong>Project directory name</strong>: this is up to you and will be used to name the folder/directory that contains a copy of the repo. Give it any meaningful name, for example this guide is named “git-guide”, the same name as on the remote repo.</li>
-<li><strong>Create project as subdirectory of</strong>: this is the location of where the folder/directory that contains the copy of the repo will be stored.</li>
-</ul></li>
-</ul>
-<p><img src="images/rstudio-clonerepo.png" width="95%" style="display: block; margin: auto;" />
+<p><img src="images/rstudio-globalopt-gitsvn.png" width="95%" style="display: block; margin: auto;" />
  </p>
 <ol start="2" style="list-style-type: decimal">
-<li><strong>Change, stage…</strong> - RStudio will keep track of all changes made to the files within your R project (not just R files). Any changes made will show up in the “Git” tab, which can be found in the same pane as the R environment. This is typically the top-right pane, but their positions can be changed so it may not be in all cases. When you’re ready to commit, save the files you’re working with and stage them by ticking the box to the left of the files in the Git pane, and then click on the “Commit” button.</li>
+<li><p><strong>If “Git executable:” shows “<em>(none)</em>”, click “Browse” and select the Git executable installed on your system.</strong> - On Windows, the filepath should point to folder Git was installed to and finish <code>.../bin/git.exe</code>. If you’re on the server, it should be <code>/usr/bin/git</code>. That’s it for attaching RStudio and Git. This will allow you to utilise the RStudio Git GUI tools inside R Projects.</p></li>
+<li><p><strong>Create an SSH Key</strong> - this step is recommended for users who will be using a remote such as GitHub with their project. The other option is HTTPS (which doesn’t require setup), however SSH is a faster and more convienent method of connecting to GitHub.</p>
+<ol style="list-style-type: decimal">
+<li>If you see anything within the ‘SSH RSA Key:’ box, you can skip this step, else click on ‘Create RSA Key…’, click ‘Create’ and close the dialog box that appears confirming the key creation. If this doesn’t work, there may be access/priviledge issues which will need to be resolved through IT and logging a ticket through the <a href="https://nhsnss.service-now.com/sp">Service Portal</a>.</li>
+<li>Now, click on ‘View public key’ and copy the text string that appears in a dialog box.</li>
+<li>Go to your <a href="https://github.com/settings/keys">GitHub SSH Settings</a> and click ‘New SSH key’.</li>
+<li>Give the key a meaningful title that you will recongnise and paste the key from RStudio. Complete the process by clicking ‘Add SSH key’.</li>
+</ol></li>
 </ol>
-<p><img src="images/rstudio-stage.png" width="95%" style="display: block; margin: auto;" />
- </p>
-<ol start="3" style="list-style-type: decimal">
-<li><strong>Commit</strong> - After clicking on “Commit”, a window will appear with the changes made for review and a prompt for a “Commit message”. Your commit message should describe the changes made and be concise, meaningful and written in imperative mood. Then, just click on “Commit”! <em>This has saved all the changes to the project. Going forward, it will be possible to look back and see the full history of changes to the project, who made those changes, and revert to previous versions where necessary.</em></li>
-</ol>
-<p><img src="images/rstudio-commit.png" width="95%" style="display: block; margin: auto;" />
- </p>
-<ol start="4" style="list-style-type: decimal">
-<li><strong>Branching</strong> - As part of the recommended workflow, you should use branches to develop individual features, this means that you can edit files but keep an original to revert back to if required. Additionally, when team working, it allows for people to work on different things in parallel. This can help improve efficiency as people don’t have to wait for others to finish what they’re doing before starting something else.</li>
-</ol>
-<ul>
-<li><strong>New Branch</strong> - To create a new branch in RStudio, just click the “New Branch” button in the Git pane and give it a name. To switch between branches, click the drop down to the right of the “New Branch” button and click the name of the branch you want to switch to. <em>(When you select a branch, the state of the files in that branch will appear in both the Files pane in RStudio, and in your computer’s file explorer.)</em></li>
-</ul>
-<p><img src="images/rstudio-branch.png" width="95%" style="display: block; margin: auto;" />
- </p>
-<ul>
-<li><strong>Merge Branches</strong> - When the working branch should be merged back to the master branch, this must be done on the command line as there is no way to do this using the GUI. This can be accessed from the “More” menu in the Git pane and selecting “Shell” or in the RStudio Terminal window. Once you’re in either of these, enter the command <code>git merge &lt;branch&gt;</code>.</li>
-</ul>
-<pre><code>username@NSS000000  ~/Documents/demo-project  (master)
-$ git merge &lt;branch&gt;</code></pre>
-<ol start="5" style="list-style-type: decimal">
-<li><p><strong>Link to GitHub</strong> - If this is a new project, it won’t be linked to GitHub yet. <em>See <a href="quick-start-github.html#quick-start-github">Quick Start GitHub</a> for instructions on how to set up a repo on GitHub.</em> RStudio currently doesn’t have a GUI option for this and must be done on the command line. As above, this can be accessed from the “More” menu in the Git pane and selecting “Shell” or in the RStudio Terminal window. Once you’re in either of these, enter the command <code>git remote add &lt;name&gt; &lt;url&gt;</code> (<em><code>&lt;name&gt;</code> is any name to refer to the GitHub connection but <code>origin</code> is the most common/preferred name to use</em>), pulling in any changes that have been made on GitHub in the meantime using <code>git pull &lt;name&gt; &lt;branch&gt;</code> and then finally sending the changes to GitHub using <code>git push &lt;name&gt; &lt;branch&gt;</code>.</p></li>
-<li><p><strong>Pull and push</strong> - After linking the project to a GitHub repository, RStudio has a GUI interface for pulling and pushing changes. It’s good practice to pull from GitHub to check for changes that have occurred since the last time and to help avoid merge conflicts. After that you can click push to send all your commits to GitHub, now everything is in-sync again.</p></li>
-</ol>
-<p><img src="images/rstudio-pullpush.png" width="95%" style="display: block; margin: auto;" />
- </p>
 
-<div style="page-break-after: always;"></div>
 </div>
 <!-- </div> -->
             </section>
@@ -193,8 +160,8 @@ $ git merge &lt;branch&gt;</code></pre>
           </div>
         </div>
       </div>
-<a href="project-workflow-with-rstudio.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="workflows.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="github-2.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -225,7 +192,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/NHS-NSS-transforming-publications/git-guide/edit/master/03-ides.Rmd",
+"link": "https://github.com/NHS-NSS-transforming-publications/git-guide/edit/master/ii-setup.Rmd",
 "text": "Edit"
 },
 "history": {
