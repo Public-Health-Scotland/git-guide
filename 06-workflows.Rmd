@@ -6,7 +6,7 @@ There are many different ways to use Git, and jumping in can often provide insig
 
 ## GitHub Workflow {-}
 
-This is our recommended workflow. The workflow is branch-based and involves keeping the master branch clean and 'production ready'/fully-functional at all times. The workflow is from GitHub and can be seen here: https://guides.github.com/pdfs/githubflow-online.pdf 
+This is our recommended workflow. The workflow is branch-based and involves keeping the master branch clean and 'production ready'/fully-functional at all times. The workflow is from GitHub and can be seen here: https://docs.github.com/en/get-started/quickstart/github-flow
 
 ```{r echo = FALSE, fig.align = 'center', out.width = '95%'}
 knitr::include_graphics('images/githubflow.png')

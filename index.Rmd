@@ -1,13 +1,16 @@
 ---
-title: "A Quick Guide to Git & GitHub"
+title: |
+  ![](images/phs-logo.png){width=250px align=right}
+  A Quick Guide to Git
 author: "Russell McCreath"
 site: bookdown::bookdown_site
 output: 
   bookdown::gitbook:
+    css: "style.css"
     split_by: section
     config:
       toc:
-description: "A quick start guide for using Git, GitHub, and integrations with RStudio"
+description: "A quick start guide for using Git in Public Health Scotland (PHS)"
 github-repo: Public-Health-Scotland/git-guide
 output_dir: /docs
 ---
