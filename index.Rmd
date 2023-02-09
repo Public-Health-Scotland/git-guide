@@ -9,7 +9,6 @@ output:
       toc:
 description: "A quick start guide for using Git, GitHub, and integrations with RStudio"
 github-repo: Public-Health-Scotland/git-guide
-cover-image: images/cover.png
 output_dir: /docs
 ---
 

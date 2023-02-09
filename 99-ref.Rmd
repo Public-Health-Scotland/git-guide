@@ -6,6 +6,7 @@
 
 These are some tips/references to keep in mind when working with git:
 
+* Review [GitHub Guidance](https://github.com/Public-Health-Scotland/GitHub-guidance)
 * Although it's good to use version control throughout a project, Git can be initialised on an existing project folder.
 * Commit often. Commits are the project history so commit after a section of code is completed, before lunch, at the end of the day, etc.
 * [Write good commit messages](https://github.com/erlang/otp/wiki/writing-good-commit-messages). The messages should be succinct, meaningful, and written in imperative form (i.e. "Add x, y, z" not "Added x, y, z").

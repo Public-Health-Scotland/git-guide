@@ -8,12 +8,13 @@ knitr::include_graphics('images/rstudio.png')
 &nbsp;
 
 
-RStudio (the most commonly used R IDE) comes with some useful Git integration in the form of buttons. While some advanced Git features still require the command line, RStudio has a nice interface for many common Git operations. As such, this guide and the supporting workshops focus on utilising this interface for learning and utilising Git. 
+IDEs (Integrated Development Environments) are what most of us use to read, write, and run code. They provide affordances and additional features to make tasks related to this easier. One of these things is integrating Git workflows into the software.
 
-RStudio allows us to create a project associated with a given folder/directory to bundle everything together. It is through a project that RStudio gets its Git integration, so projects can be used to version control any file within the associated directory. RStudio is able to connect to remote repositories on platforms such as GitHub, so the command line is not necessary to "push" or "pull" code from there.
+RStudio (the most commonly used R IDE) comes with some useful Git integration in the form of buttons and windows with details about the Git workflow. While some advanced Git features still require the command line, RStudio has a nice interface for many common Git operations. As such, this guide and the supporting workshops focus on utilising this interface for learning and utilising Git. It's important to note that the use of [RStudio Projects](https://support.posit.co/hc/en-us/articles/200526207-Using-RStudio-Projects) is necessary for this to work.
 
+## Quick Start RStudio {-}
 
-## Quick Start RStudio
+RStudio allows us to create a project associated with a given folder/directory to bundle everything together. It is through an RStudio Project that RStudio gets its Git integration, so projects can be used to version control any file within the associated directory. RStudio is able to connect to remote repositories on platforms such as GitHub, so the command line is not necessary to "push" or "pull" code from there.
 
 1. **Set up R Project** 
 
@@ -60,10 +61,10 @@ knitr::include_graphics('images/rstudio-branch.png', dpi = NA)
 ```
 &nbsp;
 
-- **Merge Branches** - When the working branch should be merged back to the master branch, this must be done on the command line as there is no way to do this using the GUI. This can be accessed from the "More" menu in the Git pane and selecting "Shell" or in the RStudio Terminal window. Once you're in either of these, enter the command `git merge <branch>`.
+- **Merge Branches** - When the working branch should be merged back to the main branch, this must be done on the command line as there is no way to do this using the GUI. This can be accessed from the "More" menu in the Git pane and selecting "Shell" or in the RStudio Terminal window. Once you're in either of these, enter the command `git merge <branch>`.
 
 ```
-username@NSS000000  ~/Documents/demo-project  (master)
+username@PHS000000  ~/Documents/demo-project  (main)
 $ git merge <branch>
 ```
 

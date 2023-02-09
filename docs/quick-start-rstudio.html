@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>3.1 Quick Start RStudio | A Quick Guide to Git &amp; GitHub</title>
+  <title>Quick Start RStudio | A Quick Guide to Git &amp; GitHub</title>
   <meta name="description" content="A quick start guide for using Git, GitHub, and integrations with RStudio" />
   <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="3.1 Quick Start RStudio | A Quick Guide to Git &amp; GitHub" />
+  <meta property="og:title" content="Quick Start RStudio | A Quick Guide to Git &amp; GitHub" />
   <meta property="og:type" content="book" />
   <meta property="og:image" content="/images/cover.png" />
   <meta property="og:description" content="A quick start guide for using Git, GitHub, and integrations with RStudio" />
   <meta name="github-repo" content="Public-Health-Scotland/git-guide" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="3.1 Quick Start RStudio | A Quick Guide to Git &amp; GitHub" />
+  <meta name="twitter:title" content="Quick Start RStudio | A Quick Guide to Git &amp; GitHub" />
   
   <meta name="twitter:description" content="A quick start guide for using Git, GitHub, and integrations with RStudio" />
   <meta name="twitter:image" content="/images/cover.png" />
@@ -98,23 +98,13 @@
 </ul></li>
 <li class="chapter" data-level="3" data-path="ides.html"><a href="ides.html"><i class="fa fa-check"></i><b>3</b> IDEs</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="quick-start-rstudio.html"><a href="quick-start-rstudio.html"><i class="fa fa-check"></i><b>3.1</b> Quick Start RStudio</a></li>
+<li class="chapter" data-level="" data-path="quick-start-rstudio.html"><a href="quick-start-rstudio.html"><i class="fa fa-check"></i>Quick Start RStudio</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="workflows.html"><a href="workflows.html"><i class="fa fa-check"></i>Workflows</a>
 <ul>
 <li class="chapter" data-level="" data-path="github-workflow.html"><a href="github-workflow.html"><i class="fa fa-check"></i>GitHub Workflow</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="git-cheat-sheet.html"><a href="git-cheat-sheet.html"><i class="fa fa-check"></i>Git Cheat Sheet</a>
-<ul>
-<li class="chapter" data-level="" data-path="git-cheat-sheet.html"><a href="git-cheat-sheet.html#git-basics"><i class="fa fa-check"></i>Git Basics</a></li>
-<li class="chapter" data-level="" data-path="git-cheat-sheet.html"><a href="git-cheat-sheet.html#undoing-changes"><i class="fa fa-check"></i>Undoing changes</a></li>
-<li class="chapter" data-level="" data-path="git-cheat-sheet.html"><a href="git-cheat-sheet.html#rewriting-git-history"><i class="fa fa-check"></i>Rewriting Git History</a></li>
-<li class="chapter" data-level="" data-path="git-cheat-sheet.html"><a href="git-cheat-sheet.html#git-branches"><i class="fa fa-check"></i>Git Branches</a></li>
-<li class="chapter" data-level="" data-path="git-cheat-sheet.html"><a href="git-cheat-sheet.html#remote-repositories"><i class="fa fa-check"></i>Remote Repositories</a></li>
-<li class="chapter" data-level="" data-path="git-cheat-sheet.html"><a href="git-cheat-sheet.html#git-log"><i class="fa fa-check"></i>Git Log</a></li>
-<li class="chapter" data-level="" data-path="git-cheat-sheet.html"><a href="git-cheat-sheet.html#git-diff"><i class="fa fa-check"></i>Git Diff</a></li>
-<li class="chapter" data-level="" data-path="git-cheat-sheet.html"><a href="git-cheat-sheet.html#git-reset"><i class="fa fa-check"></i>Git Reset</a></li>
-</ul></li>
+<li class="chapter" data-level="" data-path="git-cheat-sheet.html"><a href="git-cheat-sheet.html"><i class="fa fa-check"></i>Git Cheat Sheet</a></li>
 <li class="chapter" data-level="" data-path="reference.html"><a href="reference.html"><i class="fa fa-check"></i>Reference</a>
 <ul>
 <li class="chapter" data-level="" data-path="reference.html"><a href="reference.html#top-tips"><i class="fa fa-check"></i>Top Tips</a></li>
@@ -139,8 +129,9 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="quick-start-rstudio" class="section level2 hasAnchor" number="3.1">
-<h2><span class="header-section-number">3.1</span> Quick Start RStudio<a href="quick-start-rstudio.html#quick-start-rstudio" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="quick-start-rstudio" class="section level2 unnumbered hasAnchor">
+<h2>Quick Start RStudio<a href="quick-start-rstudio.html#quick-start-rstudio" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>RStudio allows us to create a project associated with a given folder/directory to bundle everything together. It is through an RStudio Project that RStudio gets its Git integration, so projects can be used to version control any file within the associated directory. RStudio is able to connect to remote repositories on platforms such as GitHub, so the command line is not necessary to “push” or “pull” code from there.</p>
 <ol style="list-style-type: decimal">
 <li><strong>Set up R Project</strong></li>
 </ol>
@@ -179,9 +170,9 @@
 <p><img src="images/rstudio-branch.png" width="95%" style="display: block; margin: auto;" />
  </p>
 <ul>
-<li><strong>Merge Branches</strong> - When the working branch should be merged back to the master branch, this must be done on the command line as there is no way to do this using the GUI. This can be accessed from the “More” menu in the Git pane and selecting “Shell” or in the RStudio Terminal window. Once you’re in either of these, enter the command <code>git merge &lt;branch&gt;</code>.</li>
+<li><strong>Merge Branches</strong> - When the working branch should be merged back to the main branch, this must be done on the command line as there is no way to do this using the GUI. This can be accessed from the “More” menu in the Git pane and selecting “Shell” or in the RStudio Terminal window. Once you’re in either of these, enter the command <code>git merge &lt;branch&gt;</code>.</li>
 </ul>
-<pre><code>username@NSS000000  ~/Documents/demo-project  (master)
+<pre><code>username@PHS000000  ~/Documents/demo-project  (main)
 $ git merge &lt;branch&gt;</code></pre>
 <ol start="5" style="list-style-type: decimal">
 <li><p><strong>Link to GitHub</strong> - If this is a new project, it won’t be linked to GitHub yet. <em>See <a href="quick-start-github.html#quick-start-github">Quick Start GitHub</a> for instructions on how to set up a repo on GitHub.</em> RStudio currently doesn’t have a GUI option for this and must be done on the command line. As above, this can be accessed from the “More” menu in the Git pane and selecting “Shell” or in the RStudio Terminal window. Once you’re in either of these, enter the command <code>git remote add &lt;name&gt; &lt;url&gt;</code> (<em><code>&lt;name&gt;</code> is any name to refer to the GitHub connection but <code>origin</code> is the most common/preferred name to use</em>), pulling in any changes that have been made on GitHub in the meantime using <code>git pull &lt;name&gt; &lt;branch&gt;</code> and then finally sending the changes to GitHub using <code>git push &lt;name&gt; &lt;branch&gt;</code>.</p></li>
@@ -230,8 +221,8 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/NHS-NSS-transforming-publications/git-guide/edit/master/05-ides.Rmd",
-"text": "Edit"
+"link": null,
+"text": null
 },
 "history": {
 "link": null,
