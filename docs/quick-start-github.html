@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>2.1 Quick Start GitHub | A Quick Guide to Git &amp; GitHub</title>
+  <title>Quick Start GitHub | A Quick Guide to Git &amp; GitHub</title>
   <meta name="description" content="A quick start guide for using Git, GitHub, and integrations with RStudio" />
   <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="2.1 Quick Start GitHub | A Quick Guide to Git &amp; GitHub" />
+  <meta property="og:title" content="Quick Start GitHub | A Quick Guide to Git &amp; GitHub" />
   <meta property="og:type" content="book" />
   <meta property="og:image" content="/images/cover.png" />
   <meta property="og:description" content="A quick start guide for using Git, GitHub, and integrations with RStudio" />
   <meta name="github-repo" content="Public-Health-Scotland/git-guide" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="2.1 Quick Start GitHub | A Quick Guide to Git &amp; GitHub" />
+  <meta name="twitter:title" content="Quick Start GitHub | A Quick Guide to Git &amp; GitHub" />
   
   <meta name="twitter:description" content="A quick start guide for using Git, GitHub, and integrations with RStudio" />
   <meta name="twitter:image" content="/images/cover.png" />
@@ -86,14 +86,14 @@
 </ul></li>
 <li class="chapter" data-level="1" data-path="git-1.html"><a href="git-1.html"><i class="fa fa-check"></i><b>1</b> Git</a>
 <ul>
-<li class="chapter" data-level="1.1" data-path="quick-start-git.html"><a href="quick-start-git.html"><i class="fa fa-check"></i><b>1.1</b> Quick Start Git</a></li>
+<li class="chapter" data-level="" data-path="quick-start-git.html"><a href="quick-start-git.html"><i class="fa fa-check"></i>Quick Start Git</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="git-remotes.html"><a href="git-remotes.html"><i class="fa fa-check"></i><b>2</b> Git Remotes</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="quick-start-github.html"><a href="quick-start-github.html"><i class="fa fa-check"></i><b>2.1</b> Quick Start GitHub</a>
+<li class="chapter" data-level="" data-path="quick-start-github.html"><a href="quick-start-github.html"><i class="fa fa-check"></i>Quick Start GitHub</a>
 <ul>
-<li class="chapter" data-level="2.1.1" data-path="quick-start-github.html"><a href="quick-start-github.html#new-project-repository"><i class="fa fa-check"></i><b>2.1.1</b> New Project Repository</a></li>
-<li class="chapter" data-level="2.1.2" data-path="quick-start-github.html"><a href="quick-start-github.html#existing-project-repository"><i class="fa fa-check"></i><b>2.1.2</b> Existing Project Repository</a></li>
+<li class="chapter" data-level="" data-path="quick-start-github.html"><a href="quick-start-github.html#new-project-repository"><i class="fa fa-check"></i>New Project Repository</a></li>
+<li class="chapter" data-level="" data-path="quick-start-github.html"><a href="quick-start-github.html#existing-project-repository"><i class="fa fa-check"></i>Existing Project Repository</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="ides.html"><a href="ides.html"><i class="fa fa-check"></i><b>3</b> IDEs</a>
@@ -139,10 +139,14 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="quick-start-github" class="section level2 hasAnchor" number="2.1">
-<h2><span class="header-section-number">2.1</span> Quick Start GitHub<a href="quick-start-github.html#quick-start-github" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="new-project-repository" class="section level3 hasAnchor" number="2.1.1">
-<h3><span class="header-section-number">2.1.1</span> New Project Repository<a href="quick-start-github.html#new-project-repository" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="quick-start-github" class="section level2 unnumbered hasAnchor">
+<h2>Quick Start GitHub<a href="quick-start-github.html#quick-start-github" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>GitHub is a Git hosting repository that provides users with tools to ship better code through command line features, issues (threaded discussions), pull requests, and code review. GitHub builds collaboration directly into the development process. Work is organised into according to Git repositories, where users can outline requirements or direction and set expectations for team members. Then, using the <a href="github-workflow.html#github-workflow">GitHub Workflow</a>, developers simply create a branch to work on updates, commit changes to save them, open a pull request to propose and discuss changes, and merge pull requests once everyone is on the same page.</p>
+<blockquote>
+<p><span style="color:red">GitHub should be thought of as a public forum. No confidential information (including server connection details, passwords, and person identifiable information) should be pushed, even to a private repository! Keep this in mind throughout any project, it’s easier to maintain security throughout than have to go back through and delete code or commits later.</span></p>
+</blockquote>
+<div id="new-project-repository" class="section level3 unnumbered hasAnchor">
+<h3>New Project Repository<a href="quick-start-github.html#new-project-repository" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Just like in Git, a repository is used to organise a project. Repositories contain files, folders, images, data-sets (with caution), and anything else the project may need.</p>
 <p>If you’re setting up a new project on GitHub, follow these instructions. It is recommended to include a README or some other file with information about the project, this can be done at the same time the new repository is created.</p>
 <ol style="list-style-type: decimal">
@@ -152,70 +156,73 @@
 <p><img src="images/github-newrepo.png" width="95%" style="display: block; margin: auto;" />
  </p>
 <ol start="3" style="list-style-type: decimal">
-<li><strong>Fill in the details</strong> - select the owner, give it a name (short, specfic, memorable, and preferably lowercase-with-hyphens), write a short description, and consider if initialising with a README is appropriate. <em>A README file is used to provide up front information about what the project does, why it’s useful, how users can interact, where to get help, and who maintains and contributes to the project. This is really useful for anyone landing on the GitHub page to find out more. Initialising a repository on GitHub with a README will simply add a markdown file to which you can add the details to later.</em></li>
-<li><strong>Click “Create repository”</strong></li>
+<li><p><strong>Fill in the details</strong> - select the owner, give it a name (short, specific, memorable, and preferably lowercase-with-hyphens), write a short description, and consider if initialising with a README is appropriate.</p>
+<blockquote>
+<p><em>A README file is used to provide up front information about what the project does, why it’s useful, how users can interact, where to get help, and who maintains and contributes to the project. This is really useful for anyone landing on the GitHub page to find out more. Initialising a repository on GitHub with a README will simply add a markdown file to which you can add the details to later.</em></p>
+</blockquote></li>
+<li><p><strong>Click “Create repository”</strong></p></li>
 </ol>
 <p><img src="images/github-createrepo.png" width="95%" style="display: block; margin: auto;" />
  </p>
 <ol start="5" style="list-style-type: decimal">
-<li><strong>Link local project to GitHub</strong> - if you’re not using a GUI (Graphical User Interface) such as RStudio which has Git and GitHub integrations (see <a href="quick-start-rstudio.html#quick-start-rstudio">Quick Start RStudio</a>), follow along using command line tools, introduced above in <a href="quick-start-git.html#quick-start-git">Quick Start Git</a>. In order to commit to Git and then link to GitHub, some file needs to exist. In this example, a README.md file is created. Then, we add the link to the GitHub repo (you only need to do this once per project) with <code>git remote add &lt;name&gt; &lt;url&gt;</code> (<em><code>&lt;name&gt;</code> is any name to refer to the GitHub connection but <code>origin</code> is the most common/preferred name to use</em>) and then sending the first set of changes to GitHub using <code>git push &lt;name&gt; &lt;branch&gt;</code>. <em>Also, this example uses the HTTPS connection (a URL) to GitHub. Your URL will be unique to your project. Check the GitHub code page for the instructions.</em></li>
+<li><strong>Link local project to GitHub</strong> - if you’re not using a GUI (Graphical User Interface) such as RStudio which has Git and GitHub integrations (see <a href="quick-start-rstudio.html#quick-start-rstudio">Quick Start RStudio</a>), follow along using command line tools, introduced above in <a href="quick-start-git.html#quick-start-git">Quick Start Git</a>. In order to commit to Git and then link to GitHub, some file needs to exist. In this example, a README.md file is created. Then, we add the link to the GitHub repo (you only need to do this once per project) with <code>git remote add &lt;name&gt; &lt;url&gt;</code> (<em><code>&lt;name&gt;</code> is any name to refer to the GitHub connection but <code>origin</code> is the most common/preferred name to use</em>) and then sending the first set of changes to GitHub using <code>git push &lt;name&gt; &lt;branch&gt;</code>. <em>The URL will be unique to your project. Check the GitHub repo code page for the instructions.</em></li>
 </ol>
-<pre><code>username@NSS000000 MINGW64 ~/Documents/demo-project
+<pre><code>username@PHS000000 MINGW64 ~/Documents/demo-project
 $ echo &quot;# demo-project&quot; &gt;&gt; README.md
 $ git init
 Initialized empty Git repository in C:/Users/username/Documents/demo-project/.git/
 
-username@NSS000000 MINGW64 ~/Documents/demo-project
+username@PHS000000 MINGW64 ~/Documents/demo-project
 $ git add README.md
 $ git commit -m &quot;first commit&quot;
-[master (root-commit) 1ab2cde] first commit
+[main (root-commit) 1ab2cde] first commit
   1 file changed, 1 insertion(+)
   create mode 100644 README.md
   
-username@NSS000000 MINGW64 ~/Documents/demo-project
+username@PHS000000 MINGW64 ~/Documents/demo-project
 $ git remote add origin &lt;url&gt;
-$ git push origin master
+$ git push origin main
 Counting objects: 3, done.
 Writing objects: 100% (3/3), 220 bytes | 220.00 KiB/s, done.
 Total 3 (delta 0), reused 0 (delta 0)
 To &lt;url&gt;
-* [new branch]    master -&gt; master
-Branch master set up to track remote branch master from origin.
+* [new branch]    main -&gt; main
+Branch main set up to track remote branch main from origin.
 
-username@NSS000000 MINGW64 ~/Documents/demo-project
+username@PHS000000 MINGW64 ~/Documents/demo-project
 $</code></pre>
 </div>
-<div id="existing-project-repository" class="section level3 hasAnchor" number="2.1.2">
-<h3><span class="header-section-number">2.1.2</span> Existing Project Repository<a href="quick-start-github.html#existing-project-repository" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="existing-project-repository" class="section level3 unnumbered hasAnchor">
+<h3>Existing Project Repository<a href="quick-start-github.html#existing-project-repository" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ol style="list-style-type: decimal">
 <li><strong>Download the repository from GitHub</strong> - get the URL for the project you are looking to contribute to and using <code>git clone &lt;url&gt;</code> make a local copy on your machine. This will create a local folder with the same name as the repo and a copy of all the files inside. In order to continue version control on that folder/repo, move into the folder on the command line using <code>cd &lt;folder-name&gt;</code>.</li>
 </ol>
-<pre><code>username@NSS000000 MINGW64 ~/Documents
+<pre><code>username@PHS000000 MINGW64 ~/Documents
 $ git clone &lt;url&gt;
 Cloning into &#39;existing-project&#39;...
 remote: Enumerating objects: 7, done.
 remote: Total 7 (delta 0), reused 0 (delta 0), pack-reused 7
 Unpacking objects: 100% (7/7), done.
 
-username@NSS000000 MINGW64 ~/Documents
+username@PHS000000 MINGW64 ~/Documents
 $ cd exising-project
 
-username@NSS000000 MINGW64 ~/Documents/existing-project
+username@PHS000000 MINGW64 ~/Documents/existing-project
 $</code></pre>
 <ol start="2" style="list-style-type: decimal">
 <li><strong>Set up a branch, make some changes, stage them, commit them, and push them back to GitHub</strong></li>
 </ol>
-<pre><code>username@NSS000000 MINGW64 ~/Documents/existing-project
+<pre><code>username@PHS000000 MINGW64 ~/Documents/existing-project
 $ git checkout -b &#39;feature&#39;
 Switched to branch &#39;feature&#39;
 
-username@NSS000000 MINGW64 ~/Documents/existing-project
+username@PHS000000 MINGW64 ~/Documents/existing-project
 $ git add new-file.md
 
-username@NSS000000 MINGW64 ~/Documents/existing-project
+username@PHS000000 MINGW64 ~/Documents/existing-project
 $ git commit -m &quot;add new-file&quot;
 
-username@NSS000000 MINGW64 ~/Documents/existing-project
+username@PHS000000 MINGW64 ~/Documents/existing-project
 $ git push -u origin feature
 Counting objects: 1, done.
 Writing objects: 100% (1/1), 10 bytes | 10.00 KiB/s, done.
@@ -224,10 +231,10 @@ To &lt;url&gt;
 * [new branch]    feature -&gt; feature
 Branch feature set up to track remote branch feature from origin.
 
-username@NSS000000 MINGW64 ~/Documents/existing-project
+username@PHS000000 MINGW64 ~/Documents/existing-project
 $ </code></pre>
 <ol start="3" style="list-style-type: decimal">
-<li><p><strong>Open a pull request</strong> - when you’ve made changes that are ready to be included into production, open a pull request to propose and collaborate. These changes are proposed in that branch, which ensures that the master branch only contains finished and approved work.</p>
+<li><p><strong>Open a pull request</strong> - when you’ve made changes that are ready to be included into production, open a pull request to propose and collaborate. These changes are proposed in that branch, which ensures that the main branch only contains finished and approved work.</p>
 <ol style="list-style-type: decimal">
 <li>On GitHub, go to the main page of the repository.</li>
 <li>In the “Branch:” menu, choose the branch that contains <em>your</em> commits.</li>
