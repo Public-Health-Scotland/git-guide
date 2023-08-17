@@ -4,22 +4,23 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Git | A Quick Guide to Git &amp; GitHub</title>
+  <title>VS Code Setup | A Quick Guide to Git &amp; GitHub</title>
   <meta name="description" content="A quick start guide for using Git, GitHub, and integrations with RStudio" />
   <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Git | A Quick Guide to Git &amp; GitHub" />
+  <meta property="og:title" content="VS Code Setup | A Quick Guide to Git &amp; GitHub" />
   <meta property="og:type" content="book" />
   <meta property="og:image" content="/images/cover.png" />
   <meta property="og:description" content="A quick start guide for using Git, GitHub, and integrations with RStudio" />
   <meta name="github-repo" content="Public-Health-Scotland/git-guide" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Git | A Quick Guide to Git &amp; GitHub" />
+  <meta name="twitter:title" content="VS Code Setup | A Quick Guide to Git &amp; GitHub" />
   
   <meta name="twitter:description" content="A quick start guide for using Git, GitHub, and integrations with RStudio" />
   <meta name="twitter:image" content="/images/cover.png" />
 
+<meta name="author" content="Russell McCreath" />
 
 
 
@@ -28,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="setup.html"/>
-<link rel="next" href="github-2.html"/>
+<link rel="prev" href="rstudio-setup.html"/>
+<link rel="next" href="git-1.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -68,14 +69,25 @@
       <nav role="navigation">
 
 <ul class="summary">
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
-<li class="chapter" data-level="1" data-path="git.html"><a href="git.html"><i class="fa fa-check"></i><b>1</b> Git</a>
-<ul>
-<li class="chapter" data-level="1.1" data-path="quick-start-git.html"><a href="quick-start-git.html"><i class="fa fa-check"></i><b>1.1</b> Quick Start Git</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="introduction-setup.html"><a href="introduction-setup.html"><i class="fa fa-check"></i>Introduction &amp; Setup</a>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><strong>Gitting Started with Git</strong></a></li>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i>Introduction</a>
 <ul>
 <li class="chapter" data-level="" data-path="version-control-git-and-remotes.html"><a href="version-control-git-and-remotes.html"><i class="fa fa-check"></i>Version Control, Git, and Remotes</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="setup.html"><a href="setup.html"><i class="fa fa-check"></i>Setup</a>
+<ul>
+<li class="chapter" data-level="" data-path="git-setup.html"><a href="git-setup.html"><i class="fa fa-check"></i>Git Setup</a></li>
+<li class="chapter" data-level="" data-path="github-setup.html"><a href="github-setup.html"><i class="fa fa-check"></i>GitHub Setup</a></li>
+<li class="chapter" data-level="" data-path="gitea-setup.html"><a href="gitea-setup.html"><i class="fa fa-check"></i>Gitea Setup</a></li>
+<li class="chapter" data-level="" data-path="rstudio-setup.html"><a href="rstudio-setup.html"><i class="fa fa-check"></i>RStudio Setup</a>
+<ul>
+<li class="chapter" data-level="" data-path="rstudio-setup.html"><a href="rstudio-setup.html#authentication-for-remotes"><i class="fa fa-check"></i>Authentication for remotes</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="vs-code-setup.html"><a href="vs-code-setup.html"><i class="fa fa-check"></i>VS Code Setup</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="git-1.html"><a href="git-1.html"><i class="fa fa-check"></i><b>1</b> Git</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="quick-start-git.html"><a href="quick-start-git.html"><i class="fa fa-check"></i><b>1.1</b> Quick Start Git</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="github.html"><a href="github.html"><i class="fa fa-check"></i><b>2</b> GitHub</a>
 <ul>
@@ -111,12 +123,6 @@
 <li class="chapter" data-level="" data-path="reference.html"><a href="reference.html#github-1"><i class="fa fa-check"></i>GitHub</a></li>
 <li class="chapter" data-level="" data-path="reference.html"><a href="reference.html#rstudio"><i class="fa fa-check"></i>RStudio</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="setup.html"><a href="setup.html"><i class="fa fa-check"></i>Setup</a>
-<ul>
-<li class="chapter" data-level="" data-path="git-4.html"><a href="git-4.html"><i class="fa fa-check"></i>Git</a></li>
-<li class="chapter" data-level="" data-path="github-2.html"><a href="github-2.html"><i class="fa fa-check"></i>GitHub</a></li>
-<li class="chapter" data-level="" data-path="rstudio-1.html"><a href="rstudio-1.html"><i class="fa fa-check"></i>RStudio</a></li>
-</ul></li>
 </ul>
 
       </nav>
@@ -134,38 +140,20 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="git-4" class="section level2 unnumbered hasAnchor">
-<h2>Git<a href="git-4.html#git-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><em>These intructions should only need to be followed once or when setting up a new device.</em></p>
-<ol style="list-style-type: decimal">
-<li><strong>Install Git</strong> - Git is a free, open-source, software available from <a href="https://git-scm.com/" class="uri">https://git-scm.com/</a>. If you work within NHS National Services Scotland, request the software from IT through the <a href="https://nhsnss.service-now.com/sp">Service Portal</a>. Once authorised, this will allow you to download it from the Software Center on your machine.</li>
-</ol>
-<p>This will install three applications on your computer, go to Start &gt; Git (folder):</p>
-<ul>
-<li><strong>Git Bash</strong> - this is the command line (Shell) interface for Git. This will allow you to enter Git commands, i.e. <code>git init</code>, and can be launched by right clicking in a directory/folder and selecting “Git Bash Here”.</li>
-<li><strong>Git CMD</strong> - this is a deprecated version, similar to the Bash interface, and shouldn’t be used here.</li>
-<li><strong>Git GUI</strong> - this is Git’s version of a Graphical User Interface. This will perform the same functions as “Git Bash”, but employs a point-and-click interface instead. This guide does not cover Git GUI and instead focuses on the integrated Git GUI in RStudio.</li>
-</ul>
-<ol start="2" style="list-style-type: decimal">
-<li><strong>Configure your details</strong> - Git needs to know who you are, use the following commands to configure your username and email using Git Bash (<em>if you’re a GitHub user, use the same email and username you’re registered with on GitHub.</em> This is a necessary step for GitHub to recognise the account where the commits come from, even with proper authentication GitHub will use these details to assign the commits.) Remember not to type the arrow symbols <code>&lt;&gt;</code> when entering the command:</li>
-</ol>
-<ul>
-<li><code>git config --global user.email &lt;NHS email address&gt;</code></li>
-<li><code>git config --global user.name &lt;your name&gt;</code></li>
-</ul>
-<p>At any time you can check what the current user details are using:</p>
-<ul>
-<li><code>git config --global user.email</code></li>
-</ul>
+<div id="vs-code-setup" class="section level2 unnumbered hasAnchor">
+<h2>VS Code Setup<a href="vs-code-setup.html#vs-code-setup" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>[Inset content for VS Code setup here]</p>
+
 <div style="page-break-after: always;"></div>
 </div>
+<!-- </div> -->
             </section>
 
           </div>
         </div>
       </div>
-<a href="setup.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="github-2.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="rstudio-setup.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="git-1.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -196,7 +184,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/NHS-NSS-transforming-publications/git-guide/edit/master/ii-setup.Rmd",
+"link": "https://github.com/NHS-NSS-transforming-publications/git-guide/edit/master/02-setup.Rmd",
 "text": "Edit"
 },
 "history": {
@@ -211,9 +199,6 @@ gitbook.start({
 "search": {
 "engine": "fuse",
 "options": null
-},
-"toc": {
-"collapse": "section"
 }
 });
 });

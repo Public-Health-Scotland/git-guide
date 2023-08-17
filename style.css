@@ -1,0 +1,15 @@
+h1, h2 {
+  color: #433683;
+}
+
+h3, h4, h5 {
+  color: #bd27b9;
+}
+
+code {
+  font-family: 'Source Code Pro';
+}
+
+th {
+  color: #433683 !important;
+}

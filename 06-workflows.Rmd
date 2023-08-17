@@ -1,0 +1,20 @@
+\newpage
+
+# Workflows {-}
+
+There are many different ways to use Git, and jumping in can often provide insight that would allow you to generate a workflow that works for you and your project. However, some workflows already exist, some are deliberately simple and others deliberately complicated. Each has its purpose and place. However, in general we recommend the use of the [GitHub Workflow](#github-workflow) (named as such because GitHub formalised it, not because you have to use GitHub with it). 
+
+## GitHub Workflow {-}
+
+This is our recommended workflow. The workflow is branch-based and involves keeping the master branch clean and 'production ready'/fully-functional at all times. The workflow is from GitHub and can be seen here: https://docs.github.com/en/get-started/quickstart/github-flow
+
+```{r echo = FALSE, fig.align = 'center', out.width = '95%'}
+knitr::include_graphics('images/githubflow.png')
+```
+
+1. **Create a branch** - topic/per-person branches created from the master allow teams to contribute to separate issues at the same time.
+2. **Add commits** - these are snapshots of development within a branch and create safe, revertible points in the project's history.
+3. **Open a pull request** - pull requests are the mechanism for which modified code within a branch is merged back into the master branch, i.e. bringing the master branch up to date with changes made within a branch.
+4. **Discuss and review code** - teams participate in code reviews by commenting, testing, and reviewing open pull requests. Pull requests should be approved by at least one collaborator - we recommend you assign a specific reviewer(s) to check the work. In order to ensure the master branch remains 'production ready' we also recommend that the master branch is protected and any changes are tested by the reviewer before approving.
+5. **Merge** - upon clicking merge, GitHub automatically performs the equivalent of a local `git merge` operation. Although you'll likely never have to manually enter this command, it's good to understand that the buttons available for interaction with Git are just performing these commands for us. GitHub also keeps the entire branch development history on the merged pull request.
+6. **Deploy** (*optional*) - teams can choose the best release cycles or incorporate continuous integration tools and operate with the assurance that code on the deployment branch has gone through a robust workflow.

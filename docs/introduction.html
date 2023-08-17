@@ -1,50 +1,58 @@
 <!DOCTYPE html>
-<html >
-
+<html lang="" xml:lang="">
 <head>
 
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>2.3 Introduction | A Quick Guide to Git &amp; GitHub</title>
-  <meta name="description" content="A quick start guide for using Git, GitHub, and integrations with RStudio">
-  <meta name="generator" content="bookdown  and GitBook 2.6.7">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Introduction | A Quick Guide to Git &amp; GitHub</title>
+  <meta name="description" content="A quick start guide for using Git, GitHub, and integrations with RStudio" />
+  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="2.3 Introduction | A Quick Guide to Git &amp; GitHub" />
+  <meta property="og:title" content="Introduction | A Quick Guide to Git &amp; GitHub" />
   <meta property="og:type" content="book" />
-  
-  <meta property="og:image" content="images/cover.png" />
+  <meta property="og:image" content="/images/cover.png" />
   <meta property="og:description" content="A quick start guide for using Git, GitHub, and integrations with RStudio" />
-  <meta name="github-repo" content="NHS-NSS-transforming-publications/git-guide" />
+  <meta name="github-repo" content="Public-Health-Scotland/git-guide" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="2.3 Introduction | A Quick Guide to Git &amp; GitHub" />
+  <meta name="twitter:title" content="Introduction | A Quick Guide to Git &amp; GitHub" />
   
   <meta name="twitter:description" content="A quick start guide for using Git, GitHub, and integrations with RStudio" />
-  <meta name="twitter:image" content="images/cover.png" />
+  <meta name="twitter:image" content="/images/cover.png" />
+
+<meta name="author" content="Russell McCreath" />
 
 
 
-
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="setup-1.html">
-<link rel="next" href="navigating.html">
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link rel="prev" href="index.html"/>
+<link rel="next" href="version-control-git-and-remotes.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
 
 
 
 
 
 
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 
 
 
@@ -61,82 +69,48 @@
       <nav role="navigation">
 
 <ul class="summary">
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
-<li class="chapter" data-level="" data-path="introduction-setup.html"><a href="introduction-setup.html"><i class="fa fa-check"></i>Introduction &amp; Setup</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><strong>Gitting Started with Git</strong></a></li>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i>Introduction</a>
+<ul>
 <li class="chapter" data-level="" data-path="version-control-git-and-remotes.html"><a href="version-control-git-and-remotes.html"><i class="fa fa-check"></i>Version Control, Git, and Remotes</a></li>
-<li class="chapter" data-level="" data-path="workflows.html"><a href="workflows.html"><i class="fa fa-check"></i>Workflows</a><ul>
-<li class="chapter" data-level="" data-path="workflows.html"><a href="workflows.html#github-workflow"><i class="fa fa-check"></i>GitHub Workflow</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="setup.html"><a href="setup.html"><i class="fa fa-check"></i>Setup</a><ul>
-<li class="chapter" data-level="" data-path="setup.html"><a href="setup.html#git-1"><i class="fa fa-check"></i>Git</a></li>
-<li class="chapter" data-level="" data-path="setup.html"><a href="setup.html#github"><i class="fa fa-check"></i>GitHub</a></li>
-<li class="chapter" data-level="" data-path="setup.html"><a href="setup.html#rstudio"><i class="fa fa-check"></i>RStudio</a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="1" data-path="project-workflow-with-rstudio.html"><a href="project-workflow-with-rstudio.html"><i class="fa fa-check"></i><b>1</b> Project Workflow with RStudio</a><ul>
-<li class="chapter" data-level="1.1" data-path="quick-start-rstudio.html"><a href="quick-start-rstudio.html"><i class="fa fa-check"></i><b>1.1</b> Quick Start RStudio</a></li>
-<li class="chapter" data-level="1.2" data-path="rstudio-reference.html"><a href="rstudio-reference.html"><i class="fa fa-check"></i><b>1.2</b> RStudio Reference</a></li>
-</ul></li>
-<li class="chapter" data-level="2" data-path="the-shell.html"><a href="the-shell.html"><i class="fa fa-check"></i><b>2</b> The Shell</a><ul>
-<li class="chapter" data-level="2.1" data-path="background.html"><a href="background.html"><i class="fa fa-check"></i><b>2.1</b> Background</a></li>
-<li class="chapter" data-level="2.2" data-path="setup-1.html"><a href="setup-1.html"><i class="fa fa-check"></i><b>2.2</b> Setup</a><ul>
-<li class="chapter" data-level="2.2.1" data-path="setup-1.html"><a href="setup-1.html#windows"><i class="fa fa-check"></i><b>2.2.1</b> Windows</a></li>
-<li class="chapter" data-level="2.2.2" data-path="setup-1.html"><a href="setup-1.html#linux"><i class="fa fa-check"></i><b>2.2.2</b> Linux</a></li>
-<li class="chapter" data-level="2.2.3" data-path="setup-1.html"><a href="setup-1.html#mac-os"><i class="fa fa-check"></i><b>2.2.3</b> Mac OS</a></li>
-</ul></li>
-<li class="chapter" data-level="2.3" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>2.3</b> Introduction</a><ul>
-<li class="chapter" data-level="2.3.1" data-path="introduction.html"><a href="introduction.html#commands-flags"><i class="fa fa-check"></i><b>2.3.1</b> Commands &amp; Flags</a></li>
-<li class="chapter" data-level="2.3.2" data-path="introduction.html"><a href="introduction.html#difficulty"><i class="fa fa-check"></i><b>2.3.2</b> Difficulty</a></li>
-<li class="chapter" data-level="2.3.3" data-path="introduction.html"><a href="introduction.html#benefits"><i class="fa fa-check"></i><b>2.3.3</b> Benefits</a></li>
-</ul></li>
-<li class="chapter" data-level="2.4" data-path="navigating.html"><a href="navigating.html"><i class="fa fa-check"></i><b>2.4</b> Navigating</a><ul>
-<li class="chapter" data-level="2.4.1" data-path="navigating.html"><a href="navigating.html#file-system"><i class="fa fa-check"></i><b>2.4.1</b> File System</a></li>
-</ul></li>
-<li class="chapter" data-level="2.5" data-path="shell-cheat-sheet.html"><a href="shell-cheat-sheet.html"><i class="fa fa-check"></i><b>2.5</b> Shell Cheat Sheet</a><ul>
-<li class="chapter" data-level="" data-path="shell-cheat-sheet.html"><a href="shell-cheat-sheet.html#glossary"><i class="fa fa-check"></i>Glossary</a></li>
-<li class="chapter" data-level="" data-path="shell-cheat-sheet.html"><a href="shell-cheat-sheet.html#navigation"><i class="fa fa-check"></i>Navigation</a></li>
-<li class="chapter" data-level="" data-path="shell-cheat-sheet.html"><a href="shell-cheat-sheet.html#shortcuts"><i class="fa fa-check"></i>Shortcuts</a></li>
-<li class="chapter" data-level="" data-path="shell-cheat-sheet.html"><a href="shell-cheat-sheet.html#bash-basics"><i class="fa fa-check"></i>Bash Basics</a></li>
-<li class="chapter" data-level="" data-path="shell-cheat-sheet.html"><a href="shell-cheat-sheet.html#file-commands"><i class="fa fa-check"></i>File Commands</a></li>
-<li class="chapter" data-level="" data-path="shell-cheat-sheet.html"><a href="shell-cheat-sheet.html#directory-commands"><i class="fa fa-check"></i>Directory Commands</a></li>
-</ul></li>
-<li class="chapter" data-level="2.6" data-path="shell-reference.html"><a href="shell-reference.html"><i class="fa fa-check"></i><b>2.6</b> Shell Reference</a></li>
-</ul></li>
-<li class="chapter" data-level="3" data-path="version-control-with-git.html"><a href="version-control-with-git.html"><i class="fa fa-check"></i><b>3</b> Version Control with Git</a><ul>
-<li class="chapter" data-level="3.1" data-path="setup-2.html"><a href="setup-2.html"><i class="fa fa-check"></i><b>3.1</b> Setup</a></li>
-<li class="chapter" data-level="3.2" data-path="quick-start-git.html"><a href="quick-start-git.html"><i class="fa fa-check"></i><b>3.2</b> Quick Start Git</a></li>
-<li class="chapter" data-level="3.3" data-path="git-cheat-sheet.html"><a href="git-cheat-sheet.html"><i class="fa fa-check"></i><b>3.3</b> Git Cheat Sheet</a><ul>
-<li class="chapter" data-level="" data-path="git-cheat-sheet.html"><a href="git-cheat-sheet.html#git-basics"><i class="fa fa-check"></i>Git Basics</a></li>
-<li class="chapter" data-level="" data-path="git-cheat-sheet.html"><a href="git-cheat-sheet.html#undoing-changes"><i class="fa fa-check"></i>Undoing changes</a></li>
-<li class="chapter" data-level="" data-path="git-cheat-sheet.html"><a href="git-cheat-sheet.html#rewriting-git-history"><i class="fa fa-check"></i>Rewriting Git History</a></li>
-<li class="chapter" data-level="" data-path="git-cheat-sheet.html"><a href="git-cheat-sheet.html#git-branches"><i class="fa fa-check"></i>Git Branches</a></li>
-<li class="chapter" data-level="" data-path="git-cheat-sheet.html"><a href="git-cheat-sheet.html#remote-repositories"><i class="fa fa-check"></i>Remote Repositories</a></li>
-<li class="chapter" data-level="" data-path="git-cheat-sheet.html"><a href="git-cheat-sheet.html#git-config"><i class="fa fa-check"></i>Git Config</a></li>
-<li class="chapter" data-level="" data-path="git-cheat-sheet.html"><a href="git-cheat-sheet.html#git-log"><i class="fa fa-check"></i>Git Log</a></li>
-<li class="chapter" data-level="" data-path="git-cheat-sheet.html"><a href="git-cheat-sheet.html#git-diff"><i class="fa fa-check"></i>Git Diff</a></li>
-<li class="chapter" data-level="" data-path="git-cheat-sheet.html"><a href="git-cheat-sheet.html#git-reset"><i class="fa fa-check"></i>Git Reset</a></li>
-<li class="chapter" data-level="" data-path="git-cheat-sheet.html"><a href="git-cheat-sheet.html#git-rebase"><i class="fa fa-check"></i>Git Rebase</a></li>
-<li class="chapter" data-level="" data-path="git-cheat-sheet.html"><a href="git-cheat-sheet.html#git-pull"><i class="fa fa-check"></i>Git Pull</a></li>
-<li class="chapter" data-level="" data-path="git-cheat-sheet.html"><a href="git-cheat-sheet.html#git-push"><i class="fa fa-check"></i>Git Push</a></li>
-</ul></li>
-<li class="chapter" data-level="3.4" data-path="git-reference.html"><a href="git-reference.html"><i class="fa fa-check"></i><b>3.4</b> Git Reference</a><ul>
-<li class="chapter" data-level="" data-path="git-reference.html"><a href="git-reference.html#top-tips"><i class="fa fa-check"></i>Top Tips</a></li>
-<li class="chapter" data-level="" data-path="git-reference.html"><a href="git-reference.html#links"><i class="fa fa-check"></i>Links</a></li>
+<li class="chapter" data-level="" data-path="setup.html"><a href="setup.html"><i class="fa fa-check"></i>Setup</a>
+<ul>
+<li class="chapter" data-level="" data-path="git-setup.html"><a href="git-setup.html"><i class="fa fa-check"></i>Git Setup</a></li>
+<li class="chapter" data-level="" data-path="github-setup.html"><a href="github-setup.html"><i class="fa fa-check"></i>GitHub Setup</a></li>
+<li class="chapter" data-level="" data-path="gitea-setup.html"><a href="gitea-setup.html"><i class="fa fa-check"></i>Gitea Setup</a></li>
+<li class="chapter" data-level="" data-path="rstudio-setup.html"><a href="rstudio-setup.html"><i class="fa fa-check"></i>RStudio Setup</a>
+<ul>
+<li class="chapter" data-level="" data-path="rstudio-setup.html"><a href="rstudio-setup.html#authentication-for-remotes"><i class="fa fa-check"></i>Authentication for remotes</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="github-1.html"><a href="github-1.html"><i class="fa fa-check"></i><b>4</b> GitHub</a><ul>
-<li class="chapter" data-level="4.1" data-path="github-workflow-1.html"><a href="github-workflow-1.html"><i class="fa fa-check"></i><b>4.1</b> GitHub Workflow</a></li>
-<li class="chapter" data-level="4.2" data-path="setup-3.html"><a href="setup-3.html"><i class="fa fa-check"></i><b>4.2</b> Setup</a></li>
-<li class="chapter" data-level="4.3" data-path="quick-start-github.html"><a href="quick-start-github.html"><i class="fa fa-check"></i><b>4.3</b> Quick Start GitHub</a><ul>
-<li class="chapter" data-level="4.3.1" data-path="quick-start-github.html"><a href="quick-start-github.html#new-project-repository"><i class="fa fa-check"></i><b>4.3.1</b> New Project Repository</a></li>
-<li class="chapter" data-level="4.3.2" data-path="quick-start-github.html"><a href="quick-start-github.html#existing-project-repository"><i class="fa fa-check"></i><b>4.3.2</b> Existing Project Repository</a></li>
+<li class="chapter" data-level="1" data-path="git-1.html"><a href="git-1.html"><i class="fa fa-check"></i><b>1</b> Git</a>
+<ul>
+<li class="chapter" data-level="" data-path="quick-start-git.html"><a href="quick-start-git.html"><i class="fa fa-check"></i>Quick Start Git</a></li>
 </ul></li>
-<li class="chapter" data-level="4.4" data-path="github-reference.html"><a href="github-reference.html"><i class="fa fa-check"></i><b>4.4</b> GitHub Reference</a></li>
+<li class="chapter" data-level="2" data-path="git-remotes.html"><a href="git-remotes.html"><i class="fa fa-check"></i><b>2</b> Git Remotes</a>
+<ul>
+<li class="chapter" data-level="" data-path="quick-start-github.html"><a href="quick-start-github.html"><i class="fa fa-check"></i>Quick Start GitHub</a>
+<ul>
+<li class="chapter" data-level="" data-path="quick-start-github.html"><a href="quick-start-github.html#new-project-repository"><i class="fa fa-check"></i>New Project Repository</a></li>
+<li class="chapter" data-level="" data-path="quick-start-github.html"><a href="quick-start-github.html#existing-project-repository"><i class="fa fa-check"></i>Existing Project Repository</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="acknowledgements.html"><a href="acknowledgements.html"><i class="fa fa-check"></i>Acknowledgements</a><ul>
-<li class="chapter" data-level="4.5" data-path="git-3.html"><a href="git-3.html"><i class="fa fa-check"></i><b>4.5</b> Git</a></li>
-<li class="chapter" data-level="4.6" data-path="github-2.html"><a href="github-2.html"><i class="fa fa-check"></i><b>4.6</b> GitHub</a></li>
-<li class="chapter" data-level="4.7" data-path="version-control-in-rstudio.html"><a href="version-control-in-rstudio.html"><i class="fa fa-check"></i><b>4.7</b> Version Control in RStudio</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="ides.html"><a href="ides.html"><i class="fa fa-check"></i><b>3</b> IDEs</a>
+<ul>
+<li class="chapter" data-level="" data-path="quick-start-rstudio.html"><a href="quick-start-rstudio.html"><i class="fa fa-check"></i>Quick Start RStudio</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="workflows.html"><a href="workflows.html"><i class="fa fa-check"></i>Workflows</a>
+<ul>
+<li class="chapter" data-level="" data-path="github-workflow.html"><a href="github-workflow.html"><i class="fa fa-check"></i>GitHub Workflow</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="git-cheat-sheet.html"><a href="git-cheat-sheet.html"><i class="fa fa-check"></i>Git Cheat Sheet</a></li>
+<li class="chapter" data-level="" data-path="reference.html"><a href="reference.html"><i class="fa fa-check"></i>Reference</a>
+<ul>
+<li class="chapter" data-level="" data-path="reference.html"><a href="reference.html#top-tips"><i class="fa fa-check"></i>Top Tips</a></li>
+<li class="chapter" data-level="" data-path="reference.html"><a href="reference.html#git-3"><i class="fa fa-check"></i>Git</a></li>
+<li class="chapter" data-level="" data-path="reference.html"><a href="reference.html#github"><i class="fa fa-check"></i>GitHub</a></li>
+<li class="chapter" data-level="" data-path="reference.html"><a href="reference.html#rstudio"><i class="fa fa-check"></i>RStudio</a></li>
 </ul></li>
 </ul>
 
@@ -155,65 +129,29 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="introduction" class="section level2">
-<h2><span class="header-section-number">2.3</span> Introduction</h2>
-<p>The Shell is a program which runs other programs rather than doing calculations itself. The most popular Unix shell is Bash, (the Bourne Again SHell — so-called because it’s derived from a shell written by Stephen Bourne). Bash is the default shell on most modern implementations of Unix and in most packages that provide Unix-like tools for Windows.</p>
-<p>A typical shell window looks something like:</p>
-<pre><code>user$
-user$ ls -F/
-  Applications/   System/
-  Library/        Users/
-  Network/        Volumes/
-user$</code></pre>
-<p>The first line shows only a prompt, indicating that the shell is waiting for input. Your shell may use different text for the prompt. Most importantly: when typing commands, either from these lessons or from other sources, do not type the prompt, only the commands that follow it.</p>
-<p>The part that you type, <code>ls -F /</code> in the second line of the example, typically has the following structure: a <strong>command</strong>, some <strong>flags</strong> (also called options or switches) and an <strong>argument</strong>. Flags start with a single dash (<code>-</code>) or two dashes (<code>--</code>), and change the behaviour of a command. Arguments tell the command what to operate on (e.g. files and directories). Sometimes flags and arguments are referred to as parameters. A command can be called with more than one flag and more than one argument: but a command doesn’t always require an argument or a flag.</p>
-<p>In the second line of the example above, our command is <code>ls</code>, with a flag <code>-F</code> and an argument <code>/</code>. Each part is separated by spaces: if you omit the space between <code>ls</code> and <code>-F</code> the shell will look for a command called <code>ls-F</code>, which doesn’t exist. Also, capitalisation matters: <code>LS</code> is different from <code>ls</code>.</p>
-<p>Next we see the output that our command produced. In this case it is a listing of files and folders in a location called <code>/</code> - we’ll cover what all these mean later. <em>Those using a macOS might recognise the output in this example.</em></p>
-<p>Finally, the shell again prints the prompt and waits for you to type the next command.</p>
-<p>In the examples for this lesson, we’ll show the prompt as <code>$</code>. You can make your prompt look the same by executing the command <code>PS1='$ '</code>. But you can also leave your prompt as it is - often the prompt includes useful information about who and where you are.</p>
-<p>Open a shell window and try executing <code>ls -F /</code> for yourself (don’t forget that spaces and capitalisation are important!). You can change the prompt too, if you like.</p>
-<div id="commands-flags" class="section level3">
-<h3><span class="header-section-number">2.3.1</span> Commands &amp; Flags</h3>
-<p>Every command is a program stored somewhere on the computer, and the shell keeps a list of places to search for commands (the list is in a variable called PATH, but those are concepts we’ll meet later and are not too important at the moment). Recall that commands, flags and arguments are separated by spaces.</p>
-<p>So let’s look at the REPL (read-evaluate-print loop) in more detail. Notice that the “evaluate” step is made of two parts:</p>
-<ol style="list-style-type: decimal">
-<li>Read what was typed (<code>ls -F /</code> in our example) The shell uses the spaces to split the line into the command, flags, and arguments</li>
-<li>Evaluate: -Find a program called <code>ls</code> -Execute it, passing it the flags and arguments (<code>-F</code> and <code>/</code>) to interpret as the program sees fit</li>
-<li>Print the output produced by the program.</li>
-</ol>
-<p>and then print the prompt and wait for you to enter another command.</p>
-<p><strong>Command not found?</strong><br />
-If the shell can’t find a program whose name is the command you typed, it will print an error message like:</p>
-<pre><code>$ ls-F
--bash: ls-F: command not found</code></pre>
-<p>Usually this means that the command is mis-typed - in this case we omitted the space between <code>ls</code> and <code>-F</code>.</p>
-</div>
-<div id="difficulty" class="section level3">
-<h3><span class="header-section-number">2.3.2</span> Difficulty</h3>
-<p>It is a different model of interacting than a GUI, and that will take some effort - and some time - to learn. A GUI presents you with choices and you select one. With a <strong>command line interface</strong> (CLI) the choices are combinations of commands and parameters, more like words in a language than buttons on a screen. They are not presented to you so you must learn a few, like learning some vocabulary in a new language. But a small number of commands gets you a long way, and we’ll cover those essential few today.</p>
-</div>
-<div id="benefits" class="section level3">
-<h3><span class="header-section-number">2.3.3</span> Benefits</h3>
-<p>The grammar of a shell allows you to combine existing tools into powerful pipelines and handle large volumes of data automatically. Sequences of commands can be written into a script, improving the reproducibility of workflows and allowing you to repeat them easily.</p>
-<p>In addition, the command line is often the easiest way to interact with remote machines and supercomputers. Familiarity with the shell is near essential to run a variety of specialised tools and resources including high-performance computing systems. As clusters and cloud computing systems become more popular for scientific data crunching, being able to interact with the shell is becoming a necessary skill. We can build on the command-line skills covered here to tackle a wide range of scientific questions and computational challenges.</p>
-</div>
+<div id="introduction" class="section level1 unnumbered hasAnchor">
+<h1>Introduction<a href="introduction.html#introduction" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>As you may already know, or will find out, Git is a command line (Shell/Bash) tool used for version control. Throughout this guide, the aim has been to provide a clear workflow and guidance that will allow you to work with these tools with minimal command line interaction. However, if you’d like to know more about this topic, Software Carpentry offer a fantastic <a href="http://swcarpentry.github.io/shell-novice/">Introduction to Shell</a> lesson.</p>
+<p>The target audience for this guide is analysts within Public Health Scotland (PHS). It may be that others find use in this guide, if so, fantastic! If you feel that something is missing or could be better, please raise a <a href="https://github.com/Public-Health-Scotland/git-guide/issues">GitHub issue</a>.</p>
+<p>Throughout this guide where there are code examples, <code>&lt;&gt;</code> are used to show areas that define the users input. The arrow symbols shouldn’t be entered along with the rest of the command.</p>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="setup-1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="navigating.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="version-control-git-and-remotes.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
 <script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
@@ -221,12 +159,12 @@ gitbook.start({
 "github": false,
 "facebook": true,
 "twitter": true,
-"google": false,
 "linkedin": false,
 "weibo": false,
 "instapaper": false,
 "vk": false,
-"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
 "theme": "white",
@@ -241,9 +179,14 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": null,
-"toc": {
-"collapse": "section"
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
 }
 });
 });

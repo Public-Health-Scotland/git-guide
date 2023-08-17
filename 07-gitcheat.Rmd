@@ -2,12 +2,12 @@
 
 # Git Cheat Sheet {-}
 
-### Git Basics {-}
+#### Git Basics {-}
 
 ```{r, echo=FALSE}
 git_basics_table <- data.frame(
     "Command" = c("`git config --global user.name \"[name]\"`", "`git config --global user.email \"[email]\"`", "`git init [project-name]` ", "`git clone [repo]` ", "`git status` ", "`git diff` ", "`git add [file]` ", "`git diff --staged`", "`git reset [file]`", "`git commit -m “[message]”` ", "`git log` "),
-    "Description" = c("Sets author name to be used for all your commits.", "Sets author email to be used for all your commits.", "Create empty git repo in specified directory.", "Clone repo with version history located at `[repo]`.", "List all new or modified files to be committed.", "Show file changes not yet staged.", "Stage all changes in `[file]` for the next commit.", "Shows files differences between staging and the last file version.", "Unstages the file, but preserves its contents.", "Commit the staged snapshot to permanent version history.", "Display the entire commit history for the current branch.")
+    "Description" = c("Sets author name to be used for all your commits.", "Sets author email to be used for all your commits.", "Create empty Git repo in specified directory.", "Clone repo with version history located at `[repo]`.", "List all new or modified files to be committed.", "Show file changes not yet staged.", "Stage all changes in `[file]` for the next commit.", "Shows files differences between staging and the last file version.", "Unstages the file, but preserves its contents.", "Commit the staged snapshot to permanent version history.", "Display the entire commit history for the current branch.")
   )
 
 kable(git_basics_table) %>%
@@ -19,7 +19,7 @@ kable(git_basics_table) %>%
 &nbsp;
 
 
-### Undoing changes {-}
+#### Undoing changes {-}
 
 ```{r, echo=FALSE}
 undoing_changes_table <- data.frame(
@@ -36,7 +36,7 @@ kable(undoing_changes_table) %>%
 &nbsp;
 
 
-### Rewriting Git History {-}
+#### Rewriting Git History {-}
 
 ```{r, echo=FALSE}
 rewriting_git_history_table <- data.frame(
@@ -53,7 +53,7 @@ kable(rewriting_git_history_table) %>%
 &nbsp;
 
 
-### Git Branches {-}
+#### Git Branches {-}
 
 ```{r, echo=FALSE}
 git_branches_table <- data.frame(
@@ -71,7 +71,7 @@ kable(git_branches_table) %>%
 &nbsp;
 
 
-### Remote Repositories {-}
+#### Remote Repositories {-}
 
 ```{r, echo=FALSE}
 remote_repositories_table <- data.frame(
@@ -89,7 +89,7 @@ kable(remote_repositories_table) %>%
 &nbsp;
 
 
-### Git Log {-}
+#### Git Log {-}
 
 ```{r, echo=FALSE}
 git_log_table <- data.frame(
@@ -107,7 +107,7 @@ kable(git_log_table) %>%
 &nbsp;
 
 
-### Git Diff {-}
+#### Git Diff {-}
 
 ```{r, echo=FALSE}
 git_diff_table <- data.frame(
@@ -125,7 +125,7 @@ kable(git_diff_table) %>%
 &nbsp;
 
 
-### Git Reset {-}
+#### Git Reset {-}
 
 ```{r, echo=FALSE}
 git_reset_table <- data.frame(
